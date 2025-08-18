@@ -11484,7 +11484,7 @@
                         value: !1
                     }, {
                         id: jo.Windowed,
-                        value: !0
+                        value: !1
                     }, {
                         id: jo.Graphics,
                         value: !1
@@ -11493,7 +11493,7 @@
                         value: !0
                     }, {
                         id: jo.CefAuth,
-                        value: !1
+                        value: !0
                     }, {
                         id: jo.TestBranch,
                         value: !1,
@@ -11540,7 +11540,7 @@
                         value: !1
                     }, {
                         id: jo.Windowed,
-                        value: !0
+                        value: !1
                     }, {
                         id: jo.Graphics,
                         value: !1
@@ -11590,7 +11590,7 @@
                         value: !1
                     }, {
                         id: jo.Windowed,
-                        value: !0
+                        value: !1
                     }, {
                         id: jo.Graphics,
                         value: !1
@@ -13233,40 +13233,40 @@
         }
 
         function Qa(t) {
-            let e, n, r, i, o, a, c, s, M, N, g, d, D, f, p, j, I, z = t[0].includes("Запуск игры не удался");
+            let e, n, r, i, o, a, c, s, M, N, g, d, D, f, p, j, I, z, y, T = t[0].includes("Запуск игры не удался");
 
-            function y(t, e) {
+            function h(t, e) {
                 return t[0] ? Ca : Ua
             }
-            let T = y(t),
-                h = T(t),
-                A = z && Sa(t);
+            let A = h(t),
+                x = A(t),
+                w = T && Sa(t);
             return {
                 c() {
-                    e = Q("div"), n = Q("div"), r = Q("div"), i = Q("img"), a = Y(), c = Q("h3"), c.textContent = "Упс... Возникла ошибка!", s = Y(), M = Q("span"), h.c(), N = Y(), g = Q("div"), d = Q("button"), d.textContent = "Закрыть", D = Y(), A && A.c(), l(i.src, o = ea) || G(i, "src", "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTciIGhlaWdodD0iNTgiIHZpZXdCb3g9IjAgMCA1NyA1OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMF81NTZfNzMzOSkiPg0KPHBhdGggZD0iTTQ4LjQ0NzkgNTQuNjQ3Mkg4LjMzNjI0QzUuNTgzNCA1NC42NDcyIDMuMDI2MzEgNTMuMTk2NCAxLjU3OTE2IDUwLjgxMjVDMC4xMzE1NzcgNDguNDI5IC01Ljk4MTMzZS0wNSA0NS40NTI1IDEuMjMxMjYgNDIuOTQ1OUwyMS4yODcxIDcuOTk1NTdDMjIuNjMzIDUuMjU2NjUgMjUuMzgzMiAzLjUyNjEyIDI4LjM5MjEgMy41MjYxMkMzMS40MDA5IDMuNTI2MTIgMzQuMTUxMiA1LjI1NjY1IDM1LjQ5NzEgNy45OTU1N0w1NS41NTI5IDQyLjk0NTlDNTYuNzg0MiA0NS40NTI1IDU2LjY1MjYgNDguNDI5IDU1LjIwNSA1MC44MTI1QzUzLjc1NzkgNTMuMTk2NCA1MS4yMDEyIDU0LjY0NzIgNDguNDQ3OSA1NC42NDcyWiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGQ9Ik00OC40NTI2IDU0LjY0NzJIMjguMzkyMVYzLjUyNjA0QzMxLjQwODIgMy41MDY4OSAzNC4xNjk2IDUuMjQ0MzkgMzUuNTAwOSA3Ljk5OTRMNTUuNTUxNiA0Mi45NDg1QzU2Ljc4NDcgNDUuNDUzMyA1Ni42NTQ3IDQ4LjQyOTggNTUuMjA4NCA1MC44MTMzQzUzLjc2MTcgNTMuMTk3MiA1MS4yMDU1IDU0LjY0OCA0OC40NTI2IDU0LjY0NzJaIiBmaWxsPSIjRUJFQkVCIi8+DQo8cGF0aCBkPSJNMzIuMjU1NiA0NS43OTkxQzMyLjI1NTYgNDcuOTcxMiAzMC41MjU2IDQ5LjczMTggMjguMzkyIDQ5LjczMThDMjYuMjU4NSA0OS43MzE4IDI0LjUyODggNDcuOTcxMiAyNC41Mjg4IDQ1Ljc5OTFDMjQuNTI4OCA0My42Mjc1IDI2LjI1ODUgNDEuODY2OSAyOC4zOTIgNDEuODY2OUMzMC41MjU2IDQxLjg2NjkgMzIuMjU1NiA0My42Mjc1IDMyLjI1NTYgNDUuNzk5MVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDQ1Ljc5OTFDMzIuMjU1NyA0Ni44NDIzIDMxLjg0ODggNDcuODQyNCAzMS4xMjQ0IDQ4LjU4MDNDMzAuMzk5NiA0OS4zMTc2IDI5LjQxNyA0OS43MzE4IDI4LjM5MjEgNDkuNzMxOFY0MS44NjY5QzI5LjQxNyA0MS44NjY1IDMwLjM5OTYgNDIuMjgwNyAzMS4xMjQ0IDQzLjAxODVDMzEuODQ4OCA0My43NTU4IDMyLjI1NTcgNDQuNzU2NCAzMi4yNTU3IDQ1Ljc5OTFaIiBmaWxsPSIjMkMzRTUwIi8+DQo8cGF0aCBkPSJNMjguMzkyIDExLjM5MDlDMzAuNTI1NiAxMS4zOTA5IDMyLjI1NTYgMTMuMTUxNCAzMi4yNTU2IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU2IDM2LjE3MzggMzAuNTI1NiAzNy45MzQ0IDI4LjM5MiAzNy45MzQ0QzI2LjI1ODUgMzcuOTM0NCAyNC41Mjg4IDM2LjE3MzggMjQuNTI4OCAzNC4wMDIyVjE1LjMyMzVDMjQuNTI4OCAxMy4xNTE0IDI2LjI1ODUgMTEuMzkwOSAyOC4zOTIgMTEuMzkwOVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU3IDM1LjA0NTQgMzEuODQ4OCAzNi4wNDU1IDMxLjEyNDQgMzYuNzgyOUMzMC4zOTk2IDM3LjUyMDcgMjkuNDE3IDM3LjkzNDggMjguMzkyMSAzNy45MzQ0VjExLjM5MDlDMjkuNDE3IDExLjM4OTYgMzAuNDAwOCAxMS44MDMzIDMxLjEyNTcgMTIuNTQxMUMzMS44NTAxIDEzLjI3ODkgMzIuMjU3IDE0LjI3OTkgMzIuMjU1NyAxNS4zMjM1WiIgZmlsbD0iIzJDM0U1MCIvPg0KPC9nPg0KPGRlZnM+DQo8Y2xpcFBhdGggaWQ9ImNsaXAwXzU1Nl83MzM5Ij4NCjxyZWN0IHdpZHRoPSI1NiIgaGVpZ2h0PSI1NyIgZmlsbD0id2hpdGUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMzkyNTc4IDAuNTM4NTc0KSIvPg0KPC9jbGlwUGF0aD4NCjwvZGVmcz4NCjwvc3ZnPg0K"), G(i, "alt", "warning-ico"), G(i, "class", "unknown-error-modal__header-icon"), G(c, "class", "unknown-error-modal__title"), G(M, "class", "unknown-error-modal__action-text"), G(d, "class", "unknown-error-modal__button"), G(g, "class", "unknown-error-modal__buttons-wrapper"), G(r, "class", "unknown-error-modal__window-content"), G(n, "class", "unknown-error-modal__content"), G(e, "class", "unknown-error-modal")
+                    e = Q("div"), n = Q("div"), r = Q("div"), i = Q("img"), a = Y(), c = Q("h3"), c.textContent = "Упс... Возникла ошибка!", s = Y(), M = Q("span"), x.c(), N = Y(), g = Q("a"), g.textContent = "Подробнее о проблеме в базе знаний", d = Y(), D = Q("div"), f = Q("button"), f.textContent = "Закрыть", p = Y(), w && w.c(), l(i.src, o = ea) || G(i, "src", "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTciIGhlaWdodD0iNTgiIHZpZXdCb3g9IjAgMCA1NyA1OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMF81NTZfNzMzOSkiPg0KPHBhdGggZD0iTTQ4LjQ0NzkgNTQuNjQ3Mkg4LjMzNjI0QzUuNTgzNCA1NC42NDcyIDMuMDI2MzEgNTMuMTk2NCAxLjU3OTE2IDUwLjgxMjVDMC4xMzE1NzcgNDguNDI5IC01Ljk4MTMzZS0wNSA0NS40NTI1IDEuMjMxMjYgNDIuOTQ1OUwyMS4yODcxIDcuOTk1NTdDMjIuNjMzIDUuMjU2NjUgMjUuMzgzMiAzLjUyNjEyIDI4LjM5MjEgMy41MjYxMkMzMS40MDA5IDMuNTI2MTIgMzQuMTUxMiA1LjI1NjY1IDM1LjQ5NzEgNy45OTU1N0w1NS41NTI5IDQyLjk0NTlDNTYuNzg0MiA0NS40NTI1IDU2LjY1MjYgNDguNDI5IDU1LjIwNSA1MC44MTI1QzUzLjc1NzkgNTMuMTk2NCA1MS4yMDEyIDU0LjY0NzIgNDguNDQ3OSA1NC42NDcyWiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGQ9Ik00OC40NTI2IDU0LjY0NzJIMjguMzkyMVYzLjUyNjA0QzMxLjQwODIgMy41MDY4OSAzNC4xNjk2IDUuMjQ0MzkgMzUuNTAwOSA3Ljk5OTRMNTUuNTUxNiA0Mi45NDg1QzU2Ljc4NDcgNDUuNDUzMyA1Ni42NTQ3IDQ4LjQyOTggNTUuMjA4NCA1MC44MTMzQzUzLjc2MTcgNTMuMTk3MiA1MS4yMDU1IDU0LjY0OCA0OC40NTI2IDU0LjY0NzJaIiBmaWxsPSIjRUJFQkVCIi8+DQo8cGF0aCBkPSJNMzIuMjU1NiA0NS43OTkxQzMyLjI1NTYgNDcuOTcxMiAzMC41MjU2IDQ5LjczMTggMjguMzkyIDQ5LjczMThDMjYuMjU4NSA0OS43MzE4IDI0LjUyODggNDcuOTcxMiAyNC41Mjg4IDQ1Ljc5OTFDMjQuNTI4OCA0My42Mjc1IDI2LjI1ODUgNDEuODY2OSAyOC4zOTIgNDEuODY2OUMzMC41MjU2IDQxLjg2NjkgMzIuMjU1NiA0My42Mjc1IDMyLjI1NTYgNDUuNzk5MVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDQ1Ljc5OTFDMzIuMjU1NyA0Ni44NDIzIDMxLjg0ODggNDcuODQyNCAzMS4xMjQ0IDQ4LjU4MDNDMzAuMzk5NiA0OS4zMTc2IDI5LjQxNyA0OS43MzE4IDI4LjM5MjEgNDkuNzMxOFY0MS44NjY5QzI5LjQxNyA0MS44NjY1IDMwLjM5OTYgNDIuMjgwNyAzMS4xMjQ0IDQzLjAxODVDMzEuODQ4OCA0My43NTU4IDMyLjI1NTcgNDQuNzU2NCAzMi4yNTU3IDQ1Ljc5OTFaIiBmaWxsPSIjMkMzRTUwIi8+DQo8cGF0aCBkPSJNMjguMzkyIDExLjM5MDlDMzAuNTI1NiAxMS4zOTA5IDMyLjI1NTYgMTMuMTUxNCAzMi4yNTU2IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU2IDM2LjE3MzggMzAuNTI1NiAzNy45MzQ0IDI4LjM5MiAzNy45MzQ0QzI2LjI1ODUgMzcuOTM0NCAyNC41Mjg4IDM2LjE3MzggMjQuNTI4OCAzNC4wMDIyVjE1LjMyMzVDMjQuNTI4OCAxMy4xNTE0IDI2LjI1ODUgMTEuMzkwOSAyOC4zOTIgMTEuMzkwOVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU3IDM1LjA0NTQgMzEuODQ4OCAzNi4wNDU1IDMxLjEyNDQgMzYuNzgyOUMzMC4zOTk2IDM3LjUyMDcgMjkuNDE3IDM3LjkzNDggMjguMzkyMSAzNy45MzQ0VjExLjM5MDlDMjkuNDE3IDExLjM4OTYgMzAuNDAwOCAxMS44MDMzIDMxLjEyNTcgMTIuNTQxMUMzMS44NTAxIDEzLjI3ODkgMzIuMjU3IDE0LjI3OTkgMzIuMjU1NyAxNS4zMjM1WiIgZmlsbD0iIzJDM0U1MCIvPg0KPC9nPg0KPGRlZnM+DQo8Y2xpcFBhdGggaWQ9ImNsaXAwXzU1Nl83MzM5Ij4NCjxyZWN0IHdpZHRoPSI1NiIgaGVpZ2h0PSI1NyIgZmlsbD0id2hpdGUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMzkyNTc4IDAuNTM4NTc0KSIvPg0KPC9jbGlwUGF0aD4NCjwvZGVmcz4NCjwvc3ZnPg0K"), G(i, "alt", "warning-ico"), G(i, "class", "unknown-error-modal__header-icon"), G(c, "class", "unknown-error-modal__title"), G(M, "class", "unknown-error-modal__action-text"), G(g, "href", "https://help.arizona-rp.com/hc/arizona-rp/articles/1740179374-"), G(g, "class", "unknown-error-modal__link"), G(g, "target", "_blank"), G(f, "class", "unknown-error-modal__button"), G(D, "class", "unknown-error-modal__buttons-wrapper"), G(r, "class", "unknown-error-modal__window-content"), G(n, "class", "unknown-error-modal__content"), G(e, "class", "unknown-error-modal")
                 },
                 m(o, l) {
-                    U(o, e, l), L(e, n), L(n, r), L(r, i), L(r, a), L(r, c), L(r, s), L(r, M), h.m(M, null), L(r, N), L(r, g), L(g, d), L(g, D), A && A.m(g, null), p = !0, j || (I = $(d, "click", (function() {
+                    U(o, e, l), L(e, n), L(n, r), L(r, i), L(r, a), L(r, c), L(r, s), L(r, M), x.m(M, null), L(r, N), L(r, g), L(r, d), L(r, D), L(D, f), L(D, p), w && w.m(D, null), I = !0, z || (y = $(f, "click", (function() {
                         u(t[1]) && t[1].apply(this, arguments)
-                    })), j = !0)
+                    })), z = !0)
                 },
                 p(e, [n]) {
-                    T === (T = y(t = e)) && h ? h.p(t, n) : (h.d(1), h = T(t), h && (h.c(), h.m(M, null))), 1 & n && (z = t[0].includes("Запуск игры не удался")), z ? A ? A.p(t, n) : (A = Sa(t), A.c(), A.m(g, null)) : A && (A.d(1), A = null)
+                    A === (A = h(t = e)) && x ? x.p(t, n) : (x.d(1), x = A(t), x && (x.c(), x.m(M, null))), 1 & n && (T = t[0].includes("Запуск игры не удался")), T ? w ? w.p(t, n) : (w = Sa(t), w.c(), w.m(D, null)) : w && (w.d(1), w = null)
                 },
                 i(t) {
-                    p || (ft((() => {
-                        f || (f = Ut(e, Ne, {
+                    I || (ft((() => {
+                        j || (j = Ut(e, Ne, {
                             duration: 100
-                        }, !0)), f.run(1)
-                    })), p = !0)
+                        }, !0)), j.run(1)
+                    })), I = !0)
                 },
                 o(t) {
-                    f || (f = Ut(e, Ne, {
+                    j || (j = Ut(e, Ne, {
                         duration: 100
-                    }, !1)), f.run(0), p = !1
+                    }, !1)), j.run(0), I = !1
                 },
                 d(t) {
-                    t && C(e), h.d(), A && A.d(), t && f && f.end(), j = !1, I()
+                    t && C(e), x.d(), w && w.d(), t && j && j.end(), z = !1, y()
                 }
             }
         }

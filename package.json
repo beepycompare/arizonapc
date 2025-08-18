@@ -1,6 +1,6 @@
 {
   "name": "arizona-launcher",
-  "version": "0.0.111",
+  "version": "0.0.112",
   "description": "",
   "main": "build/main.js",
   "repository": {
@@ -24,6 +24,7 @@
     "lodash": "^4.17.21",
     "md5-file": "^5.0.0",
     "node-powershell": "^5.0.1",
+    "node-process-windows": "^0.0.2",
     "path": "^0.12.7",
     "regedit": "^5.1.1",
     "shell-exec": "^1.1.2",

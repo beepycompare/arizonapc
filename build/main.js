@@ -1777,14 +1777,14 @@
                         const n = e[0],
                             r = d.join(d.dirname(i.getPath("exe")), "./resources/drivers"),
                             s = `${r}\\${n.name}`;
-                        U(s) ? (console.log(`"${s}" ${n.command}`.trim()), I(`"${s}" ${n.command}`.trim(), {
+                        U(s) ? I(`"${s}" ${n.command}`.trim(), {
                             cwd: r
                         }, (() => {})).on("exit", (() => {
                             oe.webContents.send("drivers:installProgress", {
                                 currentIndex: t,
                                 count: L.length
                             }), xe(e.slice(1), t + 1)
-                        }))) : oe.webContents.send("drivers:installProgress", {
+                        })) : oe.webContents.send("drivers:installProgress", {
                             currentIndex: t,
                             count: L.length,
                             error: !0
@@ -2307,6 +2307,7 @@
                         saveAs: !1,
                         filename: t,
                         showBadge: !1,
+                        showProgressBar: !1,
                         onStarted: e => {
                             Z = e, c()
                         },
@@ -2370,10 +2371,10 @@
                         if (t && o.hash && s && !r && (R += 1, ae(s, (R / (S / 100)).toFixed(2), "Проверка файлов...", "ПРОВЕРКА")), !o.type) return o.data ? (await y(o.data, a)).flat(1 / 0) : void 0;
                         const l = `${a}${a?"/":""}${o.name}`,
                             u = `${d}/${l}`,
-                            g = `${d}/${a}`,
-                            x = w(u);
+                            x = `${d}/${a}`,
+                            E = w(u);
                         if (f && v && a.includes("GameArchive")) {
-                            if (x) try {
+                            if (E) try {
                                 await i.promises.unlink(u)
                             } catch (e) {
                                 D.info(e, "GameArchive file unlink")
@@ -2384,7 +2385,7 @@
                                 ...e,
                                 [t.id]: t.value
                             })), {})[k.Seasons]) return;
-                        if (x && "delete" === o.type) {
+                        if (E && "delete" === o.type) {
                             const e = await i.promises.stat(u),
                                 t = o.date_change;
                             if (e.mtime / 1e3 < t) {
@@ -2397,10 +2398,29 @@
                             }
                         }
                         if ("delete" === o.type) return;
-                        if (x && !i.statSync(u).isDirectory() && (!t || t && n) && h.includes(m.normalize(u))) return;
-                        const E = (e = null) => ({
+                        if (o.data && o.pure) try {
+                            const e = (t, n = "") => {
+                                    const i = [],
+                                        r = m.normalize(n ? `${n}/${t.name}` : t.name);
+                                    if (i.push(r), t.data)
+                                        for (const n of t.data) i.push(...e(n, r));
+                                    return i
+                                },
+                                t = (await g(`${u}/**/*`.replace(/\\/g, "/"))).map((e => m.normalize(e))),
+                                n = e(o, x);
+                            for (let e of t)
+                                if (!n.includes(e)) try {
+                                    await i.promises.rm(e, {
+                                        recursive: !0
+                                    })
+                                } catch (e) {
+                                    console.log(e)
+                                }
+                        } catch (e) {}
+                        if (E && !i.statSync(u).isDirectory() && (!t || t && n) && h.includes(m.normalize(u))) return;
+                        const A = (e = null) => ({
                             filePath: u,
-                            directoryPath: g,
+                            directoryPath: x,
                             type: o.type,
                             size: "dir" === o.type ? 0 : o.size,
                             name: o.name,
@@ -2410,23 +2430,23 @@
                         });
                         if (t && b.push(m.normalize(u)), o.data) {
                             const e = await y(o.data, l);
-                            return x ? e.flat(1 / 0) : [E(), e].flat(1 / 0)
+                            return E ? e.flat(1 / 0) : [A(), e].flat(1 / 0)
                         }
-                        if (!x) return E();
+                        if (!E) return A();
                         if ("res" === o.type && !t) return;
-                        const A = await i.promises.stat(u);
-                        if (A.size !== o.size) return E(await c(u));
+                        const _ = await i.promises.stat(u);
+                        if (_.size !== o.size) return A(await c(u));
                         J += o.size;
-                        const _ = o.date_change;
-                        if (A.mtime / 1e3 !== _ && ((e, t = new Date) => {
+                        const O = o.date_change;
+                        if (_.mtime / 1e3 !== O && ((e, t = new Date) => {
                                 try {
                                     i.utimesSync(e, t, t)
                                 } catch (t) {
                                     D.info(t, "3"), i.closeSync(i.openSync(e, "w"))
                                 }
-                            })(u, _), r || "check" === o.type) try {
+                            })(u, O), r || "check" === o.type) try {
                             const e = await c(u);
-                            if (t && o.hash && s && r && (R += 1, ae(s, (R / (S / 100)).toFixed(2), "Проверка файлов...", "ПРОВЕРКА")), e !== o.hash) return E(e)
+                            if (t && o.hash && s && r && (R += 1, ae(s, (R / (S / 100)).toFixed(2), "Проверка файлов...", "ПРОВЕРКА")), e !== o.hash) return A(e)
                         } catch (e) {
                             D.info(e, "5")
                         }
