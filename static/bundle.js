@@ -12231,9 +12231,9 @@
                     })
                 }
             },
-            So = n.p + "f5b44a562ef8f856e125.png",
+            So = n.p + "5163ad308d16c53e479e.png",
             Qo = n.p + "2f221eeb298b72a0625f.png",
-            bo = n.p + "29055bf542b61d1b7b0e.png",
+            bo = n.p + "263765f19cf84501c86b.png",
             Yo = n.p + "a9f50afa57f19138bc95.png";
         var Po = function(t) {
             window.launcherAPI && window.launcherAPI.validateGameFiles && window.launcherAPI.validateGameFiles(t)
