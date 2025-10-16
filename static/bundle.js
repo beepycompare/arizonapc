@@ -11594,6 +11594,9 @@
                     }, {
                         id: jo.Graphics,
                         value: !1
+                    }, {
+                        id: jo.CefAuth,
+                        value: !0
                     }]
                 }
             }, {
@@ -13996,42 +13999,47 @@
                 const r = window.launcherAPI && window.launcherAPI.getSettings ? await window.launcherAPI.getSettings() : {};
                 r.driversAlreadyRequested || (n(5, h = !0), Be("driversAlreadyRequested", !0)), r.autoLaunchAlreadyRequested || (n(8, m = !0), Be("autoLaunchAlreadyRequested", !0)), z(Ie, p = [], p), z(je, M = t.reduce(((t, e) => {
                     const n = ho.find((({
-                        gameId: t
-                    }) => e.gameId === t));
-                    De().isEmpty(r[e.gameId]) && Be(e.gameId, n.settings);
-                    const i = De().keyBy(n.settings.options, "id"),
-                        o = De().merge({}, {
+                            gameId: t
+                        }) => e.gameId === t)),
+                        i = De().keyBy(n.settings.options, "id");
+                    let o = !1;
+                    if (De().isEmpty(r[e.gameId])) Be(e.gameId, n.settings);
+                    else if (e.gameId === zo.Rodina) {
+                        const t = Object.keys(De().keyBy(De().get(r, [e.gameId, "options"], []), "id"));
+                        Object.keys(i).some((e => !t.includes(e))) && (o = !0)
+                    }
+                    const a = De().merge({}, {
                             ...n.settings,
                             options: i
                         }, {
                             ...r[e.gameId] || {},
                             options: De().pick(De().keyBy(De().get(r, [e.gameId, "options"], []), "id"), Object.keys(i))
                         }),
-                        a = {
-                            ...o,
-                            options: De().values(o.options)
+                        u = {
+                            ...a,
+                            options: De().values(a.options)
                         },
-                        u = De().merge({}, {
+                        c = De().merge({}, {
                             ...n.settings,
                             options: i
                         }, {
                             ...r[`${e.gameId}_staging`] || {},
                             options: De().pick(De().keyBy(De().get(r, [`${e.gameId}_staging`, "options"], []), "id"), Object.keys(i))
                         }),
-                        c = {
-                            ...u,
-                            options: De().values(u.options).map((t => t.id === jo.TestBranch ? {
+                        s = {
+                            ...c,
+                            options: De().values(c.options).map((t => t.id === jo.TestBranch ? {
                                 ...t,
                                 value: !0
                             } : t))
                         },
-                        s = {
+                        l = {
                             ...De().merge({}, n, e),
-                            settings: a,
-                            baseSettings: a,
-                            stagingSettings: c
+                            settings: u,
+                            baseSettings: u,
+                            stagingSettings: s
                         };
-                    return s.optional && p.push(s), r.sourceOfInstall && r.sourceOfInstall === e.gameId ? t.unshift(s) : t.push(s), t
+                    return l.optional && p.push(l), r.sourceOfInstall && r.sourceOfInstall === e.gameId ? t.unshift(l) : t.push(l), o && Be(e.gameId, u), t
                 }), []), M), Ie.set(p);
                 const i = M.find((({
                         gameId: t
