@@ -1711,7 +1711,7 @@
                     ne.setContextMenu(re), ne.on("click", (() => oe.show())), oe = se(), ce = setInterval((() => f.checkForUpdates()), 36e5);
                     let fe = [];
                     const me = async () => {
-                        fe = await ee()
+                        fe = await ee(), h.info(fe.join(","))
                     };
                     le = setInterval(me, 36e5);
                     let ve = q("notification") || {};
@@ -1780,27 +1780,27 @@
                     })), s.on("exitLauncher", ((e, t = !1) => {
                         O && O.close(), f.quitAndInstall(!0, t)
                     }));
-                    const we = (e = [], t = 0) => {
-                        if (m(e)) return;
+                    const we = (e, t = [], n = 0) => {
+                        if (m(t)) return;
                         Q(J.InstallDrivers);
-                        const n = e[0],
-                            r = d.join(d.dirname(i.getPath("exe")), "./resources/drivers"),
-                            s = `${r}\\${n.name}`;
-                        U(s) ? I(`"${s}" ${n.command}`.trim(), {
+                        const i = t[0],
+                            r = d.join(w(e), "./drivers"),
+                            s = `${r}\\${i.name}`;
+                        U(s) ? I(`"${s}" ${i.command}`.trim(), {
                             cwd: r
-                        }, (() => {})).on("exit", (() => {
+                        }, (e => {})).on("exit", (() => {
                             oe.webContents.send("drivers:installProgress", {
-                                currentIndex: t,
+                                currentIndex: n,
                                 count: L.length
-                            }), we(e.slice(1), t + 1)
+                            }), we(e, t.slice(1), n + 1)
                         })) : oe.webContents.send("drivers:installProgress", {
-                            currentIndex: t,
+                            currentIndex: n,
                             count: L.length,
                             error: !0
                         })
                     };
-                    s.on("installDrivers", (e => {
-                        we(L)
+                    s.on("installDrivers", ((e, t) => {
+                        we(t, L)
                     })), s.on("restartAsAdmin", (e => {
                         (async () => {
                             try {
@@ -1815,9 +1815,12 @@
                         })(t)
                     })), s.on("openGameFolder", ((e, t) => {
                         o.openPath(w(t))
-                    })), s.handle("directory:select", (e => a.showOpenDialogSync(oe, {
-                        properties: ["openFile", "openDirectory"]
-                    }))), s.on("validateAndStartGame", (async (e, t, n, i, r, s = [], o = !1, a = !1) => {
+                    })), s.handle("directory:select", ((e, t) => {
+                        const n = a.showOpenDialogSync(oe, {
+                            properties: ["openFile", "openDirectory"]
+                        });
+                        return n && d.normalize(n[0] || "") === d.parse(process.cwd()).root && (n[0] = d.normalize(`${n[0]}/${t}`)), n
+                    })), s.on("validateAndStartGame", (async (e, t, n, i, r, s = [], o = !1, a = !1) => {
                         try {
                             if (Y("gameId", t), [j.Repair, j.FilesPostprocessing].includes(R())) return;
                             if (R() === j.Downloading) return C(), void await A(oe, t);

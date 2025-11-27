@@ -25,7 +25,7 @@
         validateAndStartGame: (e, n, i, o, t, a, r) => s.send("validateAndStartGame", e, n, i, o, t, a, r),
         validateGameFiles: e => s.send("validateGameFiles", e),
         repairGameFiles: (e, n) => s.send("repairGameFiles", e, n),
-        installDrivers: () => s.send("installDrivers"),
+        installDrivers: e => s.send("installDrivers", e),
         handleDriverInstallProgress: e => s.on("drivers:installProgress", e),
         handleProgress: e => s.on("progress-update", e),
         handleUpdateModalVisibility: e => s.on("update-modal-visibility", e),
