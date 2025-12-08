@@ -7373,38 +7373,38 @@
         }
 
         function $e(e) {
-            let n, r, i, o, a, u, c, s, l, N, g, D, j, d, p, f, I, z, y, T = e[0].name + "",
-                h = e[0].players + "",
-                A = e[1],
-                x = [];
-            for (let t = 0; t < A.length; t += 1) x[t] = Pe(Ye(e, A, t));
+            let n, r, i, o, a, u, c, s, l, N, g, D, j, d, p, f, I, z = e[0].name + "",
+                y = e[0].players + "",
+                T = e[1],
+                h = [];
+            for (let t = 0; t < T.length; t += 1) h[t] = Pe(Ye(e, T, t));
             return {
                 c() {
-                    n = Q("div"), r = Q("div"), i = Q("div"), o = Q("img"), u = Y(), c = Q("div"), s = Y(), l = Q("div"), N = Q("span"), g = b(T), D = Y(), j = Q("div");
-                    for (let t = 0; t < x.length; t += 1) x[t].c();
-                    d = Y(), p = Q("div"), f = Q("span"), I = b(h), z = Y(), y = Q("div"), M(o.src, a = e[0].avatarUrl) || G(o, "src", a), G(o, "alt", ""), G(o, "class", "server-case__avatar-image"), G(c, "class", "server-case__avatar-badge"), V(c, "--badge-color", e[0].enabled ? "#7AB051" : "#E11315"), G(i, "class", "server-case__avatar-wrapper"), G(r, "class", "server-case__avatar"), G(N, "class", "server-case__name"), G(j, "class", "server-case__tags"), F(j, "server-case__tags--minified", e[1].length > 2), G(l, "class", "server-case__name-wrapper"), G(f, "class", "players-online"), G(y, "class", "server-case__online-status"), F(y, "server-case__online-status--offline", !e[0].enabled), G(p, "class", "server-case__players"), G(n, "class", "server-case")
+                    n = Q("div"), r = Q("div"), i = Q("div"), o = Q("img"), u = Y(), c = Q("div"), s = Q("span"), l = b(z), N = Y(), g = Q("div");
+                    for (let t = 0; t < h.length; t += 1) h[t].c();
+                    D = Y(), j = Q("div"), d = Q("span"), p = b(y), f = Y(), I = Q("div"), M(o.src, a = e[0].avatarUrl) || G(o, "src", a), G(o, "alt", ""), G(o, "class", "server-case__avatar-image"), G(i, "class", "server-case__avatar-wrapper"), G(r, "class", "server-case__avatar"), G(s, "class", "server-case__name"), G(g, "class", "server-case__tags"), F(g, "server-case__tags--minified", e[1].length > 2), G(c, "class", "server-case__name-wrapper"), G(d, "class", "players-online"), G(I, "class", "server-case__online-status"), F(I, "server-case__online-status--offline", !e[0].enabled), G(j, "class", "server-case__players"), G(n, "class", "server-case")
                 },
                 m(t, e) {
-                    U(t, n, e), L(n, r), L(r, i), L(i, o), L(i, u), L(i, c), L(n, s), L(n, l), L(l, N), L(N, g), L(l, D), L(l, j);
-                    for (let t = 0; t < x.length; t += 1) x[t].m(j, null);
-                    L(n, d), L(n, p), L(p, f), L(f, I), L(p, z), L(p, y)
+                    U(t, n, e), L(n, r), L(r, i), L(i, o), L(n, u), L(n, c), L(c, s), L(s, l), L(c, N), L(c, g);
+                    for (let t = 0; t < h.length; t += 1) h[t].m(g, null);
+                    L(n, D), L(n, j), L(j, d), L(d, p), L(j, f), L(j, I)
                 },
                 p(t, [e]) {
-                    if (1 & e && !M(o.src, a = t[0].avatarUrl) && G(o, "src", a), 1 & e && V(c, "--badge-color", t[0].enabled ? "#7AB051" : "#E11315"), 1 & e && T !== (T = t[0].name + "") && B(g, T), 2 & e) {
+                    if (1 & e && !M(o.src, a = t[0].avatarUrl) && G(o, "src", a), 1 & e && z !== (z = t[0].name + "") && B(l, z), 2 & e) {
                         let n;
-                        for (A = t[1], n = 0; n < A.length; n += 1) {
-                            const r = Ye(t, A, n);
-                            x[n] ? x[n].p(r, e) : (x[n] = Pe(r), x[n].c(), x[n].m(j, null))
+                        for (T = t[1], n = 0; n < T.length; n += 1) {
+                            const r = Ye(t, T, n);
+                            h[n] ? h[n].p(r, e) : (h[n] = Pe(r), h[n].c(), h[n].m(g, null))
                         }
-                        for (; n < x.length; n += 1) x[n].d(1);
-                        x.length = A.length
+                        for (; n < h.length; n += 1) h[n].d(1);
+                        h.length = T.length
                     }
-                    2 & e && F(j, "server-case__tags--minified", t[1].length > 2), 1 & e && h !== (h = t[0].players + "") && B(I, h), 1 & e && F(y, "server-case__online-status--offline", !t[0].enabled)
+                    2 & e && F(g, "server-case__tags--minified", t[1].length > 2), 1 & e && y !== (y = t[0].players + "") && B(p, y), 1 & e && F(I, "server-case__online-status--offline", !t[0].enabled)
                 },
                 i: t,
                 o: t,
                 d(t) {
-                    t && C(n), S(x, t)
+                    t && C(n), S(h, t)
                 }
             }
         }
@@ -7577,29 +7577,29 @@
         }
 
         function Xe(t) {
-            let e, n, r, i, o, u, c, s, l, N, g, D, j, d, p, f, I, z, T, h, A, x, w, O, m = t[3]?.name + "",
-                E = t[3]?.players + "",
-                v = t[1] && He(t);
+            let e, n, r, i, o, u, c, s, l, N, g, D, j, d, p, f, I, z, T, h, A, x, w = t[3]?.name + "",
+                O = t[3]?.players + "",
+                m = t[1] && He(t);
             return {
                 c() {
-                    e = Q("div"), n = Q("div"), r = Q("div"), i = Q("img"), u = Y(), c = Q("div"), s = Y(), l = Q("div"), N = Q("span"), g = b(m), D = Y(), j = Q("div"), d = Q("span"), p = b(E), f = Y(), I = Q("div"), z = Y(), T = Q("div"), T.innerHTML = '<i class="server-picker__icon icon-burger-menu"></i>', h = Y(), v && v.c(), M(i.src, o = t[3].avatarUrl) || G(i, "src", o), G(i, "alt", ""), G(i, "class", "server-picker__current-server-avatar-image"), G(c, "class", "server-picker__current-server-avatar-badge"), V(c, "--loaded-status", t[3].enabled ? "#7AB051" : "#E11315"), G(r, "class", "server-picker__current-server-avatar"), G(N, "class", "server-picker__current-server-name"), G(l, "class", "server-picker__current-server-name-wrapper"), G(d, "class", "server-picker__current-server-players-online"), G(I, "class", "server-picker__online-status"), F(I, "server-picker__online-status--offline", !t[3].enabled), G(j, "class", "server-picker__current-server-players"), G(T, "class", "server-picker__current-server-menu"), G(n, "class", "server-picker__current-server"), G(e, "class", "server-picker")
+                    e = Q("div"), n = Q("div"), r = Q("div"), i = Q("img"), u = Y(), c = Q("div"), s = Q("span"), l = b(w), N = Y(), g = Q("div"), D = Q("span"), j = b(O), d = Y(), p = Q("div"), f = Y(), I = Q("div"), I.innerHTML = '<i class="server-picker__icon icon-burger-menu"></i>', z = Y(), m && m.c(), M(i.src, o = t[3].avatarUrl) || G(i, "src", o), G(i, "alt", ""), G(i, "class", "server-picker__current-server-avatar-image"), G(r, "class", "server-picker__current-server-avatar"), G(s, "class", "server-picker__current-server-name"), G(c, "class", "server-picker__current-server-name-wrapper"), G(D, "class", "server-picker__current-server-players-online"), G(p, "class", "server-picker__online-status"), F(p, "server-picker__online-status--offline", !t[3].enabled), G(g, "class", "server-picker__current-server-players"), G(I, "class", "server-picker__current-server-menu"), G(n, "class", "server-picker__current-server"), G(e, "class", "server-picker")
                 },
                 m(o, a) {
-                    U(o, e, a), L(e, n), L(n, r), L(r, i), L(r, u), L(r, c), L(n, s), L(n, l), L(l, N), L(N, g), L(n, D), L(n, j), L(j, d), L(d, p), L(j, f), L(j, I), L(n, z), L(n, T), L(e, h), v && v.m(e, null), x = !0, w || (O = [$(n, "click", t[5]), y(A = Ze.call(null, e)), $(e, "outsideclick", t[7])], w = !0)
+                    U(o, e, a), L(e, n), L(n, r), L(r, i), L(n, u), L(n, c), L(c, s), L(s, l), L(n, N), L(n, g), L(g, D), L(D, j), L(g, d), L(g, p), L(n, f), L(n, I), L(e, z), m && m.m(e, null), h = !0, A || (x = [$(n, "click", t[5]), y(T = Ze.call(null, e)), $(e, "outsideclick", t[7])], A = !0)
                 },
                 p(t, [n]) {
-                    (!x || 8 & n && !M(i.src, o = t[3].avatarUrl)) && G(i, "src", o), (!x || 8 & n) && V(c, "--loaded-status", t[3].enabled ? "#7AB051" : "#E11315"), (!x || 8 & n) && m !== (m = t[3]?.name + "") && B(g, m), (!x || 8 & n) && E !== (E = t[3]?.players + "") && B(p, E), 8 & n && F(I, "server-picker__online-status--offline", !t[3].enabled), t[1] ? v ? (v.p(t, n), 2 & n && Lt(v, 1)) : (v = He(t), v.c(), Lt(v, 1), v.m(e, null)) : v && (Ot(), Et(v, 1, 1, (() => {
-                        v = null
+                    (!h || 8 & n && !M(i.src, o = t[3].avatarUrl)) && G(i, "src", o), (!h || 8 & n) && w !== (w = t[3]?.name + "") && B(l, w), (!h || 8 & n) && O !== (O = t[3]?.players + "") && B(j, O), 8 & n && F(p, "server-picker__online-status--offline", !t[3].enabled), t[1] ? m ? (m.p(t, n), 2 & n && Lt(m, 1)) : (m = He(t), m.c(), Lt(m, 1), m.m(e, null)) : m && (Ot(), Et(m, 1, 1, (() => {
+                        m = null
                     })), mt())
                 },
                 i(t) {
-                    x || (Lt(v), x = !0)
+                    h || (Lt(m), h = !0)
                 },
                 o(t) {
-                    Et(v), x = !1
+                    Et(m), h = !1
                 },
                 d(t) {
-                    t && C(e), v && v.d(), w = !1, a(O)
+                    t && C(e), m && m.d(), A = !1, a(x)
                 }
             }
         }
@@ -9662,9 +9662,9 @@
 
         function Ur(t) {
             let e, n, r, i, o, a, u, c, s, M, l, N, g, D, j, d, p, f, I, z, y, T, h, A, x, w, O, m, E, v, _, k, S, P, R, Z, W, V, H, J, X, K, q, tt, et, nt, rt, it, ot, at, ut, ct, Mt, lt, Nt, gt, Dt, jt, dt, ft, It, zt = t[3].title + "",
-                yt = new Intl.NumberFormat("ru-RU").format(t[10][t[2]] && t[10][t[2]].reduce(Cr, 0) || 0) + "",
+                yt = `${t[10]}${t[11]?` (+${new Intl.NumberFormat("ru-RU").format(t[11])})`:""}`,
                 Tt = !je().isEmpty(t[3].youtubeVideoUrl),
-                ht = !je().isEmpty(t[10]);
+                ht = !je().isEmpty(t[2]);
             f = new mr({
                 props: {
                     icon: "icon-planet",
@@ -9676,7 +9676,7 @@
                 wt = t[3].resources.docsUrl && vr(t);
 
             function vt(e) {
-                t[12](e)
+                t[14](e)
             }
             et = new hr({});
             let _t = {
@@ -9693,12 +9693,12 @@
                     e = Q("main"), n = Q("div"), r = Q("div"), i = Q("h1"), o = b(zt), a = Y(), u = Q("div"), c = Q("div"), s = Q("p"), s.textContent = "Общий онлайн", M = Y(), l = Q("p"), N = b(yt), g = Y(), D = Q("div"), j = Q("ul"), d = Q("li"), p = Q("a"), $t(f.$$.fragment), z = Y(), At && At.c(), y = Y(), T = Q("li"), h = Q("a"), A = Q("i"), w = Y(), O = Q("li"), m = Q("a"), E = Q("i"), _ = Y(), k = Q("li"), S = Q("a"), P = Q("i"), Z = Y(), xt && xt.c(), W = Y(), V = Q("li"), H = Q("a"), J = b("Форум"), K = Y(), wt && wt.c(), q = Y(), tt = Q("div"), $t(et.$$.fragment), nt = Y(), rt = Q("footer"), $t(it.$$.fragment), at = Y(), kt && kt.c(), ut = Y(), ct = Q("div"), Ut && Ut.c(), Mt = Y(), lt = Q("button"), Nt = Q("span"), gt = b(t[6]), Dt = Y(), jt = Q("i"), G(i, "class", "launcher-content__title"), G(s, "class", "launcher-content__online-stats-caption"), G(l, "class", "launcher-content__online-stats-count"), G(c, "class", "launcher-content__online-stats"), G(p, "href", I = t[3].resources.siteUrl), G(p, "target", "_blank"), G(d, "class", "launcher-content__socials-list-item"), G(A, "class", "launcher-content__socials-list-icon icon-vk"), G(h, "href", x = t[3].resources.vkontakteUrl), G(h, "class", "launcher-content__socials-list-link"), G(h, "target", "_blank"), G(T, "class", "launcher-content__socials-list-item"), G(E, "class", "launcher-content__socials-list-icon icon-insta"), G(m, "href", v = t[3].resources.instagramUrl), G(m, "class", "launcher-content__socials-list-link"), G(m, "target", "_blank"), G(O, "class", "launcher-content__socials-list-item"), G(P, "class", "launcher-content__socials-list-icon icon-tg"), G(S, "href", R = t[3].resources.telegramUrl), G(S, "class", "launcher-content__socials-list-link"), G(S, "target", "_blank"), G(k, "class", "launcher-content__socials-list-item"), G(H, "href", X = t[3].resources.forumUrl), G(H, "class", "launcher-content__socials-list-link launcher-content__socials-list-link--site-link"), G(H, "target", "_blank"), G(V, "class", "launcher-content__socials-list-item"), G(j, "class", "launcher-content__socials-list"), G(D, "class", "launcher-content__socials-wrapper"), G(u, "class", "launcher-content__data"), G(r, "class", "launcher-content__wrapper"), G(tt, "class", "launcher-content__updates-slider-wrapper"), G(n, "class", "launcher-content__info"), G(e, "class", "launcher-content"), G(Nt, "class", "btn__text btn__text--play"), G(jt, "class", "icon-arrow-right"), G(lt, "class", "btn btn--play"), F(lt, "btn--disabled", !t[1] || t[8] || t[9]), G(ct, "class", "launcher-footer__launch-button"), G(rt, "class", "launcher-footer")
                 },
                 m(I, x) {
-                    U(I, e, x), L(e, n), L(n, r), L(r, i), L(i, o), L(r, a), L(r, u), L(u, c), L(c, s), L(c, M), L(c, l), L(l, N), L(u, g), L(u, D), L(D, j), L(j, d), L(d, p), Rt(f, p, null), L(j, z), At && At.m(j, null), L(j, y), L(j, T), L(T, h), L(h, A), L(j, w), L(j, O), L(O, m), L(m, E), L(j, _), L(j, k), L(k, S), L(S, P), L(j, Z), xt && xt.m(j, null), L(j, W), L(j, V), L(V, H), L(H, J), L(j, K), wt && wt.m(j, null), L(n, q), L(n, tt), Rt(et, tt, null), U(I, nt, x), U(I, rt, x), Rt(it, rt, null), L(rt, at), kt && kt.m(rt, null), L(rt, ut), L(rt, ct), Ut && Ut.m(ct, null), L(ct, Mt), L(ct, lt), L(lt, Nt), L(Nt, gt), L(lt, Dt), L(lt, jt), dt = !0, ft || (It = $(lt, "click", t[11]), ft = !0)
+                    U(I, e, x), L(e, n), L(n, r), L(r, i), L(i, o), L(r, a), L(r, u), L(u, c), L(c, s), L(c, M), L(c, l), L(l, N), L(u, g), L(u, D), L(D, j), L(j, d), L(d, p), Rt(f, p, null), L(j, z), At && At.m(j, null), L(j, y), L(j, T), L(T, h), L(h, A), L(j, w), L(j, O), L(O, m), L(m, E), L(j, _), L(j, k), L(k, S), L(S, P), L(j, Z), xt && xt.m(j, null), L(j, W), L(j, V), L(V, H), L(H, J), L(j, K), wt && wt.m(j, null), L(n, q), L(n, tt), Rt(et, tt, null), U(I, nt, x), U(I, rt, x), Rt(it, rt, null), L(rt, at), kt && kt.m(rt, null), L(rt, ut), L(rt, ct), Ut && Ut.m(ct, null), L(ct, Mt), L(ct, lt), L(lt, Nt), L(Nt, gt), L(lt, Dt), L(lt, jt), dt = !0, ft || (It = $(lt, "click", t[12]), ft = !0)
                 },
                 p(t, [e]) {
-                    (!dt || 8 & e) && zt !== (zt = t[3].title + "") && B(o, zt), (!dt || 1028 & e) && yt !== (yt = new Intl.NumberFormat("ru-RU").format(t[10][t[2]] && t[10][t[2]].reduce(Cr, 0) || 0) + "") && B(N, yt), (!dt || 8 & e && I !== (I = t[3].resources.siteUrl)) && G(p, "href", I), 8 & e && (Tt = !je().isEmpty(t[3].youtubeVideoUrl)), Tt ? At ? At.p(t, e) : (At = Lr(t), At.c(), At.m(j, y)) : At && (At.d(1), At = null), (!dt || 8 & e && x !== (x = t[3].resources.vkontakteUrl)) && G(h, "href", x), (!dt || 8 & e && v !== (v = t[3].resources.instagramUrl)) && G(m, "href", v), (!dt || 8 & e && R !== (R = t[3].resources.telegramUrl)) && G(S, "href", R), t[3].resources.discordUrl ? xt ? xt.p(t, e) : (xt = Er(t), xt.c(), xt.m(j, W)) : xt && (xt.d(1), xt = null), (!dt || 8 & e && X !== (X = t[3].resources.forumUrl)) && G(H, "href", X), t[3].resources.docsUrl ? wt ? wt.p(t, e) : (wt = vr(t), wt.c(), wt.m(j, null)) : wt && (wt.d(1), wt = null);
+                    (!dt || 8 & e) && zt !== (zt = t[3].title + "") && B(o, zt), (!dt || 3072 & e) && yt !== (yt = `${t[10]}${t[11]?` (+${new Intl.NumberFormat("ru-RU").format(t[11])})`:""}`) && B(N, yt), (!dt || 8 & e && I !== (I = t[3].resources.siteUrl)) && G(p, "href", I), 8 & e && (Tt = !je().isEmpty(t[3].youtubeVideoUrl)), Tt ? At ? At.p(t, e) : (At = Lr(t), At.c(), At.m(j, y)) : At && (At.d(1), At = null), (!dt || 8 & e && x !== (x = t[3].resources.vkontakteUrl)) && G(h, "href", x), (!dt || 8 & e && v !== (v = t[3].resources.instagramUrl)) && G(m, "href", v), (!dt || 8 & e && R !== (R = t[3].resources.telegramUrl)) && G(S, "href", R), t[3].resources.discordUrl ? xt ? xt.p(t, e) : (xt = Er(t), xt.c(), xt.m(j, W)) : xt && (xt.d(1), xt = null), (!dt || 8 & e && X !== (X = t[3].resources.forumUrl)) && G(H, "href", X), t[3].resources.docsUrl ? wt ? wt.p(t, e) : (wt = vr(t), wt.c(), wt.m(j, null)) : wt && (wt.d(1), wt = null);
                     const n = {};
-                    16 & e && (n.description = t[4]), 32 & e && (n.speed = t[5]), !ot && 1 & e && (ot = !0, n.percents = t[0], pt((() => ot = !1))), it.$set(n), 1024 & e && (ht = !je().isEmpty(t[10])), ht ? kt ? 1024 & e && Lt(kt, 1) : (kt = _r(), kt.c(), Lt(kt, 1), kt.m(rt, ut)) : kt && (Ot(), Et(kt, 1, 1, (() => {
+                    16 & e && (n.description = t[4]), 32 & e && (n.speed = t[5]), !ot && 1 & e && (ot = !0, n.percents = t[0], pt((() => ot = !1))), it.$set(n), 4 & e && (ht = !je().isEmpty(t[2])), ht ? kt ? 4 & e && Lt(kt, 1) : (kt = _r(), kt.c(), Lt(kt, 1), kt.m(rt, ut)) : kt && (Ot(), Et(kt, 1, 1, (() => {
                         kt = null
                     })), mt()), !t[1] && t[7] ? Ut ? Ut.p(t, e) : (Ut = kr(t), Ut.c(), Ut.m(ct, Mt)) : Ut && (Ut.d(1), Ut = null), (!dt || 64 & e) && B(gt, t[6]), 770 & e && F(lt, "btn--disabled", !t[1] || t[8] || t[9])
                 },
@@ -9713,13 +9713,10 @@
                 }
             }
         }
-        const Cr = (t, {
-            players: e
-        }) => t + e;
 
-        function Sr(t, e, n) {
+        function Cr(t, e, n) {
             let r, i, o, a, u, c, s;
-            D(t, ze, (t => n(2, r = t))), D(t, Le, (t => n(13, i = t))), D(t, me, (t => n(14, o = t))), D(t, we, (t => n(15, a = t))), D(t, ye, (t => n(3, u = t))), D(t, ve, (t => n(16, c = t))), D(t, xe, (t => n(10, s = t)));
+            D(t, ze, (t => n(13, r = t))), D(t, Le, (t => n(15, i = t))), D(t, me, (t => n(16, o = t))), D(t, xe, (t => n(2, a = t))), D(t, we, (t => n(17, u = t))), D(t, ye, (t => n(3, c = t))), D(t, ve, (t => n(18, s = t)));
             let M = 0,
                 l = "",
                 N = 0,
@@ -9730,46 +9727,65 @@
                 f = !1;
             const I = je().debounce((async () => {
                 if (!window.launcherAPI || !window.launcherAPI.validateAndStartGame) return;
-                if (100 === M && ze !== wo.ArizonaV && !mo.test(u.settings.userName)) return;
+                if (100 === M && ze !== wo.ArizonaV && !mo.test(c.settings.userName)) return;
                 const t = window.launcherAPI && window.launcherAPI.getSettings ? await window.launcherAPI.getSettings() : {};
-                if (100 === M && !t.driversAlreadyRequested) return z(ve, c = !0, c), void Ve("driversAlreadyRequested", !0);
-                const e = u.settings.options.find((({
+                if (100 === M && !t.driversAlreadyRequested) return z(ve, s = !0, s), void Ve("driversAlreadyRequested", !0);
+                const e = c.settings.options.find((({
                     id: t
                 }) => t === ho.AutoClean)) || {
                     value: !1
                 };
-                window.launcherAPI.validateAndStartGame(r, a.ip, a.port, a.id, a.additionalIps, e.value, !1), 100 === M && (n(8, p = !0), setTimeout((() => n(8, p = !1)), 6e3))
+                window.launcherAPI.validateAndStartGame(r, u.ip, u.port, u.id, u.additionalIps, e.value, !1), 100 === M && (n(8, p = !0), setTimeout((() => n(8, p = !1)), 6e3))
             }), 500);
+            let y = 0,
+                T = 0;
             return it((() => {
                 window.launcherAPI && window.launcherAPI.handleProgress && window.launcherAPI.handleProgress(((t, e, a = "", u = "Играть", c = 0, s) => {
                     n(0, M = (0, De.toNumber)(e)), z(me, o = 100 === M, o), n(4, l = a), n(6, g = u), n(5, N = c), z(Le, i = M > 0 && M < 100 || ["отменить", "проверка"].includes(u.toLowerCase()), i), n(9, f = "проверка" === u.toLowerCase()), s && s !== r && z(ze, r = s, r)
                 }))
             })), t.$$.update = () => {
-                if (15 & t.$$.dirty) {
-                    const t = r === wo.Rodina || mo.test(u.settings.userName);
+                if (8203 & t.$$.dirty) {
+                    const t = r === wo.Rodina || mo.test(c.settings.userName);
                     if (n(1, j = r === wo.ArizonaV || 100 !== M || t), j || t) n(7, d = "");
                     else {
-                        const t = /[\u0400-\u04FF]/.test(u.settings.userName);
-                        u.settings.userName && (u.settings.userName.length < 3 || u.settings.userName.length > 20) && !t ? n(7, d = "Ник-нейм должен быть от 3 до 20 символов длиной") : n(7, d = "В ник-нейме разрешены английские буквы, цифры и спец. символ _")
+                        const t = /[\u0400-\u04FF]/.test(c.settings.userName);
+                        c.settings.userName && (c.settings.userName.length < 3 || c.settings.userName.length > 20) && !t ? n(7, d = "Ник-нейм должен быть от 3 до 20 символов длиной") : n(7, d = "В ник-нейме разрешены английские буквы, цифры и спец. символ _")
                     }
                 }
-            }, [M, j, r, u, l, N, g, d, p, f, s, I, function(t) {
+                if (8196 & t.$$.dirty) {
+                    const t = (ko[r] || [r]).map((t => a[t] ? a[t].reduce(((t, {
+                        players: e,
+                        queue: n
+                    }) => (t.players += e, t.queue += n, t)), {
+                        players: 0,
+                        queue: 0
+                    }) : {
+                        players: 0,
+                        queue: 0
+                    }));
+                    n(10, y = new Intl.NumberFormat("ru-RU").format(t.reduce(((t, {
+                        players: e
+                    }) => t + e), 0) || 0)), n(11, T = t.reduce(((t, {
+                        queue: e
+                    }) => t + e), 0) || 0)
+                }
+            }, [M, j, a, c, l, N, g, d, p, f, y, T, I, r, function(t) {
                 M = t, n(0, M)
             }]
         }
-        var Qr = function(t) {
+        var Sr = function(t) {
             window.launcherAPI && window.launcherAPI.openUrlInBrowser && window.launcherAPI.openUrlInBrowser(t)
         };
 
-        function br(t, e, n) {
+        function Qr(t, e, n) {
             const r = t.slice();
             return r[16] = e[n], r
         }
 
-        function Yr(t) {
+        function br(t) {
             let e, n, r = t[6][t[5]],
                 i = [];
-            for (let e = 0; e < r.length; e += 1) i[e] = Pr(br(t, r, e));
+            for (let e = 0; e < r.length; e += 1) i[e] = Yr(Qr(t, r, e));
             const o = t => Et(i[t], 1, 1, (() => {
                 i[t] = null
             }));
@@ -9788,8 +9804,8 @@
                     if (224 & n) {
                         let a;
                         for (r = t[6][t[5]], a = 0; a < r.length; a += 1) {
-                            const o = br(t, r, a);
-                            i[a] ? (i[a].p(o, n), Lt(i[a], 1)) : (i[a] = Pr(o), i[a].c(), Lt(i[a], 1), i[a].m(e, null))
+                            const o = Qr(t, r, a);
+                            i[a] ? (i[a].p(o, n), Lt(i[a], 1)) : (i[a] = Yr(o), i[a].c(), Lt(i[a], 1), i[a].m(e, null))
                         }
                         for (Ot(), a = r.length; a < i.length; a += 1) o(a);
                         mt()
@@ -9812,7 +9828,7 @@
             }
         }
 
-        function Pr(t) {
+        function Yr(t) {
             let e, n, r, i, o, a;
 
             function u() {
@@ -9846,10 +9862,10 @@
             }
         }
 
-        function $r(t) {
+        function Pr(t) {
             let e, n, r, i, o, u, c, s, M, l, N, g, D, j, d, p, f, I, z, T, h, A, x, w, O, m, E, v, _, k, S, P, R, V, H = t[3].name + "",
                 J = `Купить ${t[4]} AZ`,
-                X = t[1] && Yr(t);
+                X = t[1] && br(t);
             return {
                 c() {
                     e = Q("from"), n = Q("div"), r = Q("label"), r.textContent = "Имя", i = Y(), o = Q("div"), u = Q("input"), c = Y(), s = Q("i"), M = Y(), l = Q("div"), N = Q("p"), N.textContent = "Сервер", g = Y(), D = Q("div"), j = Q("div"), d = Q("span"), p = b(H), f = Y(), X && X.c(), I = Y(), z = Q("i"), h = Y(), A = Q("div"), x = Q("label"), x.textContent = "Сумма (₽)", w = Y(), O = Q("input"), E = Y(), v = Q("div"), _ = Q("button"), k = Q("span"), S = b(J), G(r, "for", "name"), G(r, "class", "donation-form__label"), G(u, "id", "name"), G(u, "class", "donation-form__input donation-form__input--edit"), G(u, "type", "text"), G(s, "class", "donation-form__icon icon-edit"), G(o, "class", "donation-form__input-wrapper"), G(n, "class", "donation-form__column"), G(N, "class", "donation-form__label"), G(d, "class", "donation-form__server-name"), G(j, "class", "donation-form__input donation-form__input--server"), F(j, "donation-form__input--server-opened", t[1]), G(z, "class", "donation-form__icon icon-burger-menu"), G(D, "class", "donation-form__input-wrapper donation-form__input-wrapper--pointer"), G(l, "class", "donation-form__column"), G(x, "for", "total"), G(x, "class", "donation-form__label"), G(O, "id", "total"), G(O, "type", "number"), G(O, "class", "donation-form__input"), G(O, "min", m = 0), G(A, "class", "donation-form__column"), G(k, "class", "btn__submit-text"), G(_, "type", "submit"), G(_, "class", "donation-form__submit"), F(_, "donation-form__submit--disabled", !t[0] || t[0] < 0), G(v, "class", "donation-form__column"), G(e, "class", "donation-form")
@@ -9858,7 +9874,7 @@
                     U(a, e, m), L(e, n), L(n, r), L(n, i), L(n, o), L(o, u), W(u, t[2]), L(o, c), L(o, s), L(e, M), L(e, l), L(l, N), L(l, g), L(l, D), L(D, j), L(j, d), L(d, p), L(D, f), X && X.m(D, null), L(D, I), L(D, z), L(e, h), L(e, A), L(A, x), L(A, w), L(A, O), W(O, t[0]), L(e, E), L(e, v), L(v, _), L(_, k), L(k, S), P = !0, R || (V = [$(u, "input", t[10]), $(j, "click", t[11]), y(T = Ze.call(null, D)), $(D, "outsideclick", t[13]), $(O, "input", t[14]), $(_, "click", t[15])], R = !0)
                 },
                 p(t, [e]) {
-                    4 & e && u.value !== t[2] && W(u, t[2]), (!P || 8 & e) && H !== (H = t[3].name + "") && B(p, H), 2 & e && F(j, "donation-form__input--server-opened", t[1]), t[1] ? X ? (X.p(t, e), 2 & e && Lt(X, 1)) : (X = Yr(t), X.c(), Lt(X, 1), X.m(D, I)) : X && (Ot(), Et(X, 1, 1, (() => {
+                    4 & e && u.value !== t[2] && W(u, t[2]), (!P || 8 & e) && H !== (H = t[3].name + "") && B(p, H), 2 & e && F(j, "donation-form__input--server-opened", t[1]), t[1] ? X ? (X.p(t, e), 2 & e && Lt(X, 1)) : (X = br(t), X.c(), Lt(X, 1), X.m(D, I)) : X && (Ot(), Et(X, 1, 1, (() => {
                         X = null
                     })), mt()), 1 & e && Z(O.value) !== t[0] && W(O, t[0]), (!P || 16 & e) && J !== (J = `Купить ${t[4]} AZ`) && B(S, J), 1 & e && F(_, "donation-form__submit--disabled", !t[0] || t[0] < 0)
                 },
@@ -9874,7 +9890,7 @@
             }
         }
 
-        function Rr(t, e, n) {
+        function $r(t, e, n) {
             let r, i, o;
             D(t, ye, (t => n(9, r = t))), D(t, ze, (t => n(5, i = t))), D(t, xe, (t => n(6, o = t)));
             let a, u = !1,
@@ -9885,7 +9901,7 @@
                     n(3, s = t), n(1, u = !1)
                 },
                 N = () => {
-                    Qr(`${r.shop.donateHandlerUrl}?username=${c}&serverId=${s.id}&sum=${a}`)
+                    Sr(`${r.shop.donateHandlerUrl}?username=${c}&serverId=${s.id}&sum=${a}`)
                 };
             return it((() => {
                 n(2, c = r.settings.userName)
@@ -9899,22 +9915,22 @@
                 a = Z(this.value), n(0, a)
             }, () => N()]
         }
-        const Gr = class extends Bt {
+        const Rr = class extends Bt {
             constructor(t) {
-                super(), Zt(this, t, Rr, $r, c, {})
+                super(), Zt(this, t, $r, Pr, c, {})
             }
         };
-        var Zr = function(t, e) {
+        var Gr = function(t, e) {
             return t.toString().replace(/\B(?=(\d{3})+(?!\d))/g, e || " ")
         };
 
-        function Br(t, e, n) {
+        function Zr(t, e, n) {
             const r = t.slice();
             return r[3] = e[n], r[5] = n, r
         }
 
-        function Wr(t) {
-            let e, n, r, i, o, a, u = Zr(t[0].cash, ".") + "";
+        function Br(t) {
+            let e, n, r, i, o, a, u = Gr(t[0].cash, ".") + "";
             return {
                 c() {
                     e = Q("div"), n = Q("span"), r = b(u), i = b(" $"), o = Y(), a = Q("span"), a.textContent = "наличными", G(n, "class", "bundle__money-total"), G(a, "class", "bundle__cash"), G(e, "class", "bundle__money")
@@ -9923,7 +9939,7 @@
                     U(t, e, u), L(e, n), L(n, r), L(n, i), L(e, o), L(e, a)
                 },
                 p(t, e) {
-                    1 & e && u !== (u = Zr(t[0].cash, ".") + "") && B(r, u)
+                    1 & e && u !== (u = Gr(t[0].cash, ".") + "") && B(r, u)
                 },
                 d(t) {
                     t && C(e)
@@ -9931,7 +9947,7 @@
             }
         }
 
-        function Vr(t) {
+        function Wr(t) {
             let e, n, r, i, o = t[3] + "";
             return {
                 c() {
@@ -9949,7 +9965,7 @@
             }
         }
 
-        function Fr(t) {
+        function Vr(t) {
             let e, n, r, i = t[0].priceBeforeDiscount + "";
             return {
                 c() {
@@ -9967,13 +9983,13 @@
             }
         }
 
-        function Hr(t) {
+        function Fr(t) {
             let e, n, r, i, o, a, u, c, s, l, N, g, D, j, d, p, f, I, z, y, T, h, A = t[0].title + "",
-                x = t[0].cash && Wr(t),
+                x = t[0].cash && Br(t),
                 w = t[0].items || [],
                 O = [];
-            for (let e = 0; e < w.length; e += 1) O[e] = Vr(Br(t, w, e));
-            let m = t[0].priceBeforeDiscount && Fr(t);
+            for (let e = 0; e < w.length; e += 1) O[e] = Wr(Zr(t, w, e));
+            let m = t[0].priceBeforeDiscount && Vr(t);
             return T = new mr({
                 props: {
                     onClick: t[1],
@@ -9992,16 +10008,16 @@
                     L(p, I), L(p, z), m && m.m(z, null), L(z, y), Rt(T, z, null), h = !0
                 },
                 p(t, [e]) {
-                    if ((!h || 1 & e && !M(r.src, i = t[0].image)) && G(r, "src", i), (!h || 1 & e) && A !== (A = t[0].title + "") && B(g, A), t[0].cash ? x ? x.p(t, e) : (x = Wr(t), x.c(), x.m(a, d)) : x && (x.d(1), x = null), 1 & e) {
+                    if ((!h || 1 & e && !M(r.src, i = t[0].image)) && G(r, "src", i), (!h || 1 & e) && A !== (A = t[0].title + "") && B(g, A), t[0].cash ? x ? x.p(t, e) : (x = Br(t), x.c(), x.m(a, d)) : x && (x.d(1), x = null), 1 & e) {
                         let n;
                         for (w = t[0].items || [], n = 0; n < w.length; n += 1) {
-                            const r = Br(t, w, n);
-                            O[n] ? O[n].p(r, e) : (O[n] = Vr(r), O[n].c(), O[n].m(f, null))
+                            const r = Zr(t, w, n);
+                            O[n] ? O[n].p(r, e) : (O[n] = Wr(r), O[n].c(), O[n].m(f, null))
                         }
                         for (; n < O.length; n += 1) O[n].d(1);
                         O.length = w.length
                     }
-                    t[0].priceBeforeDiscount ? m ? m.p(t, e) : (m = Fr(t), m.c(), m.m(z, y)) : m && (m.d(1), m = null);
+                    t[0].priceBeforeDiscount ? m ? m.p(t, e) : (m = Vr(t), m.c(), m.m(z, y)) : m && (m.d(1), m = null);
                     const n = {};
                     1 & e && (n.onClick = t[1]), 1 & e && (n.text = `Купить за ${t[0].price} ₽`), T.$set(n)
                 },
@@ -10017,35 +10033,35 @@
             }
         }
 
-        function Jr(t, e, n) {
+        function Hr(t, e, n) {
             let {
                 bundle: r
             } = e;
             return t.$$set = t => {
                 "bundle" in t && n(0, r = t.bundle)
-            }, [r, () => Qr(r.url)]
+            }, [r, () => Sr(r.url)]
         }
-        const Xr = class extends Bt {
+        const Jr = class extends Bt {
             constructor(t) {
-                super(), Zt(this, t, Jr, Hr, c, {
+                super(), Zt(this, t, Hr, Fr, c, {
                     bundle: 0
                 })
             }
         };
 
-        function Kr(t, e, n) {
+        function Xr(t, e, n) {
             const r = t.slice();
             return r[2] = e[n], r[3] = e, r[4] = n, r
         }
 
-        function qr(t) {
+        function Kr(t) {
             let e, n, r;
 
             function i(e) {
                 t[1](e, t[2], t[3], t[4])
             }
             let o = {};
-            return void 0 !== t[2] && (o.bundle = t[2]), e = new Xr({
+            return void 0 !== t[2] && (o.bundle = t[2]), e = new Jr({
                 props: o
             }), st.push((() => Pt(e, "bundle", i))), {
                 c() {
@@ -10071,10 +10087,10 @@
             }
         }
 
-        function ti(t) {
+        function qr(t) {
             let e, n, r = t[0],
                 i = [];
-            for (let e = 0; e < r.length; e += 1) i[e] = qr(Kr(t, r, e));
+            for (let e = 0; e < r.length; e += 1) i[e] = Kr(Xr(t, r, e));
             const o = t => Et(i[t], 1, 1, (() => {
                 i[t] = null
             }));
@@ -10093,8 +10109,8 @@
                     if (1 & n) {
                         let a;
                         for (r = t[0], a = 0; a < r.length; a += 1) {
-                            const o = Kr(t, r, a);
-                            i[a] ? (i[a].p(o, n), Lt(i[a], 1)) : (i[a] = qr(o), i[a].c(), Lt(i[a], 1), i[a].m(e, null))
+                            const o = Xr(t, r, a);
+                            i[a] ? (i[a].p(o, n), Lt(i[a], 1)) : (i[a] = Kr(o), i[a].c(), Lt(i[a], 1), i[a].m(e, null))
                         }
                         for (Ot(), a = r.length; a < i.length; a += 1) o(a);
                         mt()
@@ -10117,7 +10133,7 @@
             }
         }
 
-        function ei(t, e, n) {
+        function ti(t, e, n) {
             let {
                 bundles: r
             } = e;
@@ -10127,16 +10143,16 @@
                 i[o] = t, n(0, r)
             }]
         }
-        const ni = class extends Bt {
+        const ei = class extends Bt {
             constructor(t) {
-                super(), Zt(this, t, ei, ti, c, {
+                super(), Zt(this, t, ti, qr, c, {
                     bundles: 0
                 })
             }
         };
 
-        function ri(t) {
-            let e, n, r, i, o, a, u = Zr(t[0].cash, ".") + "";
+        function ni(t) {
+            let e, n, r, i, o, a, u = Gr(t[0].cash, ".") + "";
             return {
                 c() {
                     e = Q("div"), n = Q("span"), r = b(u), i = b(" $"), o = Y(), a = Q("span"), a.textContent = "наличными", G(n, "class", "pack__money-total"), G(a, "class", "pack__cash"), G(e, "class", "pack__money")
@@ -10145,7 +10161,7 @@
                     U(t, e, u), L(e, n), L(n, r), L(n, i), L(e, o), L(e, a)
                 },
                 p(t, e) {
-                    1 & e && u !== (u = Zr(t[0].cash, ".") + "") && B(r, u)
+                    1 & e && u !== (u = Gr(t[0].cash, ".") + "") && B(r, u)
                 },
                 d(t) {
                     t && C(e)
@@ -10153,7 +10169,7 @@
             }
         }
 
-        function ii(t) {
+        function ri(t) {
             let e, n, r, i = t[0].priceBeforeDiscount + "";
             return {
                 c() {
@@ -10171,11 +10187,11 @@
             }
         }
 
-        function oi(t) {
+        function ii(t) {
             let e, n, r, i, o, a, u, c, s, l, N, g, D, j, d, p, f, I, z, y, T, h = t[0].cash ? "Пакет" : "Предмет",
                 A = t[0].title + "",
-                x = t[0].cash && ri(t),
-                w = t[0].priceBeforeDiscount && ii(t);
+                x = t[0].cash && ni(t),
+                w = t[0].priceBeforeDiscount && ri(t);
             return y = new mr({
                 props: {
                     onClick: t[1],
@@ -10190,7 +10206,7 @@
                     U(t, e, o), L(e, n), L(n, r), L(r, i), L(n, a), L(n, u), L(u, c), L(c, s), L(s, l), L(c, N), L(c, g), L(g, D), L(g, j), L(g, d), L(u, p), x && x.m(u, null), L(e, f), L(e, I), w && w.m(I, null), L(I, z), Rt(y, I, null), T = !0
                 },
                 p(t, [e]) {
-                    (!T || 1 & e && !M(i.src, o = t[0].image)) && G(i, "src", o), (!T || 1 & e) && h !== (h = t[0].cash ? "Пакет" : "Предмет") && B(l, h), (!T || 1 & e) && A !== (A = t[0].title + "") && B(j, A), t[0].cash ? x ? x.p(t, e) : (x = ri(t), x.c(), x.m(u, null)) : x && (x.d(1), x = null), t[0].priceBeforeDiscount ? w ? w.p(t, e) : (w = ii(t), w.c(), w.m(I, z)) : w && (w.d(1), w = null);
+                    (!T || 1 & e && !M(i.src, o = t[0].image)) && G(i, "src", o), (!T || 1 & e) && h !== (h = t[0].cash ? "Пакет" : "Предмет") && B(l, h), (!T || 1 & e) && A !== (A = t[0].title + "") && B(j, A), t[0].cash ? x ? x.p(t, e) : (x = ni(t), x.c(), x.m(u, null)) : x && (x.d(1), x = null), t[0].priceBeforeDiscount ? w ? w.p(t, e) : (w = ri(t), w.c(), w.m(I, z)) : w && (w.d(1), w = null);
                     const n = {};
                     1 & e && (n.onClick = t[1]), 1 & e && (n.text = `Купить за ${t[0].price} ₽`), y.$set(n)
                 },
@@ -10206,30 +10222,30 @@
             }
         }
 
-        function ai(t, e, n) {
+        function oi(t, e, n) {
             let {
                 pack: r
             } = e;
             return t.$$set = t => {
                 "pack" in t && n(0, r = t.pack)
-            }, [r, () => Qr(r.url)]
+            }, [r, () => Sr(r.url)]
         }
-        const ui = class extends Bt {
+        const ai = class extends Bt {
             constructor(t) {
-                super(), Zt(this, t, ai, oi, c, {
+                super(), Zt(this, t, oi, ii, c, {
                     pack: 0
                 })
             }
         };
 
-        function ci(t, e, n) {
+        function ui(t, e, n) {
             const r = t.slice();
             return r[1] = e[n], r
         }
 
-        function si(t) {
+        function ci(t) {
             let e, n;
-            return e = new ui({
+            return e = new ai({
                 props: {
                     pack: t[1]
                 }
@@ -10256,10 +10272,10 @@
             }
         }
 
-        function Mi(t) {
+        function si(t) {
             let e, n, r = t[0],
                 i = [];
-            for (let e = 0; e < r.length; e += 1) i[e] = si(ci(t, r, e));
+            for (let e = 0; e < r.length; e += 1) i[e] = ci(ui(t, r, e));
             const o = t => Et(i[t], 1, 1, (() => {
                 i[t] = null
             }));
@@ -10278,8 +10294,8 @@
                     if (1 & n) {
                         let a;
                         for (r = t[0], a = 0; a < r.length; a += 1) {
-                            const o = ci(t, r, a);
-                            i[a] ? (i[a].p(o, n), Lt(i[a], 1)) : (i[a] = si(o), i[a].c(), Lt(i[a], 1), i[a].m(e, null))
+                            const o = ui(t, r, a);
+                            i[a] ? (i[a].p(o, n), Lt(i[a], 1)) : (i[a] = ci(o), i[a].c(), Lt(i[a], 1), i[a].m(e, null))
                         }
                         for (Ot(), a = r.length; a < i.length; a += 1) o(a);
                         mt()
@@ -10302,7 +10318,7 @@
             }
         }
 
-        function li(t, e, n) {
+        function Mi(t, e, n) {
             let {
                 packs: r
             } = e;
@@ -10310,19 +10326,19 @@
                 "packs" in t && n(0, r = t.packs)
             }, [r]
         }
-        const Ni = class extends Bt {
+        const li = class extends Bt {
             constructor(t) {
-                super(), Zt(this, t, li, Mi, c, {
+                super(), Zt(this, t, Mi, si, c, {
                     packs: 0
                 })
             }
         };
 
-        function gi(t) {
+        function Ni(t) {
             let e, n, r, i, o, a, u, c = !je().isEmpty(t[0].shop.bundles),
                 s = !je().isEmpty(t[0].shop.packs),
-                M = c && Di(t),
-                l = s && ji(t);
+                M = c && gi(t),
+                l = s && Di(t);
             return {
                 c() {
                     e = Q("div"), n = Q("h1"), n.textContent = "Товары", r = Y(), i = Q("div"), M && M.c(), o = Y(), l && l.c(), G(n, "class", "shop-main__title"), G(i, "class", "products__fade-wrapper"), G(e, "class", "products")
@@ -10331,9 +10347,9 @@
                     U(t, e, a), L(e, n), L(e, r), L(e, i), M && M.m(i, null), L(i, o), l && l.m(i, null), u = !0
                 },
                 p(t, e) {
-                    1 & e && (c = !je().isEmpty(t[0].shop.bundles)), c ? M ? (M.p(t, e), 1 & e && Lt(M, 1)) : (M = Di(t), M.c(), Lt(M, 1), M.m(i, o)) : M && (Ot(), Et(M, 1, 1, (() => {
+                    1 & e && (c = !je().isEmpty(t[0].shop.bundles)), c ? M ? (M.p(t, e), 1 & e && Lt(M, 1)) : (M = gi(t), M.c(), Lt(M, 1), M.m(i, o)) : M && (Ot(), Et(M, 1, 1, (() => {
                         M = null
-                    })), mt()), 1 & e && (s = !je().isEmpty(t[0].shop.packs)), s ? l ? (l.p(t, e), 1 & e && Lt(l, 1)) : (l = ji(t), l.c(), Lt(l, 1), l.m(i, null)) : l && (Ot(), Et(l, 1, 1, (() => {
+                    })), mt()), 1 & e && (s = !je().isEmpty(t[0].shop.packs)), s ? l ? (l.p(t, e), 1 & e && Lt(l, 1)) : (l = Di(t), l.c(), Lt(l, 1), l.m(i, null)) : l && (Ot(), Et(l, 1, 1, (() => {
                         l = null
                     })), mt())
                 },
@@ -10351,9 +10367,9 @@
             }
         }
 
-        function Di(t) {
+        function gi(t) {
             let e, n;
-            return e = new ni({
+            return e = new ei({
                 props: {
                     bundles: t[0].shop.bundles
                 }
@@ -10380,9 +10396,9 @@
             }
         }
 
-        function ji(t) {
+        function Di(t) {
             let e, n;
-            return e = new Ni({
+            return e = new li({
                 props: {
                     packs: t[0].shop.packs
                 }
@@ -10409,10 +10425,10 @@
             }
         }
 
-        function di(t) {
+        function ji(t) {
             let e, n, r, i, o, a, u = !je().isEmpty(t[0].shop.bundles) || !je().isEmpty(t[0].shop.packs);
-            r = new Gr({});
-            let c = u && gi(t);
+            r = new Rr({});
+            let c = u && Ni(t);
             return {
                 c() {
                     e = Q("main"), n = Q("div"), $t(r.$$.fragment), o = Y(), c && c.c(), G(n, "class", "shop-main__fade-wrapper"), G(e, "class", "shop-main")
@@ -10421,7 +10437,7 @@
                     U(t, e, i), L(e, n), Rt(r, n, null), L(e, o), c && c.m(e, null), a = !0
                 },
                 p(t, [n]) {
-                    1 & n && (u = !je().isEmpty(t[0].shop.bundles) || !je().isEmpty(t[0].shop.packs)), u ? c ? (c.p(t, n), 1 & n && Lt(c, 1)) : (c = gi(t), c.c(), Lt(c, 1), c.m(e, null)) : c && (Ot(), Et(c, 1, 1, (() => {
+                    1 & n && (u = !je().isEmpty(t[0].shop.bundles) || !je().isEmpty(t[0].shop.packs)), u ? c ? (c.p(t, n), 1 & n && Lt(c, 1)) : (c = Ni(t), c.c(), Lt(c, 1), c.m(e, null)) : c && (Ot(), Et(c, 1, 1, (() => {
                         c = null
                     })), mt())
                 },
@@ -10439,47 +10455,47 @@
             }
         }
 
-        function pi(t, e, n) {
+        function di(t, e, n) {
             let r;
             return D(t, ye, (t => n(0, r = t))), [r]
         }
-        var fi = {
+        var pi = {
                 None: null,
                 InInstall: "inInstall",
                 InUninstall: "inUninstall"
             },
-            Ii = "standard",
-            zi = "popularity",
-            yi = "downloads",
-            Ti = [{
-                type: Ii,
+            fi = "standard",
+            Ii = "popularity",
+            zi = "downloads",
+            yi = [{
+                type: fi,
                 title: "Стандарту"
             }, {
-                type: zi,
+                type: Ii,
                 title: "Популярности"
             }, {
-                type: yi,
+                type: zi,
                 title: "Кол-ву скачиваний"
             }],
-            hi = "all",
-            Ai = "graphic",
-            xi = "script",
-            wi = "installed",
-            Oi = [{
-                id: hi,
+            Ti = "all",
+            hi = "graphic",
+            Ai = "script",
+            xi = "installed",
+            wi = [{
+                id: Ti,
                 title: "ВСЕ МОДЫ"
             }, {
-                id: Ai,
+                id: hi,
                 title: "Графические моды"
             }, {
-                id: xi,
+                id: Ai,
                 title: "Скрипты/Плагины"
             }, {
-                id: wi,
+                id: xi,
                 title: "Установленные"
             }];
 
-        function mi(t) {
+        function Oi(t) {
             let e, n, r, i = t[0].version + "";
             return {
                 c() {
@@ -10497,7 +10513,7 @@
             }
         }
 
-        function Li(t) {
+        function mi(t) {
             let e;
             return {
                 c() {
@@ -10512,7 +10528,7 @@
             }
         }
 
-        function Ei(t) {
+        function Li(t) {
             let e;
             return {
                 c() {
@@ -10527,7 +10543,7 @@
             }
         }
 
-        function vi(t) {
+        function Ei(t) {
             let e;
             return {
                 c() {
@@ -10542,7 +10558,7 @@
             }
         }
 
-        function _i(t) {
+        function vi(t) {
             let e, n, r, i, o, a;
             return n = new mr({
                 props: {
@@ -10586,7 +10602,7 @@
             }
         }
 
-        function ki(t) {
+        function _i(t) {
             let e, n;
             return e = new mr({
                 props: {
@@ -10619,7 +10635,7 @@
             }
         }
 
-        function Ui(e) {
+        function ki(e) {
             let n, r;
             return n = new mr({
                 props: {
@@ -10627,37 +10643,6 @@
                     type: "warning",
                     iconRight: !0,
                     text: "Удаление...",
-                    onClick: Zi,
-                    pseudoDisabled: !0
-                }
-            }), {
-                c() {
-                    $t(n.$$.fragment)
-                },
-                m(t, e) {
-                    Rt(n, t, e), r = !0
-                },
-                p: t,
-                i(t) {
-                    r || (Lt(n.$$.fragment, t), r = !0)
-                },
-                o(t) {
-                    Et(n.$$.fragment, t), r = !1
-                },
-                d(t) {
-                    Gt(n, t)
-                }
-            }
-        }
-
-        function Ci(e) {
-            let n, r;
-            return n = new mr({
-                props: {
-                    icon: "icon-refresh infinity-spin-animation",
-                    type: "warning",
-                    iconRight: !0,
-                    text: "Установка...",
                     onClick: Gi,
                     pseudoDisabled: !0
                 }
@@ -10681,11 +10666,42 @@
             }
         }
 
-        function Si(t) {
+        function Ui(e) {
+            let n, r;
+            return n = new mr({
+                props: {
+                    icon: "icon-refresh infinity-spin-animation",
+                    type: "warning",
+                    iconRight: !0,
+                    text: "Установка...",
+                    onClick: Ri,
+                    pseudoDisabled: !0
+                }
+            }), {
+                c() {
+                    $t(n.$$.fragment)
+                },
+                m(t, e) {
+                    Rt(n, t, e), r = !0
+                },
+                p: t,
+                i(t) {
+                    r || (Lt(n.$$.fragment, t), r = !0)
+                },
+                o(t) {
+                    Et(n.$$.fragment, t), r = !1
+                },
+                d(t) {
+                    Gt(n, t)
+                }
+            }
+        }
+
+        function Ci(t) {
             let e, n, r;
 
             function i(t, r) {
-                return 16 & r && (e = null), 8 & r && (n = null), null == e && (e = !je().isEmpty(t[4])), e ? bi : (null == n && (n = !je().isEmpty(t[3])), n ? Qi : void 0)
+                return 16 & r && (e = null), 8 & r && (n = null), null == e && (e = !je().isEmpty(t[4])), e ? Qi : (null == n && (n = !je().isEmpty(t[3])), n ? Si : void 0)
             }
             let o = i(t, -1),
                 a = o && o(t);
@@ -10705,8 +10721,8 @@
             }
         }
 
-        function Qi(t) {
-            let e, n, r, i, o, a = `Необходимо установить моды "${t[3].map(Wi).join(", ")}"`;
+        function Si(t) {
+            let e, n, r, i, o, a = `Необходимо установить моды "${t[3].map(Bi).join(", ")}"`;
             return {
                 c() {
                     e = Q("p"), n = b(a), G(e, "data-scroll-id", r = `#mod${t[3][0].id}`), G(e, "class", "mod-card__buttons-tip")
@@ -10715,7 +10731,7 @@
                     U(r, e, a), L(e, n), i || (o = $(e, "click", R(t[11])), i = !0)
                 },
                 p(t, i) {
-                    8 & i && a !== (a = `Необходимо установить моды "${t[3].map(Wi).join(", ")}"`) && B(n, a), 8 & i && r !== (r = `#mod${t[3][0].id}`) && G(e, "data-scroll-id", r)
+                    8 & i && a !== (a = `Необходимо установить моды "${t[3].map(Bi).join(", ")}"`) && B(n, a), 8 & i && r !== (r = `#mod${t[3][0].id}`) && G(e, "data-scroll-id", r)
                 },
                 d(t) {
                     t && C(e), i = !1, o()
@@ -10723,8 +10739,8 @@
             }
         }
 
-        function bi(t) {
-            let e, n, r, i, o, a = `Обнаружен конфликт модификаций. Для установки требуется удалить: "${t[4].map(Bi).join(", ")}"`;
+        function Qi(t) {
+            let e, n, r, i, o, a = `Обнаружен конфликт модификаций. Для установки требуется удалить: "${t[4].map(Zi).join(", ")}"`;
             return {
                 c() {
                     e = Q("p"), n = b(a), G(e, "data-scroll-id", r = `#mod${t[4][0].id}`), G(e, "class", "mod-card__buttons-tip")
@@ -10733,7 +10749,7 @@
                     U(r, e, a), L(e, n), i || (o = $(e, "click", R(t[11])), i = !0)
                 },
                 p(t, i) {
-                    16 & i && a !== (a = `Обнаружен конфликт модификаций. Для установки требуется удалить: "${t[4].map(Bi).join(", ")}"`) && B(n, a), 16 & i && r !== (r = `#mod${t[4][0].id}`) && G(e, "data-scroll-id", r)
+                    16 & i && a !== (a = `Обнаружен конфликт модификаций. Для установки требуется удалить: "${t[4].map(Zi).join(", ")}"`) && B(n, a), 16 & i && r !== (r = `#mod${t[4][0].id}`) && G(e, "data-scroll-id", r)
                 },
                 d(t) {
                     t && C(e), i = !1, o()
@@ -10741,11 +10757,11 @@
             }
         }
 
-        function Yi(t) {
+        function bi(t) {
             let e, n, r, i, o, a, u, c, s, M = t[0].description + "",
                 l = !je().isEmpty(t[0].changes) && !je().isNil(t[0].installedVersion) && t[0].installedVersion !== t[0].version,
-                N = t[0].source && Pi(t),
-                g = l && $i(t);
+                N = t[0].source && Yi(t),
+                g = l && Pi(t);
             return {
                 c() {
                     e = Q("div"), n = Q("span"), n.textContent = "Описание", r = Y(), i = Q("p"), o = new J, a = Y(), N && N.c(), u = Y(), g && g.c(), G(n, "class", "mod-card__full-decloration-caption"), o.a = a, G(i, "class", "mod-card__full-description-text"), G(e, "class", "mod-card__full-description")
@@ -10754,7 +10770,7 @@
                     U(t, e, c), L(e, n), L(e, r), L(e, i), o.m(M, i), L(i, a), N && N.m(i, null), L(i, u), g && g.m(i, null), s = !0
                 },
                 p(t, e) {
-                    (!s || 1 & e) && M !== (M = t[0].description + "") && o.p(M), t[0].source ? N ? N.p(t, e) : (N = Pi(t), N.c(), N.m(i, u)) : N && (N.d(1), N = null), 1 & e && (l = !je().isEmpty(t[0].changes) && !je().isNil(t[0].installedVersion) && t[0].installedVersion !== t[0].version), l ? g ? g.p(t, e) : (g = $i(t), g.c(), g.m(i, null)) : g && (g.d(1), g = null)
+                    (!s || 1 & e) && M !== (M = t[0].description + "") && o.p(M), t[0].source ? N ? N.p(t, e) : (N = Yi(t), N.c(), N.m(i, u)) : N && (N.d(1), N = null), 1 & e && (l = !je().isEmpty(t[0].changes) && !je().isNil(t[0].installedVersion) && t[0].installedVersion !== t[0].version), l ? g ? g.p(t, e) : (g = Pi(t), g.c(), g.m(i, null)) : g && (g.d(1), g = null)
                 },
                 i(t) {
                     s || (dt((() => {
@@ -10774,7 +10790,7 @@
             }
         }
 
-        function Pi(t) {
+        function Yi(t) {
             let e, n, r, i, o, a, u = `Источник: ${t[0].source}`;
             return {
                 c() {
@@ -10792,7 +10808,7 @@
             }
         }
 
-        function $i(t) {
+        function Pi(t) {
             let e, n, r, i, o = t[0].changes + "";
             return {
                 c() {
@@ -10810,28 +10826,28 @@
             }
         }
 
-        function Ri(t) {
+        function $i(t) {
             let e, n, r, i, o, u, c, s, l, N, g, D, j, d, p, f, I, z, T, h, A, x, w, O, m, E, v, _, k, S, b, P, Z, B, W = t[0].title + "",
                 V = t[0].author + "",
                 H = t[1] && !je().isNil(t[0].installedVersion) && t[0].installedVersion !== t[0].version,
                 J = t[0].shortDescription + "",
-                X = t[0].versionVisible && mi(t),
-                K = H && Li();
+                X = t[0].versionVisible && Oi(t),
+                K = H && mi();
 
             function q(t, e) {
-                return t[10] ? vi : Ei
+                return t[10] ? Ei : Li
             }
             let tt = q(t),
                 et = tt(t);
-            const nt = [Ci, Ui, ki, _i],
+            const nt = [Ui, ki, _i, vi],
                 rt = [];
 
             function it(t, e) {
-                return t[2] === fi.InInstall ? 0 : t[2] === fi.InUninstall ? 1 : t[1] ? 3 : 2
+                return t[2] === pi.InInstall ? 0 : t[2] === pi.InUninstall ? 1 : t[1] ? 3 : 2
             }
             E = it(t), v = rt[E] = nt[E](t);
-            let ot = !t[1] && Si(t),
-                at = t[10] && Yi(t);
+            let ot = !t[1] && Ci(t),
+                at = t[10] && bi(t);
             return {
                 c() {
                     e = Q("div"), n = Q("div"), r = Q("div"), i = Q("img"), u = Y(), c = Q("div"), s = Q("div"), l = Q("h2"), N = Y(), g = Q("div"), D = Q("div"), j = Q("span"), j.textContent = "Автор:", d = Q("span"), p = Y(), X && X.c(), f = Y(), I = Q("div"), K && K.c(), z = Y(), T = Q("span"), T.textContent = "Подробнее", h = Y(), et.c(), A = Y(), x = Q("div"), w = Q("p"), O = Y(), m = Q("div"), v.c(), _ = Y(), ot && ot.c(), k = Y(), at && at.c(), M(i.src, o = t[0].image) || G(i, "src", o), G(i, "alt", ""), G(i, "class", "mod-card__image"), G(r, "class", "mod-card__image-wrapper"), G(l, "class", "mod-card__title"), G(s, "class", "mod-card__title-wrapper"), G(j, "class", "mod-card__author"), G(d, "class", "mod-card__author-name"), G(D, "class", "mod-card__info"), G(T, "class", "mod-card__more"), G(I, "class", "mod-card__more-wrapper"), G(g, "class", "mod-card__info-row"), G(w, "class", "mod-card__description-text"), G(x, "class", "mod-card__description"), G(m, "class", "mod-card__buttons"), G(c, "class", "mod-card__details"), G(n, "class", "mod-card__main-info"), G(e, "id", S = `mod${t[0].id}`), G(e, "class", "mod-card"), F(e, "mod-card--expanded", t[10]), F(e, "mod-card--top-mod", t[7])
@@ -10840,11 +10856,11 @@
                     U(o, e, a), L(e, n), L(n, r), L(r, i), L(n, u), L(n, c), L(c, s), L(s, l), l.innerHTML = W, L(c, N), L(c, g), L(g, D), L(D, j), L(D, d), d.innerHTML = V, L(D, p), X && X.m(D, null), L(g, f), L(g, I), K && K.m(I, null), L(I, z), L(I, T), L(I, h), et.m(I, null), L(c, A), L(c, x), L(x, w), w.innerHTML = J, L(c, O), L(c, m), rt[E].m(m, null), L(c, _), ot && ot.m(c, null), L(e, k), at && at.m(e, null), P = !0, Z || (B = [$(I, "click", R(t[13])), y(b = Ze.call(null, e)), $(e, "outsideclick", t[14])], Z = !0)
                 },
                 p(t, [n]) {
-                    (!P || 1 & n && !M(i.src, o = t[0].image)) && G(i, "src", o), (!P || 1 & n) && W !== (W = t[0].title + "") && (l.innerHTML = W), (!P || 1 & n) && V !== (V = t[0].author + "") && (d.innerHTML = V), t[0].versionVisible ? X ? X.p(t, n) : (X = mi(t), X.c(), X.m(D, null)) : X && (X.d(1), X = null), 3 & n && (H = t[1] && !je().isNil(t[0].installedVersion) && t[0].installedVersion !== t[0].version), H ? K || (K = Li(), K.c(), K.m(I, z)) : K && (K.d(1), K = null), tt !== (tt = q(t)) && (et.d(1), et = tt(t), et && (et.c(), et.m(I, null))), (!P || 1 & n) && J !== (J = t[0].shortDescription + "") && (w.innerHTML = J);
+                    (!P || 1 & n && !M(i.src, o = t[0].image)) && G(i, "src", o), (!P || 1 & n) && W !== (W = t[0].title + "") && (l.innerHTML = W), (!P || 1 & n) && V !== (V = t[0].author + "") && (d.innerHTML = V), t[0].versionVisible ? X ? X.p(t, n) : (X = Oi(t), X.c(), X.m(D, null)) : X && (X.d(1), X = null), 3 & n && (H = t[1] && !je().isNil(t[0].installedVersion) && t[0].installedVersion !== t[0].version), H ? K || (K = mi(), K.c(), K.m(I, z)) : K && (K.d(1), K = null), tt !== (tt = q(t)) && (et.d(1), et = tt(t), et && (et.c(), et.m(I, null))), (!P || 1 & n) && J !== (J = t[0].shortDescription + "") && (w.innerHTML = J);
                     let r = E;
                     E = it(t), E === r ? rt[E].p(t, n) : (Ot(), Et(rt[r], 1, 1, (() => {
                         rt[r] = null
-                    })), mt(), v = rt[E], v ? v.p(t, n) : (v = rt[E] = nt[E](t), v.c()), Lt(v, 1), v.m(m, null)), t[1] ? ot && (ot.d(1), ot = null) : ot ? ot.p(t, n) : (ot = Si(t), ot.c(), ot.m(c, null)), t[10] ? at ? (at.p(t, n), 1024 & n && Lt(at, 1)) : (at = Yi(t), at.c(), Lt(at, 1), at.m(e, null)) : at && (Ot(), Et(at, 1, 1, (() => {
+                    })), mt(), v = rt[E], v ? v.p(t, n) : (v = rt[E] = nt[E](t), v.c()), Lt(v, 1), v.m(m, null)), t[1] ? ot && (ot.d(1), ot = null) : ot ? ot.p(t, n) : (ot = Ci(t), ot.c(), ot.m(c, null)), t[10] ? at ? (at.p(t, n), 1024 & n && Lt(at, 1)) : (at = bi(t), at.c(), Lt(at, 1), at.m(e, null)) : at && (Ot(), Et(at, 1, 1, (() => {
                         at = null
                     })), mt()), (!P || 1 & n && S !== (S = `mod${t[0].id}`)) && G(e, "id", S), 1024 & n && F(e, "mod-card--expanded", t[10]), 128 & n && F(e, "mod-card--top-mod", t[7])
                 },
@@ -10859,16 +10875,16 @@
                 }
             }
         }
-        const Gi = () => {},
-            Zi = () => {},
-            Bi = ({
+        const Ri = () => {},
+            Gi = () => {},
+            Zi = ({
                 title: t
             }) => t,
-            Wi = ({
+            Bi = ({
                 title: t
             }) => t;
 
-        function Vi(t, e, n) {
+        function Wi(t, e, n) {
             let {
                 mod: r = {}
             } = e, {
@@ -10876,7 +10892,7 @@
             } = e, {
                 actionsDisabled: o = !1
             } = e, {
-                interactionStatus: a = fi.None
+                interactionStatus: a = pi.None
             } = e, {
                 requiredDependencyMods: u = []
             } = e, {
@@ -10891,7 +10907,7 @@
             return t.$$set = t => {
                 "mod" in t && n(0, r = t.mod), "installed" in t && n(1, i = t.installed), "actionsDisabled" in t && n(12, o = t.actionsDisabled), "interactionStatus" in t && n(2, a = t.interactionStatus), "requiredDependencyMods" in t && n(3, u = t.requiredDependencyMods), "modsConflicts" in t && n(4, c = t.modsConflicts), "onInstall" in t && n(5, s = t.onInstall), "onUninstall" in t && n(6, M = t.onUninstall), "topMod" in t && n(7, l = t.topMod)
             }, t.$$.update = () => {
-                4100 & t.$$.dirty && n(8, N = a !== fi.None || o), 24 & t.$$.dirty && n(9, g = !je().isEmpty(u) || !je().isEmpty(c))
+                4100 & t.$$.dirty && n(8, N = a !== pi.None || o), 24 & t.$$.dirty && n(9, g = !je().isEmpty(u) || !je().isEmpty(c))
             }, [r, i, a, u, c, s, M, l, N, g, D, ({
                 target: t
             }) => {
@@ -10901,9 +10917,9 @@
                 })
             }, o, () => n(10, D = !D), () => n(10, D = !1)]
         }
-        const Fi = class extends Bt {
+        const Vi = class extends Bt {
             constructor(t) {
-                super(), Zt(this, t, Vi, Ri, c, {
+                super(), Zt(this, t, Wi, $i, c, {
                     mod: 0,
                     installed: 1,
                     actionsDisabled: 12,
@@ -10916,40 +10932,40 @@
                 })
             }
         };
-        var Hi = Ft(null),
-            Ji = Ft(fi.None);
+        var Fi = Ft(null),
+            Hi = Ft(pi.None);
+
+        function Ji(t, e, n) {
+            const r = t.slice();
+            return r[28] = e[n], r
+        }
 
         function Xi(t, e, n) {
             const r = t.slice();
-            return r[28] = e[n], r
+            return r[31] = e[n], r
         }
 
         function Ki(t, e, n) {
             const r = t.slice();
-            return r[31] = e[n], r
+            return r[34] = e[n], r
         }
 
         function qi(t, e, n) {
             const r = t.slice();
-            return r[34] = e[n], r
+            return r[37] = e[n], r
         }
 
         function to(t, e, n) {
             const r = t.slice();
-            return r[37] = e[n], r
+            return r[28] = e[n], r
         }
 
         function eo(t, e, n) {
             const r = t.slice();
-            return r[28] = e[n], r
-        }
-
-        function no(t, e, n) {
-            const r = t.slice();
             return r[31] = e[n], r
         }
 
-        function ro(t) {
+        function no(t) {
             let e, n;
 
             function r() {
@@ -10959,14 +10975,14 @@
             function i() {
                 return t[17](t[31])
             }
-            return e = new Fi({
+            return e = new Vi({
                 props: {
                     mod: t[31],
                     installed: t[31].installed,
-                    requiredDependencyMods: je().isEmpty(t[31].dependencyModsIds) ? [] : t[31].dependencyModsIds.map(t[14]).filter(lo),
-                    modsConflicts: je().isEmpty(t[31].conflictModsIds) ? [] : t[31].conflictModsIds.map(t[15]).filter(No),
+                    requiredDependencyMods: je().isEmpty(t[31].dependencyModsIds) ? [] : t[31].dependencyModsIds.map(t[14]).filter(Mo),
+                    modsConflicts: je().isEmpty(t[31].conflictModsIds) ? [] : t[31].conflictModsIds.map(t[15]).filter(lo),
                     actionsDisabled: !je().isNil(t[7]) && t[7] !== t[31].id,
-                    interactionStatus: je().isNil(t[7]) || t[7] !== t[31].id ? fi.None : t[3],
+                    interactionStatus: je().isNil(t[7]) || t[7] !== t[31].id ? pi.None : t[3],
                     onInstall: r,
                     onUninstall: i,
                     topMod: !0
@@ -10981,7 +10997,7 @@
                 p(n, o) {
                     t = n;
                     const a = {};
-                    32 & o[0] && (a.mod = t[31]), 32 & o[0] && (a.installed = t[31].installed), 48 & o[0] && (a.requiredDependencyMods = je().isEmpty(t[31].dependencyModsIds) ? [] : t[31].dependencyModsIds.map(t[14]).filter(lo)), 48 & o[0] && (a.modsConflicts = je().isEmpty(t[31].conflictModsIds) ? [] : t[31].conflictModsIds.map(t[15]).filter(No)), 160 & o[0] && (a.actionsDisabled = !je().isNil(t[7]) && t[7] !== t[31].id), 168 & o[0] && (a.interactionStatus = je().isNil(t[7]) || t[7] !== t[31].id ? fi.None : t[3]), 32 & o[0] && (a.onInstall = r), 32 & o[0] && (a.onUninstall = i), e.$set(a)
+                    32 & o[0] && (a.mod = t[31]), 32 & o[0] && (a.installed = t[31].installed), 48 & o[0] && (a.requiredDependencyMods = je().isEmpty(t[31].dependencyModsIds) ? [] : t[31].dependencyModsIds.map(t[14]).filter(Mo)), 48 & o[0] && (a.modsConflicts = je().isEmpty(t[31].conflictModsIds) ? [] : t[31].conflictModsIds.map(t[15]).filter(lo)), 160 & o[0] && (a.actionsDisabled = !je().isNil(t[7]) && t[7] !== t[31].id), 168 & o[0] && (a.interactionStatus = je().isNil(t[7]) || t[7] !== t[31].id ? pi.None : t[3]), 32 & o[0] && (a.onInstall = r), 32 & o[0] && (a.onUninstall = i), e.$set(a)
                 },
                 i(t) {
                     n || (Lt(e.$$.fragment, t), n = !0)
@@ -10995,10 +11011,10 @@
             }
         }
 
-        function io(t) {
+        function ro(t) {
             let e, n, r, i = t[28],
                 o = [];
-            for (let e = 0; e < i.length; e += 1) o[e] = ro(no(t, i, e));
+            for (let e = 0; e < i.length; e += 1) o[e] = no(eo(t, i, e));
             const a = t => Et(o[t], 1, 1, (() => {
                 o[t] = null
             }));
@@ -11017,8 +11033,8 @@
                     if (952 & r[0]) {
                         let u;
                         for (i = t[28], u = 0; u < i.length; u += 1) {
-                            const a = no(t, i, u);
-                            o[u] ? (o[u].p(a, r), Lt(o[u], 1)) : (o[u] = ro(a), o[u].c(), Lt(o[u], 1), o[u].m(e, n))
+                            const a = eo(t, i, u);
+                            o[u] ? (o[u].p(a, r), Lt(o[u], 1)) : (o[u] = no(a), o[u].c(), Lt(o[u], 1), o[u].m(e, n))
                         }
                         for (Ot(), u = i.length; u < o.length; u += 1) a(u);
                         mt()
@@ -11041,10 +11057,10 @@
             }
         }
 
-        function oo(t) {
-            let e, n = Oi,
+        function io(t) {
+            let e, n = wi,
                 r = [];
-            for (let e = 0; e < n.length; e += 1) r[e] = ao(to(t, n, e));
+            for (let e = 0; e < n.length; e += 1) r[e] = oo(qi(t, n, e));
             return {
                 c() {
                     e = Q("div");
@@ -11058,9 +11074,9 @@
                 p(t, i) {
                     if (4096 & i[0]) {
                         let o;
-                        for (n = Oi, o = 0; o < n.length; o += 1) {
-                            const a = to(t, n, o);
-                            r[o] ? r[o].p(a, i) : (r[o] = ao(a), r[o].c(), r[o].m(e, null))
+                        for (n = wi, o = 0; o < n.length; o += 1) {
+                            const a = qi(t, n, o);
+                            r[o] ? r[o].p(a, i) : (r[o] = oo(a), r[o].c(), r[o].m(e, null))
                         }
                         for (; o < r.length; o += 1) r[o].d(1);
                         r.length = n.length
@@ -11072,7 +11088,7 @@
             }
         }
 
-        function ao(t) {
+        function oo(t) {
             let e, n, r, i, o, a = t[37].title + "";
 
             function u() {
@@ -11094,7 +11110,7 @@
             }
         }
 
-        function uo(t) {
+        function ao(t) {
             let e, n, r, i, o, a = t[34].title + "";
 
             function u() {
@@ -11116,7 +11132,7 @@
             }
         }
 
-        function co(t) {
+        function uo(t) {
             let e, n;
 
             function r() {
@@ -11126,14 +11142,14 @@
             function i() {
                 return t[24](t[31])
             }
-            return e = new Fi({
+            return e = new Vi({
                 props: {
                     mod: t[31],
                     installed: t[31].installed,
-                    requiredDependencyMods: je().isEmpty(t[31].dependencyModsIds) ? [] : t[31].dependencyModsIds.map(t[21]).filter(go),
-                    modsConflicts: je().isEmpty(t[31].conflictModsIds) ? [] : t[31].conflictModsIds.map(t[22]).filter(Do),
+                    requiredDependencyMods: je().isEmpty(t[31].dependencyModsIds) ? [] : t[31].dependencyModsIds.map(t[21]).filter(No),
+                    modsConflicts: je().isEmpty(t[31].conflictModsIds) ? [] : t[31].conflictModsIds.map(t[22]).filter(go),
                     actionsDisabled: !je().isNil(t[7]) && t[7] !== t[31].id,
-                    interactionStatus: je().isNil(t[7]) || t[7] !== t[31].id ? fi.None : t[3],
+                    interactionStatus: je().isNil(t[7]) || t[7] !== t[31].id ? pi.None : t[3],
                     onInstall: r,
                     onUninstall: i
                 }
@@ -11147,7 +11163,7 @@
                 p(n, o) {
                     t = n;
                     const a = {};
-                    1 & o[0] && (a.mod = t[31]), 1 & o[0] && (a.installed = t[31].installed), 17 & o[0] && (a.requiredDependencyMods = je().isEmpty(t[31].dependencyModsIds) ? [] : t[31].dependencyModsIds.map(t[21]).filter(go)), 17 & o[0] && (a.modsConflicts = je().isEmpty(t[31].conflictModsIds) ? [] : t[31].conflictModsIds.map(t[22]).filter(Do)), 129 & o[0] && (a.actionsDisabled = !je().isNil(t[7]) && t[7] !== t[31].id), 137 & o[0] && (a.interactionStatus = je().isNil(t[7]) || t[7] !== t[31].id ? fi.None : t[3]), 1 & o[0] && (a.onInstall = r), 1 & o[0] && (a.onUninstall = i), e.$set(a)
+                    1 & o[0] && (a.mod = t[31]), 1 & o[0] && (a.installed = t[31].installed), 17 & o[0] && (a.requiredDependencyMods = je().isEmpty(t[31].dependencyModsIds) ? [] : t[31].dependencyModsIds.map(t[21]).filter(No)), 17 & o[0] && (a.modsConflicts = je().isEmpty(t[31].conflictModsIds) ? [] : t[31].conflictModsIds.map(t[22]).filter(go)), 129 & o[0] && (a.actionsDisabled = !je().isNil(t[7]) && t[7] !== t[31].id), 137 & o[0] && (a.interactionStatus = je().isNil(t[7]) || t[7] !== t[31].id ? pi.None : t[3]), 1 & o[0] && (a.onInstall = r), 1 & o[0] && (a.onUninstall = i), e.$set(a)
                 },
                 i(t) {
                     n || (Lt(e.$$.fragment, t), n = !0)
@@ -11161,10 +11177,10 @@
             }
         }
 
-        function so(t) {
+        function co(t) {
             let e, n, r, i = t[28],
                 o = [];
-            for (let e = 0; e < i.length; e += 1) o[e] = co(Ki(t, i, e));
+            for (let e = 0; e < i.length; e += 1) o[e] = uo(Xi(t, i, e));
             const a = t => Et(o[t], 1, 1, (() => {
                 o[t] = null
             }));
@@ -11183,8 +11199,8 @@
                     if (921 & r[0]) {
                         let u;
                         for (i = t[28], u = 0; u < i.length; u += 1) {
-                            const a = Ki(t, i, u);
-                            o[u] ? (o[u].p(a, r), Lt(o[u], 1)) : (o[u] = co(a), o[u].c(), Lt(o[u], 1), o[u].m(e, n))
+                            const a = Xi(t, i, u);
+                            o[u] ? (o[u].p(a, r), Lt(o[u], 1)) : (o[u] = uo(a), o[u].c(), Lt(o[u], 1), o[u].m(e, n))
                         }
                         for (Ot(), u = i.length; u < o.length; u += 1) a(u);
                         mt()
@@ -11207,21 +11223,21 @@
             }
         }
 
-        function Mo(t) {
-            let e, n, r, i, o, a, u, c, s, M, l, N, g, D, j, d, p, f, I, z, y, T = Oi.find(t[18]).title + "",
+        function so(t) {
+            let e, n, r, i, o, a, u, c, s, M, l, N, g, D, j, d, p, f, I, z, y, T = wi.find(t[18]).title + "",
                 h = t[5],
                 A = [];
-            for (let e = 0; e < h.length; e += 1) A[e] = io(eo(t, h, e));
+            for (let e = 0; e < h.length; e += 1) A[e] = ro(to(t, h, e));
             const x = t => Et(A[t], 1, 1, (() => {
                 A[t] = null
             }));
-            let w = t[6] && oo(t),
-                O = Ti,
+            let w = t[6] && io(t),
+                O = yi,
                 m = [];
-            for (let e = 0; e < O.length; e += 1) m[e] = uo(qi(t, O, e));
+            for (let e = 0; e < O.length; e += 1) m[e] = ao(Ki(t, O, e));
             let E = t[0],
                 v = [];
-            for (let e = 0; e < E.length; e += 1) v[e] = so(Xi(t, E, e));
+            for (let e = 0; e < E.length; e += 1) v[e] = co(Ji(t, E, e));
             const _ = t => Et(v[t], 1, 1, (() => {
                 v[t] = null
             }));
@@ -11248,17 +11264,17 @@
                     if (952 & e[0]) {
                         let n;
                         for (h = t[5], n = 0; n < h.length; n += 1) {
-                            const i = eo(t, h, n);
-                            A[n] ? (A[n].p(i, e), Lt(A[n], 1)) : (A[n] = io(i), A[n].c(), Lt(A[n], 1), A[n].m(r, null))
+                            const i = to(t, h, n);
+                            A[n] ? (A[n].p(i, e), Lt(A[n], 1)) : (A[n] = ro(i), A[n].c(), Lt(A[n], 1), A[n].m(r, null))
                         }
                         for (Ot(), n = h.length; n < A.length; n += 1) x(n);
                         mt()
                     }
-                    if ((!I || 4 & e[0]) && T !== (T = Oi.find(t[18]).title + "") && B(s, T), t[6] ? w ? w.p(t, e) : (w = oo(t), w.c(), w.m(u, null)) : w && (w.d(1), w = null), 64 & e[0] && F(u, "common-mods-header-select--opened", t[6]), 1026 & e[0]) {
+                    if ((!I || 4 & e[0]) && T !== (T = wi.find(t[18]).title + "") && B(s, T), t[6] ? w ? w.p(t, e) : (w = io(t), w.c(), w.m(u, null)) : w && (w.d(1), w = null), 64 & e[0] && F(u, "common-mods-header-select--opened", t[6]), 1026 & e[0]) {
                         let n;
-                        for (O = Ti, n = 0; n < O.length; n += 1) {
-                            const r = qi(t, O, n);
-                            m[n] ? m[n].p(r, e) : (m[n] = uo(r), m[n].c(), m[n].m(D, null))
+                        for (O = yi, n = 0; n < O.length; n += 1) {
+                            const r = Ki(t, O, n);
+                            m[n] ? m[n].p(r, e) : (m[n] = ao(r), m[n].c(), m[n].m(D, null))
                         }
                         for (; n < m.length; n += 1) m[n].d(1);
                         m.length = O.length
@@ -11266,8 +11282,8 @@
                     if (921 & e[0]) {
                         let n;
                         for (E = t[0], n = 0; n < E.length; n += 1) {
-                            const r = Xi(t, E, n);
-                            v[n] ? (v[n].p(r, e), Lt(v[n], 1)) : (v[n] = so(r), v[n].c(), Lt(v[n], 1), v[n].m(p, null))
+                            const r = Ji(t, E, n);
+                            v[n] ? (v[n].p(r, e), Lt(v[n], 1)) : (v[n] = co(r), v[n].c(), Lt(v[n], 1), v[n].m(p, null))
                         }
                         for (Ot(), n = E.length; n < v.length; n += 1) _(n);
                         mt()
@@ -11297,14 +11313,14 @@
                 }
             }
         }
-        const lo = t => t && !t.installed,
-            No = t => t && t.installed,
-            go = t => t && !t.installed,
-            Do = t => t && t.installed;
+        const Mo = t => t && !t.installed,
+            lo = t => t && t.installed,
+            No = t => t && !t.installed,
+            go = t => t && t.installed;
 
-        function jo(t, e, n) {
+        function Do(t, e, n) {
             let r, i, o, a, u;
-            D(t, ze, (t => n(25, r = t))), D(t, Ji, (t => n(3, i = t))), D(t, Hi, (t => n(7, o = t))), D(t, he, (t => n(4, a = t))), D(t, Le, (t => n(26, u = t)));
+            D(t, ze, (t => n(25, r = t))), D(t, Hi, (t => n(3, i = t))), D(t, Fi, (t => n(7, o = t))), D(t, he, (t => n(4, a = t))), D(t, Le, (t => n(26, u = t)));
             let c = [
                     [],
                     []
@@ -11317,8 +11333,8 @@
                     [],
                     []
                 ],
-                l = Ii,
-                N = hi,
+                l = fi,
+                N = Ti,
                 g = !1;
             const j = t => {
                     return e = t, n = _o, r = new Array(n).fill(null).map((function() {
@@ -11329,10 +11345,10 @@
                     var e, n, r
                 },
                 d = t => {
-                    window.launcherAPI && window.launcherAPI.installMod && (z(Hi, o = t, o), z(Ji, i = fi.InInstall, i), window.launcherAPI.installMod(r, t))
+                    window.launcherAPI && window.launcherAPI.installMod && (z(Fi, o = t, o), z(Hi, i = pi.InInstall, i), window.launcherAPI.installMod(r, t))
                 },
                 p = t => {
-                    window.launcherAPI && window.launcherAPI.uninstallMod && (z(Hi, o = t, o), z(Ji, i = fi.InUninstall, i), window.launcherAPI.uninstallMod(r, t))
+                    window.launcherAPI && window.launcherAPI.uninstallMod && (z(Fi, o = t, o), z(Hi, i = pi.InUninstall, i), window.launcherAPI.uninstallMod(r, t))
                 },
                 f = t => n(1, l = t),
                 I = () => n(6, g = !g),
@@ -11340,7 +11356,7 @@
                     n(2, N = t), I()
                 };
             return t.$$.update = () => {
-                if (8 & t.$$.dirty[0] && z(Le, u = i !== fi.None, u), 16 & t.$$.dirty[0]) {
+                if (8 & t.$$.dirty[0] && z(Le, u = i !== pi.None, u), 16 & t.$$.dirty[0]) {
                     const t = a.reduce(((t, e) => (e.top ? t.top.push(e) : t.common.push(e), t)), {
                         top: [],
                         common: []
@@ -11349,18 +11365,23 @@
                 }
                 if (8199 & t.$$.dirty[0]) {
                     switch (l) {
-                        case Ii:
+                        case fi:
                             n(0, M = [...s.flat(1 / 0)]);
                             break;
-                        case zi:
+                        case Ii:
                             n(0, M = [...s.flat(1 / 0)].sort(((t, e) => e.monthDownloads - t.monthDownloads)));
                             break;
-                        case yi:
+                        case zi:
                             n(0, M = [...s.flat(1 / 0)].sort(((t, e) => e.totalDownloads - t.totalDownloads)))
                     }
                     switch (N) {
-                        case hi:
+                        case Ti:
                             n(0, M = j(M));
+                            break;
+                        case hi:
+                            n(0, M = j(M.filter((({
+                                category: t
+                            }) => t === hi))));
                             break;
                         case Ai:
                             n(0, M = j(M.filter((({
@@ -11368,11 +11389,6 @@
                             }) => t === Ai))));
                             break;
                         case xi:
-                            n(0, M = j(M.filter((({
-                                category: t
-                            }) => t === xi))));
-                            break;
-                        case wi:
                             n(0, M = j(M.filter((({
                                 installed: t
                             }) => t))))
@@ -11382,15 +11398,15 @@
                 id: t
             }) => t === N, t => y(t.id), t => f(t.type), t => a.find((e => e.id === t)), t => a.find((e => e.id === t)), t => d(t.id), t => p(t.id)]
         }
-        const po = class extends Bt {
+        const jo = class extends Bt {
             constructor(t) {
-                super(), Zt(this, t, jo, Mo, c, {}, null, [-1, -1])
+                super(), Zt(this, t, Do, so, c, {}, null, [-1, -1])
             }
         };
 
-        function fo(e) {
+        function po(e) {
             let n, r, i, o;
-            return r = new po({}), {
+            return r = new jo({}), {
                 c() {
                     n = Q("main"), $t(r.$$.fragment), G(n, "class", "mods")
                 },
@@ -11411,20 +11427,20 @@
                 }
             }
         }
-        var Io, zo, yo, To = {
+        var fo, Io, zo, yo, To = {
                 "/": class extends Bt {
                     constructor(t) {
-                        super(), Zt(this, t, Sr, Ur, c, {})
+                        super(), Zt(this, t, Cr, Ur, c, {})
                     }
                 },
                 "/shop": class extends Bt {
                     constructor(t) {
-                        super(), Zt(this, t, pi, di, c, {})
+                        super(), Zt(this, t, di, ji, c, {})
                     }
                 },
                 "/mods": class extends Bt {
                     constructor(t) {
-                        super(), Zt(this, t, null, fo, c, {})
+                        super(), Zt(this, t, null, po, c, {})
                     }
                 }
             },
@@ -11445,8 +11461,8 @@
                 OldResolution: "oldResolution",
                 HdrResolution: "hdrResolution"
             },
-            Ao = (de(Io = {}, ho.WideScreen, "Широкий экран"), de(Io, ho.AutoLogin, "Автологин"), de(Io, ho.Preload, "Предзагрузка"), de(Io, ho.AutoClean, "Автоочистка"), de(Io, ho.Windowed, "Запуск в окне"), de(Io, ho.TestBranch, "Тестовая ветка"), de(Io, ho.Seasons, "Времена года"), de(Io, ho.Rtree, "Деревья"), de(Io, ho.Graphics, "Графика Plus"), de(Io, ho.ShitPc, "Слабый ПК"), de(Io, ho.OldResolution, "Устаревшие разрешения"), de(Io, ho.HdrResolution, "Поддержка HDR"), de(Io, ho.Grass, "Растительность"), de(Io, ho.CefAuth, "Новая авторизация"), de(Io, ho.CefDirtyRects, "Оптимизация интерфейсов"), Io),
-            xo = (de(zo = {}, ho.WideScreen, "Расширяет угол обзора и адаптирует интерфейс под современные мониторы.\n*Рекомендуется включить"), de(zo, ho.AutoLogin, "Сохраняет пароль и выполняет автоматический вход в аккаунт."), de(zo, ho.Preload, "Оптимизирует загрузку моделей и компонентов для снижения нагрузки на диск.\n*Может вызвать подлагивания при движении"), de(zo, ho.AutoClean, "Удаляет лишние файлы и модификации из папки игры при запуске."), de(zo, ho.Windowed, "Запускает игру в изменяемом окне (зависит от разрешения экрана в настройках игры).\n*При отключении используется полноэкранный режим"), de(zo, ho.TestBranch, "Загружает отдельную версию игры для публичных тестов.\n*Доступно только во время тестов. Следите за новостями проекта"), de(zo, ho.Seasons, "Окружение и растительность меняются в зависимости от сезона (лето, осень, зима, весна)."), de(zo, ho.Graphics, "Добавляет улучшенное освещение и небо.\n*Снижает производительность. Несовместимо с ENB и другими графическими модами"), de(zo, ho.ShitPc, "Отключает эффекты и снижает качество текстур.\n*Рекомендуется для очень слабых ПК"), de(zo, ho.OldResolution, "Отключает 32-bit режим экрана, снижая качество и увеличивая задержку.\n*Включайте только при отсутствии поддержки 32-bit видеокартой"), de(zo, ho.HdrResolution, "Активирует вывод изображения в HDR.\n*[BETA] Используйте только при поддержке монитором HDR. Возможны искажения цветов."), de(zo, ho.Grass, "Повышает детализацию травы, листвы и других элементов окружения.\n*Может снизить производительность"), de(zo, ho.CefAuth, "Включает обновлённую систему и вид входа в игру.\n*Рекомендуется включить"), zo),
+            Ao = (de(fo = {}, ho.WideScreen, "Широкий экран"), de(fo, ho.AutoLogin, "Автологин"), de(fo, ho.Preload, "Предзагрузка"), de(fo, ho.AutoClean, "Автоочистка"), de(fo, ho.Windowed, "Запуск в окне"), de(fo, ho.TestBranch, "Тестовая ветка"), de(fo, ho.Seasons, "Времена года"), de(fo, ho.Rtree, "Деревья"), de(fo, ho.Graphics, "Графика Plus"), de(fo, ho.ShitPc, "Слабый ПК"), de(fo, ho.OldResolution, "Устаревшие разрешения"), de(fo, ho.HdrResolution, "Поддержка HDR"), de(fo, ho.Grass, "Растительность"), de(fo, ho.CefAuth, "Новая авторизация"), de(fo, ho.CefDirtyRects, "Оптимизация интерфейсов"), fo),
+            xo = (de(Io = {}, ho.WideScreen, "Расширяет угол обзора и адаптирует интерфейс под современные мониторы.\n*Рекомендуется включить"), de(Io, ho.AutoLogin, "Сохраняет пароль и выполняет автоматический вход в аккаунт."), de(Io, ho.Preload, "Оптимизирует загрузку моделей и компонентов для снижения нагрузки на диск.\n*Может вызвать подлагивания при движении"), de(Io, ho.AutoClean, "Удаляет лишние файлы и модификации из папки игры при запуске."), de(Io, ho.Windowed, "Запускает игру в изменяемом окне (зависит от разрешения экрана в настройках игры).\n*При отключении используется полноэкранный режим"), de(Io, ho.TestBranch, "Загружает отдельную версию игры для публичных тестов.\n*Доступно только во время тестов. Следите за новостями проекта"), de(Io, ho.Seasons, "Окружение и растительность меняются в зависимости от сезона (лето, осень, зима, весна)."), de(Io, ho.Graphics, "Добавляет улучшенное освещение и небо.\n*Снижает производительность. Несовместимо с ENB и другими графическими модами"), de(Io, ho.ShitPc, "Отключает эффекты и снижает качество текстур.\n*Рекомендуется для очень слабых ПК"), de(Io, ho.OldResolution, "Отключает 32-bit режим экрана, снижая качество и увеличивая задержку.\n*Включайте только при отсутствии поддержки 32-bit видеокартой"), de(Io, ho.HdrResolution, "Активирует вывод изображения в HDR.\n*[BETA] Используйте только при поддержке монитором HDR. Возможны искажения цветов."), de(Io, ho.Grass, "Повышает детализацию травы, листвы и других элементов окружения.\n*Может снизить производительность"), de(Io, ho.CefAuth, "Включает обновлённую систему и вид входа в игру.\n*Рекомендуется включить"), Io),
             wo = {
                 Arizona: "arizona",
                 ArizonaStaging: "arizona_staging",
@@ -11671,7 +11687,7 @@
                     }]
                 }
             }],
-            Eo = (de(yo = {}, wo.Arizona, [{
+            Eo = (de(zo = {}, wo.Arizona, [{
                 id: 1,
                 name: "Phoenix",
                 players: 999,
@@ -11991,7 +12007,7 @@
                 port: "7777",
                 enabled: !0,
                 raw: {}
-            }]), de(yo, wo.Rodina, [{
+            }]), de(zo, wo.Rodina, [{
                 id: 1,
                 name: "Центральный округ",
                 players: 999,
@@ -12061,7 +12077,7 @@
                 port: "7777",
                 enabled: !0,
                 raw: {}
-            }]), de(yo, wo.Village, [{
+            }]), de(zo, wo.Village, [{
                 id: 1,
                 name: "Жизнь в деревне №1",
                 players: 999,
@@ -12081,7 +12097,7 @@
                 port: "7777",
                 enabled: !0,
                 raw: {}
-            }]), de(yo, wo.ArizonaV, [{
+            }]), de(zo, wo.ArizonaV, [{
                 id: 1,
                 name: "Liberty",
                 players: 999,
@@ -12101,9 +12117,10 @@
                 port: "22005",
                 enabled: !0,
                 raw: {}
-            }]), de(yo, wo.ArizonaStaging, []), de(yo, wo.ArizonaVStaging, []), de(yo, wo.RodinaStaging, []), de(yo, wo.VillageStaging, []), yo);
+            }]), de(zo, wo.ArizonaStaging, []), de(zo, wo.ArizonaVStaging, []), de(zo, wo.RodinaStaging, []), de(zo, wo.VillageStaging, []), zo);
         Eo[wo.Trilogy] = Eo[wo.Arizona];
-        var vo, _o = 2;
+        var vo, _o = 2,
+            ko = (de(yo = {}, wo.Arizona, ["arizona", "arizonaMobile", "vc"]), de(yo, wo.Trilogy, ["arizona", "arizonaMobile", "vc"]), de(yo, wo.Rodina, ["rodina", "rodinaMobile"]), yo);
         wo.Arizona, wo.Village, wo.Rodina, wo.ArizonaV, de(vo = {}, wo.ArizonaV, [{
             name: "ArizonaV I",
             players: Math.floor(5e3 * Math.random()),
@@ -12176,21 +12193,21 @@
             port: 7777,
             enabled: !0
         }]);
-        const ko = {
+        const Uo = {
             randomUUID: "undefined" != typeof crypto && crypto.randomUUID && crypto.randomUUID.bind(crypto)
         };
-        let Uo;
-        const Co = new Uint8Array(16),
-            So = [];
-        for (let t = 0; t < 256; ++t) So.push((t + 256).toString(16).slice(1));
-        const Qo = function(t, e, n) {
-            if (ko.randomUUID && !e && !t) return ko.randomUUID();
+        let Co;
+        const So = new Uint8Array(16),
+            Qo = [];
+        for (let t = 0; t < 256; ++t) Qo.push((t + 256).toString(16).slice(1));
+        const bo = function(t, e, n) {
+            if (Uo.randomUUID && !e && !t) return Uo.randomUUID();
             const r = (t = t || {}).random ?? t.rng?.() ?? function() {
-                if (!Uo) {
+                if (!Co) {
                     if ("undefined" == typeof crypto || !crypto.getRandomValues) throw new Error("crypto.getRandomValues() not supported. See https://github.com/uuidjs/uuid#getrandomvalues-not-supported");
-                    Uo = crypto.getRandomValues.bind(crypto)
+                    Co = crypto.getRandomValues.bind(crypto)
                 }
-                return Uo(Co)
+                return Co(So)
             }();
             if (r.length < 16) throw new Error("Random bytes length must be >= 16");
             if (r[6] = 15 & r[6] | 64, r[8] = 63 & r[8] | 128, e) {
@@ -12199,11 +12216,11 @@
                 return e
             }
             return function(t, e = 0) {
-                return (So[t[e + 0]] + So[t[e + 1]] + So[t[e + 2]] + So[t[e + 3]] + "-" + So[t[e + 4]] + So[t[e + 5]] + "-" + So[t[e + 6]] + So[t[e + 7]] + "-" + So[t[e + 8]] + So[t[e + 9]] + "-" + So[t[e + 10]] + So[t[e + 11]] + So[t[e + 12]] + So[t[e + 13]] + So[t[e + 14]] + So[t[e + 15]]).toLowerCase()
+                return (Qo[t[e + 0]] + Qo[t[e + 1]] + Qo[t[e + 2]] + Qo[t[e + 3]] + "-" + Qo[t[e + 4]] + Qo[t[e + 5]] + "-" + Qo[t[e + 6]] + Qo[t[e + 7]] + "-" + Qo[t[e + 8]] + Qo[t[e + 9]] + "-" + Qo[t[e + 10]] + Qo[t[e + 11]] + Qo[t[e + 12]] + Qo[t[e + 13]] + Qo[t[e + 14]] + Qo[t[e + 15]]).toLowerCase()
             }(r)
         };
 
-        function bo(t) {
+        function Yo(t) {
             let e, n, r, i, o;
             return {
                 c() {
@@ -12221,9 +12238,9 @@
             }
         }
 
-        function Yo(e) {
+        function Po(e) {
             let n, r = ![wo.ArizonaV, wo.Rodina].includes(e[1]),
-                i = r && bo(e);
+                i = r && Yo(e);
             return {
                 c() {
                     i && i.c(), n = P()
@@ -12232,7 +12249,7 @@
                     i && i.m(t, e), U(t, n, e)
                 },
                 p(t, [e]) {
-                    2 & e && (r = ![wo.ArizonaV, wo.Rodina].includes(t[1])), r ? i ? i.p(t, e) : (i = bo(t), i.c(), i.m(n.parentNode, n)) : i && (i.d(1), i = null)
+                    2 & e && (r = ![wo.ArizonaV, wo.Rodina].includes(t[1])), r ? i ? i.p(t, e) : (i = Yo(t), i.c(), i.m(n.parentNode, n)) : i && (i.d(1), i = null)
                 },
                 i: t,
                 o: t,
@@ -12242,7 +12259,7 @@
             }
         }
 
-        function Po(t, e, n) {
+        function $o(t, e, n) {
             let {
                 gameId: r = ""
             } = e, {
@@ -12256,7 +12273,7 @@
                 Ve(r, i)
             }), 500);
             return it((() => {
-                [wo.Rodina].includes(r) && (n(0, i.userName = `Player_${Qo().replace(/-/g,"").slice(0,12)}`, i), o(i.userName))
+                [wo.Rodina].includes(r) && (n(0, i.userName = `Player_${bo().replace(/-/g,"").slice(0,12)}`, i), o(i.userName))
             })), t.$$set = t => {
                 "gameId" in t && n(1, r = t.gameId), "settings" in t && n(0, i = t.settings)
             }, t.$$.update = () => {
@@ -12265,33 +12282,33 @@
                 i.userName = this.value, n(0, i)
             }]
         }
-        const $o = class extends Bt {
+        const Ro = class extends Bt {
                 constructor(t) {
-                    super(), Zt(this, t, Po, Yo, c, {
+                    super(), Zt(this, t, $o, Po, c, {
                         gameId: 1,
                         settings: 0
                     })
                 }
             },
-            Ro = n.p + "bcff7798786a3082848e.png",
-            Go = n.p + "2f221eeb298b72a0625f.png",
-            Zo = n.p + "695c995f4385b9291f83.png",
-            Bo = n.p + "a9f50afa57f19138bc95.png";
-        var Wo = function(t) {
+            Go = n.p + "bcff7798786a3082848e.png",
+            Zo = n.p + "2f221eeb298b72a0625f.png",
+            Bo = n.p + "695c995f4385b9291f83.png",
+            Wo = n.p + "a9f50afa57f19138bc95.png";
+        var Vo = function(t) {
             window.launcherAPI && window.launcherAPI.validateGameFiles && window.launcherAPI.validateGameFiles(t)
         };
 
-        function Vo(t, e, n) {
+        function Fo(t, e, n) {
             const r = t.slice();
             return r[14] = e[n], r
         }
 
-        function Fo(t, e, n) {
+        function Ho(t, e, n) {
             const r = t.slice();
             return r[17] = e[n], r
         }
 
-        function Ho(t) {
+        function Jo(t) {
             let e, n, r, i, o, a, u, c, s, M = t[17].shortTitle + "",
                 l = t[17].multipliers.donate > 1 && t[17].gameId === wo.ArizonaV || t[17].multipliers.donate > 2 && ![wo.Arizona, wo.Trilogy].includes(t[17].gameId) || t[17].multipliers.donate > 3,
                 N = t[17].multipliers.experience > 1 && t[17].gameId === wo.ArizonaV || t[17].multipliers.experience > 2 && ![wo.Arizona, wo.Trilogy].includes(t[17].gameId) || t[17].multipliers.experience > 3;
@@ -12299,9 +12316,9 @@
             function g() {
                 return t[10](t[17])
             }
-            let D = t[17].gameId === wo.Trilogy && t[5] && Jo(),
-                j = l && Xo(t),
-                d = N && Ko(t);
+            let D = t[17].gameId === wo.Trilogy && t[5] && Xo(),
+                j = l && Ko(t),
+                d = N && qo(t);
             return {
                 c() {
                     e = Q("li"), n = Q("span"), r = b(M), i = Y(), D && D.c(), o = Y(), a = Q("div"), j && j.c(), u = Y(), d && d.c(), G(n, "class", "navigation-panel__projects-list-link"), F(n, "navigation-panel__projects-list-link--active", t[1] === t[17].gameId), F(n, "navigation-panel__projects-list-link--disabled", t[1] !== t[17].gameId && t[3]), G(a, "class", "navigation-panel__multiplyer-container"), G(e, "class", "navigation-panel__projects-list-item")
@@ -12310,7 +12327,7 @@
                     U(t, e, M), L(e, n), L(n, r), L(e, i), D && D.m(e, null), L(e, o), L(e, a), j && j.m(a, null), L(a, u), d && d.m(a, null), c || (s = $(n, "click", R(g)), c = !0)
                 },
                 p(i, c) {
-                    t = i, 16 & c && M !== (M = t[17].shortTitle + "") && B(r, M), 18 & c && F(n, "navigation-panel__projects-list-link--active", t[1] === t[17].gameId), 26 & c && F(n, "navigation-panel__projects-list-link--disabled", t[1] !== t[17].gameId && t[3]), t[17].gameId === wo.Trilogy && t[5] ? D || (D = Jo(), D.c(), D.m(e, o)) : D && (D.d(1), D = null), 16 & c && (l = t[17].multipliers.donate > 1 && t[17].gameId === wo.ArizonaV || t[17].multipliers.donate > 2 && ![wo.Arizona, wo.Trilogy].includes(t[17].gameId) || t[17].multipliers.donate > 3), l ? j ? j.p(t, c) : (j = Xo(t), j.c(), j.m(a, u)) : j && (j.d(1), j = null), 16 & c && (N = t[17].multipliers.experience > 1 && t[17].gameId === wo.ArizonaV || t[17].multipliers.experience > 2 && ![wo.Arizona, wo.Trilogy].includes(t[17].gameId) || t[17].multipliers.experience > 3), N ? d ? d.p(t, c) : (d = Ko(t), d.c(), d.m(a, null)) : d && (d.d(1), d = null)
+                    t = i, 16 & c && M !== (M = t[17].shortTitle + "") && B(r, M), 18 & c && F(n, "navigation-panel__projects-list-link--active", t[1] === t[17].gameId), 26 & c && F(n, "navigation-panel__projects-list-link--disabled", t[1] !== t[17].gameId && t[3]), t[17].gameId === wo.Trilogy && t[5] ? D || (D = Xo(), D.c(), D.m(e, o)) : D && (D.d(1), D = null), 16 & c && (l = t[17].multipliers.donate > 1 && t[17].gameId === wo.ArizonaV || t[17].multipliers.donate > 2 && ![wo.Arizona, wo.Trilogy].includes(t[17].gameId) || t[17].multipliers.donate > 3), l ? j ? j.p(t, c) : (j = Ko(t), j.c(), j.m(a, u)) : j && (j.d(1), j = null), 16 & c && (N = t[17].multipliers.experience > 1 && t[17].gameId === wo.ArizonaV || t[17].multipliers.experience > 2 && ![wo.Arizona, wo.Trilogy].includes(t[17].gameId) || t[17].multipliers.experience > 3), N ? d ? d.p(t, c) : (d = qo(t), d.c(), d.m(a, null)) : d && (d.d(1), d = null)
                 },
                 d(t) {
                     t && C(e), D && D.d(), j && j.d(), d && d.d(), c = !1, s()
@@ -12318,7 +12335,7 @@
             }
         }
 
-        function Jo(t) {
+        function Xo(t) {
             let e;
             return {
                 c() {
@@ -12333,7 +12350,7 @@
             }
         }
 
-        function Xo(t) {
+        function Ko(t) {
             let e, n, r, i, o, a, u = `X${t[17].multipliers.donate} множитель на донат`;
             return {
                 c() {
@@ -12351,7 +12368,7 @@
             }
         }
 
-        function Ko(t) {
+        function qo(t) {
             let e, n, r, i, o, a, u = `X${t[17].multipliers.experience} множитель на опыт`;
             return {
                 c() {
@@ -12369,8 +12386,8 @@
             }
         }
 
-        function qo(t) {
-            let e, n = (!t[17].optional || t[17].optional && t[17].gameId === t[1]) && Ho(t);
+        function ta(t) {
+            let e, n = (!t[17].optional || t[17].optional && t[17].gameId === t[1]) && Jo(t);
             return {
                 c() {
                     n && n.c(), e = P()
@@ -12379,7 +12396,7 @@
                     n && n.m(t, r), U(t, e, r)
                 },
                 p(t, r) {
-                    !t[17].optional || t[17].optional && t[17].gameId === t[1] ? n ? n.p(t, r) : (n = Ho(t), n.c(), n.m(e.parentNode, e)) : n && (n.d(1), n = null)
+                    !t[17].optional || t[17].optional && t[17].gameId === t[1] ? n ? n.p(t, r) : (n = Jo(t), n.c(), n.m(e.parentNode, e)) : n && (n.d(1), n = null)
                 },
                 d(t) {
                     n && n.d(t), t && C(e)
@@ -12387,8 +12404,8 @@
             }
         }
 
-        function ta(t) {
-            let e, n, r, i, o, c, s = t[2] && ea(t);
+        function ea(t) {
+            let e, n, r, i, o, c, s = t[2] && na(t);
             return {
                 c() {
                     e = Q("li"), n = Q("span"), n.innerHTML = '<span class="icon-more"></span>', r = Y(), s && s.c(), G(n, "class", "navigation-panel__projects-list-link navigation-panel__projects-list-link--large"), F(n, "navigation-panel__projects-list-link--disabled", t[3]), G(e, "class", "navigation-panel__projects-list-item")
@@ -12399,7 +12416,7 @@
                     }))], o = !0)
                 },
                 p(r, i) {
-                    t = r, 8 & i && F(n, "navigation-panel__projects-list-link--disabled", t[3]), t[2] ? s ? s.p(t, i) : (s = ea(t), s.c(), s.m(e, null)) : s && (s.d(1), s = null)
+                    t = r, 8 & i && F(n, "navigation-panel__projects-list-link--disabled", t[3]), t[2] ? s ? s.p(t, i) : (s = na(t), s.c(), s.m(e, null)) : s && (s.d(1), s = null)
                 },
                 d(t) {
                     t && C(e), s && s.d(), o = !1, a(c)
@@ -12407,10 +12424,10 @@
             }
         }
 
-        function ea(t) {
+        function na(t) {
             let e, n = t[6].filter(t[11]),
                 r = [];
-            for (let e = 0; e < n.length; e += 1) r[e] = na(Vo(t, n, e));
+            for (let e = 0; e < n.length; e += 1) r[e] = ra(Fo(t, n, e));
             return {
                 c() {
                     e = Q("div");
@@ -12425,8 +12442,8 @@
                     if (326 & i) {
                         let o;
                         for (n = t[6].filter(t[11]), o = 0; o < n.length; o += 1) {
-                            const a = Vo(t, n, o);
-                            r[o] ? r[o].p(a, i) : (r[o] = na(a), r[o].c(), r[o].m(e, null))
+                            const a = Fo(t, n, o);
+                            r[o] ? r[o].p(a, i) : (r[o] = ra(a), r[o].c(), r[o].m(e, null))
                         }
                         for (; o < r.length; o += 1) r[o].d(1);
                         r.length = n.length
@@ -12438,7 +12455,7 @@
             }
         }
 
-        function na(t) {
+        function ra(t) {
             let e, n, r, i, o, a = t[14].shortTitle + "";
 
             function u() {
@@ -12460,7 +12477,7 @@
             }
         }
 
-        function ra(t) {
+        function ia(t) {
             let e;
             return {
                 c() {
@@ -12475,13 +12492,13 @@
             }
         }
 
-        function ia(e) {
+        function oa(e) {
             let n, r, i, o, a, u, c, s, l, N = e[6].length && e[6].filter(e[9]).length,
                 g = e[4],
                 D = [];
-            for (let t = 0; t < g.length; t += 1) D[t] = qo(Fo(e, g, t));
-            let j = N && ta(e),
-                d = !e[5] && ra();
+            for (let t = 0; t < g.length; t += 1) D[t] = ta(Ho(e, g, t));
+            let j = N && ea(e),
+                d = !e[5] && ia();
             return {
                 c() {
                     n = Q("div"), r = Q("div"), i = Q("img"), a = Y(), u = Q("nav"), c = Q("ul");
@@ -12497,13 +12514,13 @@
                     if (1 & e && !M(i.src, o = t[0]) && G(i, "src", o), 314 & e) {
                         let n;
                         for (g = t[4], n = 0; n < g.length; n += 1) {
-                            const r = Fo(t, g, n);
-                            D[n] ? D[n].p(r, e) : (D[n] = qo(r), D[n].c(), D[n].m(c, s))
+                            const r = Ho(t, g, n);
+                            D[n] ? D[n].p(r, e) : (D[n] = ta(r), D[n].c(), D[n].m(c, s))
                         }
                         for (; n < D.length; n += 1) D[n].d(1);
                         D.length = g.length
                     }
-                    66 & e && (N = t[6].length && t[6].filter(t[9]).length), N ? j ? j.p(t, e) : (j = ta(t), j.c(), j.m(c, l)) : j && (j.d(1), j = null), t[5] ? d && (d.d(1), d = null) : d || (d = ra(), d.c(), d.m(c, null))
+                    66 & e && (N = t[6].length && t[6].filter(t[9]).length), N ? j ? j.p(t, e) : (j = ea(t), j.c(), j.m(c, l)) : j && (j.d(1), j = null), t[5] ? d && (d.d(1), d = null) : d || (d = ia(), d.c(), d.m(c, null))
                 },
                 i: t,
                 o: t,
@@ -12513,11 +12530,11 @@
             }
         }
 
-        function oa(t, e, n) {
+        function aa(t, e, n) {
             let r, i, o, a, u;
             D(t, ze, (t => n(1, r = t))), D(t, Le, (t => n(3, i = t))), D(t, fe, (t => n(4, o = t))), D(t, Oe, (t => n(5, a = t))), D(t, Ie, (t => n(6, u = t)));
             let {
-                logo: c = Ro
+                logo: c = Go
             } = e, s = !1;
             const M = t => {
                 r === t || i || (z(ze, r = t, r), Oo.includes(t) || Ve("lastSelectedGameId", t))
@@ -12526,18 +12543,18 @@
                 "logo" in t && n(0, c = t.logo)
             }, t.$$.update = () => {
                 var e;
-                if (2 & t.$$.dirty && r && (Wo(r), e = r, window.launcherAPI && window.launcherAPI.requestMods && window.launcherAPI.requestMods(e)), 2 & t.$$.dirty) switch (r) {
+                if (2 & t.$$.dirty && r && (Vo(r), e = r, window.launcherAPI && window.launcherAPI.requestMods && window.launcherAPI.requestMods(e)), 2 & t.$$.dirty) switch (r) {
                     case wo.Village:
-                        n(0, c = Go);
-                        break;
-                    case wo.Rodina:
                         n(0, c = Zo);
                         break;
-                    case wo.ArizonaV:
+                    case wo.Rodina:
                         n(0, c = Bo);
                         break;
+                    case wo.ArizonaV:
+                        n(0, c = Wo);
+                        break;
                     default:
-                        n(0, c = Ro)
+                        n(0, c = Go)
                 }
             }, [c, r, s, i, o, a, u, () => {
                 n(2, s = !s)
@@ -12549,20 +12566,20 @@
                 M(t.gameId), n(2, s = !1)
             }, () => n(2, s = !1)]
         }
-        const aa = class extends Bt {
+        const ua = class extends Bt {
                 constructor(t) {
-                    super(), Zt(this, t, oa, ia, c, {
+                    super(), Zt(this, t, aa, oa, c, {
                         logo: 0
                     })
                 }
             },
-            ua = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTciIGhlaWdodD0iNTgiIHZpZXdCb3g9IjAgMCA1NyA1OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMF81NTZfNzMzOSkiPg0KPHBhdGggZD0iTTQ4LjQ0NzkgNTQuNjQ3Mkg4LjMzNjI0QzUuNTgzNCA1NC42NDcyIDMuMDI2MzEgNTMuMTk2NCAxLjU3OTE2IDUwLjgxMjVDMC4xMzE1NzcgNDguNDI5IC01Ljk4MTMzZS0wNSA0NS40NTI1IDEuMjMxMjYgNDIuOTQ1OUwyMS4yODcxIDcuOTk1NTdDMjIuNjMzIDUuMjU2NjUgMjUuMzgzMiAzLjUyNjEyIDI4LjM5MjEgMy41MjYxMkMzMS40MDA5IDMuNTI2MTIgMzQuMTUxMiA1LjI1NjY1IDM1LjQ5NzEgNy45OTU1N0w1NS41NTI5IDQyLjk0NTlDNTYuNzg0MiA0NS40NTI1IDU2LjY1MjYgNDguNDI5IDU1LjIwNSA1MC44MTI1QzUzLjc1NzkgNTMuMTk2NCA1MS4yMDEyIDU0LjY0NzIgNDguNDQ3OSA1NC42NDcyWiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGQ9Ik00OC40NTI2IDU0LjY0NzJIMjguMzkyMVYzLjUyNjA0QzMxLjQwODIgMy41MDY4OSAzNC4xNjk2IDUuMjQ0MzkgMzUuNTAwOSA3Ljk5OTRMNTUuNTUxNiA0Mi45NDg1QzU2Ljc4NDcgNDUuNDUzMyA1Ni42NTQ3IDQ4LjQyOTggNTUuMjA4NCA1MC44MTMzQzUzLjc2MTcgNTMuMTk3MiA1MS4yMDU1IDU0LjY0OCA0OC40NTI2IDU0LjY0NzJaIiBmaWxsPSIjRUJFQkVCIi8+DQo8cGF0aCBkPSJNMzIuMjU1NiA0NS43OTkxQzMyLjI1NTYgNDcuOTcxMiAzMC41MjU2IDQ5LjczMTggMjguMzkyIDQ5LjczMThDMjYuMjU4NSA0OS43MzE4IDI0LjUyODggNDcuOTcxMiAyNC41Mjg4IDQ1Ljc5OTFDMjQuNTI4OCA0My42Mjc1IDI2LjI1ODUgNDEuODY2OSAyOC4zOTIgNDEuODY2OUMzMC41MjU2IDQxLjg2NjkgMzIuMjU1NiA0My42Mjc1IDMyLjI1NTYgNDUuNzk5MVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDQ1Ljc5OTFDMzIuMjU1NyA0Ni44NDIzIDMxLjg0ODggNDcuODQyNCAzMS4xMjQ0IDQ4LjU4MDNDMzAuMzk5NiA0OS4zMTc2IDI5LjQxNyA0OS43MzE4IDI4LjM5MjEgNDkuNzMxOFY0MS44NjY5QzI5LjQxNyA0MS44NjY1IDMwLjM5OTYgNDIuMjgwNyAzMS4xMjQ0IDQzLjAxODVDMzEuODQ4OCA0My43NTU4IDMyLjI1NTcgNDQuNzU2NCAzMi4yNTU3IDQ1Ljc5OTFaIiBmaWxsPSIjMkMzRTUwIi8+DQo8cGF0aCBkPSJNMjguMzkyIDExLjM5MDlDMzAuNTI1NiAxMS4zOTA5IDMyLjI1NTYgMTMuMTUxNCAzMi4yNTU2IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU2IDM2LjE3MzggMzAuNTI1NiAzNy45MzQ0IDI4LjM5MiAzNy45MzQ0QzI2LjI1ODUgMzcuOTM0NCAyNC41Mjg4IDM2LjE3MzggMjQuNTI4OCAzNC4wMDIyVjE1LjMyMzVDMjQuNTI4OCAxMy4xNTE0IDI2LjI1ODUgMTEuMzkwOSAyOC4zOTIgMTEuMzkwOVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU3IDM1LjA0NTQgMzEuODQ4OCAzNi4wNDU1IDMxLjEyNDQgMzYuNzgyOUMzMC4zOTk2IDM3LjUyMDcgMjkuNDE3IDM3LjkzNDggMjguMzkyMSAzNy45MzQ0VjExLjM5MDlDMjkuNDE3IDExLjM4OTYgMzAuNDAwOCAxMS44MDMzIDMxLjEyNTcgMTIuNTQxMUMzMS44NTAxIDEzLjI3ODkgMzIuMjU3IDE0LjI3OTkgMzIuMjU1NyAxNS4zMjM1WiIgZmlsbD0iIzJDM0U1MCIvPg0KPC9nPg0KPGRlZnM+DQo8Y2xpcFBhdGggaWQ9ImNsaXAwXzU1Nl83MzM5Ij4NCjxyZWN0IHdpZHRoPSI1NiIgaGVpZ2h0PSI1NyIgZmlsbD0id2hpdGUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMzkyNTc4IDAuNTM4NTc0KSIvPg0KPC9jbGlwUGF0aD4NCjwvZGVmcz4NCjwvc3ZnPg0K";
+            ca = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTciIGhlaWdodD0iNTgiIHZpZXdCb3g9IjAgMCA1NyA1OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMF81NTZfNzMzOSkiPg0KPHBhdGggZD0iTTQ4LjQ0NzkgNTQuNjQ3Mkg4LjMzNjI0QzUuNTgzNCA1NC42NDcyIDMuMDI2MzEgNTMuMTk2NCAxLjU3OTE2IDUwLjgxMjVDMC4xMzE1NzcgNDguNDI5IC01Ljk4MTMzZS0wNSA0NS40NTI1IDEuMjMxMjYgNDIuOTQ1OUwyMS4yODcxIDcuOTk1NTdDMjIuNjMzIDUuMjU2NjUgMjUuMzgzMiAzLjUyNjEyIDI4LjM5MjEgMy41MjYxMkMzMS40MDA5IDMuNTI2MTIgMzQuMTUxMiA1LjI1NjY1IDM1LjQ5NzEgNy45OTU1N0w1NS41NTI5IDQyLjk0NTlDNTYuNzg0MiA0NS40NTI1IDU2LjY1MjYgNDguNDI5IDU1LjIwNSA1MC44MTI1QzUzLjc1NzkgNTMuMTk2NCA1MS4yMDEyIDU0LjY0NzIgNDguNDQ3OSA1NC42NDcyWiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGQ9Ik00OC40NTI2IDU0LjY0NzJIMjguMzkyMVYzLjUyNjA0QzMxLjQwODIgMy41MDY4OSAzNC4xNjk2IDUuMjQ0MzkgMzUuNTAwOSA3Ljk5OTRMNTUuNTUxNiA0Mi45NDg1QzU2Ljc4NDcgNDUuNDUzMyA1Ni42NTQ3IDQ4LjQyOTggNTUuMjA4NCA1MC44MTMzQzUzLjc2MTcgNTMuMTk3MiA1MS4yMDU1IDU0LjY0OCA0OC40NTI2IDU0LjY0NzJaIiBmaWxsPSIjRUJFQkVCIi8+DQo8cGF0aCBkPSJNMzIuMjU1NiA0NS43OTkxQzMyLjI1NTYgNDcuOTcxMiAzMC41MjU2IDQ5LjczMTggMjguMzkyIDQ5LjczMThDMjYuMjU4NSA0OS43MzE4IDI0LjUyODggNDcuOTcxMiAyNC41Mjg4IDQ1Ljc5OTFDMjQuNTI4OCA0My42Mjc1IDI2LjI1ODUgNDEuODY2OSAyOC4zOTIgNDEuODY2OUMzMC41MjU2IDQxLjg2NjkgMzIuMjU1NiA0My42Mjc1IDMyLjI1NTYgNDUuNzk5MVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDQ1Ljc5OTFDMzIuMjU1NyA0Ni44NDIzIDMxLjg0ODggNDcuODQyNCAzMS4xMjQ0IDQ4LjU4MDNDMzAuMzk5NiA0OS4zMTc2IDI5LjQxNyA0OS43MzE4IDI4LjM5MjEgNDkuNzMxOFY0MS44NjY5QzI5LjQxNyA0MS44NjY1IDMwLjM5OTYgNDIuMjgwNyAzMS4xMjQ0IDQzLjAxODVDMzEuODQ4OCA0My43NTU4IDMyLjI1NTcgNDQuNzU2NCAzMi4yNTU3IDQ1Ljc5OTFaIiBmaWxsPSIjMkMzRTUwIi8+DQo8cGF0aCBkPSJNMjguMzkyIDExLjM5MDlDMzAuNTI1NiAxMS4zOTA5IDMyLjI1NTYgMTMuMTUxNCAzMi4yNTU2IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU2IDM2LjE3MzggMzAuNTI1NiAzNy45MzQ0IDI4LjM5MiAzNy45MzQ0QzI2LjI1ODUgMzcuOTM0NCAyNC41Mjg4IDM2LjE3MzggMjQuNTI4OCAzNC4wMDIyVjE1LjMyMzVDMjQuNTI4OCAxMy4xNTE0IDI2LjI1ODUgMTEuMzkwOSAyOC4zOTIgMTEuMzkwOVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU3IDM1LjA0NTQgMzEuODQ4OCAzNi4wNDU1IDMxLjEyNDQgMzYuNzgyOUMzMC4zOTk2IDM3LjUyMDcgMjkuNDE3IDM3LjkzNDggMjguMzkyMSAzNy45MzQ0VjExLjM5MDlDMjkuNDE3IDExLjM4OTYgMzAuNDAwOCAxMS44MDMzIDMxLjEyNTcgMTIuNTQxMUMzMS44NTAxIDEzLjI3ODkgMzIuMjU3IDE0LjI3OTkgMzIuMjU1NyAxNS4zMjM1WiIgZmlsbD0iIzJDM0U1MCIvPg0KPC9nPg0KPGRlZnM+DQo8Y2xpcFBhdGggaWQ9ImNsaXAwXzU1Nl83MzM5Ij4NCjxyZWN0IHdpZHRoPSI1NiIgaGVpZ2h0PSI1NyIgZmlsbD0id2hpdGUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMzkyNTc4IDAuNTM4NTc0KSIvPg0KPC9jbGlwUGF0aD4NCjwvZGVmcz4NCjwvc3ZnPg0K";
 
-        function ca(e) {
+        function sa(e) {
             let n, r, i, o, u, c, s, l, N, g, D, j, d, p, f, I, z, y, T, h, A;
             return {
                 c() {
-                    n = Q("div"), r = Q("div"), i = Q("div"), o = Q("i"), u = Y(), c = Q("div"), s = Q("img"), N = Y(), g = Q("h3"), g.textContent = "Починить игру?", D = Y(), j = Q("ul"), j.innerHTML = '<li class="repair__action-item"><span class="repair__action-text">Сброс кастомных файлов</span></li> \n\t\t\t\t<li class="repair__action-item"><span class="repair__action-text">Сброс настроек игры</span></li> \n\t\t\t\t<li class="repair__action-item"><span class="repair__action-text">Установка прав в реестре</span></li>', d = Y(), p = Q("div"), f = Q("button"), f.textContent = "ОБЫЧНАЯ", I = Y(), z = Q("button"), z.textContent = "ГЛУБОКАЯ", G(o, "class", "repair__icon icon-close"), G(i, "class", "repair__window-control"), M(s.src, l = ua) || G(s, "src", "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTciIGhlaWdodD0iNTgiIHZpZXdCb3g9IjAgMCA1NyA1OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMF81NTZfNzMzOSkiPg0KPHBhdGggZD0iTTQ4LjQ0NzkgNTQuNjQ3Mkg4LjMzNjI0QzUuNTgzNCA1NC42NDcyIDMuMDI2MzEgNTMuMTk2NCAxLjU3OTE2IDUwLjgxMjVDMC4xMzE1NzcgNDguNDI5IC01Ljk4MTMzZS0wNSA0NS40NTI1IDEuMjMxMjYgNDIuOTQ1OUwyMS4yODcxIDcuOTk1NTdDMjIuNjMzIDUuMjU2NjUgMjUuMzgzMiAzLjUyNjEyIDI4LjM5MjEgMy41MjYxMkMzMS40MDA5IDMuNTI2MTIgMzQuMTUxMiA1LjI1NjY1IDM1LjQ5NzEgNy45OTU1N0w1NS41NTI5IDQyLjk0NTlDNTYuNzg0MiA0NS40NTI1IDU2LjY1MjYgNDguNDI5IDU1LjIwNSA1MC44MTI1QzUzLjc1NzkgNTMuMTk2NCA1MS4yMDEyIDU0LjY0NzIgNDguNDQ3OSA1NC42NDcyWiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGQ9Ik00OC40NTI2IDU0LjY0NzJIMjguMzkyMVYzLjUyNjA0QzMxLjQwODIgMy41MDY4OSAzNC4xNjk2IDUuMjQ0MzkgMzUuNTAwOSA3Ljk5OTRMNTUuNTUxNiA0Mi45NDg1QzU2Ljc4NDcgNDUuNDUzMyA1Ni42NTQ3IDQ4LjQyOTggNTUuMjA4NCA1MC44MTMzQzUzLjc2MTcgNTMuMTk3MiA1MS4yMDU1IDU0LjY0OCA0OC40NTI2IDU0LjY0NzJaIiBmaWxsPSIjRUJFQkVCIi8+DQo8cGF0aCBkPSJNMzIuMjU1NiA0NS43OTkxQzMyLjI1NTYgNDcuOTcxMiAzMC41MjU2IDQ5LjczMTggMjguMzkyIDQ5LjczMThDMjYuMjU4NSA0OS43MzE4IDI0LjUyODggNDcuOTcxMiAyNC41Mjg4IDQ1Ljc5OTFDMjQuNTI4OCA0My42Mjc1IDI2LjI1ODUgNDEuODY2OSAyOC4zOTIgNDEuODY2OUMzMC41MjU2IDQxLjg2NjkgMzIuMjU1NiA0My42Mjc1IDMyLjI1NTYgNDUuNzk5MVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDQ1Ljc5OTFDMzIuMjU1NyA0Ni44NDIzIDMxLjg0ODggNDcuODQyNCAzMS4xMjQ0IDQ4LjU4MDNDMzAuMzk5NiA0OS4zMTc2IDI5LjQxNyA0OS43MzE4IDI4LjM5MjEgNDkuNzMxOFY0MS44NjY5QzI5LjQxNyA0MS44NjY1IDMwLjM5OTYgNDIuMjgwNyAzMS4xMjQ0IDQzLjAxODVDMzEuODQ4OCA0My43NTU4IDMyLjI1NTcgNDQuNzU2NCAzMi4yNTU3IDQ1Ljc5OTFaIiBmaWxsPSIjMkMzRTUwIi8+DQo8cGF0aCBkPSJNMjguMzkyIDExLjM5MDlDMzAuNTI1NiAxMS4zOTA5IDMyLjI1NTYgMTMuMTUxNCAzMi4yNTU2IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU2IDM2LjE3MzggMzAuNTI1NiAzNy45MzQ0IDI4LjM5MiAzNy45MzQ0QzI2LjI1ODUgMzcuOTM0NCAyNC41Mjg4IDM2LjE3MzggMjQuNTI4OCAzNC4wMDIyVjE1LjMyMzVDMjQuNTI4OCAxMy4xNTE0IDI2LjI1ODUgMTEuMzkwOSAyOC4zOTIgMTEuMzkwOVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU3IDM1LjA0NTQgMzEuODQ4OCAzNi4wNDU1IDMxLjEyNDQgMzYuNzgyOUMzMC4zOTk2IDM3LjUyMDcgMjkuNDE3IDM3LjkzNDggMjguMzkyMSAzNy45MzQ0VjExLjM5MDlDMjkuNDE3IDExLjM4OTYgMzAuNDAwOCAxMS44MDMzIDMxLjEyNTcgMTIuNTQxMUMzMS44NTAxIDEzLjI3ODkgMzIuMjU3IDE0LjI3OTkgMzIuMjU1NyAxNS4zMjM1WiIgZmlsbD0iIzJDM0U1MCIvPg0KPC9nPg0KPGRlZnM+DQo8Y2xpcFBhdGggaWQ9ImNsaXAwXzU1Nl83MzM5Ij4NCjxyZWN0IHdpZHRoPSI1NiIgaGVpZ2h0PSI1NyIgZmlsbD0id2hpdGUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMzkyNTc4IDAuNTM4NTc0KSIvPg0KPC9jbGlwUGF0aD4NCjwvZGVmcz4NCjwvc3ZnPg0K"), G(s, "alt", "warning-ico"), G(s, "class", "repair__header-icon"), G(g, "class", "repair__title"), G(j, "class", "repair__actions-list"), G(f, "class", "repair__button"), G(z, "class", "repair__button"), G(p, "class", "repair__buttons-wrapper"), G(c, "class", "repair__window-content"), G(r, "class", "repair__content"), G(n, "class", "repair")
+                    n = Q("div"), r = Q("div"), i = Q("div"), o = Q("i"), u = Y(), c = Q("div"), s = Q("img"), N = Y(), g = Q("h3"), g.textContent = "Починить игру?", D = Y(), j = Q("ul"), j.innerHTML = '<li class="repair__action-item"><span class="repair__action-text">Сброс кастомных файлов</span></li> \n\t\t\t\t<li class="repair__action-item"><span class="repair__action-text">Сброс настроек игры</span></li> \n\t\t\t\t<li class="repair__action-item"><span class="repair__action-text">Установка прав в реестре</span></li>', d = Y(), p = Q("div"), f = Q("button"), f.textContent = "ОБЫЧНАЯ", I = Y(), z = Q("button"), z.textContent = "ГЛУБОКАЯ", G(o, "class", "repair__icon icon-close"), G(i, "class", "repair__window-control"), M(s.src, l = ca) || G(s, "src", "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTciIGhlaWdodD0iNTgiIHZpZXdCb3g9IjAgMCA1NyA1OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMF81NTZfNzMzOSkiPg0KPHBhdGggZD0iTTQ4LjQ0NzkgNTQuNjQ3Mkg4LjMzNjI0QzUuNTgzNCA1NC42NDcyIDMuMDI2MzEgNTMuMTk2NCAxLjU3OTE2IDUwLjgxMjVDMC4xMzE1NzcgNDguNDI5IC01Ljk4MTMzZS0wNSA0NS40NTI1IDEuMjMxMjYgNDIuOTQ1OUwyMS4yODcxIDcuOTk1NTdDMjIuNjMzIDUuMjU2NjUgMjUuMzgzMiAzLjUyNjEyIDI4LjM5MjEgMy41MjYxMkMzMS40MDA5IDMuNTI2MTIgMzQuMTUxMiA1LjI1NjY1IDM1LjQ5NzEgNy45OTU1N0w1NS41NTI5IDQyLjk0NTlDNTYuNzg0MiA0NS40NTI1IDU2LjY1MjYgNDguNDI5IDU1LjIwNSA1MC44MTI1QzUzLjc1NzkgNTMuMTk2NCA1MS4yMDEyIDU0LjY0NzIgNDguNDQ3OSA1NC42NDcyWiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGQ9Ik00OC40NTI2IDU0LjY0NzJIMjguMzkyMVYzLjUyNjA0QzMxLjQwODIgMy41MDY4OSAzNC4xNjk2IDUuMjQ0MzkgMzUuNTAwOSA3Ljk5OTRMNTUuNTUxNiA0Mi45NDg1QzU2Ljc4NDcgNDUuNDUzMyA1Ni42NTQ3IDQ4LjQyOTggNTUuMjA4NCA1MC44MTMzQzUzLjc2MTcgNTMuMTk3MiA1MS4yMDU1IDU0LjY0OCA0OC40NTI2IDU0LjY0NzJaIiBmaWxsPSIjRUJFQkVCIi8+DQo8cGF0aCBkPSJNMzIuMjU1NiA0NS43OTkxQzMyLjI1NTYgNDcuOTcxMiAzMC41MjU2IDQ5LjczMTggMjguMzkyIDQ5LjczMThDMjYuMjU4NSA0OS43MzE4IDI0LjUyODggNDcuOTcxMiAyNC41Mjg4IDQ1Ljc5OTFDMjQuNTI4OCA0My42Mjc1IDI2LjI1ODUgNDEuODY2OSAyOC4zOTIgNDEuODY2OUMzMC41MjU2IDQxLjg2NjkgMzIuMjU1NiA0My42Mjc1IDMyLjI1NTYgNDUuNzk5MVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDQ1Ljc5OTFDMzIuMjU1NyA0Ni44NDIzIDMxLjg0ODggNDcuODQyNCAzMS4xMjQ0IDQ4LjU4MDNDMzAuMzk5NiA0OS4zMTc2IDI5LjQxNyA0OS43MzE4IDI4LjM5MjEgNDkuNzMxOFY0MS44NjY5QzI5LjQxNyA0MS44NjY1IDMwLjM5OTYgNDIuMjgwNyAzMS4xMjQ0IDQzLjAxODVDMzEuODQ4OCA0My43NTU4IDMyLjI1NTcgNDQuNzU2NCAzMi4yNTU3IDQ1Ljc5OTFaIiBmaWxsPSIjMkMzRTUwIi8+DQo8cGF0aCBkPSJNMjguMzkyIDExLjM5MDlDMzAuNTI1NiAxMS4zOTA5IDMyLjI1NTYgMTMuMTUxNCAzMi4yNTU2IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU2IDM2LjE3MzggMzAuNTI1NiAzNy45MzQ0IDI4LjM5MiAzNy45MzQ0QzI2LjI1ODUgMzcuOTM0NCAyNC41Mjg4IDM2LjE3MzggMjQuNTI4OCAzNC4wMDIyVjE1LjMyMzVDMjQuNTI4OCAxMy4xNTE0IDI2LjI1ODUgMTEuMzkwOSAyOC4zOTIgMTEuMzkwOVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU3IDM1LjA0NTQgMzEuODQ4OCAzNi4wNDU1IDMxLjEyNDQgMzYuNzgyOUMzMC4zOTk2IDM3LjUyMDcgMjkuNDE3IDM3LjkzNDggMjguMzkyMSAzNy45MzQ0VjExLjM5MDlDMjkuNDE3IDExLjM4OTYgMzAuNDAwOCAxMS44MDMzIDMxLjEyNTcgMTIuNTQxMUMzMS44NTAxIDEzLjI3ODkgMzIuMjU3IDE0LjI3OTkgMzIuMjU1NyAxNS4zMjM1WiIgZmlsbD0iIzJDM0U1MCIvPg0KPC9nPg0KPGRlZnM+DQo8Y2xpcFBhdGggaWQ9ImNsaXAwXzU1Nl83MzM5Ij4NCjxyZWN0IHdpZHRoPSI1NiIgaGVpZ2h0PSI1NyIgZmlsbD0id2hpdGUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMzkyNTc4IDAuNTM4NTc0KSIvPg0KPC9jbGlwUGF0aD4NCjwvZGVmcz4NCjwvc3ZnPg0K"), G(s, "alt", "warning-ico"), G(s, "class", "repair__header-icon"), G(g, "class", "repair__title"), G(j, "class", "repair__actions-list"), G(f, "class", "repair__button"), G(z, "class", "repair__button"), G(p, "class", "repair__buttons-wrapper"), G(c, "class", "repair__window-content"), G(r, "class", "repair__content"), G(n, "class", "repair")
                 },
                 m(t, a) {
                     var M;
@@ -12589,7 +12606,7 @@
             }
         }
 
-        function sa(t, e, n) {
+        function Ma(t, e, n) {
             let r;
             D(t, ye, (t => n(6, r = t)));
             let {
@@ -12615,22 +12632,22 @@
                 "gameId" in t && n(2, i = t.gameId)
             }, [a, u, i, () => u(), () => u(!0), () => a()]
         }
-        const Ma = class extends Bt {
+        const la = class extends Bt {
             constructor(t) {
-                super(), Zt(this, t, sa, ca, c, {
+                super(), Zt(this, t, Ma, sa, c, {
                     gameId: 2
                 })
             }
         };
 
-        function la(t, e, n) {
+        function Na(t, e, n) {
             const r = t.slice();
             return r[25] = e[n], r[26] = e, r[27] = n, r
         }
 
-        function Na(t) {
+        function ga(t) {
             let e, n;
-            return e = new Ma({
+            return e = new la({
                 props: {
                     gameId: t[2]
                 }
@@ -12657,25 +12674,25 @@
             }
         }
 
-        function ga(t) {
+        function Da(t) {
             let e, n, r, i, o, c, s, M, l, N, g, D, j, d, p, f, I, z, y, T, h, A, x, w, O, m, E, v, _, k, S, P, R, Z, B, W, V, H, J, X, K, q, tt = !je().isEmpty(t[1].options),
-                et = !t[7] && Da(),
-                nt = t[1].password && ja(t),
-                rt = tt && da(t),
-                it = t[3] && za(t);
+                et = !t[7] && ja(),
+                nt = t[1].password && da(t),
+                rt = tt && pa(t),
+                it = t[3] && ya(t);
             return {
                 c() {
                     e = Q("div"), n = Q("header"), r = Q("i"), i = Y(), o = Q("span"), o.textContent = "Настройки", c = Y(), s = Q("i"), M = Y(), l = Q("main"), N = Q("div"), g = Q("button"), g.innerHTML = 'Починить игру <i class="icon-repair"></i>', D = Y(), j = Q("div"), d = Q("button"), p = b("Установить драйвера\r\n                    "), et && et.c(), f = Y(), I = Q("button"), I.textContent = "Автозапуск приложения", z = Y(), y = Q("div"), T = Q("div"), h = Q("i"), A = Y(), x = Q("span"), x.textContent = "Путь установки игры", w = Y(), O = Q("div"), m = Q("div"), E = Q("input"), k = Y(), S = Q("div"), S.innerHTML = '<i class="preferences__input-edit-icon icon icon-edit"></i>', P = Y(), nt && nt.c(), R = Y(), rt && rt.c(), Z = Y(), B = Q("p"), W = Q("a"), V = b("Сообщить об ошибке"), H = Y(), it && it.c(), G(r, "class", "preferences__header-icon icon-preferences"), G(o, "class", "preferences__header-title"), G(s, "class", "preferences__header-icon icon-arrow-right"), G(n, "class", "preferences__header"), G(g, "class", "preferences__repair-button"), F(g, "preferences__repair-button--disabled", t[8]), G(d, "class", "preferences__drivers-install-button"), F(d, "preferences__drivers-install-button--disabled", t[11]), G(j, "class", "preferences__button-wrapper"), G(I, "class", "preferences__drivers-install-button"), F(I, "preferences__repair-button--disabled", t[8]), G(h, "class", "preferences__icon preferences__icon--hoverable icon-directory-filled"), G(x, "class", "preferences__label"), G(T, "class", "preferences__input-row"), E.disabled = !0, G(E, "id", "game-path"), G(E, "type", "text"), G(E, "class", "preferences__input preferences__input--path"), E.value = v = t[1].gamePath || `./bin/${t[2]}`, G(E, "title", _ = t[1].gamePath || `./bin/${t[2]}`), G(S, "class", "preferences__input-edit-icon-wrapper"), G(O, "class", "preferences__label-wrapper preferences__label-wrapper--path-field"), G(y, "class", "preferences__input-group"), G(N, "class", "preferences__configurations"), G(W, "href", t[4]), G(W, "class", "preferences__bug-report"), G(W, "target", "_blank"), G(B, "class", "preferences__bug-report-wrapper"), G(l, "class", "preferences__main"), G(e, "class", "preferences")
                 },
                 m(a, v) {
                     U(a, e, v), L(e, n), L(n, r), L(n, i), L(n, o), L(n, c), L(n, s), L(e, M), L(e, l), L(l, N), L(N, g), L(N, D), L(N, j), L(j, d), L(d, p), et && et.m(d, null), L(N, f), L(N, I), L(N, z), L(N, y), L(y, T), L(T, h), L(T, A), L(T, x), L(y, w), L(y, O), L(O, m), L(m, E), L(O, k), L(O, S), L(N, P), nt && nt.m(N, null), L(l, R), rt && rt.m(l, null), L(l, Z), L(l, B), L(B, W), L(W, V), L(B, H), it && it.m(B, null), X = !0, K || (q = [$(s, "click", t[17]), $(g, "click", t[18]), $(d, "click", (function() {
-                        u(t[11] ? Ta : t[5]) && (t[11] ? Ta : t[5]).apply(this, arguments)
+                        u(t[11] ? ha : t[5]) && (t[11] ? ha : t[5]).apply(this, arguments)
                     })), $(I, "click", (function() {
                         u(t[6]) && t[6].apply(this, arguments)
                     })), $(h, "click", t[15]), $(m, "click", t[15]), $(S, "click", t[14])], K = !0)
                 },
                 p(e, n) {
-                    t = e, 256 & n && F(g, "preferences__repair-button--disabled", t[8]), t[7] ? et && (et.d(1), et = null) : et || (et = Da(), et.c(), et.m(d, null)), 2048 & n && F(d, "preferences__drivers-install-button--disabled", t[11]), 256 & n && F(I, "preferences__repair-button--disabled", t[8]), (!X || 6 & n && v !== (v = t[1].gamePath || `./bin/${t[2]}`) && E.value !== v) && (E.value = v), (!X || 6 & n && _ !== (_ = t[1].gamePath || `./bin/${t[2]}`)) && G(E, "title", _), t[1].password ? nt ? nt.p(t, n) : (nt = ja(t), nt.c(), nt.m(N, null)) : nt && (nt.d(1), nt = null), 2 & n && (tt = !je().isEmpty(t[1].options)), tt ? rt ? rt.p(t, n) : (rt = da(t), rt.c(), rt.m(l, Z)) : rt && (rt.d(1), rt = null), (!X || 16 & n) && G(W, "href", t[4]), t[3] ? it ? it.p(t, n) : (it = za(t), it.c(), it.m(B, null)) : it && (it.d(1), it = null)
+                    t = e, 256 & n && F(g, "preferences__repair-button--disabled", t[8]), t[7] ? et && (et.d(1), et = null) : et || (et = ja(), et.c(), et.m(d, null)), 2048 & n && F(d, "preferences__drivers-install-button--disabled", t[11]), 256 & n && F(I, "preferences__repair-button--disabled", t[8]), (!X || 6 & n && v !== (v = t[1].gamePath || `./bin/${t[2]}`) && E.value !== v) && (E.value = v), (!X || 6 & n && _ !== (_ = t[1].gamePath || `./bin/${t[2]}`)) && G(E, "title", _), t[1].password ? nt ? nt.p(t, n) : (nt = da(t), nt.c(), nt.m(N, null)) : nt && (nt.d(1), nt = null), 2 & n && (tt = !je().isEmpty(t[1].options)), tt ? rt ? rt.p(t, n) : (rt = pa(t), rt.c(), rt.m(l, Z)) : rt && (rt.d(1), rt = null), (!X || 16 & n) && G(W, "href", t[4]), t[3] ? it ? it.p(t, n) : (it = ya(t), it.c(), it.m(B, null)) : it && (it.d(1), it = null)
                 },
                 i(t) {
                     X || (dt((() => {
@@ -12697,7 +12714,7 @@
             }
         }
 
-        function Da(t) {
+        function ja(t) {
             let e;
             return {
                 c() {
@@ -12712,7 +12729,7 @@
             }
         }
 
-        function ja(t) {
+        function da(t) {
             let e, n, r, i, o, u, c, s, M;
             return {
                 c() {
@@ -12730,10 +12747,10 @@
             }
         }
 
-        function da(t) {
+        function pa(t) {
             let e, n, r, i = t[1].options,
                 o = [];
-            for (let e = 0; e < i.length; e += 1) o[e] = Ia(la(t, i, e));
+            for (let e = 0; e < i.length; e += 1) o[e] = za(Na(t, i, e));
             return {
                 c() {
                     e = Q("p"), e.textContent = "Параметры", n = Y(), r = Q("div");
@@ -12748,8 +12765,8 @@
                     if (8194 & e) {
                         let n;
                         for (i = t[1].options, n = 0; n < i.length; n += 1) {
-                            const a = la(t, i, n);
-                            o[n] ? o[n].p(a, e) : (o[n] = Ia(a), o[n].c(), o[n].m(r, null))
+                            const a = Na(t, i, n);
+                            o[n] ? o[n].p(a, e) : (o[n] = za(a), o[n].c(), o[n].m(r, null))
                         }
                         for (; n < o.length; n += 1) o[n].d(1);
                         o.length = i.length
@@ -12761,7 +12778,7 @@
             }
         }
 
-        function pa(t) {
+        function fa(t) {
             let e;
             return {
                 c() {
@@ -12776,7 +12793,7 @@
             }
         }
 
-        function fa(t) {
+        function Ia(t) {
             let e, n, r, i, o, a, u = xo[t[25].id] + "";
             return {
                 c() {
@@ -12794,7 +12811,7 @@
             }
         }
 
-        function Ia(t) {
+        function za(t) {
             let e, n, r, i, o, u, c, s, M, l, N, g, D, j, d, p, f, I, z = Ao[t[25].id] + "";
 
             function y() {
@@ -12804,8 +12821,8 @@
             function T() {
                 return t[21](t[27])
             }
-            let h = !0 === t[25].withSpecialBadge && pa(),
-                A = xo[t[25].id] && fa(t);
+            let h = !0 === t[25].withSpecialBadge && fa(),
+                A = xo[t[25].id] && Ia(t);
             return {
                 c() {
                     e = Q("div"), n = Q("div"), r = Q("input"), u = Y(), c = Q("label"), s = Q("i"), l = Y(), N = Q("label"), g = b(z), j = Y(), h && h.c(), d = Y(), A && A.c(), p = Y(), G(r, "type", "checkbox"), G(r, "id", i = t[25]?.id), G(r, "name", o = t[25]?.id), G(r, "class", "tumbler__input"), G(s, "class", "tumbler__trigger"), G(c, "for", M = t[25]?.id), G(c, "class", "tumbler__toggle"), G(N, "for", D = t[25]?.id), G(N, "class", "tumbler__label"), G(n, "class", "tumbler"), G(e, "class", "switches__tumbler")
@@ -12814,7 +12831,7 @@
                     U(i, e, o), L(e, n), L(n, r), r.checked = t[1].options[t[27]].value, L(n, u), L(n, c), L(c, s), L(n, l), L(n, N), L(N, g), L(n, j), h && h.m(n, null), L(n, d), A && A.m(n, null), L(e, p), f || (I = [$(r, "change", y), $(r, "change", T)], f = !0)
                 },
                 p(e, a) {
-                    t = e, 2 & a && i !== (i = t[25]?.id) && G(r, "id", i), 2 & a && o !== (o = t[25]?.id) && G(r, "name", o), 2 & a && (r.checked = t[1].options[t[27]].value), 2 & a && M !== (M = t[25]?.id) && G(c, "for", M), 2 & a && z !== (z = Ao[t[25].id] + "") && B(g, z), 2 & a && D !== (D = t[25]?.id) && G(N, "for", D), !0 === t[25].withSpecialBadge ? h || (h = pa(), h.c(), h.m(n, d)) : h && (h.d(1), h = null), xo[t[25].id] ? A ? A.p(t, a) : (A = fa(t), A.c(), A.m(n, null)) : A && (A.d(1), A = null)
+                    t = e, 2 & a && i !== (i = t[25]?.id) && G(r, "id", i), 2 & a && o !== (o = t[25]?.id) && G(r, "name", o), 2 & a && (r.checked = t[1].options[t[27]].value), 2 & a && M !== (M = t[25]?.id) && G(c, "for", M), 2 & a && z !== (z = Ao[t[25].id] + "") && B(g, z), 2 & a && D !== (D = t[25]?.id) && G(N, "for", D), !0 === t[25].withSpecialBadge ? h || (h = fa(), h.c(), h.m(n, d)) : h && (h.d(1), h = null), xo[t[25].id] ? A ? A.p(t, a) : (A = Ia(t), A.c(), A.m(n, null)) : A && (A.d(1), A = null)
                 },
                 d(t) {
                     t && C(e), h && h.d(), A && A.d(), f = !1, a(I)
@@ -12822,7 +12839,7 @@
             }
         }
 
-        function za(t) {
+        function ya(t) {
             let e, n, r, i, o = `v${t[3]}${t[12]?"d":""}`;
             return {
                 c() {
@@ -12840,9 +12857,9 @@
             }
         }
 
-        function ya(t) {
-            let e, n, r, i = t[9] && Na(t),
-                o = t[0] && ga(t);
+        function Ta(t) {
+            let e, n, r, i = t[9] && ga(t),
+                o = t[0] && Da(t);
             return {
                 c() {
                     i && i.c(), e = Y(), o && o.c(), n = P()
@@ -12851,9 +12868,9 @@
                     i && i.m(t, a), U(t, e, a), o && o.m(t, a), U(t, n, a), r = !0
                 },
                 p(t, [r]) {
-                    t[9] ? i ? (i.p(t, r), 512 & r && Lt(i, 1)) : (i = Na(t), i.c(), Lt(i, 1), i.m(e.parentNode, e)) : i && (Ot(), Et(i, 1, 1, (() => {
+                    t[9] ? i ? (i.p(t, r), 512 & r && Lt(i, 1)) : (i = ga(t), i.c(), Lt(i, 1), i.m(e.parentNode, e)) : i && (Ot(), Et(i, 1, 1, (() => {
                         i = null
-                    })), mt()), t[0] ? o ? (o.p(t, r), 1 & r && Lt(o, 1)) : (o = ga(t), o.c(), Lt(o, 1), o.m(n.parentNode, n)) : o && (Ot(), Et(o, 1, 1, (() => {
+                    })), mt()), t[0] ? o ? (o.p(t, r), 1 & r && Lt(o, 1)) : (o = Da(t), o.c(), Lt(o, 1), o.m(n.parentNode, n)) : o && (Ot(), Et(o, 1, 1, (() => {
                         o = null
                     })), mt())
                 },
@@ -12868,9 +12885,9 @@
                 }
             }
         }
-        const Ta = () => {};
+        const ha = () => {};
 
-        function ha(t, e, n) {
+        function Aa(t, e, n) {
             let r, i, o, a, u;
             D(t, me, (t => n(7, r = t))), D(t, Le, (t => n(8, i = t))), D(t, ze, (t => n(23, o = t))), D(t, fe, (t => n(24, a = t))), D(t, Ee, (t => n(12, u = t)));
             let {
@@ -12914,7 +12931,7 @@
                     if (!s || !window.launcherAPI || !window.launcherAPI.selectDirectory) return;
                     const t = await window.launcherAPI.selectDirectory(s) || [],
                         e = M.gamePath;
-                    n(1, M.gamePath = t[0] || M.gamePath, M), e !== M.gamePath && Wo(s), window.launcherAPI.setSettings(s, M)
+                    n(1, M.gamePath = t[0] || M.gamePath, M), e !== M.gamePath && Vo(s), window.launcherAPI.setSettings(s, M)
                 }, () => {
                     s && window.launcherAPI && window.launcherAPI.openGameFolder && window.launcherAPI.openGameFolder(s)
                 }, () => n(9, d = !1), () => n(0, c = !c), () => n(9, d = !0),
@@ -12929,9 +12946,9 @@
                     }), 12e5)))
                 }]
         }
-        const Aa = class extends Bt {
+        const xa = class extends Bt {
             constructor(t) {
-                super(), Zt(this, t, ha, ya, c, {
+                super(), Zt(this, t, Aa, Ta, c, {
                     opened: 0,
                     gameId: 2,
                     settings: 1,
@@ -12943,11 +12960,11 @@
             }
         };
 
-        function xa(t) {
+        function wa(t) {
             let e, n, r, i, o, c, s, l, N, g, D, j, d, p, f, I, z, y;
             return {
                 c() {
-                    e = Q("div"), n = Q("div"), r = Q("div"), i = Q("img"), c = Y(), s = Q("h3"), s.textContent = "Обновление лаунчера", l = Y(), N = Q("span"), N.innerHTML = "Вышло новое обновление для лаунчера.\n\t\t\t\t<br/>\n\t\t\t\tНеобходимо его установить.", g = Y(), D = Q("div"), j = Q("button"), j.textContent = "Обновить и перезапустить", d = Y(), p = Q("button"), p.textContent = "Закрыть", M(i.src, o = ua) || G(i, "src", "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTciIGhlaWdodD0iNTgiIHZpZXdCb3g9IjAgMCA1NyA1OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMF81NTZfNzMzOSkiPg0KPHBhdGggZD0iTTQ4LjQ0NzkgNTQuNjQ3Mkg4LjMzNjI0QzUuNTgzNCA1NC42NDcyIDMuMDI2MzEgNTMuMTk2NCAxLjU3OTE2IDUwLjgxMjVDMC4xMzE1NzcgNDguNDI5IC01Ljk4MTMzZS0wNSA0NS40NTI1IDEuMjMxMjYgNDIuOTQ1OUwyMS4yODcxIDcuOTk1NTdDMjIuNjMzIDUuMjU2NjUgMjUuMzgzMiAzLjUyNjEyIDI4LjM5MjEgMy41MjYxMkMzMS40MDA5IDMuNTI2MTIgMzQuMTUxMiA1LjI1NjY1IDM1LjQ5NzEgNy45OTU1N0w1NS41NTI5IDQyLjk0NTlDNTYuNzg0MiA0NS40NTI1IDU2LjY1MjYgNDguNDI5IDU1LjIwNSA1MC44MTI1QzUzLjc1NzkgNTMuMTk2NCA1MS4yMDEyIDU0LjY0NzIgNDguNDQ3OSA1NC42NDcyWiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGQ9Ik00OC40NTI2IDU0LjY0NzJIMjguMzkyMVYzLjUyNjA0QzMxLjQwODIgMy41MDY4OSAzNC4xNjk2IDUuMjQ0MzkgMzUuNTAwOSA3Ljk5OTRMNTUuNTUxNiA0Mi45NDg1QzU2Ljc4NDcgNDUuNDUzMyA1Ni42NTQ3IDQ4LjQyOTggNTUuMjA4NCA1MC44MTMzQzUzLjc2MTcgNTMuMTk3MiA1MS4yMDU1IDU0LjY0OCA0OC40NTI2IDU0LjY0NzJaIiBmaWxsPSIjRUJFQkVCIi8+DQo8cGF0aCBkPSJNMzIuMjU1NiA0NS43OTkxQzMyLjI1NTYgNDcuOTcxMiAzMC41MjU2IDQ5LjczMTggMjguMzkyIDQ5LjczMThDMjYuMjU4NSA0OS43MzE4IDI0LjUyODggNDcuOTcxMiAyNC41Mjg4IDQ1Ljc5OTFDMjQuNTI4OCA0My42Mjc1IDI2LjI1ODUgNDEuODY2OSAyOC4zOTIgNDEuODY2OUMzMC41MjU2IDQxLjg2NjkgMzIuMjU1NiA0My42Mjc1IDMyLjI1NTYgNDUuNzk5MVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDQ1Ljc5OTFDMzIuMjU1NyA0Ni44NDIzIDMxLjg0ODggNDcuODQyNCAzMS4xMjQ0IDQ4LjU4MDNDMzAuMzk5NiA0OS4zMTc2IDI5LjQxNyA0OS43MzE4IDI4LjM5MjEgNDkuNzMxOFY0MS44NjY5QzI5LjQxNyA0MS44NjY1IDMwLjM5OTYgNDIuMjgwNyAzMS4xMjQ0IDQzLjAxODVDMzEuODQ4OCA0My43NTU4IDMyLjI1NTcgNDQuNzU2NCAzMi4yNTU3IDQ1Ljc5OTFaIiBmaWxsPSIjMkMzRTUwIi8+DQo8cGF0aCBkPSJNMjguMzkyIDExLjM5MDlDMzAuNTI1NiAxMS4zOTA5IDMyLjI1NTYgMTMuMTUxNCAzMi4yNTU2IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU2IDM2LjE3MzggMzAuNTI1NiAzNy45MzQ0IDI4LjM5MiAzNy45MzQ0QzI2LjI1ODUgMzcuOTM0NCAyNC41Mjg4IDM2LjE3MzggMjQuNTI4OCAzNC4wMDIyVjE1LjMyMzVDMjQuNTI4OCAxMy4xNTE0IDI2LjI1ODUgMTEuMzkwOSAyOC4zOTIgMTEuMzkwOVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU3IDM1LjA0NTQgMzEuODQ4OCAzNi4wNDU1IDMxLjEyNDQgMzYuNzgyOUMzMC4zOTk2IDM3LjUyMDcgMjkuNDE3IDM3LjkzNDggMjguMzkyMSAzNy45MzQ0VjExLjM5MDlDMjkuNDE3IDExLjM4OTYgMzAuNDAwOCAxMS44MDMzIDMxLjEyNTcgMTIuNTQxMUMzMS44NTAxIDEzLjI3ODkgMzIuMjU3IDE0LjI3OTkgMzIuMjU1NyAxNS4zMjM1WiIgZmlsbD0iIzJDM0U1MCIvPg0KPC9nPg0KPGRlZnM+DQo8Y2xpcFBhdGggaWQ9ImNsaXAwXzU1Nl83MzM5Ij4NCjxyZWN0IHdpZHRoPSI1NiIgaGVpZ2h0PSI1NyIgZmlsbD0id2hpdGUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMzkyNTc4IDAuNTM4NTc0KSIvPg0KPC9jbGlwUGF0aD4NCjwvZGVmcz4NCjwvc3ZnPg0K"), G(i, "alt", "warning-ico"), G(i, "class", "update-modal__header-icon"), G(s, "class", "update-modal__title"), G(N, "class", "update-modal__action-text"), G(j, "class", "update-modal__button"), G(p, "class", "update-modal__button"), G(D, "class", "update-modal__buttons-wrapper"), G(r, "class", "update-modal__window-content"), G(n, "class", "update-modal__content"), G(e, "class", "update-modal")
+                    e = Q("div"), n = Q("div"), r = Q("div"), i = Q("img"), c = Y(), s = Q("h3"), s.textContent = "Обновление лаунчера", l = Y(), N = Q("span"), N.innerHTML = "Вышло новое обновление для лаунчера.\n\t\t\t\t<br/>\n\t\t\t\tНеобходимо его установить.", g = Y(), D = Q("div"), j = Q("button"), j.textContent = "Обновить и перезапустить", d = Y(), p = Q("button"), p.textContent = "Закрыть", M(i.src, o = ca) || G(i, "src", "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTciIGhlaWdodD0iNTgiIHZpZXdCb3g9IjAgMCA1NyA1OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMF81NTZfNzMzOSkiPg0KPHBhdGggZD0iTTQ4LjQ0NzkgNTQuNjQ3Mkg4LjMzNjI0QzUuNTgzNCA1NC42NDcyIDMuMDI2MzEgNTMuMTk2NCAxLjU3OTE2IDUwLjgxMjVDMC4xMzE1NzcgNDguNDI5IC01Ljk4MTMzZS0wNSA0NS40NTI1IDEuMjMxMjYgNDIuOTQ1OUwyMS4yODcxIDcuOTk1NTdDMjIuNjMzIDUuMjU2NjUgMjUuMzgzMiAzLjUyNjEyIDI4LjM5MjEgMy41MjYxMkMzMS40MDA5IDMuNTI2MTIgMzQuMTUxMiA1LjI1NjY1IDM1LjQ5NzEgNy45OTU1N0w1NS41NTI5IDQyLjk0NTlDNTYuNzg0MiA0NS40NTI1IDU2LjY1MjYgNDguNDI5IDU1LjIwNSA1MC44MTI1QzUzLjc1NzkgNTMuMTk2NCA1MS4yMDEyIDU0LjY0NzIgNDguNDQ3OSA1NC42NDcyWiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGQ9Ik00OC40NTI2IDU0LjY0NzJIMjguMzkyMVYzLjUyNjA0QzMxLjQwODIgMy41MDY4OSAzNC4xNjk2IDUuMjQ0MzkgMzUuNTAwOSA3Ljk5OTRMNTUuNTUxNiA0Mi45NDg1QzU2Ljc4NDcgNDUuNDUzMyA1Ni42NTQ3IDQ4LjQyOTggNTUuMjA4NCA1MC44MTMzQzUzLjc2MTcgNTMuMTk3MiA1MS4yMDU1IDU0LjY0OCA0OC40NTI2IDU0LjY0NzJaIiBmaWxsPSIjRUJFQkVCIi8+DQo8cGF0aCBkPSJNMzIuMjU1NiA0NS43OTkxQzMyLjI1NTYgNDcuOTcxMiAzMC41MjU2IDQ5LjczMTggMjguMzkyIDQ5LjczMThDMjYuMjU4NSA0OS43MzE4IDI0LjUyODggNDcuOTcxMiAyNC41Mjg4IDQ1Ljc5OTFDMjQuNTI4OCA0My42Mjc1IDI2LjI1ODUgNDEuODY2OSAyOC4zOTIgNDEuODY2OUMzMC41MjU2IDQxLjg2NjkgMzIuMjU1NiA0My42Mjc1IDMyLjI1NTYgNDUuNzk5MVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDQ1Ljc5OTFDMzIuMjU1NyA0Ni44NDIzIDMxLjg0ODggNDcuODQyNCAzMS4xMjQ0IDQ4LjU4MDNDMzAuMzk5NiA0OS4zMTc2IDI5LjQxNyA0OS43MzE4IDI4LjM5MjEgNDkuNzMxOFY0MS44NjY5QzI5LjQxNyA0MS44NjY1IDMwLjM5OTYgNDIuMjgwNyAzMS4xMjQ0IDQzLjAxODVDMzEuODQ4OCA0My43NTU4IDMyLjI1NTcgNDQuNzU2NCAzMi4yNTU3IDQ1Ljc5OTFaIiBmaWxsPSIjMkMzRTUwIi8+DQo8cGF0aCBkPSJNMjguMzkyIDExLjM5MDlDMzAuNTI1NiAxMS4zOTA5IDMyLjI1NTYgMTMuMTUxNCAzMi4yNTU2IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU2IDM2LjE3MzggMzAuNTI1NiAzNy45MzQ0IDI4LjM5MiAzNy45MzQ0QzI2LjI1ODUgMzcuOTM0NCAyNC41Mjg4IDM2LjE3MzggMjQuNTI4OCAzNC4wMDIyVjE1LjMyMzVDMjQuNTI4OCAxMy4xNTE0IDI2LjI1ODUgMTEuMzkwOSAyOC4zOTIgMTEuMzkwOVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU3IDM1LjA0NTQgMzEuODQ4OCAzNi4wNDU1IDMxLjEyNDQgMzYuNzgyOUMzMC4zOTk2IDM3LjUyMDcgMjkuNDE3IDM3LjkzNDggMjguMzkyMSAzNy45MzQ0VjExLjM5MDlDMjkuNDE3IDExLjM4OTYgMzAuNDAwOCAxMS44MDMzIDMxLjEyNTcgMTIuNTQxMUMzMS44NTAxIDEzLjI3ODkgMzIuMjU3IDE0LjI3OTkgMzIuMjU1NyAxNS4zMjM1WiIgZmlsbD0iIzJDM0U1MCIvPg0KPC9nPg0KPGRlZnM+DQo8Y2xpcFBhdGggaWQ9ImNsaXAwXzU1Nl83MzM5Ij4NCjxyZWN0IHdpZHRoPSI1NiIgaGVpZ2h0PSI1NyIgZmlsbD0id2hpdGUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMzkyNTc4IDAuNTM4NTc0KSIvPg0KPC9jbGlwUGF0aD4NCjwvZGVmcz4NCjwvc3ZnPg0K"), G(i, "alt", "warning-ico"), G(i, "class", "update-modal__header-icon"), G(s, "class", "update-modal__title"), G(N, "class", "update-modal__action-text"), G(j, "class", "update-modal__button"), G(p, "class", "update-modal__button"), G(D, "class", "update-modal__buttons-wrapper"), G(r, "class", "update-modal__window-content"), G(n, "class", "update-modal__content"), G(e, "class", "update-modal")
                 },
                 m(o, a) {
                     U(o, e, a), L(e, n), L(n, r), L(r, i), L(r, c), L(r, s), L(r, l), L(r, N), L(r, g), L(r, D), L(D, j), L(D, d), L(D, p), I = !0, z || (y = [$(j, "click", t[2]), $(p, "click", (function() {
@@ -12975,7 +12992,7 @@
             }
         }
 
-        function wa(t, e, n) {
+        function Oa(t, e, n) {
             let {
                 closeModal: r = (() => {})
             } = e;
@@ -12986,15 +13003,15 @@
                 "closeModal" in t && n(0, r = t.closeModal)
             }, [r, i, () => i(!0)]
         }
-        const Oa = class extends Bt {
+        const ma = class extends Bt {
             constructor(t) {
-                super(), Zt(this, t, wa, xa, c, {
+                super(), Zt(this, t, Oa, wa, c, {
                     closeModal: 0
                 })
             }
         };
 
-        function ma(t) {
+        function La(t) {
             let e, n, r, i, o, a, u = `Установлено: ${t[2].currentIndex}/${t[2].count}`;
             return {
                 c() {
@@ -13012,7 +13029,7 @@
             }
         }
 
-        function La(t) {
+        function Ea(t) {
             let e, n, r, i, o, a;
             return {
                 c() {
@@ -13032,15 +13049,15 @@
             }
         }
 
-        function Ea(t) {
+        function va(t) {
             let e, n, r, i, o, a;
 
             function c(t, e) {
-                return t[2]?.error ? va : _a
+                return t[2]?.error ? _a : ka
             }
             let s = c(t),
                 M = s(t),
-                l = !t[2]?.error && ka(t);
+                l = !t[2]?.error && Ua(t);
             return {
                 c() {
                     M.c(), e = Y(), n = Q("div"), l && l.c(), r = Y(), i = Q("button"), i.textContent = "Закрыть", G(i, "class", "drivers-install__button"), G(n, "class", "drivers-install__buttons-wrapper")
@@ -13051,7 +13068,7 @@
                     })), o = !0)
                 },
                 p(i, o) {
-                    s !== (s = c(t = i)) && (M.d(1), M = s(t), M && (M.c(), M.m(e.parentNode, e))), t[2]?.error ? l && (l.d(1), l = null) : l ? l.p(t, o) : (l = ka(t), l.c(), l.m(n, r))
+                    s !== (s = c(t = i)) && (M.d(1), M = s(t), M && (M.c(), M.m(e.parentNode, e))), t[2]?.error ? l && (l.d(1), l = null) : l ? l.p(t, o) : (l = Ua(t), l.c(), l.m(n, r))
                 },
                 d(t) {
                     M.d(t), t && C(e), t && C(n), l && l.d(), o = !1, a()
@@ -13059,7 +13076,7 @@
             }
         }
 
-        function va(t) {
+        function _a(t) {
             let e, n, r;
             return {
                 c() {
@@ -13074,7 +13091,7 @@
             }
         }
 
-        function _a(t) {
+        function ka(t) {
             let e, n, r;
             return {
                 c() {
@@ -13089,7 +13106,7 @@
             }
         }
 
-        function ka(e) {
+        function Ua(e) {
             let n, r, i;
             return {
                 c() {
@@ -13105,17 +13122,17 @@
             }
         }
 
-        function Ua(t) {
+        function Ca(t) {
             let e, n, r, i, o, a, u, c;
 
             function s(t, e) {
-                return t[1] ? t[2].currentIndex === t[2].count - 1 ? La : ma : Ea
+                return t[1] ? t[2].currentIndex === t[2].count - 1 ? Ea : La : va
             }
             let l = s(t),
                 N = l(t);
             return {
                 c() {
-                    e = Q("div"), n = Q("div"), r = Q("div"), i = Q("img"), a = Y(), N.c(), M(i.src, o = ua) || G(i, "src", "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTciIGhlaWdodD0iNTgiIHZpZXdCb3g9IjAgMCA1NyA1OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMF81NTZfNzMzOSkiPg0KPHBhdGggZD0iTTQ4LjQ0NzkgNTQuNjQ3Mkg4LjMzNjI0QzUuNTgzNCA1NC42NDcyIDMuMDI2MzEgNTMuMTk2NCAxLjU3OTE2IDUwLjgxMjVDMC4xMzE1NzcgNDguNDI5IC01Ljk4MTMzZS0wNSA0NS40NTI1IDEuMjMxMjYgNDIuOTQ1OUwyMS4yODcxIDcuOTk1NTdDMjIuNjMzIDUuMjU2NjUgMjUuMzgzMiAzLjUyNjEyIDI4LjM5MjEgMy41MjYxMkMzMS40MDA5IDMuNTI2MTIgMzQuMTUxMiA1LjI1NjY1IDM1LjQ5NzEgNy45OTU1N0w1NS41NTI5IDQyLjk0NTlDNTYuNzg0MiA0NS40NTI1IDU2LjY1MjYgNDguNDI5IDU1LjIwNSA1MC44MTI1QzUzLjc1NzkgNTMuMTk2NCA1MS4yMDEyIDU0LjY0NzIgNDguNDQ3OSA1NC42NDcyWiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGQ9Ik00OC40NTI2IDU0LjY0NzJIMjguMzkyMVYzLjUyNjA0QzMxLjQwODIgMy41MDY4OSAzNC4xNjk2IDUuMjQ0MzkgMzUuNTAwOSA3Ljk5OTRMNTUuNTUxNiA0Mi45NDg1QzU2Ljc4NDcgNDUuNDUzMyA1Ni42NTQ3IDQ4LjQyOTggNTUuMjA4NCA1MC44MTMzQzUzLjc2MTcgNTMuMTk3MiA1MS4yMDU1IDU0LjY0OCA0OC40NTI2IDU0LjY0NzJaIiBmaWxsPSIjRUJFQkVCIi8+DQo8cGF0aCBkPSJNMzIuMjU1NiA0NS43OTkxQzMyLjI1NTYgNDcuOTcxMiAzMC41MjU2IDQ5LjczMTggMjguMzkyIDQ5LjczMThDMjYuMjU4NSA0OS43MzE4IDI0LjUyODggNDcuOTcxMiAyNC41Mjg4IDQ1Ljc5OTFDMjQuNTI4OCA0My42Mjc1IDI2LjI1ODUgNDEuODY2OSAyOC4zOTIgNDEuODY2OUMzMC41MjU2IDQxLjg2NjkgMzIuMjU1NiA0My42Mjc1IDMyLjI1NTYgNDUuNzk5MVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDQ1Ljc5OTFDMzIuMjU1NyA0Ni44NDIzIDMxLjg0ODggNDcuODQyNCAzMS4xMjQ0IDQ4LjU4MDNDMzAuMzk5NiA0OS4zMTc2IDI5LjQxNyA0OS43MzE4IDI4LjM5MjEgNDkuNzMxOFY0MS44NjY5QzI5LjQxNyA0MS44NjY1IDMwLjM5OTYgNDIuMjgwNyAzMS4xMjQ0IDQzLjAxODVDMzEuODQ4OCA0My43NTU4IDMyLjI1NTcgNDQuNzU2NCAzMi4yNTU3IDQ1Ljc5OTFaIiBmaWxsPSIjMkMzRTUwIi8+DQo8cGF0aCBkPSJNMjguMzkyIDExLjM5MDlDMzAuNTI1NiAxMS4zOTA5IDMyLjI1NTYgMTMuMTUxNCAzMi4yNTU2IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU2IDM2LjE3MzggMzAuNTI1NiAzNy45MzQ0IDI4LjM5MiAzNy45MzQ0QzI2LjI1ODUgMzcuOTM0NCAyNC41Mjg4IDM2LjE3MzggMjQuNTI4OCAzNC4wMDIyVjE1LjMyMzVDMjQuNTI4OCAxMy4xNTE0IDI2LjI1ODUgMTEuMzkwOSAyOC4zOTIgMTEuMzkwOVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU3IDM1LjA0NTQgMzEuODQ4OCAzNi4wNDU1IDMxLjEyNDQgMzYuNzgyOUMzMC4zOTk2IDM3LjUyMDcgMjkuNDE3IDM3LjkzNDggMjguMzkyMSAzNy45MzQ0VjExLjM5MDlDMjkuNDE3IDExLjM4OTYgMzAuNDAwOCAxMS44MDMzIDMxLjEyNTcgMTIuNTQxMUMzMS44NTAxIDEzLjI3ODkgMzIuMjU3IDE0LjI3OTkgMzIuMjU1NyAxNS4zMjM1WiIgZmlsbD0iIzJDM0U1MCIvPg0KPC9nPg0KPGRlZnM+DQo8Y2xpcFBhdGggaWQ9ImNsaXAwXzU1Nl83MzM5Ij4NCjxyZWN0IHdpZHRoPSI1NiIgaGVpZ2h0PSI1NyIgZmlsbD0id2hpdGUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMzkyNTc4IDAuNTM4NTc0KSIvPg0KPC9jbGlwUGF0aD4NCjwvZGVmcz4NCjwvc3ZnPg0K"), G(i, "alt", "warning-ico"), G(i, "class", "drivers-install__header-icon"), G(r, "class", "drivers-install__window-content"), G(n, "class", "drivers-install__content"), G(e, "class", "drivers-install")
+                    e = Q("div"), n = Q("div"), r = Q("div"), i = Q("img"), a = Y(), N.c(), M(i.src, o = ca) || G(i, "src", "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTciIGhlaWdodD0iNTgiIHZpZXdCb3g9IjAgMCA1NyA1OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMF81NTZfNzMzOSkiPg0KPHBhdGggZD0iTTQ4LjQ0NzkgNTQuNjQ3Mkg4LjMzNjI0QzUuNTgzNCA1NC42NDcyIDMuMDI2MzEgNTMuMTk2NCAxLjU3OTE2IDUwLjgxMjVDMC4xMzE1NzcgNDguNDI5IC01Ljk4MTMzZS0wNSA0NS40NTI1IDEuMjMxMjYgNDIuOTQ1OUwyMS4yODcxIDcuOTk1NTdDMjIuNjMzIDUuMjU2NjUgMjUuMzgzMiAzLjUyNjEyIDI4LjM5MjEgMy41MjYxMkMzMS40MDA5IDMuNTI2MTIgMzQuMTUxMiA1LjI1NjY1IDM1LjQ5NzEgNy45OTU1N0w1NS41NTI5IDQyLjk0NTlDNTYuNzg0MiA0NS40NTI1IDU2LjY1MjYgNDguNDI5IDU1LjIwNSA1MC44MTI1QzUzLjc1NzkgNTMuMTk2NCA1MS4yMDEyIDU0LjY0NzIgNDguNDQ3OSA1NC42NDcyWiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGQ9Ik00OC40NTI2IDU0LjY0NzJIMjguMzkyMVYzLjUyNjA0QzMxLjQwODIgMy41MDY4OSAzNC4xNjk2IDUuMjQ0MzkgMzUuNTAwOSA3Ljk5OTRMNTUuNTUxNiA0Mi45NDg1QzU2Ljc4NDcgNDUuNDUzMyA1Ni42NTQ3IDQ4LjQyOTggNTUuMjA4NCA1MC44MTMzQzUzLjc2MTcgNTMuMTk3MiA1MS4yMDU1IDU0LjY0OCA0OC40NTI2IDU0LjY0NzJaIiBmaWxsPSIjRUJFQkVCIi8+DQo8cGF0aCBkPSJNMzIuMjU1NiA0NS43OTkxQzMyLjI1NTYgNDcuOTcxMiAzMC41MjU2IDQ5LjczMTggMjguMzkyIDQ5LjczMThDMjYuMjU4NSA0OS43MzE4IDI0LjUyODggNDcuOTcxMiAyNC41Mjg4IDQ1Ljc5OTFDMjQuNTI4OCA0My42Mjc1IDI2LjI1ODUgNDEuODY2OSAyOC4zOTIgNDEuODY2OUMzMC41MjU2IDQxLjg2NjkgMzIuMjU1NiA0My42Mjc1IDMyLjI1NTYgNDUuNzk5MVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDQ1Ljc5OTFDMzIuMjU1NyA0Ni44NDIzIDMxLjg0ODggNDcuODQyNCAzMS4xMjQ0IDQ4LjU4MDNDMzAuMzk5NiA0OS4zMTc2IDI5LjQxNyA0OS43MzE4IDI4LjM5MjEgNDkuNzMxOFY0MS44NjY5QzI5LjQxNyA0MS44NjY1IDMwLjM5OTYgNDIuMjgwNyAzMS4xMjQ0IDQzLjAxODVDMzEuODQ4OCA0My43NTU4IDMyLjI1NTcgNDQuNzU2NCAzMi4yNTU3IDQ1Ljc5OTFaIiBmaWxsPSIjMkMzRTUwIi8+DQo8cGF0aCBkPSJNMjguMzkyIDExLjM5MDlDMzAuNTI1NiAxMS4zOTA5IDMyLjI1NTYgMTMuMTUxNCAzMi4yNTU2IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU2IDM2LjE3MzggMzAuNTI1NiAzNy45MzQ0IDI4LjM5MiAzNy45MzQ0QzI2LjI1ODUgMzcuOTM0NCAyNC41Mjg4IDM2LjE3MzggMjQuNTI4OCAzNC4wMDIyVjE1LjMyMzVDMjQuNTI4OCAxMy4xNTE0IDI2LjI1ODUgMTEuMzkwOSAyOC4zOTIgMTEuMzkwOVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU3IDM1LjA0NTQgMzEuODQ4OCAzNi4wNDU1IDMxLjEyNDQgMzYuNzgyOUMzMC4zOTk2IDM3LjUyMDcgMjkuNDE3IDM3LjkzNDggMjguMzkyMSAzNy45MzQ0VjExLjM5MDlDMjkuNDE3IDExLjM4OTYgMzAuNDAwOCAxMS44MDMzIDMxLjEyNTcgMTIuNTQxMUMzMS44NTAxIDEzLjI3ODkgMzIuMjU3IDE0LjI3OTkgMzIuMjU1NyAxNS4zMjM1WiIgZmlsbD0iIzJDM0U1MCIvPg0KPC9nPg0KPGRlZnM+DQo8Y2xpcFBhdGggaWQ9ImNsaXAwXzU1Nl83MzM5Ij4NCjxyZWN0IHdpZHRoPSI1NiIgaGVpZ2h0PSI1NyIgZmlsbD0id2hpdGUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMzkyNTc4IDAuNTM4NTc0KSIvPg0KPC9jbGlwUGF0aD4NCjwvZGVmcz4NCjwvc3ZnPg0K"), G(i, "alt", "warning-ico"), G(i, "class", "drivers-install__header-icon"), G(r, "class", "drivers-install__window-content"), G(n, "class", "drivers-install__content"), G(e, "class", "drivers-install")
                 },
                 m(t, o) {
                     U(t, e, o), L(e, n), L(n, r), L(r, i), L(r, a), N.m(r, null), c = !0
@@ -13141,7 +13158,7 @@
             }
         }
 
-        function Ca(t, e, n) {
+        function Sa(t, e, n) {
             let r;
             D(t, ze, (t => n(4, r = t)));
             let i = !1,
@@ -13166,19 +13183,19 @@
                 window.launcherAPI && window.launcherAPI.installDrivers && (window.launcherAPI.installDrivers(r), n(1, i = !0))
             }]
         }
-        const Sa = class extends Bt {
+        const Qa = class extends Bt {
             constructor(t) {
-                super(), Zt(this, t, Ca, Ua, c, {
+                super(), Zt(this, t, Sa, Ca, c, {
                     closeModal: 0
                 })
             }
         };
 
-        function Qa(t) {
+        function ba(t) {
             let e, n, r, i, o, a, c, s, l, N, g, D, j, d, p, f;
             return {
                 c() {
-                    e = Q("div"), n = Q("div"), r = Q("div"), i = Q("img"), a = Y(), c = Q("h3"), c.textContent = "Сервер загрузки не отвечает", s = Y(), l = Q("span"), l.textContent = "Попробуйте позже или проверьте ваше интернет-соединение.", N = Y(), g = Q("div"), D = Q("button"), D.textContent = "Закрыть", M(i.src, o = ua) || G(i, "src", "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTciIGhlaWdodD0iNTgiIHZpZXdCb3g9IjAgMCA1NyA1OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMF81NTZfNzMzOSkiPg0KPHBhdGggZD0iTTQ4LjQ0NzkgNTQuNjQ3Mkg4LjMzNjI0QzUuNTgzNCA1NC42NDcyIDMuMDI2MzEgNTMuMTk2NCAxLjU3OTE2IDUwLjgxMjVDMC4xMzE1NzcgNDguNDI5IC01Ljk4MTMzZS0wNSA0NS40NTI1IDEuMjMxMjYgNDIuOTQ1OUwyMS4yODcxIDcuOTk1NTdDMjIuNjMzIDUuMjU2NjUgMjUuMzgzMiAzLjUyNjEyIDI4LjM5MjEgMy41MjYxMkMzMS40MDA5IDMuNTI2MTIgMzQuMTUxMiA1LjI1NjY1IDM1LjQ5NzEgNy45OTU1N0w1NS41NTI5IDQyLjk0NTlDNTYuNzg0MiA0NS40NTI1IDU2LjY1MjYgNDguNDI5IDU1LjIwNSA1MC44MTI1QzUzLjc1NzkgNTMuMTk2NCA1MS4yMDEyIDU0LjY0NzIgNDguNDQ3OSA1NC42NDcyWiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGQ9Ik00OC40NTI2IDU0LjY0NzJIMjguMzkyMVYzLjUyNjA0QzMxLjQwODIgMy41MDY4OSAzNC4xNjk2IDUuMjQ0MzkgMzUuNTAwOSA3Ljk5OTRMNTUuNTUxNiA0Mi45NDg1QzU2Ljc4NDcgNDUuNDUzMyA1Ni42NTQ3IDQ4LjQyOTggNTUuMjA4NCA1MC44MTMzQzUzLjc2MTcgNTMuMTk3MiA1MS4yMDU1IDU0LjY0OCA0OC40NTI2IDU0LjY0NzJaIiBmaWxsPSIjRUJFQkVCIi8+DQo8cGF0aCBkPSJNMzIuMjU1NiA0NS43OTkxQzMyLjI1NTYgNDcuOTcxMiAzMC41MjU2IDQ5LjczMTggMjguMzkyIDQ5LjczMThDMjYuMjU4NSA0OS43MzE4IDI0LjUyODggNDcuOTcxMiAyNC41Mjg4IDQ1Ljc5OTFDMjQuNTI4OCA0My42Mjc1IDI2LjI1ODUgNDEuODY2OSAyOC4zOTIgNDEuODY2OUMzMC41MjU2IDQxLjg2NjkgMzIuMjU1NiA0My42Mjc1IDMyLjI1NTYgNDUuNzk5MVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDQ1Ljc5OTFDMzIuMjU1NyA0Ni44NDIzIDMxLjg0ODggNDcuODQyNCAzMS4xMjQ0IDQ4LjU4MDNDMzAuMzk5NiA0OS4zMTc2IDI5LjQxNyA0OS43MzE4IDI4LjM5MjEgNDkuNzMxOFY0MS44NjY5QzI5LjQxNyA0MS44NjY1IDMwLjM5OTYgNDIuMjgwNyAzMS4xMjQ0IDQzLjAxODVDMzEuODQ4OCA0My43NTU4IDMyLjI1NTcgNDQuNzU2NCAzMi4yNTU3IDQ1Ljc5OTFaIiBmaWxsPSIjMkMzRTUwIi8+DQo8cGF0aCBkPSJNMjguMzkyIDExLjM5MDlDMzAuNTI1NiAxMS4zOTA5IDMyLjI1NTYgMTMuMTUxNCAzMi4yNTU2IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU2IDM2LjE3MzggMzAuNTI1NiAzNy45MzQ0IDI4LjM5MiAzNy45MzQ0QzI2LjI1ODUgMzcuOTM0NCAyNC41Mjg4IDM2LjE3MzggMjQuNTI4OCAzNC4wMDIyVjE1LjMyMzVDMjQuNTI4OCAxMy4xNTE0IDI2LjI1ODUgMTEuMzkwOSAyOC4zOTIgMTEuMzkwOVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU3IDM1LjA0NTQgMzEuODQ4OCAzNi4wNDU1IDMxLjEyNDQgMzYuNzgyOUMzMC4zOTk2IDM3LjUyMDcgMjkuNDE3IDM3LjkzNDggMjguMzkyMSAzNy45MzQ0VjExLjM5MDlDMjkuNDE3IDExLjM4OTYgMzAuNDAwOCAxMS44MDMzIDMxLjEyNTcgMTIuNTQxMUMzMS44NTAxIDEzLjI3ODkgMzIuMjU3IDE0LjI3OTkgMzIuMjU1NyAxNS4zMjM1WiIgZmlsbD0iIzJDM0U1MCIvPg0KPC9nPg0KPGRlZnM+DQo8Y2xpcFBhdGggaWQ9ImNsaXAwXzU1Nl83MzM5Ij4NCjxyZWN0IHdpZHRoPSI1NiIgaGVpZ2h0PSI1NyIgZmlsbD0id2hpdGUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMzkyNTc4IDAuNTM4NTc0KSIvPg0KPC9jbGlwUGF0aD4NCjwvZGVmcz4NCjwvc3ZnPg0K"), G(i, "alt", "warning-ico"), G(i, "class", "drivers-install__header-icon"), G(c, "class", "drivers-install__title"), G(l, "class", "drivers-install__action-text"), G(D, "class", "drivers-install__button"), G(g, "class", "drivers-install__buttons-wrapper"), G(r, "class", "drivers-install__window-content"), G(n, "class", "drivers-install__content"), G(e, "class", "drivers-install")
+                    e = Q("div"), n = Q("div"), r = Q("div"), i = Q("img"), a = Y(), c = Q("h3"), c.textContent = "Сервер загрузки не отвечает", s = Y(), l = Q("span"), l.textContent = "Попробуйте позже или проверьте ваше интернет-соединение.", N = Y(), g = Q("div"), D = Q("button"), D.textContent = "Закрыть", M(i.src, o = ca) || G(i, "src", "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTciIGhlaWdodD0iNTgiIHZpZXdCb3g9IjAgMCA1NyA1OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMF81NTZfNzMzOSkiPg0KPHBhdGggZD0iTTQ4LjQ0NzkgNTQuNjQ3Mkg4LjMzNjI0QzUuNTgzNCA1NC42NDcyIDMuMDI2MzEgNTMuMTk2NCAxLjU3OTE2IDUwLjgxMjVDMC4xMzE1NzcgNDguNDI5IC01Ljk4MTMzZS0wNSA0NS40NTI1IDEuMjMxMjYgNDIuOTQ1OUwyMS4yODcxIDcuOTk1NTdDMjIuNjMzIDUuMjU2NjUgMjUuMzgzMiAzLjUyNjEyIDI4LjM5MjEgMy41MjYxMkMzMS40MDA5IDMuNTI2MTIgMzQuMTUxMiA1LjI1NjY1IDM1LjQ5NzEgNy45OTU1N0w1NS41NTI5IDQyLjk0NTlDNTYuNzg0MiA0NS40NTI1IDU2LjY1MjYgNDguNDI5IDU1LjIwNSA1MC44MTI1QzUzLjc1NzkgNTMuMTk2NCA1MS4yMDEyIDU0LjY0NzIgNDguNDQ3OSA1NC42NDcyWiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGQ9Ik00OC40NTI2IDU0LjY0NzJIMjguMzkyMVYzLjUyNjA0QzMxLjQwODIgMy41MDY4OSAzNC4xNjk2IDUuMjQ0MzkgMzUuNTAwOSA3Ljk5OTRMNTUuNTUxNiA0Mi45NDg1QzU2Ljc4NDcgNDUuNDUzMyA1Ni42NTQ3IDQ4LjQyOTggNTUuMjA4NCA1MC44MTMzQzUzLjc2MTcgNTMuMTk3MiA1MS4yMDU1IDU0LjY0OCA0OC40NTI2IDU0LjY0NzJaIiBmaWxsPSIjRUJFQkVCIi8+DQo8cGF0aCBkPSJNMzIuMjU1NiA0NS43OTkxQzMyLjI1NTYgNDcuOTcxMiAzMC41MjU2IDQ5LjczMTggMjguMzkyIDQ5LjczMThDMjYuMjU4NSA0OS43MzE4IDI0LjUyODggNDcuOTcxMiAyNC41Mjg4IDQ1Ljc5OTFDMjQuNTI4OCA0My42Mjc1IDI2LjI1ODUgNDEuODY2OSAyOC4zOTIgNDEuODY2OUMzMC41MjU2IDQxLjg2NjkgMzIuMjU1NiA0My42Mjc1IDMyLjI1NTYgNDUuNzk5MVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDQ1Ljc5OTFDMzIuMjU1NyA0Ni44NDIzIDMxLjg0ODggNDcuODQyNCAzMS4xMjQ0IDQ4LjU4MDNDMzAuMzk5NiA0OS4zMTc2IDI5LjQxNyA0OS43MzE4IDI4LjM5MjEgNDkuNzMxOFY0MS44NjY5QzI5LjQxNyA0MS44NjY1IDMwLjM5OTYgNDIuMjgwNyAzMS4xMjQ0IDQzLjAxODVDMzEuODQ4OCA0My43NTU4IDMyLjI1NTcgNDQuNzU2NCAzMi4yNTU3IDQ1Ljc5OTFaIiBmaWxsPSIjMkMzRTUwIi8+DQo8cGF0aCBkPSJNMjguMzkyIDExLjM5MDlDMzAuNTI1NiAxMS4zOTA5IDMyLjI1NTYgMTMuMTUxNCAzMi4yNTU2IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU2IDM2LjE3MzggMzAuNTI1NiAzNy45MzQ0IDI4LjM5MiAzNy45MzQ0QzI2LjI1ODUgMzcuOTM0NCAyNC41Mjg4IDM2LjE3MzggMjQuNTI4OCAzNC4wMDIyVjE1LjMyMzVDMjQuNTI4OCAxMy4xNTE0IDI2LjI1ODUgMTEuMzkwOSAyOC4zOTIgMTEuMzkwOVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU3IDM1LjA0NTQgMzEuODQ4OCAzNi4wNDU1IDMxLjEyNDQgMzYuNzgyOUMzMC4zOTk2IDM3LjUyMDcgMjkuNDE3IDM3LjkzNDggMjguMzkyMSAzNy45MzQ0VjExLjM5MDlDMjkuNDE3IDExLjM4OTYgMzAuNDAwOCAxMS44MDMzIDMxLjEyNTcgMTIuNTQxMUMzMS44NTAxIDEzLjI3ODkgMzIuMjU3IDE0LjI3OTkgMzIuMjU1NyAxNS4zMjM1WiIgZmlsbD0iIzJDM0U1MCIvPg0KPC9nPg0KPGRlZnM+DQo8Y2xpcFBhdGggaWQ9ImNsaXAwXzU1Nl83MzM5Ij4NCjxyZWN0IHdpZHRoPSI1NiIgaGVpZ2h0PSI1NyIgZmlsbD0id2hpdGUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMzkyNTc4IDAuNTM4NTc0KSIvPg0KPC9jbGlwUGF0aD4NCjwvZGVmcz4NCjwvc3ZnPg0K"), G(i, "alt", "warning-ico"), G(i, "class", "drivers-install__header-icon"), G(c, "class", "drivers-install__title"), G(l, "class", "drivers-install__action-text"), G(D, "class", "drivers-install__button"), G(g, "class", "drivers-install__buttons-wrapper"), G(r, "class", "drivers-install__window-content"), G(n, "class", "drivers-install__content"), G(e, "class", "drivers-install")
                 },
                 m(o, M) {
                     U(o, e, M), L(e, n), L(n, r), L(r, i), L(r, a), L(r, c), L(r, s), L(r, l), L(r, N), L(r, g), L(g, D), d = !0, p || (f = $(D, "click", (function() {
@@ -13206,7 +13223,7 @@
             }
         }
 
-        function ba(t, e, n) {
+        function Ya(t, e, n) {
             let {
                 closeModal: r = (() => {})
             } = e;
@@ -13214,19 +13231,19 @@
                 "closeModal" in t && n(0, r = t.closeModal)
             }, [r]
         }
-        const Ya = class extends Bt {
+        const Pa = class extends Bt {
             constructor(t) {
-                super(), Zt(this, t, ba, Qa, c, {
+                super(), Zt(this, t, Ya, ba, c, {
                     closeModal: 0
                 })
             }
         };
 
-        function Pa(t) {
+        function $a(t) {
             let e, n, r, i, o, c, s, l, N, g, D, j, d, p, f, I, z, y;
             return {
                 c() {
-                    e = Q("div"), n = Q("div"), r = Q("div"), i = Q("img"), c = Y(), s = Q("h3"), s.textContent = "Внимание!", l = Y(), N = Q("span"), N.textContent = "Для выполнения дальнейших действий необходим перезапуск приложения с правами администратора", g = Y(), D = Q("div"), j = Q("button"), j.textContent = "Перезапустить", d = Y(), p = Q("button"), p.textContent = "Закрыть", M(i.src, o = ua) || G(i, "src", "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTciIGhlaWdodD0iNTgiIHZpZXdCb3g9IjAgMCA1NyA1OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMF81NTZfNzMzOSkiPg0KPHBhdGggZD0iTTQ4LjQ0NzkgNTQuNjQ3Mkg4LjMzNjI0QzUuNTgzNCA1NC42NDcyIDMuMDI2MzEgNTMuMTk2NCAxLjU3OTE2IDUwLjgxMjVDMC4xMzE1NzcgNDguNDI5IC01Ljk4MTMzZS0wNSA0NS40NTI1IDEuMjMxMjYgNDIuOTQ1OUwyMS4yODcxIDcuOTk1NTdDMjIuNjMzIDUuMjU2NjUgMjUuMzgzMiAzLjUyNjEyIDI4LjM5MjEgMy41MjYxMkMzMS40MDA5IDMuNTI2MTIgMzQuMTUxMiA1LjI1NjY1IDM1LjQ5NzEgNy45OTU1N0w1NS41NTI5IDQyLjk0NTlDNTYuNzg0MiA0NS40NTI1IDU2LjY1MjYgNDguNDI5IDU1LjIwNSA1MC44MTI1QzUzLjc1NzkgNTMuMTk2NCA1MS4yMDEyIDU0LjY0NzIgNDguNDQ3OSA1NC42NDcyWiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGQ9Ik00OC40NTI2IDU0LjY0NzJIMjguMzkyMVYzLjUyNjA0QzMxLjQwODIgMy41MDY4OSAzNC4xNjk2IDUuMjQ0MzkgMzUuNTAwOSA3Ljk5OTRMNTUuNTUxNiA0Mi45NDg1QzU2Ljc4NDcgNDUuNDUzMyA1Ni42NTQ3IDQ4LjQyOTggNTUuMjA4NCA1MC44MTMzQzUzLjc2MTcgNTMuMTk3MiA1MS4yMDU1IDU0LjY0OCA0OC40NTI2IDU0LjY0NzJaIiBmaWxsPSIjRUJFQkVCIi8+DQo8cGF0aCBkPSJNMzIuMjU1NiA0NS43OTkxQzMyLjI1NTYgNDcuOTcxMiAzMC41MjU2IDQ5LjczMTggMjguMzkyIDQ5LjczMThDMjYuMjU4NSA0OS43MzE4IDI0LjUyODggNDcuOTcxMiAyNC41Mjg4IDQ1Ljc5OTFDMjQuNTI4OCA0My42Mjc1IDI2LjI1ODUgNDEuODY2OSAyOC4zOTIgNDEuODY2OUMzMC41MjU2IDQxLjg2NjkgMzIuMjU1NiA0My42Mjc1IDMyLjI1NTYgNDUuNzk5MVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDQ1Ljc5OTFDMzIuMjU1NyA0Ni44NDIzIDMxLjg0ODggNDcuODQyNCAzMS4xMjQ0IDQ4LjU4MDNDMzAuMzk5NiA0OS4zMTc2IDI5LjQxNyA0OS43MzE4IDI4LjM5MjEgNDkuNzMxOFY0MS44NjY5QzI5LjQxNyA0MS44NjY1IDMwLjM5OTYgNDIuMjgwNyAzMS4xMjQ0IDQzLjAxODVDMzEuODQ4OCA0My43NTU4IDMyLjI1NTcgNDQuNzU2NCAzMi4yNTU3IDQ1Ljc5OTFaIiBmaWxsPSIjMkMzRTUwIi8+DQo8cGF0aCBkPSJNMjguMzkyIDExLjM5MDlDMzAuNTI1NiAxMS4zOTA5IDMyLjI1NTYgMTMuMTUxNCAzMi4yNTU2IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU2IDM2LjE3MzggMzAuNTI1NiAzNy45MzQ0IDI4LjM5MiAzNy45MzQ0QzI2LjI1ODUgMzcuOTM0NCAyNC41Mjg4IDM2LjE3MzggMjQuNTI4OCAzNC4wMDIyVjE1LjMyMzVDMjQuNTI4OCAxMy4xNTE0IDI2LjI1ODUgMTEuMzkwOSAyOC4zOTIgMTEuMzkwOVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU3IDM1LjA0NTQgMzEuODQ4OCAzNi4wNDU1IDMxLjEyNDQgMzYuNzgyOUMzMC4zOTk2IDM3LjUyMDcgMjkuNDE3IDM3LjkzNDggMjguMzkyMSAzNy45MzQ0VjExLjM5MDlDMjkuNDE3IDExLjM4OTYgMzAuNDAwOCAxMS44MDMzIDMxLjEyNTcgMTIuNTQxMUMzMS44NTAxIDEzLjI3ODkgMzIuMjU3IDE0LjI3OTkgMzIuMjU1NyAxNS4zMjM1WiIgZmlsbD0iIzJDM0U1MCIvPg0KPC9nPg0KPGRlZnM+DQo8Y2xpcFBhdGggaWQ9ImNsaXAwXzU1Nl83MzM5Ij4NCjxyZWN0IHdpZHRoPSI1NiIgaGVpZ2h0PSI1NyIgZmlsbD0id2hpdGUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMzkyNTc4IDAuNTM4NTc0KSIvPg0KPC9jbGlwUGF0aD4NCjwvZGVmcz4NCjwvc3ZnPg0K"), G(i, "alt", "warning-ico"), G(i, "class", "drivers-install__header-icon"), G(s, "class", "drivers-install__title"), G(N, "class", "drivers-install__action-text"), G(j, "class", "drivers-install__button"), G(p, "class", "drivers-install__button"), G(D, "class", "drivers-install__buttons-wrapper"), G(r, "class", "drivers-install__window-content"), G(n, "class", "drivers-install__content"), G(e, "class", "drivers-install")
+                    e = Q("div"), n = Q("div"), r = Q("div"), i = Q("img"), c = Y(), s = Q("h3"), s.textContent = "Внимание!", l = Y(), N = Q("span"), N.textContent = "Для выполнения дальнейших действий необходим перезапуск приложения с правами администратора", g = Y(), D = Q("div"), j = Q("button"), j.textContent = "Перезапустить", d = Y(), p = Q("button"), p.textContent = "Закрыть", M(i.src, o = ca) || G(i, "src", "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTciIGhlaWdodD0iNTgiIHZpZXdCb3g9IjAgMCA1NyA1OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMF81NTZfNzMzOSkiPg0KPHBhdGggZD0iTTQ4LjQ0NzkgNTQuNjQ3Mkg4LjMzNjI0QzUuNTgzNCA1NC42NDcyIDMuMDI2MzEgNTMuMTk2NCAxLjU3OTE2IDUwLjgxMjVDMC4xMzE1NzcgNDguNDI5IC01Ljk4MTMzZS0wNSA0NS40NTI1IDEuMjMxMjYgNDIuOTQ1OUwyMS4yODcxIDcuOTk1NTdDMjIuNjMzIDUuMjU2NjUgMjUuMzgzMiAzLjUyNjEyIDI4LjM5MjEgMy41MjYxMkMzMS40MDA5IDMuNTI2MTIgMzQuMTUxMiA1LjI1NjY1IDM1LjQ5NzEgNy45OTU1N0w1NS41NTI5IDQyLjk0NTlDNTYuNzg0MiA0NS40NTI1IDU2LjY1MjYgNDguNDI5IDU1LjIwNSA1MC44MTI1QzUzLjc1NzkgNTMuMTk2NCA1MS4yMDEyIDU0LjY0NzIgNDguNDQ3OSA1NC42NDcyWiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGQ9Ik00OC40NTI2IDU0LjY0NzJIMjguMzkyMVYzLjUyNjA0QzMxLjQwODIgMy41MDY4OSAzNC4xNjk2IDUuMjQ0MzkgMzUuNTAwOSA3Ljk5OTRMNTUuNTUxNiA0Mi45NDg1QzU2Ljc4NDcgNDUuNDUzMyA1Ni42NTQ3IDQ4LjQyOTggNTUuMjA4NCA1MC44MTMzQzUzLjc2MTcgNTMuMTk3MiA1MS4yMDU1IDU0LjY0OCA0OC40NTI2IDU0LjY0NzJaIiBmaWxsPSIjRUJFQkVCIi8+DQo8cGF0aCBkPSJNMzIuMjU1NiA0NS43OTkxQzMyLjI1NTYgNDcuOTcxMiAzMC41MjU2IDQ5LjczMTggMjguMzkyIDQ5LjczMThDMjYuMjU4NSA0OS43MzE4IDI0LjUyODggNDcuOTcxMiAyNC41Mjg4IDQ1Ljc5OTFDMjQuNTI4OCA0My42Mjc1IDI2LjI1ODUgNDEuODY2OSAyOC4zOTIgNDEuODY2OUMzMC41MjU2IDQxLjg2NjkgMzIuMjU1NiA0My42Mjc1IDMyLjI1NTYgNDUuNzk5MVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDQ1Ljc5OTFDMzIuMjU1NyA0Ni44NDIzIDMxLjg0ODggNDcuODQyNCAzMS4xMjQ0IDQ4LjU4MDNDMzAuMzk5NiA0OS4zMTc2IDI5LjQxNyA0OS43MzE4IDI4LjM5MjEgNDkuNzMxOFY0MS44NjY5QzI5LjQxNyA0MS44NjY1IDMwLjM5OTYgNDIuMjgwNyAzMS4xMjQ0IDQzLjAxODVDMzEuODQ4OCA0My43NTU4IDMyLjI1NTcgNDQuNzU2NCAzMi4yNTU3IDQ1Ljc5OTFaIiBmaWxsPSIjMkMzRTUwIi8+DQo8cGF0aCBkPSJNMjguMzkyIDExLjM5MDlDMzAuNTI1NiAxMS4zOTA5IDMyLjI1NTYgMTMuMTUxNCAzMi4yNTU2IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU2IDM2LjE3MzggMzAuNTI1NiAzNy45MzQ0IDI4LjM5MiAzNy45MzQ0QzI2LjI1ODUgMzcuOTM0NCAyNC41Mjg4IDM2LjE3MzggMjQuNTI4OCAzNC4wMDIyVjE1LjMyMzVDMjQuNTI4OCAxMy4xNTE0IDI2LjI1ODUgMTEuMzkwOSAyOC4zOTIgMTEuMzkwOVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU3IDM1LjA0NTQgMzEuODQ4OCAzNi4wNDU1IDMxLjEyNDQgMzYuNzgyOUMzMC4zOTk2IDM3LjUyMDcgMjkuNDE3IDM3LjkzNDggMjguMzkyMSAzNy45MzQ0VjExLjM5MDlDMjkuNDE3IDExLjM4OTYgMzAuNDAwOCAxMS44MDMzIDMxLjEyNTcgMTIuNTQxMUMzMS44NTAxIDEzLjI3ODkgMzIuMjU3IDE0LjI3OTkgMzIuMjU1NyAxNS4zMjM1WiIgZmlsbD0iIzJDM0U1MCIvPg0KPC9nPg0KPGRlZnM+DQo8Y2xpcFBhdGggaWQ9ImNsaXAwXzU1Nl83MzM5Ij4NCjxyZWN0IHdpZHRoPSI1NiIgaGVpZ2h0PSI1NyIgZmlsbD0id2hpdGUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMzkyNTc4IDAuNTM4NTc0KSIvPg0KPC9jbGlwUGF0aD4NCjwvZGVmcz4NCjwvc3ZnPg0K"), G(i, "alt", "warning-ico"), G(i, "class", "drivers-install__header-icon"), G(s, "class", "drivers-install__title"), G(N, "class", "drivers-install__action-text"), G(j, "class", "drivers-install__button"), G(p, "class", "drivers-install__button"), G(D, "class", "drivers-install__buttons-wrapper"), G(r, "class", "drivers-install__window-content"), G(n, "class", "drivers-install__content"), G(e, "class", "drivers-install")
                 },
                 m(o, a) {
                     U(o, e, a), L(e, n), L(n, r), L(r, i), L(r, c), L(r, s), L(r, l), L(r, N), L(r, g), L(r, D), L(D, j), L(D, d), L(D, p), I = !0, z || (y = [$(j, "click", t[1]), $(p, "click", (function() {
@@ -13254,7 +13271,7 @@
             }
         }
 
-        function $a(t, e, n) {
+        function Ra(t, e, n) {
             let {
                 closeModal: r = (() => {})
             } = e;
@@ -13264,19 +13281,19 @@
                 window.launcherAPI && window.launcherAPI.restartAsAdmin && window.launcherAPI.restartAsAdmin()
             }]
         }
-        const Ra = class extends Bt {
+        const Ga = class extends Bt {
             constructor(t) {
-                super(), Zt(this, t, $a, Pa, c, {
+                super(), Zt(this, t, Ra, $a, c, {
                     closeModal: 0
                 })
             }
         };
 
-        function Ga(e) {
+        function Za(e) {
             let n, r, i, o, u, c, s, l, N, g, D, j, d, p, f, I, z, y;
             return {
                 c() {
-                    n = Q("div"), r = Q("div"), i = Q("div"), o = Q("img"), c = Y(), s = Q("h3"), s.textContent = "Хочешь получить выгоду?", l = Y(), N = Q("span"), N.innerHTML = "Мы присылаем уникальные промокоды, которые дадут тебе классные тачки, игровую валюту и даже AZ-Coins!\n                <br/> \n                <br/>\n\t            Для этого наш лаунчер будет запускаться автоматически с включением устройства. Согласны?", g = Y(), D = Q("div"), j = Q("button"), j.textContent = "Согласен", d = Y(), p = Q("button"), p.textContent = "Не хочу", M(o.src, u = ua) || G(o, "src", "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTciIGhlaWdodD0iNTgiIHZpZXdCb3g9IjAgMCA1NyA1OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMF81NTZfNzMzOSkiPg0KPHBhdGggZD0iTTQ4LjQ0NzkgNTQuNjQ3Mkg4LjMzNjI0QzUuNTgzNCA1NC42NDcyIDMuMDI2MzEgNTMuMTk2NCAxLjU3OTE2IDUwLjgxMjVDMC4xMzE1NzcgNDguNDI5IC01Ljk4MTMzZS0wNSA0NS40NTI1IDEuMjMxMjYgNDIuOTQ1OUwyMS4yODcxIDcuOTk1NTdDMjIuNjMzIDUuMjU2NjUgMjUuMzgzMiAzLjUyNjEyIDI4LjM5MjEgMy41MjYxMkMzMS40MDA5IDMuNTI2MTIgMzQuMTUxMiA1LjI1NjY1IDM1LjQ5NzEgNy45OTU1N0w1NS41NTI5IDQyLjk0NTlDNTYuNzg0MiA0NS40NTI1IDU2LjY1MjYgNDguNDI5IDU1LjIwNSA1MC44MTI1QzUzLjc1NzkgNTMuMTk2NCA1MS4yMDEyIDU0LjY0NzIgNDguNDQ3OSA1NC42NDcyWiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGQ9Ik00OC40NTI2IDU0LjY0NzJIMjguMzkyMVYzLjUyNjA0QzMxLjQwODIgMy41MDY4OSAzNC4xNjk2IDUuMjQ0MzkgMzUuNTAwOSA3Ljk5OTRMNTUuNTUxNiA0Mi45NDg1QzU2Ljc4NDcgNDUuNDUzMyA1Ni42NTQ3IDQ4LjQyOTggNTUuMjA4NCA1MC44MTMzQzUzLjc2MTcgNTMuMTk3MiA1MS4yMDU1IDU0LjY0OCA0OC40NTI2IDU0LjY0NzJaIiBmaWxsPSIjRUJFQkVCIi8+DQo8cGF0aCBkPSJNMzIuMjU1NiA0NS43OTkxQzMyLjI1NTYgNDcuOTcxMiAzMC41MjU2IDQ5LjczMTggMjguMzkyIDQ5LjczMThDMjYuMjU4NSA0OS43MzE4IDI0LjUyODggNDcuOTcxMiAyNC41Mjg4IDQ1Ljc5OTFDMjQuNTI4OCA0My42Mjc1IDI2LjI1ODUgNDEuODY2OSAyOC4zOTIgNDEuODY2OUMzMC41MjU2IDQxLjg2NjkgMzIuMjU1NiA0My42Mjc1IDMyLjI1NTYgNDUuNzk5MVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDQ1Ljc5OTFDMzIuMjU1NyA0Ni44NDIzIDMxLjg0ODggNDcuODQyNCAzMS4xMjQ0IDQ4LjU4MDNDMzAuMzk5NiA0OS4zMTc2IDI5LjQxNyA0OS43MzE4IDI4LjM5MjEgNDkuNzMxOFY0MS44NjY5QzI5LjQxNyA0MS44NjY1IDMwLjM5OTYgNDIuMjgwNyAzMS4xMjQ0IDQzLjAxODVDMzEuODQ4OCA0My43NTU4IDMyLjI1NTcgNDQuNzU2NCAzMi4yNTU3IDQ1Ljc5OTFaIiBmaWxsPSIjMkMzRTUwIi8+DQo8cGF0aCBkPSJNMjguMzkyIDExLjM5MDlDMzAuNTI1NiAxMS4zOTA5IDMyLjI1NTYgMTMuMTUxNCAzMi4yNTU2IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU2IDM2LjE3MzggMzAuNTI1NiAzNy45MzQ0IDI4LjM5MiAzNy45MzQ0QzI2LjI1ODUgMzcuOTM0NCAyNC41Mjg4IDM2LjE3MzggMjQuNTI4OCAzNC4wMDIyVjE1LjMyMzVDMjQuNTI4OCAxMy4xNTE0IDI2LjI1ODUgMTEuMzkwOSAyOC4zOTIgMTEuMzkwOVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU3IDM1LjA0NTQgMzEuODQ4OCAzNi4wNDU1IDMxLjEyNDQgMzYuNzgyOUMzMC4zOTk2IDM3LjUyMDcgMjkuNDE3IDM3LjkzNDggMjguMzkyMSAzNy45MzQ0VjExLjM5MDlDMjkuNDE3IDExLjM4OTYgMzAuNDAwOCAxMS44MDMzIDMxLjEyNTcgMTIuNTQxMUMzMS44NTAxIDEzLjI3ODkgMzIuMjU3IDE0LjI3OTkgMzIuMjU1NyAxNS4zMjM1WiIgZmlsbD0iIzJDM0U1MCIvPg0KPC9nPg0KPGRlZnM+DQo8Y2xpcFBhdGggaWQ9ImNsaXAwXzU1Nl83MzM5Ij4NCjxyZWN0IHdpZHRoPSI1NiIgaGVpZ2h0PSI1NyIgZmlsbD0id2hpdGUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMzkyNTc4IDAuNTM4NTc0KSIvPg0KPC9jbGlwUGF0aD4NCjwvZGVmcz4NCjwvc3ZnPg0K"), G(o, "alt", "warning-ico"), G(o, "class", "drivers-install__header-icon"), G(s, "class", "drivers-install__title"), G(N, "class", "drivers-install__action-text"), G(j, "class", "drivers-install__button"), G(p, "class", "drivers-install__button"), G(D, "class", "drivers-install__buttons-wrapper"), G(i, "class", "drivers-install__window-content"), G(r, "class", "drivers-install__content"), G(n, "class", "drivers-install")
+                    n = Q("div"), r = Q("div"), i = Q("div"), o = Q("img"), c = Y(), s = Q("h3"), s.textContent = "Хочешь получить выгоду?", l = Y(), N = Q("span"), N.innerHTML = "Мы присылаем уникальные промокоды, которые дадут тебе классные тачки, игровую валюту и даже AZ-Coins!\n                <br/> \n                <br/>\n\t            Для этого наш лаунчер будет запускаться автоматически с включением устройства. Согласны?", g = Y(), D = Q("div"), j = Q("button"), j.textContent = "Согласен", d = Y(), p = Q("button"), p.textContent = "Не хочу", M(o.src, u = ca) || G(o, "src", "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTciIGhlaWdodD0iNTgiIHZpZXdCb3g9IjAgMCA1NyA1OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMF81NTZfNzMzOSkiPg0KPHBhdGggZD0iTTQ4LjQ0NzkgNTQuNjQ3Mkg4LjMzNjI0QzUuNTgzNCA1NC42NDcyIDMuMDI2MzEgNTMuMTk2NCAxLjU3OTE2IDUwLjgxMjVDMC4xMzE1NzcgNDguNDI5IC01Ljk4MTMzZS0wNSA0NS40NTI1IDEuMjMxMjYgNDIuOTQ1OUwyMS4yODcxIDcuOTk1NTdDMjIuNjMzIDUuMjU2NjUgMjUuMzgzMiAzLjUyNjEyIDI4LjM5MjEgMy41MjYxMkMzMS40MDA5IDMuNTI2MTIgMzQuMTUxMiA1LjI1NjY1IDM1LjQ5NzEgNy45OTU1N0w1NS41NTI5IDQyLjk0NTlDNTYuNzg0MiA0NS40NTI1IDU2LjY1MjYgNDguNDI5IDU1LjIwNSA1MC44MTI1QzUzLjc1NzkgNTMuMTk2NCA1MS4yMDEyIDU0LjY0NzIgNDguNDQ3OSA1NC42NDcyWiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGQ9Ik00OC40NTI2IDU0LjY0NzJIMjguMzkyMVYzLjUyNjA0QzMxLjQwODIgMy41MDY4OSAzNC4xNjk2IDUuMjQ0MzkgMzUuNTAwOSA3Ljk5OTRMNTUuNTUxNiA0Mi45NDg1QzU2Ljc4NDcgNDUuNDUzMyA1Ni42NTQ3IDQ4LjQyOTggNTUuMjA4NCA1MC44MTMzQzUzLjc2MTcgNTMuMTk3MiA1MS4yMDU1IDU0LjY0OCA0OC40NTI2IDU0LjY0NzJaIiBmaWxsPSIjRUJFQkVCIi8+DQo8cGF0aCBkPSJNMzIuMjU1NiA0NS43OTkxQzMyLjI1NTYgNDcuOTcxMiAzMC41MjU2IDQ5LjczMTggMjguMzkyIDQ5LjczMThDMjYuMjU4NSA0OS43MzE4IDI0LjUyODggNDcuOTcxMiAyNC41Mjg4IDQ1Ljc5OTFDMjQuNTI4OCA0My42Mjc1IDI2LjI1ODUgNDEuODY2OSAyOC4zOTIgNDEuODY2OUMzMC41MjU2IDQxLjg2NjkgMzIuMjU1NiA0My42Mjc1IDMyLjI1NTYgNDUuNzk5MVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDQ1Ljc5OTFDMzIuMjU1NyA0Ni44NDIzIDMxLjg0ODggNDcuODQyNCAzMS4xMjQ0IDQ4LjU4MDNDMzAuMzk5NiA0OS4zMTc2IDI5LjQxNyA0OS43MzE4IDI4LjM5MjEgNDkuNzMxOFY0MS44NjY5QzI5LjQxNyA0MS44NjY1IDMwLjM5OTYgNDIuMjgwNyAzMS4xMjQ0IDQzLjAxODVDMzEuODQ4OCA0My43NTU4IDMyLjI1NTcgNDQuNzU2NCAzMi4yNTU3IDQ1Ljc5OTFaIiBmaWxsPSIjMkMzRTUwIi8+DQo8cGF0aCBkPSJNMjguMzkyIDExLjM5MDlDMzAuNTI1NiAxMS4zOTA5IDMyLjI1NTYgMTMuMTUxNCAzMi4yNTU2IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU2IDM2LjE3MzggMzAuNTI1NiAzNy45MzQ0IDI4LjM5MiAzNy45MzQ0QzI2LjI1ODUgMzcuOTM0NCAyNC41Mjg4IDM2LjE3MzggMjQuNTI4OCAzNC4wMDIyVjE1LjMyMzVDMjQuNTI4OCAxMy4xNTE0IDI2LjI1ODUgMTEuMzkwOSAyOC4zOTIgMTEuMzkwOVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU3IDM1LjA0NTQgMzEuODQ4OCAzNi4wNDU1IDMxLjEyNDQgMzYuNzgyOUMzMC4zOTk2IDM3LjUyMDcgMjkuNDE3IDM3LjkzNDggMjguMzkyMSAzNy45MzQ0VjExLjM5MDlDMjkuNDE3IDExLjM4OTYgMzAuNDAwOCAxMS44MDMzIDMxLjEyNTcgMTIuNTQxMUMzMS44NTAxIDEzLjI3ODkgMzIuMjU3IDE0LjI3OTkgMzIuMjU1NyAxNS4zMjM1WiIgZmlsbD0iIzJDM0U1MCIvPg0KPC9nPg0KPGRlZnM+DQo8Y2xpcFBhdGggaWQ9ImNsaXAwXzU1Nl83MzM5Ij4NCjxyZWN0IHdpZHRoPSI1NiIgaGVpZ2h0PSI1NyIgZmlsbD0id2hpdGUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMzkyNTc4IDAuNTM4NTc0KSIvPg0KPC9jbGlwUGF0aD4NCjwvZGVmcz4NCjwvc3ZnPg0K"), G(o, "alt", "warning-ico"), G(o, "class", "drivers-install__header-icon"), G(s, "class", "drivers-install__title"), G(N, "class", "drivers-install__action-text"), G(j, "class", "drivers-install__button"), G(p, "class", "drivers-install__button"), G(D, "class", "drivers-install__buttons-wrapper"), G(i, "class", "drivers-install__window-content"), G(r, "class", "drivers-install__content"), G(n, "class", "drivers-install")
                 },
                 m(t, a) {
                     U(t, n, a), L(n, r), L(r, i), L(i, o), L(i, c), L(i, s), L(i, l), L(i, N), L(i, g), L(i, D), L(D, j), L(D, d), L(D, p), I = !0, z || (y = [$(j, "click", e[2]), $(p, "click", e[3])], z = !0)
@@ -13300,7 +13317,7 @@
             }
         }
 
-        function Za(t, e, n) {
+        function Ba(t, e, n) {
             let {
                 closeModal: r = (() => {})
             } = e;
@@ -13311,15 +13328,15 @@
                 "closeModal" in t && n(1, r = t.closeModal)
             }, [i, r, () => i(!0), () => i(!1)]
         }
-        const Ba = class extends Bt {
+        const Wa = class extends Bt {
             constructor(t) {
-                super(), Zt(this, t, Za, Ga, c, {
+                super(), Zt(this, t, Ba, Za, c, {
                     closeModal: 1
                 })
             }
         };
 
-        function Wa(e) {
+        function Va(e) {
             let n, r, i;
             return {
                 c() {
@@ -13335,7 +13352,7 @@
             }
         }
 
-        function Va(t) {
+        function Fa(t) {
             let e, n;
             return {
                 c() {
@@ -13353,7 +13370,7 @@
             }
         }
 
-        function Fa(e) {
+        function Ha(e) {
             let n, r, i;
             return {
                 c() {
@@ -13369,18 +13386,18 @@
             }
         }
 
-        function Ha(t) {
+        function Ja(t) {
             let e, n, r, i, o, a, c, s, l, N, g, D, j, d, p, f, I, z, y, T = t[0].includes("Запуск игры не удался");
 
             function h(t, e) {
-                return t[0] ? Va : Wa
+                return t[0] ? Fa : Va
             }
             let A = h(t),
                 x = A(t),
-                w = T && Fa(t);
+                w = T && Ha(t);
             return {
                 c() {
-                    e = Q("div"), n = Q("div"), r = Q("div"), i = Q("img"), a = Y(), c = Q("h3"), c.textContent = "Упс... Возникла ошибка!", s = Y(), l = Q("span"), x.c(), N = Y(), g = Q("a"), g.textContent = "Подробнее о проблеме в базе знаний", D = Y(), j = Q("div"), d = Q("button"), d.textContent = "Закрыть", p = Y(), w && w.c(), M(i.src, o = ua) || G(i, "src", "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTciIGhlaWdodD0iNTgiIHZpZXdCb3g9IjAgMCA1NyA1OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMF81NTZfNzMzOSkiPg0KPHBhdGggZD0iTTQ4LjQ0NzkgNTQuNjQ3Mkg4LjMzNjI0QzUuNTgzNCA1NC42NDcyIDMuMDI2MzEgNTMuMTk2NCAxLjU3OTE2IDUwLjgxMjVDMC4xMzE1NzcgNDguNDI5IC01Ljk4MTMzZS0wNSA0NS40NTI1IDEuMjMxMjYgNDIuOTQ1OUwyMS4yODcxIDcuOTk1NTdDMjIuNjMzIDUuMjU2NjUgMjUuMzgzMiAzLjUyNjEyIDI4LjM5MjEgMy41MjYxMkMzMS40MDA5IDMuNTI2MTIgMzQuMTUxMiA1LjI1NjY1IDM1LjQ5NzEgNy45OTU1N0w1NS41NTI5IDQyLjk0NTlDNTYuNzg0MiA0NS40NTI1IDU2LjY1MjYgNDguNDI5IDU1LjIwNSA1MC44MTI1QzUzLjc1NzkgNTMuMTk2NCA1MS4yMDEyIDU0LjY0NzIgNDguNDQ3OSA1NC42NDcyWiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGQ9Ik00OC40NTI2IDU0LjY0NzJIMjguMzkyMVYzLjUyNjA0QzMxLjQwODIgMy41MDY4OSAzNC4xNjk2IDUuMjQ0MzkgMzUuNTAwOSA3Ljk5OTRMNTUuNTUxNiA0Mi45NDg1QzU2Ljc4NDcgNDUuNDUzMyA1Ni42NTQ3IDQ4LjQyOTggNTUuMjA4NCA1MC44MTMzQzUzLjc2MTcgNTMuMTk3MiA1MS4yMDU1IDU0LjY0OCA0OC40NTI2IDU0LjY0NzJaIiBmaWxsPSIjRUJFQkVCIi8+DQo8cGF0aCBkPSJNMzIuMjU1NiA0NS43OTkxQzMyLjI1NTYgNDcuOTcxMiAzMC41MjU2IDQ5LjczMTggMjguMzkyIDQ5LjczMThDMjYuMjU4NSA0OS43MzE4IDI0LjUyODggNDcuOTcxMiAyNC41Mjg4IDQ1Ljc5OTFDMjQuNTI4OCA0My42Mjc1IDI2LjI1ODUgNDEuODY2OSAyOC4zOTIgNDEuODY2OUMzMC41MjU2IDQxLjg2NjkgMzIuMjU1NiA0My42Mjc1IDMyLjI1NTYgNDUuNzk5MVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDQ1Ljc5OTFDMzIuMjU1NyA0Ni44NDIzIDMxLjg0ODggNDcuODQyNCAzMS4xMjQ0IDQ4LjU4MDNDMzAuMzk5NiA0OS4zMTc2IDI5LjQxNyA0OS43MzE4IDI4LjM5MjEgNDkuNzMxOFY0MS44NjY5QzI5LjQxNyA0MS44NjY1IDMwLjM5OTYgNDIuMjgwNyAzMS4xMjQ0IDQzLjAxODVDMzEuODQ4OCA0My43NTU4IDMyLjI1NTcgNDQuNzU2NCAzMi4yNTU3IDQ1Ljc5OTFaIiBmaWxsPSIjMkMzRTUwIi8+DQo8cGF0aCBkPSJNMjguMzkyIDExLjM5MDlDMzAuNTI1NiAxMS4zOTA5IDMyLjI1NTYgMTMuMTUxNCAzMi4yNTU2IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU2IDM2LjE3MzggMzAuNTI1NiAzNy45MzQ0IDI4LjM5MiAzNy45MzQ0QzI2LjI1ODUgMzcuOTM0NCAyNC41Mjg4IDM2LjE3MzggMjQuNTI4OCAzNC4wMDIyVjE1LjMyMzVDMjQuNTI4OCAxMy4xNTE0IDI2LjI1ODUgMTEuMzkwOSAyOC4zOTIgMTEuMzkwOVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU3IDM1LjA0NTQgMzEuODQ4OCAzNi4wNDU1IDMxLjEyNDQgMzYuNzgyOUMzMC4zOTk2IDM3LjUyMDcgMjkuNDE3IDM3LjkzNDggMjguMzkyMSAzNy45MzQ0VjExLjM5MDlDMjkuNDE3IDExLjM4OTYgMzAuNDAwOCAxMS44MDMzIDMxLjEyNTcgMTIuNTQxMUMzMS44NTAxIDEzLjI3ODkgMzIuMjU3IDE0LjI3OTkgMzIuMjU1NyAxNS4zMjM1WiIgZmlsbD0iIzJDM0U1MCIvPg0KPC9nPg0KPGRlZnM+DQo8Y2xpcFBhdGggaWQ9ImNsaXAwXzU1Nl83MzM5Ij4NCjxyZWN0IHdpZHRoPSI1NiIgaGVpZ2h0PSI1NyIgZmlsbD0id2hpdGUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMzkyNTc4IDAuNTM4NTc0KSIvPg0KPC9jbGlwUGF0aD4NCjwvZGVmcz4NCjwvc3ZnPg0K"), G(i, "alt", "warning-ico"), G(i, "class", "unknown-error-modal__header-icon"), G(c, "class", "unknown-error-modal__title"), G(l, "class", "unknown-error-modal__action-text"), G(g, "href", "https://help.arizona-rp.com/hc/arizona-rp/articles/1740179374-"), G(g, "class", "unknown-error-modal__link"), G(g, "target", "_blank"), G(d, "class", "unknown-error-modal__button"), G(j, "class", "unknown-error-modal__buttons-wrapper"), G(r, "class", "unknown-error-modal__window-content"), G(n, "class", "unknown-error-modal__content"), G(e, "class", "unknown-error-modal")
+                    e = Q("div"), n = Q("div"), r = Q("div"), i = Q("img"), a = Y(), c = Q("h3"), c.textContent = "Упс... Возникла ошибка!", s = Y(), l = Q("span"), x.c(), N = Y(), g = Q("a"), g.textContent = "Подробнее о проблеме в базе знаний", D = Y(), j = Q("div"), d = Q("button"), d.textContent = "Закрыть", p = Y(), w && w.c(), M(i.src, o = ca) || G(i, "src", "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTciIGhlaWdodD0iNTgiIHZpZXdCb3g9IjAgMCA1NyA1OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMF81NTZfNzMzOSkiPg0KPHBhdGggZD0iTTQ4LjQ0NzkgNTQuNjQ3Mkg4LjMzNjI0QzUuNTgzNCA1NC42NDcyIDMuMDI2MzEgNTMuMTk2NCAxLjU3OTE2IDUwLjgxMjVDMC4xMzE1NzcgNDguNDI5IC01Ljk4MTMzZS0wNSA0NS40NTI1IDEuMjMxMjYgNDIuOTQ1OUwyMS4yODcxIDcuOTk1NTdDMjIuNjMzIDUuMjU2NjUgMjUuMzgzMiAzLjUyNjEyIDI4LjM5MjEgMy41MjYxMkMzMS40MDA5IDMuNTI2MTIgMzQuMTUxMiA1LjI1NjY1IDM1LjQ5NzEgNy45OTU1N0w1NS41NTI5IDQyLjk0NTlDNTYuNzg0MiA0NS40NTI1IDU2LjY1MjYgNDguNDI5IDU1LjIwNSA1MC44MTI1QzUzLjc1NzkgNTMuMTk2NCA1MS4yMDEyIDU0LjY0NzIgNDguNDQ3OSA1NC42NDcyWiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGQ9Ik00OC40NTI2IDU0LjY0NzJIMjguMzkyMVYzLjUyNjA0QzMxLjQwODIgMy41MDY4OSAzNC4xNjk2IDUuMjQ0MzkgMzUuNTAwOSA3Ljk5OTRMNTUuNTUxNiA0Mi45NDg1QzU2Ljc4NDcgNDUuNDUzMyA1Ni42NTQ3IDQ4LjQyOTggNTUuMjA4NCA1MC44MTMzQzUzLjc2MTcgNTMuMTk3MiA1MS4yMDU1IDU0LjY0OCA0OC40NTI2IDU0LjY0NzJaIiBmaWxsPSIjRUJFQkVCIi8+DQo8cGF0aCBkPSJNMzIuMjU1NiA0NS43OTkxQzMyLjI1NTYgNDcuOTcxMiAzMC41MjU2IDQ5LjczMTggMjguMzkyIDQ5LjczMThDMjYuMjU4NSA0OS43MzE4IDI0LjUyODggNDcuOTcxMiAyNC41Mjg4IDQ1Ljc5OTFDMjQuNTI4OCA0My42Mjc1IDI2LjI1ODUgNDEuODY2OSAyOC4zOTIgNDEuODY2OUMzMC41MjU2IDQxLjg2NjkgMzIuMjU1NiA0My42Mjc1IDMyLjI1NTYgNDUuNzk5MVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDQ1Ljc5OTFDMzIuMjU1NyA0Ni44NDIzIDMxLjg0ODggNDcuODQyNCAzMS4xMjQ0IDQ4LjU4MDNDMzAuMzk5NiA0OS4zMTc2IDI5LjQxNyA0OS43MzE4IDI4LjM5MjEgNDkuNzMxOFY0MS44NjY5QzI5LjQxNyA0MS44NjY1IDMwLjM5OTYgNDIuMjgwNyAzMS4xMjQ0IDQzLjAxODVDMzEuODQ4OCA0My43NTU4IDMyLjI1NTcgNDQuNzU2NCAzMi4yNTU3IDQ1Ljc5OTFaIiBmaWxsPSIjMkMzRTUwIi8+DQo8cGF0aCBkPSJNMjguMzkyIDExLjM5MDlDMzAuNTI1NiAxMS4zOTA5IDMyLjI1NTYgMTMuMTUxNCAzMi4yNTU2IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU2IDM2LjE3MzggMzAuNTI1NiAzNy45MzQ0IDI4LjM5MiAzNy45MzQ0QzI2LjI1ODUgMzcuOTM0NCAyNC41Mjg4IDM2LjE3MzggMjQuNTI4OCAzNC4wMDIyVjE1LjMyMzVDMjQuNTI4OCAxMy4xNTE0IDI2LjI1ODUgMTEuMzkwOSAyOC4zOTIgMTEuMzkwOVoiIGZpbGw9IiMzNTQ5NUUiLz4NCjxwYXRoIGQ9Ik0zMi4yNTU3IDE1LjMyMzVWMzQuMDAyMkMzMi4yNTU3IDM1LjA0NTQgMzEuODQ4OCAzNi4wNDU1IDMxLjEyNDQgMzYuNzgyOUMzMC4zOTk2IDM3LjUyMDcgMjkuNDE3IDM3LjkzNDggMjguMzkyMSAzNy45MzQ0VjExLjM5MDlDMjkuNDE3IDExLjM4OTYgMzAuNDAwOCAxMS44MDMzIDMxLjEyNTcgMTIuNTQxMUMzMS44NTAxIDEzLjI3ODkgMzIuMjU3IDE0LjI3OTkgMzIuMjU1NyAxNS4zMjM1WiIgZmlsbD0iIzJDM0U1MCIvPg0KPC9nPg0KPGRlZnM+DQo8Y2xpcFBhdGggaWQ9ImNsaXAwXzU1Nl83MzM5Ij4NCjxyZWN0IHdpZHRoPSI1NiIgaGVpZ2h0PSI1NyIgZmlsbD0id2hpdGUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMzkyNTc4IDAuNTM4NTc0KSIvPg0KPC9jbGlwUGF0aD4NCjwvZGVmcz4NCjwvc3ZnPg0K"), G(i, "alt", "warning-ico"), G(i, "class", "unknown-error-modal__header-icon"), G(c, "class", "unknown-error-modal__title"), G(l, "class", "unknown-error-modal__action-text"), G(g, "href", "https://help.arizona-rp.com/hc/arizona-rp/articles/1740179374-"), G(g, "class", "unknown-error-modal__link"), G(g, "target", "_blank"), G(d, "class", "unknown-error-modal__button"), G(j, "class", "unknown-error-modal__buttons-wrapper"), G(r, "class", "unknown-error-modal__window-content"), G(n, "class", "unknown-error-modal__content"), G(e, "class", "unknown-error-modal")
                 },
                 m(o, M) {
                     U(o, e, M), L(e, n), L(n, r), L(r, i), L(r, a), L(r, c), L(r, s), L(r, l), x.m(l, null), L(r, N), L(r, g), L(r, D), L(r, j), L(j, d), L(j, p), w && w.m(j, null), I = !0, z || (y = $(d, "click", (function() {
@@ -13388,7 +13405,7 @@
                     })), z = !0)
                 },
                 p(e, [n]) {
-                    A === (A = h(t = e)) && x ? x.p(t, n) : (x.d(1), x = A(t), x && (x.c(), x.m(l, null))), 1 & n && (T = t[0].includes("Запуск игры не удался")), T ? w ? w.p(t, n) : (w = Fa(t), w.c(), w.m(j, null)) : w && (w.d(1), w = null)
+                    A === (A = h(t = e)) && x ? x.p(t, n) : (x.d(1), x = A(t), x && (x.c(), x.m(l, null))), 1 & n && (T = t[0].includes("Запуск игры не удался")), T ? w ? w.p(t, n) : (w = Ha(t), w.c(), w.m(j, null)) : w && (w.d(1), w = null)
                 },
                 i(t) {
                     I || (dt((() => {
@@ -13408,7 +13425,7 @@
             }
         }
 
-        function Ja(t, e, n) {
+        function Xa(t, e, n) {
             let r, i;
             D(t, we, (t => n(3, r = t))), D(t, ze, (t => n(4, i = t)));
             let {
@@ -13422,17 +13439,17 @@
                 window.launcherAPI.validateAndStartGame(i, r.ip, r.port, r.id, r.additionalIps, !1, !0), a()
             }]
         }
-        const Xa = class extends Bt {
+        const Ka = class extends Bt {
                 constructor(t) {
-                    super(), Zt(this, t, Ja, Ha, c, {
+                    super(), Zt(this, t, Xa, Ja, c, {
                         description: 0,
                         closeModal: 1
                     })
                 }
             },
-            Ka = JSON.parse('[{"gameId":"arizona","youtubeVideoUrl":"https://www.youtube.com/watch?v=2iKlqwhVU0A","multipliers":{"donate":2,"experience":2},"shop":{"donateHandlerUrl":"https://arizona-rp.com/shop","exchangeRate":1,"bundles":[],"packs":[]},"news":[{"title":"Новогоднее обновление","imageUrl":"https://pc.rod-ins.com/resource/web/arizona/news/6_new_year.png","url":"https://arizona-rp.com/posts/6"},{"title":"Хэллоуин","imageUrl":"https://pc.rod-ins.com/resource/web/arizona/news/5_arizona_halwn_2023.jpeg","url":"https://arizona-rp.com/posts/5"},{"title":"День рождение","imageUrl":"https://pc.rod-ins.com/resource/web/arizona/news/3_arizona_hb.jpeg","url":"https://arizona-rp.com/posts/3"},{"title":"Летнее","imageUrl":"https://pc.rod-ins.com/resource/web/arizona/news/2_arizona_summer_2023.jpeg","url":"https://arizona-rp.com/posts/2"}],"trilogyAvailable":true},{"gameId":"rodina","youtubeVideoUrl":"https://www.youtube.com/watch?v=zzhiAaYUN0M","multipliers":{"donate":4,"experience":4},"shop":{"donateHandlerUrl":"https://rodina-rp.com/shop","exchangeRate":1,"bundles":[],"packs":[]},"news":[{"title":"Новый год","imageUrl":"https://pc.rod-ins.com/resource/web/8_Bez-imeni-2.png","url":"https://rodina-rp.com/posts/8"},{"title":"Мобильная версия","imageUrl":"https://pc.rod-ins.com/resource/web/7_banner-zbt.png","url":"https://rodina-rp.com/posts/7"},{"title":"Хорошие новости","imageUrl":"https://pc.rod-ins.com/resource/web/6_IMG_6444.PNG","url":"https://rodina-rp.com/posts/6"},{"title":"Хэллоуинское обновление","imageUrl":"https://pc.rod-ins.com/resource/web/5_prew-hl-rodina1.png","url":"https://rodina-rp.com/posts/5"}]},{"gameId":"arizonav","multipliers":{"donate":1,"experience":1},"shop":{"donateHandlerUrl":"https://arizona-v.com/#/donate","exchangeRate":1,"bundles":[],"packs":[]},"news":[{"title":"Зимнее обновление","imageUrl":"https://api-samp.arizona-five.com/uploads/1704671800401.jpg","url":"https://arizona-v.com/#/desc?id=39","createDate":1704671897},{"title":"Хэллоуинский РЕЙВ","imageUrl":"https://api-samp.arizona-five.com/uploads/1699633213862.jpg","url":"https://arizona-v.com/#/desc?id=38","createDate":1699633256},{"title":"Осеннее обновление","imageUrl":"https://api-samp.arizona-five.com/uploads/1696799941073.jpg","url":"https://arizona-v.com/#/desc?id=37","createDate":1696800014},{"title":"Большое обновление","imageUrl":"https://api-samp.arizona-five.com/uploads/1684491680823.jpg","url":"https://arizona-v.com/#/desc?id=36","createDate":1684491751}]},{"gameId":"village","multipliers":{"donate":0,"experience":1},"shop":{"donateHandlerUrl":null,"exchangeRate":1,"bundles":[],"packs":[]},"news":[{"title":"Новогоднее обновление","imageUrl":"https://api-samp.arizona-five.com/uploads/1641458067974.jpg","url":"https://bone-country.ru/news/view/44","createDate":1641458428},{"title":"Большое обновление 2021","imageUrl":"https://api-samp.arizona-five.com/uploads/1639569015432.jpg","url":"https://bone-country.ru/news/view/43","createDate":1639569191},{"title":"Обновление на Halloween","imageUrl":"https://api-samp.arizona-five.com/uploads/1635773748811.jpg","url":"https://bone-country.ru/news/view/42","createDate":1635773877},{"title":"Нам 2 года!","imageUrl":"https://api-samp.arizona-five.com/uploads/1628796706086.jpg","url":"https://bone-country.ru/news/view/41","createDate":1628796747}]}]');
+            qa = JSON.parse('[{"gameId":"arizona","youtubeVideoUrl":"https://www.youtube.com/watch?v=2iKlqwhVU0A","multipliers":{"donate":2,"experience":2},"shop":{"donateHandlerUrl":"https://arizona-rp.com/shop","exchangeRate":1,"bundles":[],"packs":[]},"news":[{"title":"Новогоднее обновление","imageUrl":"https://pc.rod-ins.com/resource/web/arizona/news/6_new_year.png","url":"https://arizona-rp.com/posts/6"},{"title":"Хэллоуин","imageUrl":"https://pc.rod-ins.com/resource/web/arizona/news/5_arizona_halwn_2023.jpeg","url":"https://arizona-rp.com/posts/5"},{"title":"День рождение","imageUrl":"https://pc.rod-ins.com/resource/web/arizona/news/3_arizona_hb.jpeg","url":"https://arizona-rp.com/posts/3"},{"title":"Летнее","imageUrl":"https://pc.rod-ins.com/resource/web/arizona/news/2_arizona_summer_2023.jpeg","url":"https://arizona-rp.com/posts/2"}],"trilogyAvailable":true},{"gameId":"rodina","youtubeVideoUrl":"https://www.youtube.com/watch?v=zzhiAaYUN0M","multipliers":{"donate":4,"experience":4},"shop":{"donateHandlerUrl":"https://rodina-rp.com/shop","exchangeRate":1,"bundles":[],"packs":[]},"news":[{"title":"Новый год","imageUrl":"https://pc.rod-ins.com/resource/web/8_Bez-imeni-2.png","url":"https://rodina-rp.com/posts/8"},{"title":"Мобильная версия","imageUrl":"https://pc.rod-ins.com/resource/web/7_banner-zbt.png","url":"https://rodina-rp.com/posts/7"},{"title":"Хорошие новости","imageUrl":"https://pc.rod-ins.com/resource/web/6_IMG_6444.PNG","url":"https://rodina-rp.com/posts/6"},{"title":"Хэллоуинское обновление","imageUrl":"https://pc.rod-ins.com/resource/web/5_prew-hl-rodina1.png","url":"https://rodina-rp.com/posts/5"}]},{"gameId":"arizonav","multipliers":{"donate":1,"experience":1},"shop":{"donateHandlerUrl":"https://arizona-v.com/#/donate","exchangeRate":1,"bundles":[],"packs":[]},"news":[{"title":"Зимнее обновление","imageUrl":"https://api-samp.arizona-five.com/uploads/1704671800401.jpg","url":"https://arizona-v.com/#/desc?id=39","createDate":1704671897},{"title":"Хэллоуинский РЕЙВ","imageUrl":"https://api-samp.arizona-five.com/uploads/1699633213862.jpg","url":"https://arizona-v.com/#/desc?id=38","createDate":1699633256},{"title":"Осеннее обновление","imageUrl":"https://api-samp.arizona-five.com/uploads/1696799941073.jpg","url":"https://arizona-v.com/#/desc?id=37","createDate":1696800014},{"title":"Большое обновление","imageUrl":"https://api-samp.arizona-five.com/uploads/1684491680823.jpg","url":"https://arizona-v.com/#/desc?id=36","createDate":1684491751}]},{"gameId":"village","multipliers":{"donate":0,"experience":1},"shop":{"donateHandlerUrl":null,"exchangeRate":1,"bundles":[],"packs":[]},"news":[{"title":"Новогоднее обновление","imageUrl":"https://api-samp.arizona-five.com/uploads/1641458067974.jpg","url":"https://bone-country.ru/news/view/44","createDate":1641458428},{"title":"Большое обновление 2021","imageUrl":"https://api-samp.arizona-five.com/uploads/1639569015432.jpg","url":"https://bone-country.ru/news/view/43","createDate":1639569191},{"title":"Обновление на Halloween","imageUrl":"https://api-samp.arizona-five.com/uploads/1635773748811.jpg","url":"https://bone-country.ru/news/view/42","createDate":1635773877},{"title":"Нам 2 года!","imageUrl":"https://api-samp.arizona-five.com/uploads/1628796706086.jpg","url":"https://bone-country.ru/news/view/41","createDate":1628796747}]}]');
 
-        function qa(t, e, n, r, i, o, a) {
+        function tu(t, e, n, r, i, o, a) {
             try {
                 var u = t[o](a),
                     c = u.value
@@ -13441,10 +13458,10 @@
             }
             u.done ? e(c) : Promise.resolve(c).then(r, i)
         }
-        var tu, eu = n(757),
-            nu = n.n(eu);
+        var eu, nu = n(757),
+            ru = n.n(nu);
 
-        function ru(t, e) {
+        function iu(t, e) {
             var n = Object.keys(t);
             if (Object.getOwnPropertySymbols) {
                 var r = Object.getOwnPropertySymbols(t);
@@ -13455,41 +13472,41 @@
             return n
         }
 
-        function iu(t) {
+        function ou(t) {
             for (var e = 1; e < arguments.length; e++) {
                 var n = null != arguments[e] ? arguments[e] : {};
-                e % 2 ? ru(Object(n), !0).forEach((function(e) {
+                e % 2 ? iu(Object(n), !0).forEach((function(e) {
                     de(t, e, n[e])
-                })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n)) : ru(Object(n)).forEach((function(e) {
+                })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n)) : iu(Object(n)).forEach((function(e) {
                     Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e))
                 }))
             }
             return t
         }
-        var ou = "main",
-            au = "Reserve",
-            uu = (de(tu = {}, ou, "https://api.arizona-five.com/"), de(tu, au, "https://arz-api-reserve.s-amp.com/"), tu),
-            cu = ou,
-            su = Date.now(),
-            Mu = function() {
-                var t, e = (t = nu().mark((function t(e) {
+        var au = "main",
+            uu = "Reserve",
+            cu = (de(eu = {}, au, "https://api.arizona-five.com/"), de(eu, uu, "https://arz-api-reserve.s-amp.com/"), eu),
+            su = au,
+            Mu = Date.now(),
+            lu = function() {
+                var t, e = (t = ru().mark((function t(e) {
                     var n, r, i, o, a, u, c, s, M, l, N, D = arguments;
-                    return nu().wrap((function(t) {
+                    return ru().wrap((function(t) {
                         for (;;) switch (t.prev = t.next) {
                             case 0:
-                                return n = D.length > 1 && void 0 !== D[1] ? D[1] : {}, r = D.length > 2 ? D[2] : void 0, t.prev = 2, cu !== ou && Date.now() - su > 3e5 && (cu = ou, su = Date.now()), r && (cu = au, su = Date.now()), i = "".concat(uu[cu]).concat(e), t.next = 8, ce()(i, iu({
+                                return n = D.length > 1 && void 0 !== D[1] ? D[1] : {}, r = D.length > 2 ? D[2] : void 0, t.prev = 2, su !== au && Date.now() - Mu > 3e5 && (su = au, Mu = Date.now()), r && (su = uu, Mu = Date.now()), i = "".concat(cu[su]).concat(e), t.next = 8, ce()(i, ou({
                                     timeout: 15e3
                                 }, n));
                             case 8:
                                 return o = t.sent, g(Ee) && (console.log("[UI]", i, "  | Status:", o.status), console.log(JSON.stringify((null == o ? void 0 : o.data) || {})), console.log("==============")), t.abrupt("return", o);
                             case 13:
-                                if (t.prev = 13, t.t0 = t.catch(2), g(Ee) && (N = "".concat(uu[cu]).concat(e), console.log("\n                [API Error Response]\n                Status: ".concat((null === t.t0 || void 0 === t.t0 || null === (a = t.t0.response) || void 0 === a ? void 0 : a.status) || "-", "\n                URL: ").concat((null === t.t0 || void 0 === t.t0 || null === (u = t.t0.response) || void 0 === u || null === (c = u.config) || void 0 === c ? void 0 : c.url) || (null === t.t0 || void 0 === t.t0 || null === (s = t.t0.request) || void 0 === s ? void 0 : s.responseURL) || N || "-", "\n                Data: ").concat(JSON.stringify((null === t.t0 || void 0 === t.t0 || null === (M = t.t0.response) || void 0 === M ? void 0 : M.data) || {}, null, 2), "\n                Headers: ").concat(JSON.stringify((null === t.t0 || void 0 === t.t0 || null === (l = t.t0.response) || void 0 === l ? void 0 : l.headers) || {}, null, 2), "\n                Message: ").concat(t.t0.message, "\n            ")), console.log("==============")), cu !== au) {
+                                if (t.prev = 13, t.t0 = t.catch(2), g(Ee) && (N = "".concat(cu[su]).concat(e), console.log("\n                [API Error Response]\n                Status: ".concat((null === t.t0 || void 0 === t.t0 || null === (a = t.t0.response) || void 0 === a ? void 0 : a.status) || "-", "\n                URL: ").concat((null === t.t0 || void 0 === t.t0 || null === (u = t.t0.response) || void 0 === u || null === (c = u.config) || void 0 === c ? void 0 : c.url) || (null === t.t0 || void 0 === t.t0 || null === (s = t.t0.request) || void 0 === s ? void 0 : s.responseURL) || N || "-", "\n                Data: ").concat(JSON.stringify((null === t.t0 || void 0 === t.t0 || null === (M = t.t0.response) || void 0 === M ? void 0 : M.data) || {}, null, 2), "\n                Headers: ").concat(JSON.stringify((null === t.t0 || void 0 === t.t0 || null === (l = t.t0.response) || void 0 === l ? void 0 : l.headers) || {}, null, 2), "\n                Message: ").concat(t.t0.message, "\n            ")), console.log("==============")), su !== uu) {
                                     t.next = 20;
                                     break
                                 }
-                                throw cu = ou, su = Date.now(), t.t0;
+                                throw su = au, Mu = Date.now(), t.t0;
                             case 20:
-                                return cu = au, su = Date.now(), t.abrupt("return", Mu(e, n));
+                                return su = uu, Mu = Date.now(), t.abrupt("return", lu(e, n));
                             case 23:
                             case "end":
                                 return t.stop()
@@ -13504,11 +13521,11 @@
                         var o = t.apply(e, n);
 
                         function a(t) {
-                            qa(o, r, i, a, u, "next", t)
+                            tu(o, r, i, a, u, "next", t)
                         }
 
                         function u(t) {
-                            qa(o, r, i, a, u, "throw", t)
+                            tu(o, r, i, a, u, "throw", t)
                         }
                         a(void 0)
                     }))
@@ -13518,7 +13535,7 @@
                 }
             }();
 
-        function lu(e) {
+        function Nu(e) {
             let n, r, i;
             return {
                 c() {
@@ -13540,37 +13557,37 @@
             }
         }
 
-        function Nu(t) {
+        function gu(t) {
             let e, n, r, i, o, u, c, s, M, l, N, g, D, j, d, p, f, I, z, T, h, A, x, w, O, m, E, v, _, k, S, b, P = t[13](),
                 R = t[13](),
-                Z = !t[13]() && t[15] === fi.None,
+                Z = !t[13]() && t[15] === pi.None,
                 B = t[18].shop.donateHandlerUrl && !Oo.includes(t[2]),
-                W = t[15] === fi.InInstall && !je().isNil(t[16]),
+                W = t[15] === pi.InInstall && !je().isNil(t[16]),
                 V = !je().isEmpty(t[18].settings),
-                H = P && gu();
-            u = new aa({});
-            let J = R && Du(t);
+                H = P && Du();
+            u = new ua({});
+            let J = R && ju(t);
 
             function X(t, e) {
-                return "inProgress" === t[9] ? du : "downloaded" === t[9] ? ju : void 0
+                return "inProgress" === t[9] ? pu : "downloaded" === t[9] ? du : void 0
             }
             let K = X(t),
                 q = K && K(t),
-                tt = Z && pu(t),
-                et = B && fu(t);
+                tt = Z && fu(t),
+                et = B && Iu(t);
 
             function nt(t, e) {
-                return 49154 & e[0] && (x = null), null == x && (x = !!(t[14] && t[15] === fi.None || je().isEmpty(t[1]))), x ? zu : Iu
+                return 49154 & e[0] && (x = null), null == x && (x = !!(t[14] && t[15] === pi.None || je().isEmpty(t[1]))), x ? yu : zu
             }
             let rt = nt(t, [-1, -1]),
                 it = rt(t),
-                ot = W && Tu(t);
+                ot = W && hu(t);
             m = new ae({
                 props: {
                     routes: To
                 }
             });
-            let at = V && hu(t);
+            let at = V && Au(t);
             return {
                 c() {
                     H && H.c(), e = Y(), n = Q("div"), r = Q("header"), i = Q("div"), o = Q("div"), $t(u.$$.fragment), c = Y(), J && J.c(), s = Y(), M = Q("div"), q && q.c(), l = Y(), N = Q("div"), g = Q("i"), D = Y(), j = Q("div"), j.innerHTML = '<i class="icon icon--minimize">__</i>', d = Y(), p = Q("div"), p.innerHTML = '<i class="icon icon-close"></i>', f = Y(), I = Q("nav"), z = Q("ul"), tt && tt.c(), T = Y(), et && et.c(), h = Y(), A = Q("li"), it.c(), w = Y(), ot && ot.c(), O = Y(), $t(m.$$.fragment), E = Y(), v = Q("aside"), at && at.c(), G(o, "class", "header-first-line__navigation-control"), G(g, "class", "icon icon-preferences"), G(g, "tabindex", "-1"), G(N, "class", "window-control__settings"), G(j, "class", "window-control__minimize"), G(p, "class", "window-control__close"), G(M, "class", "header-first-line__window-control"), G(i, "class", "header-first-line"), G(A, "class", "page-list__item"), G(z, "class", "page-list"), G(I, "class", "page-navigation"), G(r, "class", "launcher-head"), G(n, "class", "theme-container__content"), F(n, "theme-container__content--space-between", t[13]()), G(v, "class", "sidebar")
@@ -13579,11 +13596,11 @@
                     H && H.m(a, x), U(a, e, x), U(a, n, x), L(n, r), L(r, i), L(i, o), Rt(u, o, null), L(o, c), J && J.m(o, null), L(i, s), L(i, M), q && q.m(M, null), L(M, l), L(M, N), L(N, g), L(M, D), L(M, j), L(M, d), L(M, p), L(r, f), L(r, I), L(I, z), tt && tt.m(z, null), L(z, T), et && et.m(z, null), L(z, h), L(z, A), it.m(A, null), L(I, w), ot && ot.m(I, null), L(n, O), Rt(m, n, null), U(a, E, x), U(a, v, x), at && at.m(v, null), k = !0, S || (b = [$(g, "click", t[29]), $(j, "click", t[19]), $(p, "click", t[20]), y(_ = Ze.call(null, v)), $(v, "outsideclick", t[38])], S = !0)
                 },
                 p(t, r) {
-                    8192 & r[0] && (P = t[13]()), P ? H ? 8192 & r[0] && Lt(H, 1) : (H = gu(), H.c(), Lt(H, 1), H.m(e.parentNode, e)) : H && (H.d(1), H = null), 8192 & r[0] && (R = t[13]()), R ? J ? (J.p(t, r), 8192 & r[0] && Lt(J, 1)) : (J = Du(t), J.c(), Lt(J, 1), J.m(o, null)) : J && (Ot(), Et(J, 1, 1, (() => {
+                    8192 & r[0] && (P = t[13]()), P ? H ? 8192 & r[0] && Lt(H, 1) : (H = Du(), H.c(), Lt(H, 1), H.m(e.parentNode, e)) : H && (H.d(1), H = null), 8192 & r[0] && (R = t[13]()), R ? J ? (J.p(t, r), 8192 & r[0] && Lt(J, 1)) : (J = ju(t), J.c(), Lt(J, 1), J.m(o, null)) : J && (Ot(), Et(J, 1, 1, (() => {
                         J = null
-                    })), mt()), K === (K = X(t)) && q ? q.p(t, r) : (q && q.d(1), q = K && K(t), q && (q.c(), q.m(M, l))), 40960 & r[0] && (Z = !t[13]() && t[15] === fi.None), Z ? tt ? (tt.p(t, r), 40960 & r[0] && Lt(tt, 1)) : (tt = pu(t), tt.c(), Lt(tt, 1), tt.m(z, T)) : tt && (Ot(), Et(tt, 1, 1, (() => {
+                    })), mt()), K === (K = X(t)) && q ? q.p(t, r) : (q && q.d(1), q = K && K(t), q && (q.c(), q.m(M, l))), 40960 & r[0] && (Z = !t[13]() && t[15] === pi.None), Z ? tt ? (tt.p(t, r), 40960 & r[0] && Lt(tt, 1)) : (tt = fu(t), tt.c(), Lt(tt, 1), tt.m(z, T)) : tt && (Ot(), Et(tt, 1, 1, (() => {
                         tt = null
-                    })), mt()), 262148 & r[0] && (B = t[18].shop.donateHandlerUrl && !Oo.includes(t[2])), B ? et ? et.p(t, r) : (et = fu(t), et.c(), et.m(z, h)) : et && (et.d(1), et = null), rt === (rt = nt(t, r)) && it ? it.p(t, r) : (it.d(1), it = rt(t), it && (it.c(), it.m(A, null))), 98304 & r[0] && (W = t[15] === fi.InInstall && !je().isNil(t[16])), W ? ot ? ot.p(t, r) : (ot = Tu(t), ot.c(), ot.m(I, null)) : ot && (ot.d(1), ot = null), 8192 & r[0] && F(n, "theme-container__content--space-between", t[13]()), 262144 & r[0] && (V = !je().isEmpty(t[18].settings)), V ? at ? (at.p(t, r), 262144 & r[0] && Lt(at, 1)) : (at = hu(t), at.c(), Lt(at, 1), at.m(v, null)) : at && (Ot(), Et(at, 1, 1, (() => {
+                    })), mt()), 262148 & r[0] && (B = t[18].shop.donateHandlerUrl && !Oo.includes(t[2])), B ? et ? et.p(t, r) : (et = Iu(t), et.c(), et.m(z, h)) : et && (et.d(1), et = null), rt === (rt = nt(t, r)) && it ? it.p(t, r) : (it.d(1), it = rt(t), it && (it.c(), it.m(A, null))), 98304 & r[0] && (W = t[15] === pi.InInstall && !je().isNil(t[16])), W ? ot ? ot.p(t, r) : (ot = hu(t), ot.c(), ot.m(I, null)) : ot && (ot.d(1), ot = null), 8192 & r[0] && F(n, "theme-container__content--space-between", t[13]()), 262144 & r[0] && (V = !je().isEmpty(t[18].settings)), V ? at ? (at.p(t, r), 262144 & r[0] && Lt(at, 1)) : (at = Au(t), at.c(), Lt(at, 1), at.m(v, null)) : at && (Ot(), Et(at, 1, 1, (() => {
                         at = null
                     })), mt())
                 },
@@ -13599,7 +13616,7 @@
             }
         }
 
-        function gu(e) {
+        function Du(e) {
             let n, r;
             return {
                 c() {
@@ -13622,7 +13639,7 @@
             }
         }
 
-        function Du(t) {
+        function ju(t) {
             let e, n, r;
 
             function i(e) {
@@ -13631,7 +13648,7 @@
             let o = {
                 gameId: t[2]
             };
-            return void 0 !== t[18].settings && (o.settings = t[18].settings), e = new $o({
+            return void 0 !== t[18].settings && (o.settings = t[18].settings), e = new Ro({
                 props: o
             }), st.push((() => Pt(e, "settings", i))), {
                 c() {
@@ -13656,7 +13673,7 @@
             }
         }
 
-        function ju(e) {
+        function du(e) {
             let n, r, i, o;
             return {
                 c() {
@@ -13672,7 +13689,7 @@
             }
         }
 
-        function du(e) {
+        function pu(e) {
             let n;
             return {
                 c() {
@@ -13688,7 +13705,7 @@
             }
         }
 
-        function pu(e) {
+        function fu(e) {
             let n, r, i, o, u, c, s, M;
             return {
                 c() {
@@ -13720,7 +13737,7 @@
             }
         }
 
-        function fu(t) {
+        function Iu(t) {
             let e, n, r, i;
             return {
                 c() {
@@ -13738,8 +13755,8 @@
             }
         }
 
-        function Iu(t) {
-            let e, n, r, i, o, u = t[17] && yu();
+        function zu(t) {
+            let e, n, r, i, o, u = t[17] && Tu();
             return {
                 c() {
                     e = Q("a"), n = b("МОДЫ\r\n\t\t\t\t\t\t\t\t\t"), u && u.c(), G(e, "href", "/mods"), G(e, "class", "page-list__link"), G(e, "tabindex", "-1"), F(e, "page-list__link--active", "/mods" === t[0])
@@ -13748,7 +13765,7 @@
                     U(a, e, c), L(e, n), u && u.m(e, null), i || (o = [y(r = ne.call(null, e)), $(e, "click", t[31])], i = !0)
                 },
                 p(t, n) {
-                    t[17] ? u || (u = yu(), u.c(), u.m(e, null)) : u && (u.d(1), u = null), 1 & n[0] && F(e, "page-list__link--active", "/mods" === t[0])
+                    t[17] ? u || (u = Tu(), u.c(), u.m(e, null)) : u && (u.d(1), u = null), 1 & n[0] && F(e, "page-list__link--active", "/mods" === t[0])
                 },
                 d(t) {
                     t && C(e), u && u.d(), i = !1, a(o)
@@ -13756,7 +13773,7 @@
             }
         }
 
-        function zu(t) {
+        function yu(t) {
             let e;
             return {
                 c() {
@@ -13774,7 +13791,7 @@
             }
         }
 
-        function yu(t) {
+        function Tu(t) {
             let e;
             return {
                 c() {
@@ -13789,7 +13806,7 @@
             }
         }
 
-        function Tu(t) {
+        function hu(t) {
             let e, n, r, i, o, a = `Установка мода "${t[1].find(t[32]).title}"`;
             return {
                 c() {
@@ -13807,7 +13824,7 @@
             }
         }
 
-        function hu(t) {
+        function Au(t) {
             let e, n, r, i, o;
 
             function a(e) {
@@ -13827,7 +13844,7 @@
                 openDriversUpdateModal: t[33],
                 openAutoLaunchModal: t[34]
             };
-            return void 0 !== t[3] && (s.opened = t[3]), void 0 !== t[18].settings && (s.settings = t[18].settings), void 0 !== t[18].resources.problemReportUrl && (s.reportUrl = t[18].resources.problemReportUrl), e = new Aa({
+            return void 0 !== t[3] && (s.opened = t[3]), void 0 !== t[18].settings && (s.settings = t[18].settings), void 0 !== t[18].resources.problemReportUrl && (s.reportUrl = t[18].resources.problemReportUrl), e = new xa({
                 props: s
             }), st.push((() => Pt(e, "opened", a))), st.push((() => Pt(e, "settings", u))), st.push((() => Pt(e, "reportUrl", c))), {
                 c() {
@@ -13852,9 +13869,9 @@
             }
         }
 
-        function Au(t) {
+        function xu(t) {
             let e, n;
-            return e = new Oa({
+            return e = new ma({
                 props: {
                     closeModal: t[39]
                 }
@@ -13881,9 +13898,9 @@
             }
         }
 
-        function xu(t) {
+        function wu(t) {
             let e, n;
-            return e = new Sa({
+            return e = new Qa({
                 props: {
                     closeModal: t[40]
                 }
@@ -13910,9 +13927,9 @@
             }
         }
 
-        function wu(t) {
+        function Ou(t) {
             let e, n;
-            return e = new Ya({
+            return e = new Pa({
                 props: {
                     closeModal: t[41]
                 }
@@ -13939,9 +13956,9 @@
             }
         }
 
-        function Ou(t) {
+        function mu(t) {
             let e, n;
-            return e = new Ra({
+            return e = new Ga({
                 props: {
                     closeModal: t[42]
                 }
@@ -13968,9 +13985,9 @@
             }
         }
 
-        function mu(t) {
+        function Lu(t) {
             let e, n;
-            return e = new Ba({
+            return e = new Wa({
                 props: {
                     closeModal: t[43]
                 }
@@ -13997,9 +14014,9 @@
             }
         }
 
-        function Lu(t) {
+        function Eu(t) {
             let e, n;
-            return e = new Xa({
+            return e = new Ka({
                 props: {
                     closeModal: t[44],
                     description: t[11]
@@ -14027,21 +14044,21 @@
             }
         }
 
-        function Eu(t) {
+        function vu(t) {
             let e, n, r, i, o, a, u, c, s, M, l, N, g, D;
-            const j = [Nu, lu],
+            const j = [gu, Nu],
                 d = [];
 
             function p(t, e) {
                 return t[2] ? 0 : 1
             }
             n = p(t), r = d[n] = j[n](t);
-            let f = t[4] && Au(t),
-                I = t[5] && xu(t),
-                z = t[6] && wu(t),
-                y = t[7] && Ou(t),
-                T = t[8] && mu(t),
-                h = t[10] && Lu(t);
+            let f = t[4] && xu(t),
+                I = t[5] && wu(t),
+                z = t[6] && Ou(t),
+                y = t[7] && mu(t),
+                T = t[8] && Lu(t),
+                h = t[10] && Eu(t);
             return {
                 c() {
                     e = Q("div"), r.c(), i = Y(), f && f.c(), o = Y(), I && I.c(), a = Y(), z && z.c(), u = Y(), y && y.c(), c = Y(), T && T.c(), s = Y(), h && h.c(), M = Y(), l = Q("div"), G(l, "class", "theme-container__drag-bar"), G(e, "class", "theme-container"), G(e, "data-theme", t[2]), F(e, "theme-container--image-bg", t[13]()), F(e, "theme-container--no-bottom-padding", !t[13]())
@@ -14053,17 +14070,17 @@
                     let g = n;
                     n = p(t), n === g ? d[n].p(t, l) : (Ot(), Et(d[g], 1, 1, (() => {
                         d[g] = null
-                    })), mt(), r = d[n], r ? r.p(t, l) : (r = d[n] = j[n](t), r.c()), Lt(r, 1), r.m(e, i)), t[4] ? f ? (f.p(t, l), 16 & l[0] && Lt(f, 1)) : (f = Au(t), f.c(), Lt(f, 1), f.m(e, o)) : f && (Ot(), Et(f, 1, 1, (() => {
+                    })), mt(), r = d[n], r ? r.p(t, l) : (r = d[n] = j[n](t), r.c()), Lt(r, 1), r.m(e, i)), t[4] ? f ? (f.p(t, l), 16 & l[0] && Lt(f, 1)) : (f = xu(t), f.c(), Lt(f, 1), f.m(e, o)) : f && (Ot(), Et(f, 1, 1, (() => {
                         f = null
-                    })), mt()), t[5] ? I ? (I.p(t, l), 32 & l[0] && Lt(I, 1)) : (I = xu(t), I.c(), Lt(I, 1), I.m(e, a)) : I && (Ot(), Et(I, 1, 1, (() => {
+                    })), mt()), t[5] ? I ? (I.p(t, l), 32 & l[0] && Lt(I, 1)) : (I = wu(t), I.c(), Lt(I, 1), I.m(e, a)) : I && (Ot(), Et(I, 1, 1, (() => {
                         I = null
-                    })), mt()), t[6] ? z ? (z.p(t, l), 64 & l[0] && Lt(z, 1)) : (z = wu(t), z.c(), Lt(z, 1), z.m(e, u)) : z && (Ot(), Et(z, 1, 1, (() => {
+                    })), mt()), t[6] ? z ? (z.p(t, l), 64 & l[0] && Lt(z, 1)) : (z = Ou(t), z.c(), Lt(z, 1), z.m(e, u)) : z && (Ot(), Et(z, 1, 1, (() => {
                         z = null
-                    })), mt()), t[7] ? y ? (y.p(t, l), 128 & l[0] && Lt(y, 1)) : (y = Ou(t), y.c(), Lt(y, 1), y.m(e, c)) : y && (Ot(), Et(y, 1, 1, (() => {
+                    })), mt()), t[7] ? y ? (y.p(t, l), 128 & l[0] && Lt(y, 1)) : (y = mu(t), y.c(), Lt(y, 1), y.m(e, c)) : y && (Ot(), Et(y, 1, 1, (() => {
                         y = null
-                    })), mt()), t[8] ? T ? (T.p(t, l), 256 & l[0] && Lt(T, 1)) : (T = mu(t), T.c(), Lt(T, 1), T.m(e, s)) : T && (Ot(), Et(T, 1, 1, (() => {
+                    })), mt()), t[8] ? T ? (T.p(t, l), 256 & l[0] && Lt(T, 1)) : (T = Lu(t), T.c(), Lt(T, 1), T.m(e, s)) : T && (Ot(), Et(T, 1, 1, (() => {
                         T = null
-                    })), mt()), t[10] ? h ? (h.p(t, l), 1024 & l[0] && Lt(h, 1)) : (h = Lu(t), h.c(), Lt(h, 1), h.m(e, M)) : h && (Ot(), Et(h, 1, 1, (() => {
+                    })), mt()), t[10] ? h ? (h.p(t, l), 1024 & l[0] && Lt(h, 1)) : (h = Eu(t), h.c(), Lt(h, 1), h.m(e, M)) : h && (Ot(), Et(h, 1, 1, (() => {
                         h = null
                     })), mt()), (!N || 4 & l[0]) && G(e, "data-theme", t[2]), 8192 & l[0] && F(e, "theme-container--image-bg", t[13]()), 8192 & l[0] && F(e, "theme-container--no-bottom-padding", !t[13]())
                 },
@@ -14079,9 +14096,9 @@
             }
         }
 
-        function vu(t, e, n) {
+        function _u(t, e, n) {
             let r, i, o, a, u, c, s, M, l, N, g, j, d, p, f, I;
-            D(t, ve, (t => n(23, i = t))), D(t, Le, (t => n(14, o = t))), D(t, Ji, (t => n(15, a = t))), D(t, Hi, (t => n(16, u = t))), D(t, he, (t => n(1, c = t))), D(t, ze, (t => n(2, s = t))), D(t, Ee, (t => n(24, M = t))), D(t, Ae, (t => n(17, l = t))), D(t, fe, (t => n(25, N = t))), D(t, ye, (t => n(18, g = t))), D(t, Te, (t => n(49, j = t))), D(t, Oe, (t => n(50, d = t))), D(t, Ie, (t => n(51, p = t))), D(t, xe, (t => n(26, f = t))), D(t, we, (t => n(52, I = t)));
+            D(t, ve, (t => n(23, i = t))), D(t, Le, (t => n(14, o = t))), D(t, Hi, (t => n(15, a = t))), D(t, Fi, (t => n(16, u = t))), D(t, he, (t => n(1, c = t))), D(t, ze, (t => n(2, s = t))), D(t, Ee, (t => n(24, M = t))), D(t, Ae, (t => n(17, l = t))), D(t, fe, (t => n(25, N = t))), D(t, ye, (t => n(18, g = t))), D(t, Te, (t => n(49, j = t))), D(t, Oe, (t => n(50, d = t))), D(t, Ie, (t => n(51, p = t))), D(t, xe, (t => n(26, f = t))), D(t, we, (t => n(52, I = t)));
             let y = !1,
                 T = window.location.hash.substr(1),
                 h = !1,
@@ -14098,7 +14115,7 @@
                 try {
                     const {
                         data: t
-                    } = await Mu("launcher/servers", {
+                    } = await lu("launcher/servers", {
                         method: "GET"
                     }), e = Object.keys(t).reduce(((e, n) => (e[n] = t[n].map((t => ({
                         id: t.number,
@@ -14202,7 +14219,7 @@
             };
             let C = !1,
                 S = null;
-            const Q = (t = !1, e = !1) => Mu("launcher/projects", {
+            const Q = (t = !1, e = !1) => lu("launcher/projects", {
                 method: "GET"
             }, e).then((({
                 data: n
@@ -14210,7 +14227,7 @@
                 if (!Array.isArray(n)) throw e || Q(!1, !0), new Error;
                 U(n, t), C && (clearInterval(S), C = !1)
             })).catch((e => {
-                C || (console.log(e), U(Ka, t), C = !0, S = setInterval((async () => {
+                C || (console.log(e), U(qa, t), C = !0, S = setInterval((async () => {
                     await Q(!0)
                 }), 3e4))
             }));
@@ -14234,7 +14251,7 @@
                         ...t,
                         installed: n,
                         installedVersion: t.version
-                    } : t)), c), z(Hi, u = null, u), z(Ji, a = fi.None, a), z(Le, o = !1, o)
+                    } : t)), c), z(Fi, u = null, u), z(Hi, a = pi.None, a), z(Le, o = !1, o)
                 })), window.launcherAPI && window.launcherAPI.handleRestartAsAdminModalVisibility && window.launcherAPI.handleRestartAsAdminModalVisibility(((t, e = !1) => {
                     n(7, w = e)
                 })), window.launcherAPI && window.launcherAPI.handleAutoLaunchModalVisibility && window.launcherAPI.handleAutoLaunchModalVisibility(((t, e = !1) => {
@@ -14260,7 +14277,7 @@
                         console.warn("Caught exception while replacing the current page. If you're running this in the Svelte REPL, please note that the `replace` method might not work in this environment.")
                     }
                     window.dispatchEvent(new Event("hashchange"))
-                }("/")), n(22, _ = s), f && !(0, De.isEmpty)(f) || z(xe, f = Eo, f)), 1 & t.$$.dirty[0] && n(13, r = () => "/" === T || "" === T), 5 & t.$$.dirty[0] && "/" === T && Wo(s), 33554436 & t.$$.dirty[0] && z(ye, g = N.find((({
+                }("/")), n(22, _ = s), f && !(0, De.isEmpty)(f) || z(xe, f = Eo, f)), 1 & t.$$.dirty[0] && n(13, r = () => "/" === T || "" === T), 5 & t.$$.dirty[0] && "/" === T && Vo(s), 33554436 & t.$$.dirty[0] && z(ye, g = N.find((({
                     gameId: t
                 }) => t === s)), g), 2 & t.$$.dirty[0] && z(Ae, l = c.some((t => t.installed && t.version !== t.installedVersion)), l), 16777216 & t.$$.dirty[0] && M && (Q(), k()), 8388608 & t.$$.dirty[0] && i && (n(5, A = !0), z(ve, i = !1, i))
             }, [T, c, s, y, h, A, x, w, O, m, L, E, v, r, o, a, u, l, g, () => {
@@ -14283,7 +14300,7 @@
         }
         new class extends Bt {
             constructor(t) {
-                super(), Zt(this, t, vu, Eu, c, {}, null, [-1, -1])
+                super(), Zt(this, t, _u, vu, c, {}, null, [-1, -1])
             }
         }({
             target: document.getElementById("root")

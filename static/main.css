@@ -2017,7 +2017,7 @@
 }
 
 .preferences__tooltip--auto {
-    max-width: 200px;
+    max-width: calc(0.0526315789 * 100vw + 97.8947368421px);
     width: max-content;
     bottom: auto;
     left: -5px;
@@ -2025,6 +2025,10 @@
     transform: translate(-100%, -50%);
     font-size: calc(0.0046052632 * 100vw + 6.3157894737px);
     white-space: pre-wrap
+}
+
+.preferences__tooltip--help-button {
+    transform: scale(0.9)
 }
 
 .preferences__drivers-install-button {
@@ -2194,7 +2198,6 @@
     border-radius: 50%;
     transition: transform .2s linear;
     cursor: pointer;
-    position: relative;
     margin-left: auto
 }
 
