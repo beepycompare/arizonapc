@@ -12290,9 +12290,9 @@
                     })
                 }
             },
-            Go = n.p + "bcff7798786a3082848e.png",
+            Go = n.p + "77192175f55c3e9921b9.png",
             Zo = n.p + "2f221eeb298b72a0625f.png",
-            Bo = n.p + "695c995f4385b9291f83.png",
+            Bo = n.p + "1aa7d169c1c290ef3f87.png",
             Wo = n.p + "a9f50afa57f19138bc95.png";
         var Vo = function(t) {
             window.launcherAPI && window.launcherAPI.validateGameFiles && window.launcherAPI.validateGameFiles(t)
@@ -14122,6 +14122,7 @@
                         name: t.name,
                         players: t.online,
                         maxPlayers: t.maxplayers,
+                        queue: t.queue ?? 0,
                         avatarUrl: t.icon,
                         ip: t.ip,
                         port: t.port,
