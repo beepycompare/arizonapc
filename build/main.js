@@ -1892,29 +1892,33 @@
             6852: (e, t, n) => {
                 "use strict";
                 n.r(t), n.d(t, {
-                    getAvailableCdnIndexes: () => a
+                    getAvailableCdnIndexes: () => c
                 });
                 var i = n(2505),
-                    r = n.n(i);
-                const s = {
+                    r = n.n(i),
+                    s = n(4157);
+                const o = {
                         main: ["https://cdn.azresources.cloud", "https://reserve-cdn.azresources.cloud"],
-                        sound: ["https://cdn.azsounds.cloud", "https://reserve-cdn.azsounds.cloud"],
+                        sound: ["https://cdn.azsounds.net", "https://reserve-cdn.azsounds.net"],
                         api: ["https://server-api.arizona.games", "https://reserve-server-api.arizona.games"]
                     },
-                    o = async (e, t = 0) => {
+                    a = async (e, t = 0) => {
                         try {
                             if (!e.length) return 0;
                             const n = e[0],
                                 {
                                     data: i
                                 } = await r().get(`${n}/ping.json`, {
+                                    headers: {
+                                        "User-Agent": `Arizona PC/${s.app.getVersion()}`
+                                    },
                                     timeout: 5e3
                                 });
-                            return "5aa4731d5d84e09e2f7e7141e560104f" === i.hash ? t : o(e.slice(1), t + 1)
+                            return "5aa4731d5d84e09e2f7e7141e560104f" === i.hash ? t : a(e.slice(1), t + 1)
                         } catch (n) {
-                            return o(e.slice(1), t + 1)
+                            return a(e.slice(1), t + 1)
                         }
-                    }, a = async () => await Promise.all(Object.values(s).map((e => o(e))))
+                    }, c = async () => await Promise.all(Object.values(o).map((e => a(e))))
             },
             8618: e => {
                 e.exports = {
