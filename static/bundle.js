@@ -12290,9 +12290,9 @@
                     })
                 }
             },
-            Go = n.p + "77192175f55c3e9921b9.png",
+            Go = n.p + "bd1296829ad7d91b9240.png",
             Zo = n.p + "2f221eeb298b72a0625f.png",
-            Bo = n.p + "1aa7d169c1c290ef3f87.png",
+            Bo = n.p + "3262372920bb9c4338b5.png",
             Wo = n.p + "a9f50afa57f19138bc95.png";
         var Vo = function(t) {
             window.launcherAPI && window.launcherAPI.validateGameFiles && window.launcherAPI.validateGameFiles(t)
