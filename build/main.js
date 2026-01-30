@@ -2660,10 +2660,10 @@
                                                 let s = null;
                                                 const u = Date.now(),
                                                     d = a ? "start cmd.exe /K " : "",
-                                                    m = f(`${d}"${p}" -c -h ${t} -p ${n} ${O} -cdn ${l.join(",")||"0,0,0"}${e===R.Village?"":` -referrer ${(M(G)||"").replace("&","^&")}`}`, {
+                                                    m = f(`${d}"${p}" -c -h ${t} -p ${n} ${O} -cdn ${l.join(",")||"0,0,0"}${e===R.Village?"":` -referrer ${M(G)||""}`}`, {
                                                         cwd: h
                                                     }, ((i, r, a) => {
-                                                        i && Date.now() - u < 5e3 && (o('<p class="unknown-error-modal__subtitle">Запуск игры не удался<br/><br/></p><p class="unknown-error-modal__action-subheader">Возможные решения:</p>- Выключите антивирус (Если он есть)<br/>- Нажмите "Починить игру" (В настройках лаунчера)<br/>- Нажмите "Установить драйвера" (В настройках лаунчера)'), W(V.StartGameError), U.info(`${d}"${p}" -c -h ${t} -p ${n} ${O} -cdn ${l.join(",")||"0,0,0"}${e===R.Village?"":` -referrer ${(M(G)||"").replace("&","^&")}`}`), U.info(h), U.info(i), c && c.isHidden && "function" == typeof c.isHidden && c.isHidden() && (c.show(), c.focus()), s && clearInterval(s))
+                                                        i && Date.now() - u < 5e3 && (o('<p class="unknown-error-modal__subtitle">Запуск игры не удался<br/><br/></p><p class="unknown-error-modal__action-subheader">Возможные решения:</p>- Выключите антивирус (Если он есть)<br/>- Нажмите "Починить игру" (В настройках лаунчера)<br/>- Нажмите "Установить драйвера" (В настройках лаунчера)'), W(V.StartGameError), U.info(`${d}"${p}" -c -h ${t} -p ${n} ${O} -cdn ${l.join(",")||"0,0,0"}${e===R.Village?"":` -referrer ${M(G)||""}`}`), U.info(h), U.info(i), c && c.isHidden && "function" == typeof c.isHidden && c.isHidden() && (c.show(), c.focus()), s && clearInterval(s))
                                                     }));
                                                 s = setInterval((async () => {
                                                     (await Promise.all(N.map((e => w({
