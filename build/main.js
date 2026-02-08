@@ -1695,9 +1695,11 @@
                     f.logger = h, f.logger.transports.file.level = "info", f.logger.transports.file.resolvePath = () => d.join(d.dirname(i.getPath("exe")), "./logs.log"), f.on("error", (e => {
                         x.log.info("Update error:", e)
                     })), f.checkForUpdates().catch((e => x.log.info("checkForUpdates Error:", e)));
-                    const V = u.createFromPath(d.join(__dirname, "../assets/favicon.ico"));
-                    ne = new l(V), ne.setToolTip("Arizona Games Launcher");
-                    const re = p.buildFromTemplate([{
+                    const V = u.createFromPath(d.join(__dirname, "../assets/favicon.ico")),
+                        re = u.createFromPath(d.join(__dirname, "../assets/rodina.ico")),
+                        fe = u.createFromPath(d.join(__dirname, "../assets/favicon.ico"));
+                    ne = new l(fe), ne.setToolTip("Arizona Games Launcher");
+                    const me = p.buildFromTemplate([{
                         label: "Открыть",
                         click: () => {
                             oe.show()
@@ -1708,14 +1710,14 @@
                             oe ? ae ? f.quitAndInstall(!0, !1) : oe.close() : i.quit()
                         }
                     }]);
-                    ne.setContextMenu(re), ne.on("click", (() => oe.show())), oe = se(), ce = setInterval((() => f.checkForUpdates()), 36e5);
-                    let fe = [];
-                    const me = async () => {
-                        fe = await ee(), h.info(fe.join(","))
-                    };
-                    le = setInterval(me, 36e5);
-                    let ve = q("notification") || {};
+                    ne.setContextMenu(me), ne.on("click", (() => oe.show())), oe = se(), ce = setInterval((() => f.checkForUpdates()), 36e5);
+                    let ve = [];
                     const ge = async () => {
+                        ve = await ee(), h.info(ve.join(","))
+                    };
+                    le = setInterval(ge, 36e5);
+                    let ye = q("notification") || {};
+                    const be = async () => {
                         try {
                             const {
                                 data: e = []
@@ -1724,48 +1726,54 @@
                             });
                             if (m(e)) return;
                             e.sort(((e, t) => e.id - t.id)).forEach((e => {
-                                e.id <= ve.id || (ve = {
+                                if (e.id <= ye.id) return;
+                                ye = {
                                     ...e
-                                }, G("notification", e), new c({
+                                }, G("notification", e);
+                                const t = "rodina" === e.project ? re : V;
+                                new c({
                                     title: e.title,
                                     body: e.text,
-                                    icon: V
-                                }).show())
+                                    icon: t
+                                }).show()
                             }))
                         } catch (e) {}
                     };
-                    ue = setInterval(ge, 6e4), setTimeout(ge, 5e3);
-                    let ye = null;
+                    ue = setInterval(be, 6e4), setTimeout(be, 5e3);
+                    let xe = null;
                     try {
-                        ye = q(K), ye || b().then((e => G(K, e))).catch((() => {}))
+                        xe = q(K), xe || b().then((e => G(K, e))).catch((() => {}))
                     } catch (e) {}
-                    let be = q("ownNotification") || {};
-                    const xe = async () => {
+                    let we = q("ownNotification") || {};
+                    const _e = async () => {
                         try {
-                            if (!ye) return;
+                            if (!xe) return;
                             const {
                                 data: e = []
-                            } = await Z(`notifications/own/${ye}?platform=pc`, {
+                            } = await Z(`notifications/own/${xe}?platform=pc`, {
                                 method: "GET"
                             });
                             if (m(e)) return;
                             e.sort(((e, t) => e.id - t.id)).forEach((e => {
-                                e.id <= be.id || (be = {
+                                if (e.id <= we.id) return;
+                                we = {
                                     ...e
-                                }, G("ownNotification", e), new c({
+                                }, G("ownNotification", e);
+                                const t = "rodina" === e.project ? re : V;
+                                new c({
                                     title: e.title,
                                     body: e.text,
-                                    icon: V
-                                }).show())
+                                    icon: t
+                                }).show()
                             }))
                         } catch (e) {}
                     };
-                    ue = setInterval(xe, 3e5), setTimeout(xe, 5e3), pe = setInterval((() => N(oe)), 3e4), Q(J.StartLauncher), f.on("update-available", (() => {
+                    ue = setInterval(_e, 3e5), setTimeout(_e, 5e3), pe = setInterval((() => N(oe)), 3e4), Q(J.StartLauncher), f.on("update-available", (() => {
                         oe.webContents.send("update-download-in-progress", j.InProgress)
                     })), f.on("update-downloaded", (() => {
                         ae = !0, oe.webContents.send("update-download-in-progress", j.Downloaded)
                     })), oe.webContents.on("did-finish-load", (() => {
-                        oe.isDestroyed() || oe.webContents.isDestroyed() || (oe.webContents.send("update-app-version", i.getVersion()), me())
+                        oe.isDestroyed() || oe.webContents.isDestroyed() || (oe.webContents.send("update-app-version", i.getVersion()), ge())
                     })), oe.webContents.on("console-message", ((e, t, n) => {
                         h.info(n)
                     })), s.handle("getSettings", (async (e, t) => {
@@ -1780,7 +1788,7 @@
                     })), s.on("exitLauncher", ((e, t = !1) => {
                         O && O.close(), f.quitAndInstall(!0, t)
                     }));
-                    const we = (e, t = [], n = 0) => {
+                    const Ee = (e, t = [], n = 0) => {
                         if (m(t)) return;
                         Q(J.InstallDrivers);
                         const i = t[0],
@@ -1796,7 +1804,7 @@
                             oe.webContents.send("drivers:installProgress", {
                                 currentIndex: n,
                                 count: L.length
-                            }), we(e, t.slice(1), n + 1)
+                            }), Ee(e, t.slice(1), n + 1)
                         })) : oe.webContents.send("drivers:installProgress", {
                             currentIndex: n,
                             count: L.length,
@@ -1804,7 +1812,7 @@
                         })
                     };
                     s.on("installDrivers", ((e, t) => {
-                        we(t, L)
+                        Ee(t, L)
                     })), s.on("restartAsAdmin", (e => {
                         (async () => {
                             try {
@@ -1830,7 +1838,7 @@
                             if (k() === D.Downloading) return C(), void await A(oe, t);
                             await A(oe, t, !0), await P();
                             const e = await _(t, o, !0, !1, oe) || [];
-                            await E(oe, t, e), e.length && !o || await S(t, n, i, r, s, (e => oe.webContents.send("unknown-error-modal-visibility", !0, e)), a, oe, fe)
+                            await E(oe, t, e), e.length && !o || await S(t, n, i, r, s, (e => oe.webContents.send("unknown-error-modal-visibility", !0, e)), a, oe, ve)
                         } catch (e) {
                             R(D.None), T(oe, 0, "Требуется обновить", "ОБНОВИТЬ"), e.message !== F && oe.webContents.send("unknown-error-modal-visibility", !0)
                         }
@@ -2036,6 +2044,7 @@
                         CefDirtyRects: "cefDirtyRects",
                         CefAuth: "authCef",
                         Grass: "grass",
+                        NewGrass: "newGrass",
                         OldResolution: "oldResolution",
                         HdrResolution: "hdrResolution"
                     },
@@ -2317,50 +2326,59 @@
                         FINGERPRINT_SETTING_NAME: Q
                     } = n(5954);
                 let J = D.Main,
-                    Y = Date.now(),
-                    X = [],
-                    K = 0,
+                    Y = Date.now();
+                const X = (e, t = new Date) => {
+                    try {
+                        i.utimesSync(e, t, t)
+                    } catch (t) {
+                        U.info(t, "3"), i.closeSync(i.openSync(e, "w"))
+                    }
+                };
+                let K = [],
                     Z = 0,
-                    ee = R.None,
-                    te = null,
-                    ne = 0,
+                    ee = 0,
+                    te = R.None,
+                    ne = null,
                     ie = 0,
-                    re = Date.now(),
-                    se = {
+                    re = 0,
+                    se = Date.now(),
+                    oe = {
                         processedItemsSize: null
                     };
-                const oe = async (e = l) => {
-                    ee = R.Downloading, H("cdnType", J), W(V.GameDownloadStart);
+                const ae = async (e = l) => {
+                    te = R.Downloading, H("cdnType", J), W(V.GameDownloadStart);
                     try {
-                        for (let t of X) {
-                            if (ee !== R.Downloading) return Promise.resolve();
+                        for (let t of K) {
+                            if (te !== R.Downloading) return Promise.resolve();
                             await t(), e()
                         }
                         e()
                     } catch (t) {
-                        return W(V.GameDownloadError), U.info(t, "4"), J !== D.Main || t instanceof s || (U.info(`[DOWNLOAD]: Unexpected error. CDN changed to: ${D.Reserve}`), J = D.Reserve, Y = Date.now()), te && e(`Ошибка при скачивании файла ${te.getFilename()}. Попробуйте еще раз`), t
+                        return W(V.GameDownloadError), U.info(t, "4"), J !== D.Main || t instanceof s || (U.info(`[DOWNLOAD]: Unexpected error. CDN changed to: ${D.Reserve}`), J = D.Reserve, Y = Date.now()), ne && e(`Ошибка при скачивании файла ${ne.getFilename()}. Попробуйте еще раз`), t
                     }
-                    ee = R.None, W(V.GameDownloadEnd)
-                }, ae = (e, t, n, i, s, o = "", a = l, c = l) => {
-                    const u = Z;
-                    return r(s, o || `${z(e,J)}/game/${i}`, {
-                        directory: n,
+                    te = R.None, W(V.GameDownloadEnd)
+                }, ce = (e, t, n, i, s, o, a = "", c = l, u = l) => {
+                    const p = ee;
+                    return r(o, a || `${z(e,J)}/game/${s}`, {
+                        directory: i,
                         saveAs: !1,
-                        filename: t,
+                        filename: n,
                         showBadge: !1,
                         showProgressBar: !1,
                         onStarted: e => {
-                            te = e, c()
+                            ne = e, u()
                         },
-                        onCompleted: () => te = null,
+                        onCompleted: () => {
+                            ne = null, "check" === t.type && X(s, t.date_change)
+                        },
                         onProgress: ({
                             transferredBytes: e
                         }) => {
-                            Z = u + e, Date.now() - re >= 1e3 && (re = Date.now(), ne = Math.max(Z - ie, 0), ie = Z), a()
+                            ee = p + e, Date.now() - se >= 1e3 && (se = Date.now(), ie = Math.max(ee - re, 0), re = ee), c()
                         }
                     })
-                }, ce = async (e = "arizona", t = !1, n = !1, r = !1, s, l = 0) => {
-                    if (ee === R.Repair) return [];
+                }, le = async (e = "arizona", t = !1, n = !1, r = !1, s, l = 0) => {
+                    if (te === R.Repair) return [];
                     let u = {};
                     const p = z(e, J);
                     J === D.Reserve && Date.now() - Y > 6e5 && (J = D.Main);
@@ -2373,10 +2391,10 @@
                         U.info(`[CND]: Selected CDN: ${p}`), u = e
                     } catch (i) {
                         if (U.info(`[PING ERROR]: URL: ${p}`), 1 === l) J = J === D.Main ? D.Reserve : D.Main, Y = Date.now();
-                        else if (3 === l) return ue(s), J = D.Main, Promise.reject();
-                        return ce(e, t = !1, n, r, s, l + 1)
+                        else if (3 === l) return pe(s), J = D.Main, Promise.reject();
+                        return le(e, t = !1, n, r, s, l + 1)
                     }
-                    t && (ee = R.Repair, s && le(s, 0, "Проверка файлов...", "ПРОВЕРКА"));
+                    t && (te = R.Repair, s && ue(s, 0, "Проверка файлов...", "ПРОВЕРКА"));
                     const d = A(e),
                         h = S(e).map((e => v.normalize(`${d}/${e}`))),
                         f = e === k.Trilogy;
@@ -2405,11 +2423,11 @@
                             const e = v.normalize(`${d}/accessTestFile.txt`);
                             i.writeFileSync(e, "Writable?"), i.unlinkSync(e)
                         } catch (e) {
-                            throw pe(s), new Error(j)
+                            throw de(s), new Error(j)
                         }
                     })();
                     const T = async (o, a = "") => {
-                        if (t && o.hash && s && !r && (_ += 1, le(s, (_ / (w / 100)).toFixed(2), "Проверка файлов...", "ПРОВЕРКА")), !o.type) return o.data ? (await g(o.data, a)).flat(1 / 0) : void 0;
+                        if (t && o.hash && s && !r && (_ += 1, ue(s, (_ / (w / 100)).toFixed(2), "Проверка файлов...", "ПРОВЕРКА")), !o.type) return o.data ? (await g(o.data, a)).flat(1 / 0) : void 0;
                         const l = `${a}${a?"/":""}${o.name}`,
                             u = `${d}/${l}`,
                             b = `${d}/${a}`,
@@ -2435,7 +2453,7 @@
                                 } catch (e) {
                                     U.info(e, "11")
                                 }
-                                return void(Z += o.size)
+                                return void(ee += o.size)
                             }
                         }
                         if ("delete" === o.type) return;
@@ -2477,17 +2495,12 @@
                         if ("res" === o.type && !t) return;
                         const O = await i.promises.stat(u);
                         if (O.size !== o.size) return S(await c(u));
-                        Z += o.size;
-                        const T = o.date_change;
-                        if (O.mtime / 1e3 !== T && ((e, t = new Date) => {
-                                try {
-                                    i.utimesSync(e, t, t)
-                                } catch (t) {
-                                    U.info(t, "3"), i.closeSync(i.openSync(e, "w"))
-                                }
-                            })(u, T), r || "check" === o.type) try {
+                        ee += o.size;
+                        const T = o.date_change,
+                            R = O.mtime / 1e3;
+                        if (R !== T && X(u, T), (r || "check" === o.type) && (r || "check" !== o.type || R !== T)) try {
                             const e = await c(u);
-                            if (t && o.hash && s && r && (_ += 1, le(s, (_ / (w / 100)).toFixed(2), "Проверка файлов...", "ПРОВЕРКА")), e !== o.hash) return S(e)
+                            if (t && o.hash && s && r && (_ += 1, ue(s, (_ / (w / 100)).toFixed(2), "Проверка файлов...", "ПРОВЕРКА")), e !== o.hash) return S(e)
                         } catch (e) {
                             U.info(e, "5")
                         }
@@ -2532,44 +2545,44 @@
                                     U.info(e, "6")
                                 }
                             }
-                        })), !N.length && s && le(s, 100, "Готово к игре", "ИГРАТЬ")
+                        })), !N.length && s && ue(s, 100, "Готово к игре", "ИГРАТЬ")
                     }
                     return N
-                }, le = (e, t, n = "", i, r) => {
-                    e.isDestroyed() || e.webContents.isDestroyed() || (e.setProgressBar(-1), e.webContents.send("progress-update", t, n, i, _(ne), r))
-                }, ue = e => {
-                    !e || e.isDestroyed() || e.webContents.isDestroyed() || e.webContents.send("network-error-modal-visibility", !0)
+                }, ue = (e, t, n = "", i, r) => {
+                    e.isDestroyed() || e.webContents.isDestroyed() || (e.setProgressBar(-1), e.webContents.send("progress-update", t, n, i, _(ie), r))
                 }, pe = e => {
+                    !e || e.isDestroyed() || e.webContents.isDestroyed() || e.webContents.send("network-error-modal-visibility", !0)
+                }, de = e => {
                     !e || e.isDestroyed() || e.webContents.isDestroyed() || e.webContents.send("restart-as-admin-modal-visibility", !0)
-                }, de = (e, t, n) => {
-                    const i = Math.min(Z / (K / 100), 100).toFixed(2),
+                }, he = (e, t, n) => {
+                    const i = Math.min(ee / (Z / 100), 100).toFixed(2),
                         r = i >= 100;
-                    r && (ne = 0), t ? le(e, 0, t, "ОБНОВИТЬ") : le(e, i, r ? "Готово к игре" : `Загрузка файлов... [${_(Z)}mb/${_(K)}mb]`, r ? "ИГРАТЬ" : "ОТМЕНИТЬ", n)
-                }, he = () => {
-                    ee = R.None, te && te.cancel(), te = null, W(V.GameDownloadStop)
-                }, fe = async (e, t = "arizona", n = !1) => {
-                    if (ee !== R.Downloading) {
-                        if (ee !== R.Verification) try {
-                            ee = R.Verification, le(e, 0, "Проверка файлов...", "ОТМЕНИТЬ");
-                            const i = await ce(t, !1, !1, !1, e);
-                            return ee = R.None, u(i) ? (le(e, 100, "Готово к игре", "ИГРАТЬ"), Promise.resolve()) : (n || le(e, 0, "Требуется обновить", "ОБНОВИТЬ"), Promise.resolve())
+                    r && (ie = 0), t ? ue(e, 0, t, "ОБНОВИТЬ") : ue(e, i, r ? "Готово к игре" : `Загрузка файлов... [${_(ee)}mb/${_(Z)}mb]`, r ? "ИГРАТЬ" : "ОТМЕНИТЬ", n)
+                }, fe = () => {
+                    te = R.None, ne && ne.cancel(), ne = null, W(V.GameDownloadStop)
+                }, me = async (e, t = "arizona", n = !1) => {
+                    if (te !== R.Downloading) {
+                        if (te !== R.Verification) try {
+                            te = R.Verification, ue(e, 0, "Проверка файлов...", "ОТМЕНИТЬ");
+                            const i = await le(t, !1, !1, !1, e);
+                            return te = R.None, u(i) ? (ue(e, 100, "Готово к игре", "ИГРАТЬ"), Promise.resolve()) : (n || ue(e, 0, "Требуется обновить", "ОБНОВИТЬ"), Promise.resolve())
                         } catch (t) {
-                            return ee = R.None, le(e, 0, "Требуется обновить", "ОБНОВИТЬ"), U.info(t, "10"), U.info("Files validation error"), Promise.resolve()
+                            return te = R.None, ue(e, 0, "Требуется обновить", "ОБНОВИТЬ"), U.info(t, "10"), U.info("Files validation error"), Promise.resolve()
                         }
                     } else {
-                        const t = Math.min(Z / (K / 100), 100).toFixed(2);
-                        le(e, t, `Загрузка файлов... [${_(Z)}mb/${_(K)}mb]`, "ОТМЕНИТЬ")
+                        const t = Math.min(ee / (Z / 100), 100).toFixed(2);
+                        ue(e, t, `Загрузка файлов... [${_(ee)}mb/${_(Z)}mb]`, "ОТМЕНИТЬ")
                     }
                 };
                 e.exports = {
-                    getFilesToUpdate: ce,
+                    getFilesToUpdate: le,
                     startDownloadGameFiles: async (e, t = "arizona", n) => {
-                        if (ee !== R.Verification)
-                            if (ee !== R.Downloading) try {
-                                if (K = n.reduce(((e, t) => e + t.size), 0), Z = 0, X = [], u(n)) return ee = R.None, le(e, 100, "Готово к игре", "ИГРАТЬ"), Promise.resolve();
+                        if (te !== R.Verification)
+                            if (te !== R.Downloading) try {
+                                if (Z = n.reduce(((e, t) => e + t.size), 0), ee = 0, K = [], u(n)) return te = R.None, ue(e, 100, "Готово к игре", "ИГРАТЬ"), Promise.resolve();
                                 try {
                                     const t = await g(n[0].filePath);
-                                    if (t.free < K) return void le(e, 0, `Недостаточно места на диске ${t.diskPath}`, "ОБНОВИТЬ")
+                                    if (t.free < Z) return void ue(e, 0, `Недостаточно места на диске ${t.diskPath}`, "ОБНОВИТЬ")
                                 } catch (e) {
                                     U.info(e, "7")
                                 }
@@ -2596,22 +2609,22 @@
                                             try {
                                                 await i.promises.unlink(s.filePath)
                                             } catch (t) {
-                                                return U.info(t, "8"), U.info(`Не удается удалить ${s.filePath}`, "#8"), void le(e, 0, `Не удается удалить ${s.filePath.split("/").slice(-1)}`, "ОБНОВИТЬ")
+                                                return U.info(t, "8"), U.info(`Не удается удалить ${s.filePath}`, "#8"), void ue(e, 0, `Не удается удалить ${s.filePath.split("/").slice(-1)}`, "ОБНОВИТЬ")
                                             }
                                         } catch (e) {}
-                                        X.push((() => ae(t, s.name, s.directoryPath, s.filePath, e, s.downloadPath, (() => de(e)), (() => U.info(`Download file "${s.filePath}" [${s.prevHash} / ${s.hash} ]  Size: ${s.size}. CDN: ${J}`)))))
+                                        K.push((() => ce(t, s, s.name, s.directoryPath, s.filePath, e, s.downloadPath, (() => he(e)), (() => U.info(`Download file "${s.filePath}" [${s.prevHash} / ${s.hash} ]  Size: ${s.size}. CDN: ${J}`)))))
                                     } else i.mkdirSync(s.filePath, {
                                         recursive: !0
                                     });
-                                await oe((n => de(e, n, t)))
+                                await ae((n => he(e, n, t)))
                             } catch (e) {
                                 return U.info(e, "9"), Promise.reject()
-                            } else te && (he(), fe(e, t))
+                            } else ne && (fe(), me(e, t))
                     },
-                    processDownloadQueue: oe,
-                    validateGameFiles: fe,
+                    processDownloadQueue: ae,
+                    validateGameFiles: me,
                     startGame: async (e, t, n, r, s = [], o = (e => {}), a = !1, c, l = []) => {
-                        if (ee === R.Repair) return;
+                        if (te === R.Repair) return;
                         W(V.TryStartGame);
                         const p = M(e),
                             h = A(e),
@@ -2646,6 +2659,7 @@
                                         "-cef_dirty_rects": y[C.CefDirtyRects],
                                         "-auth_cef_enable": y[C.CefAuth],
                                         "-enable_grass": y[C.Grass],
+                                        "-enable_new_grass": y[C.NewGrass],
                                         "-16bpp": y[C.OldResolution],
                                         "-allow_hdr": y[C.HdrResolution],
                                         "-arizona": e === k.Arizona,
@@ -2749,16 +2763,16 @@
                                 if (!D.trilogyLargeFileSize || !q || H.size !== D.trilogyLargeFileSize) {
                                     try {
                                         const e = await g(h);
-                                        if (e.free < 23850730160) return void le(c, 0, `Недостаточно места на диске ${e.diskPath}`, "ИГРАТЬ")
+                                        if (e.free < 23850730160) return void ue(c, 0, `Недостаточно места на диске ${e.diskPath}`, "ИГРАТЬ")
                                     } catch (e) {
                                         U.info(e, "trilogy checkDiskSpace error")
                                     }
-                                    ee = R.FilesPostprocessing, le(c, 0, "Подготовка файлов...", "ОЖИДАЙТЕ");
+                                    te = R.FilesPostprocessing, ue(c, 0, "Подготовка файлов...", "ОЖИДАЙТЕ");
                                     const e = 208507301.6,
                                         t = setInterval((async () => {
                                             try {
                                                 const t = await i.promises.stat($);
-                                                le(c, Math.min(d(t.size / e, 2), 99.99), "Подготовка файлов...", "ОЖИДАЙТЕ")
+                                                ue(c, Math.min(d(t.size / e, 2), 99.99), "Подготовка файлов...", "ОЖИДАЙТЕ")
                                             } catch (e) {}
                                         }), 1e3);
                                     return void f('"./FilesConsolidator.exe" "./GameArchive/" "./Game/Gameface/Content/Paks/gta.pak"', {
@@ -2770,11 +2784,11 @@
                                             B("_sys", {
                                                 ...D,
                                                 trilogyLargeFileSize: e.size
-                                            }), le(c, 100, "Запуск игры...", "ОЖИДАЙТЕ"), setTimeout((() => {
-                                                ee = R.None, le(c, 100, "Готово к игре", "ИГРАТЬ")
+                                            }), ue(c, 100, "Запуск игры...", "ОЖИДАЙТЕ"), setTimeout((() => {
+                                                te = R.None, ue(c, 100, "Готово к игре", "ИГРАТЬ")
                                             }), 5e3), z()
                                         } catch (e) {
-                                            le(c, 100, "Ошибка подготовки файлов", "ИГРАТЬ")
+                                            ue(c, 100, "Ошибка подготовки файлов", "ИГРАТЬ")
                                         }
                                     }))
                                 }
@@ -2793,12 +2807,12 @@
                         var _
                     },
                     getGamePath: A,
-                    setGameProgress: le,
-                    currentDownloadItem: te,
-                    setInteractionStatus: e => ee = e,
-                    getInteractionStatus: () => ee,
-                    getCurrentDownloadItem: () => te,
-                    stopDownload: he,
+                    setGameProgress: ue,
+                    currentDownloadItem: ne,
+                    setInteractionStatus: e => te = e,
+                    getInteractionStatus: () => te,
+                    getCurrentDownloadItem: () => ne,
+                    stopDownload: fe,
                     killGtaSaGameProcessIfExists: async () => {
                         let e = !1;
                         await new Promise(((t, n) => {
@@ -2817,7 +2831,7 @@
                         })), e && await $(300)
                     },
                     checkNetworkDownloadConnection: e => {
-                        ee === R.Downloading ? (p(se.processedItemsSize) || se.processedItemsSize !== Z || (J === D.Main && (J = D.Reserve, Y = Date.now()), he(), ue(e), de(e, "Потеряно интернет-соединение")), se.processedItemsSize = Z) : se.processedItemsSize = null
+                        te === R.Downloading ? (p(oe.processedItemsSize) || oe.processedItemsSize !== ee || (J === D.Main && (J = D.Reserve, Y = Date.now()), fe(), pe(e), he(e, "Потеряно интернет-соединение")), oe.processedItemsSize = ee) : oe.processedItemsSize = null
                     },
                     getCurrentCdnUrlType: () => J
                 }

@@ -11458,11 +11458,12 @@
                 CefDirtyRects: "cefDirtyRects",
                 CefAuth: "authCef",
                 Grass: "grass",
+                NewGrass: "newGrass",
                 OldResolution: "oldResolution",
                 HdrResolution: "hdrResolution"
             },
-            Ao = (de(fo = {}, ho.WideScreen, "Широкий экран"), de(fo, ho.AutoLogin, "Автологин"), de(fo, ho.Preload, "Предзагрузка"), de(fo, ho.AutoClean, "Автоочистка"), de(fo, ho.Windowed, "Запуск в окне"), de(fo, ho.TestBranch, "Тестовая ветка"), de(fo, ho.Seasons, "Времена года"), de(fo, ho.Rtree, "Деревья"), de(fo, ho.Graphics, "Графика Plus"), de(fo, ho.ShitPc, "Слабый ПК"), de(fo, ho.OldResolution, "Устаревшие разрешения"), de(fo, ho.HdrResolution, "Поддержка HDR"), de(fo, ho.Grass, "Растительность"), de(fo, ho.CefAuth, "Новая авторизация"), de(fo, ho.CefDirtyRects, "Оптимизация интерфейсов"), fo),
-            xo = (de(Io = {}, ho.WideScreen, "Расширяет угол обзора и адаптирует интерфейс под современные мониторы.\n*Рекомендуется включить"), de(Io, ho.AutoLogin, "Сохраняет пароль и выполняет автоматический вход в аккаунт."), de(Io, ho.Preload, "Оптимизирует загрузку моделей и компонентов для снижения нагрузки на диск.\n*Может вызвать подлагивания при движении"), de(Io, ho.AutoClean, "Удаляет лишние файлы и модификации из папки игры при запуске."), de(Io, ho.Windowed, "Запускает игру в изменяемом окне (зависит от разрешения экрана в настройках игры).\n*При отключении используется полноэкранный режим"), de(Io, ho.TestBranch, "Загружает отдельную версию игры для публичных тестов.\n*Доступно только во время тестов. Следите за новостями проекта"), de(Io, ho.Seasons, "Окружение и растительность меняются в зависимости от сезона (лето, осень, зима, весна)."), de(Io, ho.Graphics, "Добавляет улучшенное освещение и небо.\n*Снижает производительность. Несовместимо с ENB и другими графическими модами"), de(Io, ho.ShitPc, "Отключает эффекты и снижает качество текстур.\n*Рекомендуется для очень слабых ПК"), de(Io, ho.OldResolution, "Отключает 32-bit режим экрана, снижая качество и увеличивая задержку.\n*Включайте только при отсутствии поддержки 32-bit видеокартой"), de(Io, ho.HdrResolution, "Активирует вывод изображения в HDR.\n*[BETA] Используйте только при поддержке монитором HDR. Возможны искажения цветов."), de(Io, ho.Grass, "Повышает детализацию травы, листвы и других элементов окружения.\n*Может снизить производительность"), de(Io, ho.CefAuth, "Включает обновлённую систему и вид входа в игру.\n*Рекомендуется включить"), Io),
+            Ao = (de(fo = {}, ho.WideScreen, "Широкий экран"), de(fo, ho.AutoLogin, "Автологин"), de(fo, ho.Preload, "Предзагрузка"), de(fo, ho.AutoClean, "Автоочистка"), de(fo, ho.Windowed, "Запуск в окне"), de(fo, ho.TestBranch, "Тестовая ветка"), de(fo, ho.Seasons, "Времена года"), de(fo, ho.Rtree, "Деревья"), de(fo, ho.Graphics, "Графика Plus"), de(fo, ho.ShitPc, "Слабый ПК"), de(fo, ho.OldResolution, "Устаревшие разрешения"), de(fo, ho.HdrResolution, "Поддержка HDR"), de(fo, ho.Grass, "Растительность"), de(fo, ho.NewGrass, "Новая растительность"), de(fo, ho.CefAuth, "Новая авторизация"), de(fo, ho.CefDirtyRects, "Оптимизация интерфейсов"), fo),
+            xo = (de(Io = {}, ho.WideScreen, "Расширяет угол обзора и адаптирует интерфейс под современные мониторы.\n*Рекомендуется включить"), de(Io, ho.AutoLogin, "Сохраняет пароль и выполняет автоматический вход в аккаунт."), de(Io, ho.Preload, "Оптимизирует загрузку моделей и компонентов для снижения нагрузки на диск.\n*Может вызвать подлагивания при движении"), de(Io, ho.AutoClean, "Удаляет лишние файлы и модификации из папки игры при запуске."), de(Io, ho.Windowed, "Запускает игру в изменяемом окне (зависит от разрешения экрана в настройках игры).\n*При отключении используется полноэкранный режим"), de(Io, ho.TestBranch, "Загружает отдельную версию игры для публичных тестов.\n*Доступно только во время тестов. Следите за новостями проекта"), de(Io, ho.Seasons, "Окружение и растительность меняются в зависимости от сезона (лето, осень, зима, весна)."), de(Io, ho.Graphics, "Добавляет улучшенное освещение и небо.\n*Снижает производительность. Несовместимо с ENB и другими графическими модами"), de(Io, ho.ShitPc, "Отключает эффекты и снижает качество текстур.\n*Рекомендуется для очень слабых ПК"), de(Io, ho.OldResolution, "Отключает 32-bit режим экрана, снижая качество и увеличивая задержку.\n*Включайте только при отсутствии поддержки 32-bit видеокартой"), de(Io, ho.HdrResolution, "Активирует вывод изображения в HDR.\n*[BETA] Используйте только при поддержке монитором HDR. Возможны искажения цветов."), de(Io, ho.Grass, "Повышает детализацию травы, листвы и других элементов окружения.\n*Может снизить производительность"), de(Io, ho.NewGrass, "Новый вид растительности"), de(Io, ho.CefAuth, "Включает обновлённую систему и вид входа в игру.\n*Рекомендуется включить"), Io),
             wo = {
                 Arizona: "arizona",
                 ArizonaStaging: "arizona_staging",
@@ -11520,6 +11521,9 @@
                         id: ho.Grass,
                         value: !0
                     }, {
+                        id: ho.NewGrass,
+                        value: !0
+                    }, {
                         id: ho.AutoClean,
                         value: !1
                     }, {
@@ -11575,6 +11579,9 @@
                     }, {
                         id: ho.ShitPc,
                         value: !1
+                    }, {
+                        id: ho.NewGrass,
+                        value: !0
                     }, {
                         id: ho.AutoClean,
                         value: !1
@@ -11685,7 +11692,8 @@
                         id: ho.Seasons,
                         value: !0
                     }]
-                }
+                },
+                optional: !0
             }],
             Eo = (de(zo = {}, wo.Arizona, [{
                 id: 1,
@@ -14098,7 +14106,7 @@
 
         function _u(t, e, n) {
             let r, i, o, a, u, c, s, M, l, N, g, j, d, p, f, I;
-            D(t, ve, (t => n(23, i = t))), D(t, Le, (t => n(14, o = t))), D(t, Hi, (t => n(15, a = t))), D(t, Fi, (t => n(16, u = t))), D(t, he, (t => n(1, c = t))), D(t, ze, (t => n(2, s = t))), D(t, Ee, (t => n(24, M = t))), D(t, Ae, (t => n(17, l = t))), D(t, fe, (t => n(25, N = t))), D(t, ye, (t => n(18, g = t))), D(t, Te, (t => n(49, j = t))), D(t, Oe, (t => n(50, d = t))), D(t, Ie, (t => n(51, p = t))), D(t, xe, (t => n(26, f = t))), D(t, we, (t => n(52, I = t)));
+            D(t, ve, (t => n(23, i = t))), D(t, Le, (t => n(14, o = t))), D(t, Hi, (t => n(15, a = t))), D(t, Fi, (t => n(16, u = t))), D(t, he, (t => n(1, c = t))), D(t, ze, (t => n(2, s = t))), D(t, Ee, (t => n(24, M = t))), D(t, Ae, (t => n(17, l = t))), D(t, fe, (t => n(25, N = t))), D(t, ye, (t => n(18, g = t))), D(t, Te, (t => n(49, j = t))), D(t, Ie, (t => n(50, d = t))), D(t, Oe, (t => n(51, p = t))), D(t, xe, (t => n(26, f = t))), D(t, we, (t => n(52, I = t)));
             let y = !1,
                 T = window.location.hash.substr(1),
                 h = !1,
@@ -14130,7 +14138,7 @@
                         enabled: 0 !== t.maxplayers,
                         raw: t
                     }))), e)), {});
-                    d && (e[wo.Trilogy] = e[wo.Arizona]), z(xe, f = e, f), z(we, I = e[s].find((({
+                    p && (e[wo.Trilogy] = e[wo.Arizona]), z(xe, f = e, f), z(we, I = e[s].find((({
                         id: t
                     }) => I.id === t)) || e[s][0], I)
                 } catch (t) {
@@ -14139,7 +14147,7 @@
                 }
             }, U = async (t = [], e = !1) => {
                 const r = window.launcherAPI && window.launcherAPI.getSettings ? await window.launcherAPI.getSettings() : {};
-                r.autoLaunchAlreadyRequested || (n(8, O = !0), Ve("autoLaunchAlreadyRequested", !0)), z(Ie, p = [], p), z(fe, N = t.reduce(((t, e) => {
+                r.autoLaunchAlreadyRequested || (n(8, O = !0), Ve("autoLaunchAlreadyRequested", !0)), z(Ie, d = [], d), z(fe, N = t.filter((t => t.gameId !== wo.Village)).reduce(((t, e) => {
                     const n = Lo.find((({
                             gameId: t
                         }) => e.gameId === t)),
@@ -14181,13 +14189,13 @@
                             baseSettings: u,
                             stagingSettings: s
                         };
-                    return M.optional && p.push(M), r.sourceOfInstall && r.sourceOfInstall === e.gameId ? t.unshift(M) : t.push(M), o && Ve(e.gameId, u), t
-                }), []), N), Ie.set(p);
+                    return M.optional && d.push(M), r.sourceOfInstall && r.sourceOfInstall === e.gameId ? t.unshift(M) : t.push(M), o && Ve(e.gameId, u), t
+                }), []), N), Ie.set(d);
                 const i = N.find((({
                         gameId: t
                     }) => t === wo.Arizona)) || {},
-                    o = d;
-                if (z(Oe, d = !!i.trilogyAvailable, d), e && !o && d && await k(), i.trilogyAvailable) {
+                    o = p;
+                if (z(Oe, p = !!i.trilogyAvailable, p), e && !o && p && await k(), i.trilogyAvailable) {
                     const t = Lo.find((({
                             gameId: t
                         }) => t === wo.Trilogy)),
@@ -14202,7 +14210,7 @@
                             settings: e,
                             options: []
                         };
-                    r.sourceOfInstall && r.sourceOfInstall === wo.Trilogy ? N.unshift(n) : N.push(n), fe.set(N)
+                    n.optional && d.push(n), r.sourceOfInstall && r.sourceOfInstall === wo.Trilogy ? N.unshift(n) : N.push(n), fe.set(N)
                 }
                 if (!e) {
                     const t = r.lastSelectedGameId && N.find((({
