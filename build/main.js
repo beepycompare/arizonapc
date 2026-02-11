@@ -2498,9 +2498,10 @@
                         ee += o.size;
                         const T = o.date_change,
                             R = O.mtime / 1e3;
-                        if (R !== T && X(u, T), (r || "check" === o.type) && (r || "check" !== o.type || R !== T)) try {
+                        if (R !== T && "check" !== o.type && X(u, T), (r || "check" === o.type) && (r || "check" !== o.type || R !== T)) try {
                             const e = await c(u);
-                            if (t && o.hash && s && r && (_ += 1, ue(s, (_ / (w / 100)).toFixed(2), "Проверка файлов...", "ПРОВЕРКА")), e !== o.hash) return S(e)
+                            if (t && o.hash && s && r && (_ += 1, ue(s, (_ / (w / 100)).toFixed(2), "Проверка файлов...", "ПРОВЕРКА")), e !== o.hash) return S(e);
+                            X(u, T)
                         } catch (e) {
                             U.info(e, "5")
                         }
