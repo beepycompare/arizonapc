@@ -7424,7 +7424,7 @@
                 7 & t.$$.dirty && (n(1, a = []), (o.raw.donateMultiplier > 2 && ![wo.Arizona, wo.Trilogy].includes(r) || o.raw.donateMultiplier > 3) && a.push({
                     type: Qe,
                     text: `X${o.raw.donateMultiplier} ДОНАТ`
-                }), (o.raw.experienceMultiplier > 2 && ![wo.Arizona, wo.Trilogy].includes(r) || o.raw.experienceMultiplier > 3) && a.push({
+                }), o.raw.experienceMultiplier > 2 && a.push({
                     type: "exp",
                     text: `X${o.raw.experienceMultiplier} ОПЫТ`
                 }), a.length || (o.raw.new && a.push({
@@ -12318,27 +12318,26 @@
 
         function Jo(t) {
             let e, n, r, i, o, a, u, c, s, M = t[17].shortTitle + "",
-                l = t[17].multipliers.donate > 1 && t[17].gameId === wo.ArizonaV || t[17].multipliers.donate > 2 && ![wo.Arizona, wo.Trilogy].includes(t[17].gameId) || t[17].multipliers.donate > 3,
-                N = t[17].multipliers.experience > 1 && t[17].gameId === wo.ArizonaV || t[17].multipliers.experience > 2 && ![wo.Arizona, wo.Trilogy].includes(t[17].gameId) || t[17].multipliers.experience > 3;
+                l = t[17].multipliers.donate > 1 && t[17].gameId === wo.ArizonaV || t[17].multipliers.donate > 2 && ![wo.Arizona, wo.Trilogy].includes(t[17].gameId) || t[17].multipliers.donate > 3;
 
-            function g() {
+            function N() {
                 return t[10](t[17])
             }
-            let D = t[17].gameId === wo.Trilogy && t[5] && Xo(),
-                j = l && Ko(t),
-                d = N && qo(t);
+            let g = t[17].gameId === wo.Trilogy && t[5] && Xo(),
+                D = l && Ko(t),
+                j = (t[17].multipliers.experience > 1 && t[17].gameId === wo.ArizonaV || t[17].multipliers.experience > 2) && qo(t);
             return {
                 c() {
-                    e = Q("li"), n = Q("span"), r = b(M), i = Y(), D && D.c(), o = Y(), a = Q("div"), j && j.c(), u = Y(), d && d.c(), G(n, "class", "navigation-panel__projects-list-link"), F(n, "navigation-panel__projects-list-link--active", t[1] === t[17].gameId), F(n, "navigation-panel__projects-list-link--disabled", t[1] !== t[17].gameId && t[3]), G(a, "class", "navigation-panel__multiplyer-container"), G(e, "class", "navigation-panel__projects-list-item")
+                    e = Q("li"), n = Q("span"), r = b(M), i = Y(), g && g.c(), o = Y(), a = Q("div"), D && D.c(), u = Y(), j && j.c(), G(n, "class", "navigation-panel__projects-list-link"), F(n, "navigation-panel__projects-list-link--active", t[1] === t[17].gameId), F(n, "navigation-panel__projects-list-link--disabled", t[1] !== t[17].gameId && t[3]), G(a, "class", "navigation-panel__multiplyer-container"), G(e, "class", "navigation-panel__projects-list-item")
                 },
                 m(t, M) {
-                    U(t, e, M), L(e, n), L(n, r), L(e, i), D && D.m(e, null), L(e, o), L(e, a), j && j.m(a, null), L(a, u), d && d.m(a, null), c || (s = $(n, "click", R(g)), c = !0)
+                    U(t, e, M), L(e, n), L(n, r), L(e, i), g && g.m(e, null), L(e, o), L(e, a), D && D.m(a, null), L(a, u), j && j.m(a, null), c || (s = $(n, "click", R(N)), c = !0)
                 },
                 p(i, c) {
-                    t = i, 16 & c && M !== (M = t[17].shortTitle + "") && B(r, M), 18 & c && F(n, "navigation-panel__projects-list-link--active", t[1] === t[17].gameId), 26 & c && F(n, "navigation-panel__projects-list-link--disabled", t[1] !== t[17].gameId && t[3]), t[17].gameId === wo.Trilogy && t[5] ? D || (D = Xo(), D.c(), D.m(e, o)) : D && (D.d(1), D = null), 16 & c && (l = t[17].multipliers.donate > 1 && t[17].gameId === wo.ArizonaV || t[17].multipliers.donate > 2 && ![wo.Arizona, wo.Trilogy].includes(t[17].gameId) || t[17].multipliers.donate > 3), l ? j ? j.p(t, c) : (j = Ko(t), j.c(), j.m(a, u)) : j && (j.d(1), j = null), 16 & c && (N = t[17].multipliers.experience > 1 && t[17].gameId === wo.ArizonaV || t[17].multipliers.experience > 2 && ![wo.Arizona, wo.Trilogy].includes(t[17].gameId) || t[17].multipliers.experience > 3), N ? d ? d.p(t, c) : (d = qo(t), d.c(), d.m(a, null)) : d && (d.d(1), d = null)
+                    t = i, 16 & c && M !== (M = t[17].shortTitle + "") && B(r, M), 18 & c && F(n, "navigation-panel__projects-list-link--active", t[1] === t[17].gameId), 26 & c && F(n, "navigation-panel__projects-list-link--disabled", t[1] !== t[17].gameId && t[3]), t[17].gameId === wo.Trilogy && t[5] ? g || (g = Xo(), g.c(), g.m(e, o)) : g && (g.d(1), g = null), 16 & c && (l = t[17].multipliers.donate > 1 && t[17].gameId === wo.ArizonaV || t[17].multipliers.donate > 2 && ![wo.Arizona, wo.Trilogy].includes(t[17].gameId) || t[17].multipliers.donate > 3), l ? D ? D.p(t, c) : (D = Ko(t), D.c(), D.m(a, u)) : D && (D.d(1), D = null), t[17].multipliers.experience > 1 && t[17].gameId === wo.ArizonaV || t[17].multipliers.experience > 2 ? j ? j.p(t, c) : (j = qo(t), j.c(), j.m(a, null)) : j && (j.d(1), j = null)
                 },
                 d(t) {
-                    t && C(e), D && D.d(), j && j.d(), d && d.d(), c = !1, s()
+                    t && C(e), g && g.d(), D && D.d(), j && j.d(), c = !1, s()
                 }
             }
         }

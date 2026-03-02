@@ -1619,7 +1619,7 @@
                     ie = null;
                 const re = ({
                         url: e
-                    }) => e.startsWith("http:") || e.startsWith("https:") ? (o.openExternal(e), {
+                    }) => e.startsWith("http:") || e.startsWith("https:") ? (o.openExternal(e), Q(J.OpenNews).catch((() => {})), {
                         action: "deny"
                     }) : {
                         action: "allow"
@@ -1912,9 +1912,9 @@
                 const {
                     log: o
                 } = n(835), a = {
-                    main: ["https://cdn.azresources.cloud", "https://reserve-cdn.azresources.cloud"],
-                    sound: ["https://cdn.azsounds.net", "https://reserve-cdn.azsounds.net"],
-                    api: ["https://server-api.arizona.games", "https://reserve-server-api.arizona.games"]
+                    main: ["https://cdn.azresources.cloud", "https://resources.azgames-cdn.ru"],
+                    sound: ["https://cdn.azsounds.net", "https://azgamesound-cdn.ru"],
+                    api: ["https://server-api.arizona.games", "https://server-api.azgames-cdn.ru"]
                 }, c = async (e, t = 0) => {
                     try {
                         if (!e.length) return 0;
@@ -1934,17 +1934,20 @@
                             urls: e
                         }), "5aa4731d5d84e09e2f7e7141e560104f" === i.hash ? t : c(e.slice(1), t + 1)
                     } catch (n) {
-                        return r().isAxiosError(n) ? n.response ? o.info("[PING ERROR - RESPONSE]", {
-                            status: n.response.status,
-                            data: n.response.data,
-                            urls: e
-                        }) : "ECONNABORTED" === n.code ? o.info("[PING ERROR - TIMEOUT]", {
-                            message: n.message,
-                            urls: e
-                        }) : o.info("[PING ERROR - NETWORK]", {
-                            message: n.message,
-                            urls: e
-                        }) : o.info("[PING ERROR - UNKNOWN]", n, e), c(e.slice(1), t + 1)
+                        if (r().isAxiosError(n)) {
+                            if (n.response ? o.info("[PING ERROR - RESPONSE]", {
+                                    status: n.response.status,
+                                    data: n.response.data,
+                                    urls: e
+                                }) : "ECONNABORTED" === n.code ? o.info("[PING ERROR - TIMEOUT]", {
+                                    message: n.message,
+                                    urls: e
+                                }) : o.info("[PING ERROR - NETWORK]", {
+                                    message: n.message,
+                                    urls: e
+                                }), 403 === Number(n?.response?.status) && e.length > 1) return 1
+                        } else o.info("[PING ERROR - UNKNOWN]", n, e);
+                        return c(e.slice(1), t + 1)
                     }
                 }, l = async () => await Promise.all(Object.values(a).map((e => c(e))))
             },
@@ -2234,7 +2237,8 @@
                         TryStartGame: "try_start_game",
                         StartGameError: "start_game_error",
                         InstallDrivers: "install_drivers",
-                        RepairGame: "repair_game"
+                        RepairGame: "repair_game",
+                        OpenNews: "news_open"
                     },
                     c = async e => {
                         try {
@@ -2369,7 +2373,7 @@
                             ne = e, u()
                         },
                         onCompleted: () => {
-                            ne = null, "check" === t.type && X(s, t.date_change)
+                            ne = null, X(s, t.date_change), B(["hashmap", s], t.hash)
                         },
                         onProgress: ({
                             transferredBytes: e
@@ -2498,7 +2502,17 @@
                         ee += o.size;
                         const T = o.date_change,
                             R = O.mtime / 1e3;
-                        if (R !== T && "check" !== o.type && X(u, T), (r || "check" === o.type) && (r || "check" !== o.type || R !== T)) try {
+                        if (R !== T && "check" !== o.type) {
+                            if (T > R) {
+                                const e = M(["hashmap", u]);
+                                if (e && e !== o.hash) return S(e);
+                                const t = await c(u);
+                                if (t !== o.hash) return S(t);
+                                B(["hashmap", u], o.hash)
+                            }
+                            X(u, T)
+                        }
+                        if ((r || "check" === o.type) && (r || "check" !== o.type || R !== T)) try {
                             const e = await c(u);
                             if (t && o.hash && s && r && (_ += 1, ue(s, (_ / (w / 100)).toFixed(2), "Проверка файлов...", "ПРОВЕРКА")), e !== o.hash) return S(e);
                             X(u, T)
