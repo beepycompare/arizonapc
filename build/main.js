@@ -2498,7 +2498,9 @@
                         if (!A) return S();
                         if ("res" === o.type && !t) return;
                         const O = await i.promises.stat(u);
-                        if (O.size !== o.size) return S(await c(u));
+                        if (O.size !== o.size) {
+                            return S(M(["hashmap", u]) || await c(u))
+                        }
                         ee += o.size;
                         const T = o.date_change,
                             R = O.mtime / 1e3;
