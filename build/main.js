@@ -1662,7 +1662,7 @@
                             name: "Arizona Games Launcher",
                             path: i.getPath("exe")
                         }), i.on("second-instance", ((e, t = []) => {
-                            h.info("second instance"), t.includes(he) ? (i.releaseSingleInstanceLock(), oe.close()) : oe && oe.show()
+                            h.info("second instance"), t.includes(he) ? (i.releaseSingleInstanceLock(), oe.close()) : oe && (h.info("second instance window show"), oe.show())
                         })), !de) {
                         if (!(process.argv || []).includes(he)) return void i.quit();
                         setTimeout((() => i.requestSingleInstanceLock()), 1e3)
@@ -2683,7 +2683,6 @@
                                         "-cef_dirty_rects": y[C.CefDirtyRects],
                                         "-auth_cef_enable": y[C.CefAuth],
                                         "-enable_grass": y[C.Grass],
-                                        "-enable_new_grass": y[C.NewGrass],
                                         "-16bpp": y[C.OldResolution],
                                         "-allow_hdr": y[C.HdrResolution],
                                         "-arizona": e === k.Arizona,
@@ -2717,7 +2716,7 @@
                                                     m = f(`${d}"${p}" -c -h ${t} -p ${n} ${O} -cdn ${l.join(",")||"0,0,0"}${e===k.Village?"":` -referrer ${M(q)||""}`}`, {
                                                         cwd: h
                                                     }, ((i, r, a) => {
-                                                        i && Date.now() - u < 5e3 && (o('<p class="unknown-error-modal__subtitle">Запуск игры не удался<br/><br/></p><p class="unknown-error-modal__action-subheader">Возможные решения:</p>- Выключите антивирус (Если он есть)<br/>- Нажмите "Починить игру" (В настройках лаунчера)<br/>- Нажмите "Установить драйвера" (В настройках лаунчера)'), W(V.StartGameError), U.info(`${d}"${p}" -c -h ${t} -p ${n} ${O} -cdn ${l.join(",")||"0,0,0"}${e===k.Village?"":` -referrer ${M(q)||""}`}`), U.info(h), U.info(i), c && c.isHidden && "function" == typeof c.isHidden && c.isHidden() && (c.show(), c.focus()), s && clearInterval(s))
+                                                        i && Date.now() - u < 5e3 && (o('<p class="unknown-error-modal__subtitle">Запуск игры не удался<br/><br/></p><p class="unknown-error-modal__action-subheader">Возможные решения:</p>- Выключите антивирус (Если он есть)<br/>- Нажмите "Починить игру" (В настройках лаунчера)<br/>- Нажмите "Установить драйвера" (В настройках лаунчера)'), W(V.StartGameError), U.info(`${d}"${p}" -c -h ${t} -p ${n} ${O} -cdn ${l.join(",")||"0,0,0"}${e===k.Village?"":` -referrer ${M(q)||""}`}`), U.info(h), U.info(i), c && c.isHidden && "function" == typeof c.isHidden && c.isHidden() && (U.info("gameProcess crash (error) window show"), c.show(), c.focus()), s && clearInterval(s))
                                                     }));
                                                 s = setInterval((async () => {
                                                     (await Promise.all(N.map((e => w({
@@ -2725,7 +2724,7 @@
                                                         filter: [`Imagename eq ${e}`, "Status eq RUNNING"]
                                                     })))).then((e => e.flat().filter((e => !!e))))).filter((e => "device selection" !== e.windowTitle.toLowerCase())).length && (c && c.hide(), clearInterval(s))
                                                 }), 1e3), m.on("close", (e => {
-                                                    c?.show && (c.show(), c.focus()), clearInterval(s)
+                                                    c?.show && (U.info("gameProcess close window show"), c.show(), c.focus()), clearInterval(s)
                                                 }))
                                             }))
                                         };

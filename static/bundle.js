@@ -11505,7 +11505,7 @@
                     userName: "",
                     options: [{
                         id: ho.WideScreen,
-                        value: !1
+                        value: !0
                     }, {
                         id: ho.AutoLogin,
                         value: !0
@@ -11520,9 +11520,6 @@
                         value: !1
                     }, {
                         id: ho.Grass,
-                        value: !0
-                    }, {
-                        id: ho.NewGrass,
                         value: !0
                     }, {
                         id: ho.AutoClean,
@@ -11573,16 +11570,13 @@
                     userName: "",
                     options: [{
                         id: ho.WideScreen,
-                        value: !1
+                        value: !0
                     }, {
                         id: ho.AutoLogin,
                         value: !0
                     }, {
                         id: ho.ShitPc,
                         value: !1
-                    }, {
-                        id: ho.NewGrass,
-                        value: !0
                     }, {
                         id: ho.AutoClean,
                         value: !1
@@ -11627,7 +11621,7 @@
                     userName: "",
                     options: [{
                         id: ho.WideScreen,
-                        value: !1
+                        value: !0
                     }, {
                         id: ho.AutoLogin,
                         value: !0
@@ -12301,7 +12295,7 @@
             },
             Go = n.p + "c0eb0fe8b061b084313b.png",
             Zo = n.p + "2f221eeb298b72a0625f.png",
-            Bo = n.p + "3262372920bb9c4338b5.png",
+            Bo = n.p + "1d4cbcb651e3245cffc9.png",
             Wo = n.p + "a9f50afa57f19138bc95.png";
         var Vo = function(t) {
             window.launcherAPI && window.launcherAPI.validateGameFiles && window.launcherAPI.validateGameFiles(t)
