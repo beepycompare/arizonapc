@@ -1965,7 +1965,7 @@
 }
 
 .preferences__button-wrapper:hover .preferences__tooltip {
-    opacity: 1
+    opacity: 1 !important
 }
 
 .preferences__drivers-install-button,
@@ -2206,7 +2206,7 @@
 }
 
 .preferences__help-button:hover .preferences__tooltip {
-    opacity: 1
+    opacity: 1 !important
 }
 
 .preferences__bug-report-wrapper {
