@@ -2368,7 +2368,7 @@
                     de = async (e, t, n, i = (() => 0)) => {
                         t && (pe[e] = t, ve(n, i(), "Проверка файлов...", "ОТМЕНИТЬ", !0)), B.info(`Hash calculation for ${e} STARTED`);
                         const r = await c(e);
-                        return B.info(`Hash calculation for ${e} FINISHED`), t && (ve(n, i(), "Проверка файлов...", "ОТМЕНИТЬ", !0), delete pe[e]), r
+                        return B.info(`Hash calculation for ${e} FINISHED`), t && (delete pe[e], ve(n, i(), "Проверка файлов...", "ОТМЕНИТЬ", !!Object.keys(pe).length)), r
                     }, he = async (e = l) => {
                         ne = R.Downloading, V("cdnType", Y), H(Q.GameDownloadStart);
                         try {
@@ -2459,28 +2459,38 @@
                             }
                         }, N = async (o, a = "") => {
                             if (!o.type) return o.data ? (await b(o.data, a)).flat(1 / 0) : void 0;
-                            const c = `${a}${a?"/":""}${o.name}`,
-                                l = `${h}/${c}`,
-                                p = `${h}/${a}`,
-                                x = E(l);
+                            if (o.variant_tag && [k.Arizona, k.ArizonaStaging].includes(e)) {
+                                const t = M(e),
+                                    n = (t && t.options ? t.options : []).reduce(((e, t) => ({
+                                        ...e,
+                                        [t.id]: t.value
+                                    })), {})[C.NewGraphics] ? "future" : "default";
+                                if (o.variant_tag !== n) return
+                            }
+                            const c = o.install_as || o.name,
+                                l = `${a}${a?"/":""}${c}`,
+                                p = `${a}${a?"/":""}${o.name}`,
+                                x = `${h}/${l}`,
+                                A = `${h}/${a}`,
+                                S = E(x);
                             if (m && g && a.includes("GameArchive")) {
-                                if (x) try {
-                                    await i.promises.unlink(l)
+                                if (S) try {
+                                    await i.promises.unlink(x)
                                 } catch (e) {
                                     B.info(e, "GameArchive file unlink")
                                 }
                                 return
                             }
-                            if (m && l.includes("Snow.pak") && !M(e).options.reduce(((e, t) => ({
+                            if (m && x.includes("Snow.pak") && !M(e).options.reduce(((e, t) => ({
                                     ...e,
                                     [t.id]: t.value
                                 })), {})[C.Seasons]) return;
-                            if (x && "delete" === o.type) {
-                                const e = await i.promises.stat(l),
+                            if (S && "delete" === o.type) {
+                                const e = await i.promises.stat(x),
                                     t = o.date_change;
                                 if (e.mtime / 1e3 < t) {
                                     try {
-                                        await i.promises.unlink(l)
+                                        await i.promises.unlink(x)
                                     } catch (e) {
                                         B.info(e, "11")
                                     }
@@ -2496,8 +2506,8 @@
                                             for (const n of t.data) i.push(...e(n, r));
                                         return i
                                     },
-                                    t = (await y(`${l}/**/*`.replace(/\\/g, "/"))).map((e => v.normalize(e))),
-                                    n = e(o, p);
+                                    t = (await y(`${x}/**/*`.replace(/\\/g, "/"))).map((e => v.normalize(e))),
+                                    n = e(o, A);
                                 for (let e of t)
                                     if (!n.includes(e)) try {
                                         await i.promises.rm(e, {
@@ -2507,45 +2517,45 @@
                                         console.log(e)
                                     }
                             } catch (e) {}
-                            if (x && !i.statSync(l).isDirectory() && (!t || t && n) && f.includes(v.normalize(l))) return;
-                            const A = (e = null) => ({
-                                filePath: l,
-                                directoryPath: p,
+                            if (S && !i.statSync(x).isDirectory() && (!t || t && n) && f.includes(v.normalize(x))) return;
+                            const O = (e = null) => ({
+                                filePath: x,
+                                directoryPath: A,
                                 type: o.type,
                                 size: "dir" === o.type ? 0 : o.size,
-                                name: o.name,
+                                name: c,
                                 prevHash: e,
                                 hash: o.hash,
-                                downloadPath: `${d}/game/${c}`
+                                downloadPath: `${d}/game/${p}`
                             });
-                            if (t && w.push(v.normalize(l)), o.data) {
-                                const e = await b(o.data, c);
-                                return x ? e.flat(1 / 0) : [A(), e].flat(1 / 0)
+                            if (t && w.push(v.normalize(x)), o.data) {
+                                const e = await b(o.data, l);
+                                return S ? e.flat(1 / 0) : [O(), e].flat(1 / 0)
                             }
-                            if (!x) return A();
+                            if (!S) return O();
                             if ("res" === o.type && !t) return;
-                            const S = await i.promises.stat(l);
-                            if (S.size !== o.size) {
-                                return A(M(["hashmap", l]) || "-1")
+                            const P = await i.promises.stat(x);
+                            if (P.size !== o.size) {
+                                return O(M(["hashmap", x]) || "-1")
                             }
                             te += o.size;
-                            const O = o.date_change,
-                                k = S.mtime / 1e3;
-                            if (k !== O && "check" !== o.type) {
-                                if (O > k) {
-                                    const e = M(["hashmap", l]);
-                                    if (e && e !== o.hash) return A(e);
+                            const N = o.date_change,
+                                I = P.mtime / 1e3;
+                            if (I !== N && "check" !== o.type) {
+                                if (N > I) {
+                                    const e = M(["hashmap", x]);
+                                    if (e && e !== o.hash) return O(e);
                                     const t = () => u ? 0 : _ > 0 ? (T / (_ / 100)).toFixed(2) : 0,
-                                        n = await de(l, ne === R.Verification && s ? o.name : null, s, t);
-                                    if (z(["hashmap", l], n), n !== o.hash) return A(n)
+                                        n = await de(x, ne === R.Verification && s ? o.name : null, s, t);
+                                    if (z(["hashmap", x], n), n !== o.hash) return O(n)
                                 }
-                                K(l, O)
+                                K(x, N)
                             }
-                            if ((r || "check" === o.type) && (r || "check" !== o.type || k !== O)) try {
+                            if ((r || "check" === o.type) && (r || "check" !== o.type || I !== N)) try {
                                 const e = () => u ? 0 : _ > 0 ? (T / (_ / 100)).toFixed(2) : 0,
-                                    t = await de(l, s ? o.name : null, s, e);
-                                if (z(["hashmap", l], t), t !== o.hash) return A(t);
-                                K(l, O)
+                                    t = await de(x, s ? o.name : null, s, e);
+                                if (z(["hashmap", x], t), t !== o.hash) return O(t);
+                                K(x, N)
                             } catch (e) {
                                 B.info(e, "5")
                             }
