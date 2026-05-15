@@ -74,6 +74,12 @@
     font-size: 4vmin
 }
 
+.launcher-content__socials-list-icon--svg {
+    width: 1em;
+    height: 1em;
+    display: block
+}
+
 .launcher-content__updates-slider-wrapper {
     margin-top: calc(0.0072368421 * 100vw + 2.2105263158vh);
     width: 75vmin
@@ -3418,8 +3424,8 @@ img {
     --global-text-color: #FFFFFF;
     --global-text-secondary: #6F747D;
     --global-icons-color: #FFC700;
-    --global-bg-img: url(./c7760f3819cdf710bf80.png);
-    --global-bg-character: url(./7ce79c422d749241ee7d.png);
+    --global-bg-img: url(./5afa3c86e7a1dd601c87.png);
+    --global-bg-character: url(./1771c281104da7aca143.png);
     --progress-bar-gradient: linear-gradient(90deg, #282A31 0%, rgba(40, 42, 49, 0) 100%)
 }
 

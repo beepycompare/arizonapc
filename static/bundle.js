@@ -11476,7 +11476,6 @@
                 AutoClean: "autoClean",
                 Windowed: "windowed",
                 TestBranch: "testBranch",
-                Seasons: "seasons",
                 Rtree: "rtree",
                 Graphics: "graphics",
                 NewGraphics: "newGraphics",
@@ -11488,8 +11487,8 @@
                 OldResolution: "oldResolution",
                 HdrResolution: "hdrResolution"
             },
-            wo = (pe(zo = {}, xo.WideScreen, "Широкий экран"), pe(zo, xo.AutoLogin, "Автологин"), pe(zo, xo.Preload, "Предзагрузка"), pe(zo, xo.AutoClean, "Автоочистка"), pe(zo, xo.Windowed, "Запуск в окне"), pe(zo, xo.TestBranch, "Тестовая ветка"), pe(zo, xo.Seasons, "Времена года"), pe(zo, xo.Rtree, "Деревья"), pe(zo, xo.Graphics, "Графика Plus"), pe(zo, xo.NewGraphics, "Arizona Future"), pe(zo, xo.ShitPc, "Слабый ПК"), pe(zo, xo.OldResolution, "Устаревшие разрешения"), pe(zo, xo.HdrResolution, "Поддержка HDR"), pe(zo, xo.Grass, "Растительность"), pe(zo, xo.NewGrass, "Новая растительность"), pe(zo, xo.CefAuth, "Новая авторизация"), pe(zo, xo.CefDirtyRects, "Оптимизация интерфейсов"), zo),
-            Oo = (pe(yo = {}, xo.WideScreen, "Расширяет угол обзора и адаптирует интерфейс под современные мониторы.\n*Рекомендуется включить"), pe(yo, xo.AutoLogin, "Сохраняет пароль и выполняет автоматический вход в аккаунт."), pe(yo, xo.Preload, "Оптимизирует загрузку моделей и компонентов для снижения нагрузки на диск.\n*Может вызвать подлагивания при движении"), pe(yo, xo.AutoClean, "Удаляет лишние файлы и модификации из папки игры при запуске."), pe(yo, xo.Windowed, "Запускает игру в изменяемом окне (зависит от разрешения экрана в настройках игры).\n*При отключении используется полноэкранный режим"), pe(yo, xo.TestBranch, "Загружает отдельную версию игры для публичных тестов.\n*Доступно только во время тестов. Следите за новостями проекта"), pe(yo, xo.Seasons, "Окружение и растительность меняются в зависимости от сезона (лето, осень, зима, весна)."), pe(yo, xo.Graphics, "Добавляет улучшенное освещение и небо.\n*Снижает производительность. Несовместимо с ENB и другими графическими модами"), pe(yo, xo.NewGraphics, "Обновленный визуальный стиль игры с новыми моделями и эффектами - будущее Arizona Online."), pe(yo, xo.ShitPc, "Отключает эффекты и снижает качество текстур.\n*Рекомендуется для очень слабых ПК"), pe(yo, xo.OldResolution, "Отключает 32-bit режим экрана, снижая качество и увеличивая задержку.\n*Включайте только при отсутствии поддержки 32-bit видеокартой"), pe(yo, xo.HdrResolution, "Активирует вывод изображения в HDR.\n*[BETA] Используйте только при поддержке монитором HDR. Возможны искажения цветов."), pe(yo, xo.Grass, "Повышает детализацию травы, листвы и других элементов окружения.\n*Может снизить производительность"), pe(yo, xo.NewGrass, "Новый вид растительности"), pe(yo, xo.CefAuth, "Включает обновлённую систему и вид входа в игру.\n*Рекомендуется включить"), yo),
+            wo = (pe(zo = {}, xo.WideScreen, "Широкий экран"), pe(zo, xo.AutoLogin, "Автологин"), pe(zo, xo.Preload, "Предзагрузка"), pe(zo, xo.AutoClean, "Автоочистка"), pe(zo, xo.Windowed, "Запуск в окне"), pe(zo, xo.TestBranch, "Тестовая ветка"), pe(zo, xo.Rtree, "Деревья"), pe(zo, xo.Graphics, "Графика Plus"), pe(zo, xo.NewGraphics, "Arizona Future"), pe(zo, xo.ShitPc, "Слабый ПК"), pe(zo, xo.OldResolution, "Устаревшие разрешения"), pe(zo, xo.HdrResolution, "Поддержка HDR"), pe(zo, xo.Grass, "Растительность"), pe(zo, xo.NewGrass, "Новая растительность"), pe(zo, xo.CefAuth, "Новая авторизация"), pe(zo, xo.CefDirtyRects, "Оптимизация интерфейсов"), zo),
+            Oo = (pe(yo = {}, xo.WideScreen, "Расширяет угол обзора и адаптирует интерфейс под современные мониторы.\n*Рекомендуется включить"), pe(yo, xo.AutoLogin, "Сохраняет пароль и выполняет автоматический вход в аккаунт."), pe(yo, xo.Preload, "Оптимизирует загрузку моделей и компонентов для снижения нагрузки на диск.\n*Может вызвать подлагивания при движении"), pe(yo, xo.AutoClean, "Удаляет лишние файлы и модификации из папки игры при запуске."), pe(yo, xo.Windowed, "Запускает игру в изменяемом окне (зависит от разрешения экрана в настройках игры).\n*При отключении используется полноэкранный режим"), pe(yo, xo.TestBranch, "Загружает отдельную версию игры для публичных тестов.\n*Доступно только во время тестов. Следите за новостями проекта"), pe(yo, xo.Graphics, "Добавляет улучшенное освещение и небо.\n*Снижает производительность. Несовместимо с ENB и другими графическими модами"), pe(yo, xo.NewGraphics, "Обновленный визуальный стиль игры с новыми моделями и эффектами - будущее Arizona Online."), pe(yo, xo.ShitPc, "Отключает эффекты и снижает качество текстур.\n*Рекомендуется для очень слабых ПК"), pe(yo, xo.OldResolution, "Отключает 32-bit режим экрана, снижая качество и увеличивая задержку.\n*Включайте только при отсутствии поддержки 32-bit видеокартой"), pe(yo, xo.HdrResolution, "Активирует вывод изображения в HDR.\n*[BETA] Используйте только при поддержке монитором HDR. Возможны искажения цветов."), pe(yo, xo.Grass, "Повышает детализацию травы, листвы и других элементов окружения.\n*Может снизить производительность"), pe(yo, xo.NewGrass, "Новый вид растительности"), pe(yo, xo.CefAuth, "Включает обновлённую систему и вид входа в игру.\n*Рекомендуется включить"), yo),
             mo = {
                 Arizona: "arizona",
                 ArizonaStaging: "arizona_staging",
@@ -11560,9 +11559,6 @@
                         id: xo.NewGraphics,
                         value: !0
                     }, {
-                        id: xo.Seasons,
-                        value: !0
-                    }, {
                         id: xo.CefAuth,
                         value: !0
                     }, {
@@ -11615,9 +11611,6 @@
                     }, {
                         id: xo.Graphics,
                         value: !1
-                    }, {
-                        id: xo.Seasons,
-                        value: !0
                     }]
                 },
                 optional: !0
@@ -12292,7 +12285,7 @@
             },
             Bo = n.p + "c0eb0fe8b061b084313b.png",
             Wo = n.p + "2f221eeb298b72a0625f.png",
-            Vo = n.p + "1d4cbcb651e3245cffc9.png",
+            Vo = n.p + "d2c3d382bdf17071addd.png",
             Fo = n.p + "a9f50afa57f19138bc95.png";
         var Ho = function(t) {
             window.launcherAPI && window.launcherAPI.validateGameFiles && window.launcherAPI.validateGameFiles(t)
