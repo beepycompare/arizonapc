@@ -5,34 +5,35 @@
                 e.exports = require("electron")
             }
         },
-        n = {};
+        i = {};
     const {
-        contextBridge: i,
+        contextBridge: n,
         ipcRenderer: s
-    } = function i(s) {
-        var o = n[s];
-        if (void 0 !== o) return o.exports;
-        var t = n[s] = {
+    } = function n(s) {
+        var a = i[s];
+        if (void 0 !== a) return a.exports;
+        var o = i[s] = {
             exports: {}
         };
-        return e[s](t, t.exports, i), t.exports
+        return e[s](o, o.exports, n), o.exports
     }(4157);
-    i.exposeInMainWorld("launcherAPI", {
+    n.exposeInMainWorld("launcherAPI", {
         openUrlInBrowser: e => s.send("open-url", e),
         closeApp: () => s.send("close-app"),
         maximizeWindow: () => s.send("maximize-window"),
         minimizeWindow: () => s.send("minimize-window"),
-        validateAndStartGame: (e, n, i, o, t, a, r) => s.send("validateAndStartGame", e, n, i, o, t, a, r),
+        validateAndStartGame: (e, i, n, a, o, r, t) => s.send("validateAndStartGame", e, i, n, a, o, r, t),
         validateGameFiles: e => s.send("validateGameFiles", e),
-        repairGameFiles: (e, n) => s.send("repairGameFiles", e, n),
+        repairGameFiles: (e, i) => s.send("repairGameFiles", e, i),
         installDrivers: e => s.send("installDrivers", e),
         handleDriverInstallProgress: e => s.on("drivers:installProgress", e),
         handleProgress: e => s.on("progress-update", e),
         handleUpdateModalVisibility: e => s.on("update-modal-visibility", e),
         handleNetworkErrorModalVisibility: e => s.on("network-error-modal-visibility", e),
+        handleRepairModalVisibility: e => s.on("repair-modal-visibility", e),
         handleAppVersionUpdate: e => s.on("update-app-version", e),
         getSettings: e => s.invoke("getSettings", e),
-        setSettings: (e, n) => s.send("setSettings", e, n),
+        setSettings: (e, i) => s.send("setSettings", e, i),
         exitLauncher: e => s.send("exitLauncher", e),
         selectDirectory: (e = "") => s.invoke("directory:select", e),
         openGameFolder: (e = "") => s.send("openGameFolder", e),
@@ -45,7 +46,9 @@
         requestMods: e => s.send("mods:request", e),
         handleModsInitialize: e => s.on("mods:load", e),
         onModInstallChange: e => s.on("mod:onInstallChange", e),
-        installMod: (e, n) => s.send("mod:install", e, n),
-        uninstallMod: (e, n) => s.send("mod:uninstall", e, n)
+        installMod: (e, i) => s.send("mod:install", e, i),
+        uninstallMod: (e, i) => s.send("mod:uninstall", e, i),
+        handleCrashRepairModalVisibility: e => s.on("crash-repair-modal-visibility", e),
+        sendCrashRepairModalResponse: e => s.send("crash-repair-modal-response", e)
     })
 })();
