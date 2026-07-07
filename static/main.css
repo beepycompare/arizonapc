@@ -3101,7 +3101,8 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 3vmin 3vmin
+    padding: 3vmin 2vmin;
+    width: fit-content
 }
 
 .crash-repair__header-icon {
@@ -3115,13 +3116,14 @@
 }
 
 .crash-repair__window-content {
-    padding: 2vmin 15vmin;
+    padding: 2vmin 0;
     padding-bottom: 45px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: calc(0.0059210526 * 100vw + 13.2631578947px)
+    gap: calc(0.0059210526 * 100vw + 13.2631578947px);
+    max-width: 75vmin
 }
 
 .crash-repair__message {
@@ -3130,7 +3132,7 @@
     font-size: 2vmin;
     text-align: center;
     line-height: 1.5;
-    max-width: 70%
+    max-width: 100%
 }
 
 .crash-repair__report-link {
@@ -3150,7 +3152,8 @@
     flex-direction: column;
     width: 100%;
     align-items: center;
-    gap: calc(0.0026315789 * 100vw + 5.8947368421px)
+    gap: calc(0.0026315789 * 100vw + 5.8947368421px);
+    max-width: 700px
 }
 
 .crash-repair__button {
@@ -3168,7 +3171,7 @@
     align-items: center;
     transition: .3s;
     transition-property: background-color, color;
-    width: 60%
+    width: 100%
 }
 
 .crash-repair__button:hover {
