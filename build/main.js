@@ -3148,8 +3148,9 @@
                     loadMods: x,
                     installMod: async (e, t, n, u) => {
                         let d = !1;
-                        const m = await a(t, `${g()}/${t}/${n}`, `${f(t,u===s.Main?s.Mods:s.ModsReserve)}/${n}`, c(t)),
-                            x = m.reduce(((e, {
+                        const m = await a(t, `${g()}/${t}/${n}`, `${f(t,u===s.Main?s.Mods:s.ModsReserve)}/${n}`, c(t));
+                        console.log(JSON.stringify(m));
+                        const x = m.reduce(((e, {
                                 filePath: t,
                                 fileRelativePath: n
                             }) => {
