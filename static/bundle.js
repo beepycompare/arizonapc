@@ -12285,7 +12285,7 @@
             },
             Bo = n.p + "feedd042b208a164575a.png",
             Vo = n.p + "2f221eeb298b72a0625f.png",
-            Wo = n.p + "d2c3d382bdf17071addd.png",
+            Wo = n.p + "8f0e2346b5c1d8b24a51.png",
             Fo = n.p + "a9f50afa57f19138bc95.png";
         var Ho = function(t) {
             window.launcherAPI && window.launcherAPI.validateGameFiles && window.launcherAPI.validateGameFiles(t)
