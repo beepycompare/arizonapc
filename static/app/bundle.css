@@ -3479,8 +3479,8 @@ img {
     --global-text-color: #FFFFFF;
     --global-text-secondary: #6F747D;
     --global-icons-color: #FFC700;
-    --global-bg-img: url(./3f41b5176da2298229ee.png);
-    --global-bg-character: url(./698a2f61c5d9ff7a8b88.png);
+    --global-bg-img: url(../app/assets/3f41b5176da2298229ee.png);
+    --global-bg-character: url(../app/assets/66e6fc77e3943231ad6f.png);
     --progress-bar-gradient: linear-gradient(90deg, #282A31 0%, rgba(40, 42, 49, 0) 100%)
 }
 
@@ -3504,8 +3504,8 @@ img {
     --global-text-color: #FFFFFF;
     --global-text-secondary: #6F747D;
     --global-icons-color: #FFC700;
-    --global-bg-img: url(./dd93c2f3307960f8fda0.png);
-    --global-bg-character: url(./96808476ef4148ffbdb0.png);
+    --global-bg-img: url(../app/assets/dd93c2f3307960f8fda0.png);
+    --global-bg-character: url(../app/assets/96808476ef4148ffbdb0.png);
     --progress-bar-gradient: linear-gradient(90deg, #282A31 0%, rgba(40, 42, 49, 0) 100%)
 }
 
@@ -3526,8 +3526,8 @@ img {
     --global-text-color: #FFFFFF;
     --global-text-secondary: #6F747D;
     --global-icons-color: #FFC700;
-    --global-bg-img: url(./4cdbae4deba9e8d60d1f.png);
-    --global-bg-character: url(./3cace713a2d37fb13f4f.png);
+    --global-bg-img: url(../app/assets/4cdbae4deba9e8d60d1f.png);
+    --global-bg-character: url(../app/assets/3cace713a2d37fb13f4f.png);
     --progress-bar-gradient: linear-gradient(90deg, #282A31 0%, rgba(40, 42, 49, 0) 100%)
 }
 
@@ -3542,8 +3542,8 @@ img {
     --global-text-color: #FFFFFF;
     --global-text-secondary: #6F747D;
     --global-icons-color: #FFC700;
-    --global-bg-img: url(./3e044d396390ce466f32.png);
-    --global-bg-character: url(./c9a1e67df64006c5bd68.png);
+    --global-bg-img: url(../app/assets/3e044d396390ce466f32.png);
+    --global-bg-character: url(../app/assets/c9a1e67df64006c5bd68.png);
     --progress-bar-gradient: linear-gradient(90deg, #282A31 0%, rgba(40, 42, 49, 0) 100%)
 }
 
@@ -3559,7 +3559,7 @@ img {
     --global-text-secondary: #6F747D;
     --global-icons-color: #FFC700;
     --global-bg-img: #FFFFFF;
-    --global-bg-character: url(./54f015dcaf4e6e1fecee.png);
+    --global-bg-character: url(../app/assets/54f015dcaf4e6e1fecee.png);
     --progress-bar-gradient: linear-gradient(90deg, #EDEDED 0%, rgba(253, 253, 253, 0) 100%);
     background-color: #ebebeb
 }

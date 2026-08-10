@@ -1,0 +1,141 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0)
+}
+
+.game-loader-window {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    z-index: 950099;
+    -webkit-app-region: drag
+}
+
+.game-loader-window__card {
+    --sweep-gradient: linear-gradient(90deg, #ff4662 0%, #e574ff 50%, #8b5eff 75%, #00bbff 100%);
+    --sweep-w: calc(322 / 866 * 100vw);
+    --sweep-h: calc(1289 / 866 * 100vw);
+    --sweep-blur: calc(61 / 866 * 100vw);
+    --sweep-from: 30deg;
+    --sweep-to: 165deg;
+    --sweep-dur: 1.3s;
+    --sweep-ease: linear;
+    --streak-thickness: 2px;
+    position: relative;
+    width: min(100vw - 50px * 2, (100vh - 50px * 2) * 866 / 546);
+    aspect-ratio: 866/546;
+    border-radius: 2.3094688222vw;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, .45);
+    background-color: #131516
+}
+
+.game-loader-window__media {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: calc(2.3094688222vw - 2px);
+    overflow: hidden
+}
+
+.game-loader-window__stage {
+    display: block;
+    width: 100%;
+    height: 100%
+}
+
+.game-loader-window__reveal {
+    width: 0;
+    transition: width var(--reveal-dur, 10000ms) linear
+}
+
+.game-loader-window__reveal--on {
+    width: var(--full-w)
+}
+
+.game-loader-window__bright {
+    opacity: .3;
+    transition: opacity var(--reveal-dur, 10000ms) linear
+}
+
+.game-loader-window__bright--on {
+    opacity: 1
+}
+
+.game-loader-window__shade {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(22, 24, 25, 0) 70.6%, rgba(22, 24, 25, 0.7) 100%);
+    border-radius: 2.3094688222vw
+}
+
+.game-loader-window__logo {
+    position: absolute;
+    left: 50%;
+    bottom: 3.6951501155vw;
+    translate: -50% 0;
+    height: 5.7736720554vw;
+    width: auto;
+    display: block;
+    z-index: 1;
+    pointer-events: none;
+    user-select: none
+}
+
+.game-loader-window__border {
+    position: absolute;
+    inset: -2px;
+    border-radius: calc(2.3094688222vw + 2px);
+    padding: var(--streak-thickness);
+    z-index: 2;
+    pointer-events: none;
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask-composite: exclude
+}
+
+.game-loader-window__sweep {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: var(--sweep-w);
+    height: var(--sweep-h);
+    translate: -50% -50%;
+    background: var(--sweep-gradient);
+    filter: blur(var(--sweep-blur));
+    animation: game-launch-sweep calc(var(--sweep-dur)*2) var(--sweep-ease) infinite alternate
+}
+
+@keyframes game-launch-sweep {
+    from {
+        rotate: var(--sweep-from)
+    }
+
+    to {
+        rotate: var(--sweep-to)
+    }
+}
+
+@media(prefers-reduced-motion: reduce) {
+
+    .game-loader-window .game-loader-window__reveal,
+    .game-loader-window .game-loader-window__bright {
+        transition-duration: .01ms
+    }
+
+    .game-loader-window .game-loader-window__sweep {
+        animation: none
+    }
+}

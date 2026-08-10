@@ -1,23 +1,23 @@
 /*! For license information please see bundle.js.LICENSE.txt */
 (() => {
     var t = {
-            757: (t, e, n) => {
-                t.exports = n(76)
+            7757: (t, e, n) => {
+                t.exports = n(5666)
             },
-            669: (t, e, n) => {
-                t.exports = n(609)
+            9669: (t, e, n) => {
+                t.exports = n(1609)
             },
-            448: (t, e, n) => {
+            5448: (t, e, n) => {
                 "use strict";
-                var r = n(867),
-                    i = n(26),
-                    o = n(372),
-                    a = n(327),
-                    u = n(97),
-                    c = n(109),
-                    s = n(985),
-                    M = n(874),
-                    l = n(648),
+                var r = n(4867),
+                    i = n(6026),
+                    o = n(4372),
+                    a = n(5327),
+                    u = n(4097),
+                    c = n(4109),
+                    s = n(7985),
+                    M = n(7874),
+                    l = n(2648),
                     N = n(644),
                     g = n(205);
                 t.exports = function(t) {
@@ -80,24 +80,24 @@
                     }))
                 }
             },
-            609: (t, e, n) => {
+            1609: (t, e, n) => {
                 "use strict";
-                var r = n(867),
-                    i = n(849),
+                var r = n(4867),
+                    i = n(1849),
                     o = n(321),
-                    a = n(185),
+                    a = n(7185),
                     u = function t(e) {
                         var n = new o(e),
                             u = i(o.prototype.request, n);
                         return r.extend(u, o.prototype, n), r.extend(u, n), u.create = function(n) {
                             return t(a(e, n))
                         }, u
-                    }(n(546));
-                u.Axios = o, u.CanceledError = n(644), u.CancelToken = n(972), u.isCancel = n(502), u.VERSION = n(288).version, u.toFormData = n(675), u.AxiosError = n(648), u.Cancel = u.CanceledError, u.all = function(t) {
+                    }(n(5546));
+                u.Axios = o, u.CanceledError = n(644), u.CancelToken = n(4972), u.isCancel = n(6502), u.VERSION = n(7288).version, u.toFormData = n(7675), u.AxiosError = n(2648), u.Cancel = u.CanceledError, u.all = function(t) {
                     return Promise.all(t)
-                }, u.spread = n(713), u.isAxiosError = n(268), t.exports = u, t.exports.default = u
+                }, u.spread = n(8713), u.isAxiosError = n(6268), t.exports = u, t.exports.default = u
             },
-            972: (t, e, n) => {
+            4972: (t, e, n) => {
                 "use strict";
                 var r = n(644);
 
@@ -145,16 +145,16 @@
             },
             644: (t, e, n) => {
                 "use strict";
-                var r = n(648);
+                var r = n(2648);
 
                 function i(t) {
                     r.call(this, null == t ? "canceled" : t, r.ERR_CANCELED), this.name = "CanceledError"
                 }
-                n(867).inherits(i, r, {
+                n(4867).inherits(i, r, {
                     __CANCEL__: !0
                 }), t.exports = i
             },
-            502: t => {
+            6502: t => {
                 "use strict";
                 t.exports = function(t) {
                     return !(!t || !t.__CANCEL__)
@@ -162,13 +162,13 @@
             },
             321: (t, e, n) => {
                 "use strict";
-                var r = n(867),
-                    i = n(327),
+                var r = n(4867),
+                    i = n(5327),
                     o = n(782),
-                    a = n(572),
-                    u = n(185),
-                    c = n(97),
-                    s = n(875),
+                    a = n(3572),
+                    u = n(7185),
+                    c = n(4097),
+                    s = n(4875),
                     M = s.validators;
 
                 function l(t) {
@@ -243,9 +243,9 @@
                     l.prototype[t] = e(), l.prototype[t + "Form"] = e(!0)
                 })), t.exports = l
             },
-            648: (t, e, n) => {
+            2648: (t, e, n) => {
                 "use strict";
-                var r = n(867);
+                var r = n(4867);
 
                 function i(t, e, n, r, i) {
                     Error.call(this), this.message = t, this.name = "AxiosError", e && (this.code = e), n && (this.config = n), r && (this.request = r), i && (this.response = i)
@@ -284,7 +284,7 @@
             },
             782: (t, e, n) => {
                 "use strict";
-                var r = n(867);
+                var r = n(4867);
 
                 function i() {
                     this.handlers = []
@@ -304,20 +304,20 @@
                     }))
                 }, t.exports = i
             },
-            97: (t, e, n) => {
+            4097: (t, e, n) => {
                 "use strict";
-                var r = n(793),
-                    i = n(303);
+                var r = n(1793),
+                    i = n(7303);
                 t.exports = function(t, e) {
                     return t && !r(e) ? i(t, e) : e
                 }
             },
-            572: (t, e, n) => {
+            3572: (t, e, n) => {
                 "use strict";
-                var r = n(867),
-                    i = n(527),
-                    o = n(502),
-                    a = n(546),
+                var r = n(4867),
+                    i = n(8527),
+                    o = n(6502),
+                    a = n(5546),
                     u = n(644);
 
                 function c(t) {
@@ -333,9 +333,9 @@
                     }))
                 }
             },
-            185: (t, e, n) => {
+            7185: (t, e, n) => {
                 "use strict";
-                var r = n(867);
+                var r = n(4867);
                 t.exports = function(t, e) {
                     e = e || {};
                     var n = {};
@@ -395,18 +395,18 @@
                     })), n
                 }
             },
-            26: (t, e, n) => {
+            6026: (t, e, n) => {
                 "use strict";
-                var r = n(648);
+                var r = n(2648);
                 t.exports = function(t, e, n) {
                     var i = n.config.validateStatus;
                     n.status && i && !i(n.status) ? e(new r("Request failed with status code " + n.status, [r.ERR_BAD_REQUEST, r.ERR_BAD_RESPONSE][Math.floor(n.status / 100) - 4], n.config, n.request, n)) : t(n)
                 }
             },
-            527: (t, e, n) => {
+            8527: (t, e, n) => {
                 "use strict";
-                var r = n(867),
-                    i = n(546);
+                var r = n(4867),
+                    i = n(5546);
                 t.exports = function(t, e, n) {
                     var o = this || i;
                     return r.forEach(n, (function(n) {
@@ -414,13 +414,13 @@
                     })), t
                 }
             },
-            546: (t, e, n) => {
+            5546: (t, e, n) => {
                 "use strict";
-                var r = n(867),
-                    i = n(16),
-                    o = n(648),
-                    a = n(874),
-                    u = n(675),
+                var r = n(4867),
+                    i = n(6016),
+                    o = n(2648),
+                    a = n(7874),
+                    u = n(7675),
                     c = {
                         "Content-Type": "application/x-www-form-urlencoded"
                     };
@@ -430,7 +430,7 @@
                 }
                 var M, l = {
                     transitional: a,
-                    adapter: (("undefined" != typeof XMLHttpRequest || "undefined" != typeof process && "[object process]" === Object.prototype.toString.call(process)) && (M = n(448)), M),
+                    adapter: (("undefined" != typeof XMLHttpRequest || "undefined" != typeof process && "[object process]" === Object.prototype.toString.call(process)) && (M = n(5448)), M),
                     transformRequest: [function(t, e) {
                         if (i(e, "Accept"), i(e, "Content-Type"), r.isFormData(t) || r.isArrayBuffer(t) || r.isBuffer(t) || r.isStream(t) || r.isFile(t) || r.isBlob(t)) return t;
                         if (r.isArrayBufferView(t)) return t.buffer;
@@ -473,7 +473,7 @@
                     maxContentLength: -1,
                     maxBodyLength: -1,
                     env: {
-                        FormData: n(623)
+                        FormData: n(1623)
                     },
                     validateStatus: function(t) {
                         return t >= 200 && t < 300
@@ -490,7 +490,7 @@
                     l.headers[t] = r.merge(c)
                 })), t.exports = l
             },
-            874: t => {
+            7874: t => {
                 "use strict";
                 t.exports = {
                     silentJSONParsing: !0,
@@ -498,12 +498,12 @@
                     clarifyTimeoutError: !1
                 }
             },
-            288: t => {
+            7288: t => {
                 t.exports = {
                     version: "0.27.2"
                 }
             },
-            849: t => {
+            1849: t => {
                 "use strict";
                 t.exports = function(t, e) {
                     return function() {
@@ -512,9 +512,9 @@
                     }
                 }
             },
-            327: (t, e, n) => {
+            5327: (t, e, n) => {
                 "use strict";
-                var r = n(867);
+                var r = n(4867);
 
                 function i(t) {
                     return encodeURIComponent(t).replace(/%3A/gi, ":").replace(/%24/g, "$").replace(/%2C/gi, ",").replace(/%20/g, "+").replace(/%5B/gi, "[").replace(/%5D/gi, "]")
@@ -538,15 +538,15 @@
                     return t
                 }
             },
-            303: t => {
+            7303: t => {
                 "use strict";
                 t.exports = function(t, e) {
                     return e ? t.replace(/\/+$/, "") + "/" + e.replace(/^\/+/, "") : t
                 }
             },
-            372: (t, e, n) => {
+            4372: (t, e, n) => {
                 "use strict";
-                var r = n(867);
+                var r = n(4867);
                 t.exports = r.isStandardBrowserEnv() ? {
                     write: function(t, e, n, i, o, a) {
                         var u = [];
@@ -567,22 +567,22 @@
                     remove: function() {}
                 }
             },
-            793: t => {
+            1793: t => {
                 "use strict";
                 t.exports = function(t) {
                     return /^([a-z][a-z\d+\-.]*:)?\/\//i.test(t)
                 }
             },
-            268: (t, e, n) => {
+            6268: (t, e, n) => {
                 "use strict";
-                var r = n(867);
+                var r = n(4867);
                 t.exports = function(t) {
                     return r.isObject(t) && !0 === t.isAxiosError
                 }
             },
-            985: (t, e, n) => {
+            7985: (t, e, n) => {
                 "use strict";
-                var r = n(867);
+                var r = n(4867);
                 t.exports = r.isStandardBrowserEnv() ? function() {
                     var t, e = /(msie|trident)/i.test(navigator.userAgent),
                         n = document.createElement("a");
@@ -609,21 +609,21 @@
                     return !0
                 }
             },
-            16: (t, e, n) => {
+            6016: (t, e, n) => {
                 "use strict";
-                var r = n(867);
+                var r = n(4867);
                 t.exports = function(t, e) {
                     r.forEach(t, (function(n, r) {
                         r !== e && r.toUpperCase() === e.toUpperCase() && (t[e] = n, delete t[r])
                     }))
                 }
             },
-            623: t => {
+            1623: t => {
                 t.exports = null
             },
-            109: (t, e, n) => {
+            4109: (t, e, n) => {
                 "use strict";
-                var r = n(867),
+                var r = n(4867),
                     i = ["age", "authorization", "content-length", "content-type", "etag", "expires", "from", "host", "if-modified-since", "if-unmodified-since", "last-modified", "location", "max-forwards", "proxy-authorization", "referer", "retry-after", "user-agent"];
                 t.exports = function(t) {
                     var e, n, o, a = {};
@@ -642,7 +642,7 @@
                     return e && e[1] || ""
                 }
             },
-            713: t => {
+            8713: t => {
                 "use strict";
                 t.exports = function(t) {
                     return function(e) {
@@ -650,9 +650,9 @@
                     }
                 }
             },
-            675: (t, e, n) => {
+            7675: (t, e, n) => {
                 "use strict";
-                var r = n(867);
+                var r = n(4867);
                 t.exports = function(t, e) {
                     e = e || new FormData;
                     var n = [];
@@ -678,10 +678,10 @@
                     }(t), e
                 }
             },
-            875: (t, e, n) => {
+            4875: (t, e, n) => {
                 "use strict";
-                var r = n(288).version,
-                    i = n(648),
+                var r = n(7288).version,
+                    i = n(2648),
                     o = {};
                 ["object", "boolean", "number", "function", "string", "symbol"].forEach((function(t, e) {
                     o[t] = function(n) {
@@ -713,9 +713,9 @@
                     validators: o
                 }
             },
-            867: (t, e, n) => {
+            4867: (t, e, n) => {
                 "use strict";
-                var r, i = n(849),
+                var r, i = n(1849),
                     o = Object.prototype.toString,
                     a = (r = Object.create(null), function(t) {
                         var e = o.call(t);
@@ -851,7 +851,7 @@
                     isFileList: d
                 }
             },
-            465: (t, e, n) => {
+            3465: (t, e, n) => {
                 t = n.nmd(t);
                 var r = "__lodash_hash_undefined__",
                     i = 9007199254740991,
@@ -1302,7 +1302,7 @@
                     return _t(t, !0, !0)
                 }
             },
-            208: (t, e, n) => {
+            9208: (t, e, n) => {
                 var r, i = "__lodash_hash_undefined__",
                     o = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
                     a = /^\w*$/,
@@ -1502,7 +1502,7 @@
                     return void 0 === r ? n : r
                 }
             },
-            307: (t, e, n) => {
+            2307: (t, e, n) => {
                 t = n.nmd(t);
                 var r = "__lodash_hash_undefined__",
                     i = 9007199254740991,
@@ -1990,7 +1990,7 @@
                     return At(t, e)
                 }
             },
-            486: function(t, e, n) {
+            6486: function(t, e, n) {
                 var r;
                 t = n.nmd(t),
                     function() {
@@ -5676,7 +5676,7 @@
                         }.call(e, n, e, t)) === i || (t.exports = r)
                     }.call(this)
             },
-            76: t => {
+            5666: t => {
                 var e = function(t) {
                     "use strict";
                     var e, n = Object.prototype,
@@ -6024,7 +6024,17 @@
         } catch (t) {
             if ("object" == typeof window) return window
         }
-    }(), n.o = (t, e) => Object.prototype.hasOwnProperty.call(t, e), n.nmd = t => (t.paths = [], t.children || (t.children = []), t), n.p = "./", (() => {
+    }(), n.o = (t, e) => Object.prototype.hasOwnProperty.call(t, e), n.nmd = t => (t.paths = [], t.children || (t.children = []), t), (() => {
+        var t;
+        n.g.importScripts && (t = n.g.location + "");
+        var e = n.g.document;
+        if (!t && e && (e.currentScript && (t = e.currentScript.src), !t)) {
+            var r = e.getElementsByTagName("script");
+            r.length && (t = r[r.length - 1].src)
+        }
+        if (!t) throw new Error("Automatic publicPath is not supported in this browser");
+        t = t.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/"), n.p = t + "../"
+    })(), (() => {
         "use strict";
 
         function t() {}
@@ -7148,7 +7158,7 @@
                 })
             }
         };
-        var ce = n(669),
+        var ce = n(9669),
             se = n.n(ce);
 
         function Me(t) {
@@ -7226,7 +7236,7 @@
                 css: (t, e) => `\n\t\t\ttransform: ${s} translate(${(1-t)*i}px, ${(1-t)*o}px);\n\t\t\topacity: ${c-M*e}`
             }
         }
-        var je = n(486),
+        var je = n(6486),
             de = n.n(je);
 
         function Ie(t, e, n) {
@@ -7239,7 +7249,7 @@
         }
         n.p;
         n.p, n.p, n.p;
-        const pe = (n.p, n.p + "6b1e7e3af476c7ceb8a2.png");
+        const pe = (n.p, n.p + "app/assets/6b1e7e3af476c7ceb8a2.png");
         var fe = Ht([]),
             ze = Ht([]),
             ye = Ht(null),
@@ -8146,11 +8156,11 @@
             Yn = t => e => {
                 t[e] && t[e]()
             };
-        var Pn = n(208),
+        var Pn = n(9208),
             $n = n.n(Pn),
-            Rn = n(465),
+            Rn = n(3465),
             Gn = n.n(Rn),
-            Zn = n(307),
+            Zn = n(2307),
             Bn = n.n(Zn);
 
         function Vn(t, e) {
@@ -12283,10 +12293,10 @@
                     })
                 }
             },
-            Bo = n.p + "feedd042b208a164575a.png",
-            Vo = n.p + "2f221eeb298b72a0625f.png",
-            Wo = n.p + "8f0e2346b5c1d8b24a51.png",
-            Fo = n.p + "a9f50afa57f19138bc95.png";
+            Bo = n.p + "app/assets/feedd042b208a164575a.png",
+            Vo = n.p + "app/assets/2f221eeb298b72a0625f.png",
+            Wo = n.p + "app/assets/8f0e2346b5c1d8b24a51.png",
+            Fo = n.p + "app/assets/a9f50afa57f19138bc95.png";
         var Ho = function(t) {
             window.launcherAPI && window.launcherAPI.validateGameFiles && window.launcherAPI.validateGameFiles(t)
         };
@@ -13561,7 +13571,7 @@
             }
             u.done ? e(c) : Promise.resolve(c).then(r, i)
         }
-        var su, Mu = n(757),
+        var su, Mu = n(7757),
             lu = n.n(Mu);
 
         function Nu(t, e) {
