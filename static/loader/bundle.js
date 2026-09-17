@@ -375,7 +375,7 @@
         }
     }
     const Z = e.p + "loader/assets/cf2c5114382f9454fab3.png",
-        ee = e.p + "loader/assets/656e68986603a4a734d5.png",
+        ee = e.p + "loader/assets/24ab4254bba00a5a00fd.png",
         te = e.p + "loader/assets/05b7070bdc42a5dd3346.png",
         ne = e.p + "loader/assets/cb132ea5f230239b9b63.png";
 

@@ -12295,7 +12295,7 @@
             },
             Bo = n.p + "app/assets/feedd042b208a164575a.png",
             Vo = n.p + "app/assets/2f221eeb298b72a0625f.png",
-            Wo = n.p + "app/assets/8f0e2346b5c1d8b24a51.png",
+            Wo = n.p + "app/assets/5da6cbff849d3d2ceb19.png",
             Fo = n.p + "app/assets/a9f50afa57f19138bc95.png";
         var Ho = function(t) {
             window.launcherAPI && window.launcherAPI.validateGameFiles && window.launcherAPI.validateGameFiles(t)
