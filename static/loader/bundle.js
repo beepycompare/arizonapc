@@ -52,14 +52,14 @@
         return 0 === Object.keys(e).length
     }
     const u = "undefined" != typeof window;
-    let f = u ? () => window.performance.now() : () => Date.now(),
-        g = u ? e => requestAnimationFrame(e) : t;
+    let g = u ? () => window.performance.now() : () => Date.now(),
+        f = u ? e => requestAnimationFrame(e) : t;
     const p = new Set;
 
     function m(e) {
         p.forEach((t => {
             t.c(e) || (p.delete(t), t.f())
-        })), 0 !== p.size && g(m)
+        })), 0 !== p.size && f(m)
     }
     let h = !1;
 
@@ -74,44 +74,48 @@
     }
 
     function y(e) {
-        const t = _("style");
+        const t = v("style");
         return function(e, t) {
             $(e.head || e, t)
         }(w(e), t), t.sheet
     }
 
-    function b(e) {
-        e.parentNode.removeChild(e)
+    function b(e, t, n) {
+        e.insertBefore(t, n || null)
     }
 
     function _(e) {
-        return document.createElement(e)
+        e.parentNode.removeChild(e)
     }
 
     function v(e) {
+        return document.createElement(e)
+    }
+
+    function x(e) {
         return document.createElementNS("http://www.w3.org/2000/svg", e)
     }
 
-    function x() {
+    function S() {
         return e = " ", document.createTextNode(e);
         var e
     }
 
-    function S(e, t, n) {
+    function k(e, t, n) {
         null == n ? e.removeAttribute(t) : e.getAttribute(t) !== n && e.setAttribute(t, n)
     }
 
-    function k(e, t, n, o) {
+    function A(e, t, n, o) {
         null === n ? e.style.removeProperty(t) : e.style.setProperty(t, n, o ? "important" : "")
     }
 
-    function A(e, t, n) {
+    function C(e, t, n) {
         e.classList[n ? "add" : "remove"](t)
     }
-    const C = new Map;
-    let E, R = 0;
+    const E = new Map;
+    let R, z = 0;
 
-    function z(e, t, n, o, r, i, a, s = 0) {
+    function M(e, t, n, o, r, i, a, s = 0) {
         const l = 16.666 / o;
         let c = "{\n";
         for (let e = 0; e <= 1; e += l) {
@@ -120,77 +124,77 @@
         }
         const d = c + `100% {${a(n,1-n)}}\n}`,
             u = `__svelte_${function(e){let t=5381,n=e.length;for(;n--;)t=(t<<5)-t^e.charCodeAt(n);return t>>>0}(d)}_${s}`,
-            f = w(e),
+            g = w(e),
             {
-                stylesheet: g,
+                stylesheet: f,
                 rules: p
-            } = C.get(f) || function(e, t) {
+            } = E.get(g) || function(e, t) {
                 const n = {
                     stylesheet: y(t),
                     rules: {}
                 };
-                return C.set(e, n), n
-            }(f, e);
-        p[u] || (p[u] = !0, g.insertRule(`@keyframes ${u} ${d}`, g.cssRules.length));
+                return E.set(e, n), n
+            }(g, e);
+        p[u] || (p[u] = !0, f.insertRule(`@keyframes ${u} ${d}`, f.cssRules.length));
         const m = e.style.animation || "";
-        return e.style.animation = `${m?`${m}, `:""}${u} ${o}ms linear ${r}ms 1 both`, R += 1, u
+        return e.style.animation = `${m?`${m}, `:""}${u} ${o}ms linear ${r}ms 1 both`, z += 1, u
     }
 
-    function M(e) {
-        E = e
+    function F(e) {
+        R = e
     }
-    const F = [],
-        T = [],
+    const T = [],
         O = [],
         I = [],
-        N = Promise.resolve();
-    let q = !1;
+        N = [],
+        q = Promise.resolve();
+    let B = !1;
 
-    function B(e) {
-        O.push(e)
+    function G(e) {
+        I.push(e)
     }
-    const G = new Set;
-    let P, j = 0;
+    const P = new Set;
+    let j, D = 0;
 
-    function D() {
-        const e = E;
+    function L() {
+        const e = R;
         do {
-            for (; j < F.length;) {
-                const e = F[j];
-                j++, M(e), L(e.$$)
+            for (; D < T.length;) {
+                const e = T[D];
+                D++, F(e), U(e.$$)
             }
-            for (M(null), F.length = 0, j = 0; T.length;) T.pop()();
-            for (let e = 0; e < O.length; e += 1) {
-                const t = O[e];
-                G.has(t) || (G.add(t), t())
+            for (F(null), T.length = 0, D = 0; O.length;) O.pop()();
+            for (let e = 0; e < I.length; e += 1) {
+                const t = I[e];
+                P.has(t) || (P.add(t), t())
             }
-            O.length = 0
-        } while (F.length);
-        for (; I.length;) I.pop()();
-        q = !1, G.clear(), M(e)
+            I.length = 0
+        } while (T.length);
+        for (; N.length;) N.pop()();
+        B = !1, P.clear(), F(e)
     }
 
-    function L(e) {
+    function U(e) {
         if (null !== e.fragment) {
             e.update(), i(e.before_update);
             const t = e.dirty;
-            e.dirty = [-1], e.fragment && e.fragment.p(e.ctx, t), e.after_update.forEach(B)
+            e.dirty = [-1], e.fragment && e.fragment.p(e.ctx, t), e.after_update.forEach(G)
         }
     }
 
-    function U(e, t, n) {
+    function V(e, t, n) {
         e.dispatchEvent(function(e, t, n = !1) {
             const o = document.createEvent("CustomEvent");
             return o.initCustomEvent(e, n, !1, t), o
         }(`${t?"intro":"outro"}${n}`))
     }
-    const V = new Set;
-    let H;
-    const Y = {
+    const H = new Set;
+    let Y;
+    const J = {
         duration: 0
     };
 
-    function J(e, o, r, s) {
+    function K(e, o, r, s) {
         let l = o(e, r),
             c = s ? 0 : 1,
             d = null,
@@ -202,15 +206,15 @@
                 const n = (e.style.animation || "").split(", "),
                     o = n.filter(t ? e => e.indexOf(t) < 0 : e => -1 === e.indexOf("__svelte")),
                     r = n.length - o.length;
-                r && (e.style.animation = o.join(", "), R -= r, R || g((() => {
-                    R || (C.forEach((e => {
+                r && (e.style.animation = o.join(", "), z -= r, z || f((() => {
+                    z || (E.forEach((e => {
                         const {
                             stylesheet: t
                         } = e;
                         let n = t.cssRules.length;
                         for (; n--;) t.deleteRule(n);
                         e.rules = {}
-                    })), C.clear())
+                    })), E.clear())
                 })))
             }(e, h)
         }
@@ -235,21 +239,21 @@
                 easing: s = n,
                 tick: y = t,
                 css: b
-            } = l || Y, _ = {
-                start: f() + r,
+            } = l || J, _ = {
+                start: g() + r,
                 b: o
             };
-            o || (_.group = H, H.r += 1), d || u ? u = _ : (b && ($(), h = z(e, c, o, a, r, s, b)), o && y(0, 1), d = w(_, a), B((() => U(e, o, "start"))), function(e) {
+            o || (_.group = Y, Y.r += 1), d || u ? u = _ : (b && ($(), h = M(e, c, o, a, r, s, b)), o && y(0, 1), d = w(_, a), G((() => V(e, o, "start"))), function(e) {
                 let t;
-                0 === p.size && g(m), new Promise((n => {
+                0 === p.size && f(m), new Promise((n => {
                     p.add(t = {
                         c: e,
                         f: n
                     })
                 }))
             }((t => {
-                if (u && t > u.start && (d = w(u, a), u = null, U(e, d.b, "start"), b && ($(), h = z(e, c, d.b, d.duration, 0, s, l.css))), d)
-                    if (t >= d.end) y(c = d.b, 1 - c), U(e, d.b, "end"), u || (d.b ? $() : --d.group.r || i(d.group.c)), d = null;
+                if (u && t > u.start && (d = w(u, a), u = null, V(e, d.b, "start"), b && ($(), h = M(e, c, d.b, d.duration, 0, s, l.css))), d)
+                    if (t >= d.end) y(c = d.b, 1 - c), V(e, d.b, "end"), u || (d.b ? $() : --d.group.r || i(d.group.c)), d = null;
                     else if (t >= d.start) {
                     const e = t - d.start;
                     c = d.a + d.d * s(e / d.duration), y(c, 1 - c)
@@ -259,9 +263,9 @@
         }
         return {
             run(e) {
-                a(l) ? (P || (P = Promise.resolve(), P.then((() => {
-                    P = null
-                }))), P).then((() => {
+                a(l) ? (j || (j = Promise.resolve(), j.then((() => {
+                    j = null
+                }))), j).then((() => {
                     l = l(), y(e)
                 })) : y(e)
             },
@@ -270,16 +274,16 @@
             }
         }
     }
-    let K;
+    let Q;
 
-    function Q(e, t) {
+    function W(e, t) {
         const n = e.$$;
         null !== n.fragment && (i(n.on_destroy), n.fragment && n.fragment.d(t), n.on_destroy = n.fragment = null, n.ctx = [])
     }
 
-    function W(e, n, s, l, c, d, u, f = [-1]) {
-        const g = E;
-        M(e);
+    function X(e, n, s, l, c, d, u, g = [-1]) {
+        const f = R;
+        F(e);
         const p = e.$$ = {
             fragment: null,
             ctx: null,
@@ -292,26 +296,26 @@
             on_disconnect: [],
             before_update: [],
             after_update: [],
-            context: new Map(n.context || (g ? g.$$.context : [])),
+            context: new Map(n.context || (f ? f.$$.context : [])),
             callbacks: r(),
-            dirty: f,
+            dirty: g,
             skip_bound: !1,
-            root: n.target || g.$$.root
+            root: n.target || f.$$.root
         };
         u && u(p.root);
         let m = !1;
         if (p.ctx = s ? s(e, n.props || {}, ((t, n, ...o) => {
                 const r = o.length ? o[0] : n;
                 return p.ctx && c(p.ctx[t], p.ctx[t] = r) && (!p.skip_bound && p.bound[t] && p.bound[t](r), m && function(e, t) {
-                    -1 === e.$$.dirty[0] && (F.push(e), q || (q = !0, N.then(D)), e.$$.dirty.fill(0)), e.$$.dirty[t / 31 | 0] |= 1 << t % 31
+                    -1 === e.$$.dirty[0] && (T.push(e), B || (B = !0, q.then(L)), e.$$.dirty.fill(0)), e.$$.dirty[t / 31 | 0] |= 1 << t % 31
                 }(e, t)), n
             })) : [], p.update(), m = !0, i(p.before_update), p.fragment = !!l && l(p.ctx), n.target) {
             if (n.hydrate) {
                 h = !0;
                 const e = (y = n.target, Array.from(y.childNodes));
-                p.fragment && p.fragment.l(e), e.forEach(b)
+                p.fragment && p.fragment.l(e), e.forEach(_)
             } else p.fragment && p.fragment.c();
-            n.intro && (($ = e.$$.fragment) && $.i && (V.delete($), $.i(w))),
+            n.intro && (($ = e.$$.fragment) && $.i && (H.delete($), $.i(w))),
                 function(e, t, n, r) {
                     const {
                         fragment: s,
@@ -319,16 +323,16 @@
                         on_destroy: c,
                         after_update: d
                     } = e.$$;
-                    s && s.m(t, n), r || B((() => {
+                    s && s.m(t, n), r || G((() => {
                         const t = l.map(o).filter(a);
                         c ? c.push(...t) : i(t), e.$$.on_mount = []
-                    })), d.forEach(B)
-                }(e, n.target, n.anchor, n.customElement), h = !1, D()
+                    })), d.forEach(G)
+                }(e, n.target, n.anchor, n.customElement), h = !1, L()
         }
         var $, w, y;
-        M(g)
+        F(f)
     }
-    "undefined" != typeof window ? window : "undefined" != typeof globalThis ? globalThis : global, new Set(["allowfullscreen", "allowpaymentrequest", "async", "autofocus", "autoplay", "checked", "controls", "default", "defer", "disabled", "formnovalidate", "hidden", "ismap", "loop", "multiple", "muted", "nomodule", "novalidate", "open", "playsinline", "readonly", "required", "reversed", "selected"]), "function" == typeof HTMLElement && (K = class extends HTMLElement {
+    "undefined" != typeof window ? window : "undefined" != typeof globalThis ? globalThis : global, new Set(["allowfullscreen", "allowpaymentrequest", "async", "autofocus", "autoplay", "checked", "controls", "default", "defer", "disabled", "formnovalidate", "hidden", "ismap", "loop", "multiple", "muted", "nomodule", "novalidate", "open", "playsinline", "readonly", "required", "reversed", "selected"]), "function" == typeof HTMLElement && (Q = class extends HTMLElement {
         constructor() {
             super(), this.attachShadow({
                 mode: "open"
@@ -348,7 +352,7 @@
             i(this.$$.on_disconnect)
         }
         $destroy() {
-            Q(this, 1), this.$destroy = t
+            W(this, 1), this.$destroy = t
         }
         $on(e, t) {
             const n = this.$$.callbacks[e] || (this.$$.callbacks[e] = []);
@@ -361,7 +365,7 @@
         }
     });
 
-    function X(e, {
+    function Z(e, {
         delay: t = 0,
         duration: o = 400,
         easing: r = n
@@ -374,66 +378,88 @@
             css: e => "opacity: " + e * i
         }
     }
-    const Z = e.p + "loader/assets/cf2c5114382f9454fab3.png",
-        ee = e.p + "loader/assets/24ab4254bba00a5a00fd.png",
-        te = e.p + "loader/assets/05b7070bdc42a5dd3346.png",
-        ne = e.p + "loader/assets/cb132ea5f230239b9b63.png";
+    const ee = e.p + "loader/assets/cf2c5114382f9454fab3.png",
+        te = e.p + "loader/assets/24ab4254bba00a5a00fd.png",
+        ne = e.p + "loader/assets/05b7070bdc42a5dd3346.png",
+        oe = e.p + "loader/assets/cb132ea5f230239b9b63.png";
 
-    function oe(e) {
-        let t, n, o, r, i, a, s, l, d, u, f, g, p, m, h, w, y, C, E, R, z, M, F, T, O, I, N, q, G, P, j, D, L, U, V, H, Y, K, Q, W, Z, ee, te, ne;
+    function re(e) {
+        let t, n;
         return {
             c() {
-                t = _("div"), n = _("div"), o = _("div"), r = v("svg"), i = v("defs"), a = v("filter"), s = v("feTurbulence"), d = v("feDisplacementMap"), h = v("filter"), w = v("feColorMatrix"), y = v("feComponentTransfer"), C = v("feFuncR"), E = v("feFuncG"), R = v("feFuncB"), M = v("mask"), F = v("g"), T = v("rect"), P = v("image"), D = v("image"), V = x(), H = _("div"), Y = x(), K = _("img"), W = x(), Z = _("div"), Z.innerHTML = '<div class="game-loader-window__sweep"></div>', S(s, "type", "fractalNoise"), S(s, "baseFrequency", l = (1 / de).toFixed(4)), S(s, "numOctaves", "3"), S(s, "seed", "7"), S(s, "result", "n"), S(d, "in", "SourceGraphic"), S(d, "in2", "n"), S(d, "scale", ue), S(d, "xChannelSelector", "R"), S(d, "yChannelSelector", "G"), S(a, "id", u = "tex-" + e[6]), S(a, "filterUnits", "userSpaceOnUse"), S(a, "x", f = e[5] - ce), S(a, "y", g = -se - ce), S(a, "width", p = le + 2 * ce), S(a, "height", m = ie + 2 * se + 2 * ce), S(a, "color-interpolation-filters", "sRGB"), S(w, "type", "saturate"), S(w, "values", "0"), S(C, "type", "linear"), S(C, "slope", fe), S(C, "intercept", ge), S(E, "type", "linear"), S(E, "slope", fe), S(E, "intercept", ge), S(R, "type", "linear"), S(R, "slope", fe), S(R, "intercept", ge), S(h, "id", z = "dim-" + e[6]), S(h, "x", "0"), S(h, "y", "0"), S(h, "width", "100%"), S(h, "height", "100%"), S(h, "color-interpolation-filters", "sRGB"), S(T, "class", "game-loader-window__reveal"), S(T, "x", e[5]), S(T, "y", O = -se), S(T, "height", I = ie + 2 * se), S(T, "fill", "#fff"), S(T, "filter", N = "url(#tex-" + e[6] + ")"), k(T, "--full-w", le + "px"), k(T, "--reveal-dur", e[0] + "ms"), A(T, "game-loader-window__reveal--on", e[1]), S(F, "transform", q = "rotate(" + ae + " " + re / 2 + " " + ie / 2 + ")"), S(M, "id", G = "reveal-" + e[6]), S(M, "maskUnits", "userSpaceOnUse"), S(M, "x", "0"), S(M, "y", "0"), S(M, "width", re), S(M, "height", ie), S(P, "class", "game-loader-window__dark"), S(P, "href", e[3]), S(P, "x", "0"), S(P, "y", "0"), S(P, "width", re), S(P, "height", ie), S(P, "preserveAspectRatio", "xMidYMid slice"), S(P, "filter", j = "url(#dim-" + e[6] + ")"), S(P, "opacity", pe), S(D, "class", "game-loader-window__bright"), S(D, "href", e[3]), S(D, "x", "0"), S(D, "y", "0"), S(D, "width", re), S(D, "height", ie), S(D, "preserveAspectRatio", "xMidYMid slice"), S(D, "mask", L = "url(#reveal-" + e[6] + ")"), k(D, "--reveal-dur", e[0] + "ms"), A(D, "game-loader-window__bright--on", e[1]), S(r, "class", "game-loader-window__stage"), S(r, "viewBox", U = "0 0 " + re + " " + ie), S(r, "preserveAspectRatio", "none"), S(H, "class", "game-loader-window__shade"), S(o, "class", "game-loader-window__media"), S(K, "class", "game-loader-window__logo"), c(K.src, Q = e[4]) || S(K, "src", Q), S(K, "alt", ""), S(Z, "class", "game-loader-window__border"), S(n, "class", "game-loader-window__card"), S(n, "style", ee = e[2] ? `--sweep-gradient: ${e[2]};` : ""), S(t, "class", "game-loader-window")
+                t = v("img"), k(t, "class", "game-loader-window__logo"), c(t.src, n = e[4]) || k(t, "src", n), k(t, "alt", "")
             },
-            m(e, l) {
-                (function(e, t, n) {
-                    e.insertBefore(t, n || null)
-                })(e, t, l), $(t, n), $(n, o), $(o, r), $(r, i), $(i, a), $(a, s), $(a, d), $(i, h), $(h, w), $(h, y), $(y, C), $(y, E), $(y, R), $(i, M), $(M, F), $(F, T), $(r, P), $(r, D), $(o, V), $(o, H), $(n, Y), $(n, K), $(n, W), $(n, Z), ne = !0
+            m(e, n) {
+                b(e, t, n)
             },
-            p(e, [t]) {
-                (!ne || 1 & t) && k(T, "--reveal-dur", e[0] + "ms"), 2 & t && A(T, "game-loader-window__reveal--on", e[1]), (!ne || 8 & t) && S(P, "href", e[3]), (!ne || 8 & t) && S(D, "href", e[3]), (!ne || 1 & t) && k(D, "--reveal-dur", e[0] + "ms"), 2 & t && A(D, "game-loader-window__bright--on", e[1]), (!ne || 16 & t && !c(K.src, Q = e[4])) && S(K, "src", Q), (!ne || 4 & t && ee !== (ee = e[2] ? `--sweep-gradient: ${e[2]};` : "")) && S(n, "style", ee)
-            },
-            i(e) {
-                ne || (B((() => {
-                    te || (te = J(t, X, {
-                        duration: 200
-                    }, !0)), te.run(1)
-                })), ne = !0)
-            },
-            o(e) {
-                te || (te = J(t, X, {
-                    duration: 200
-                }, !1)), te.run(0), ne = !1
+            p(e, o) {
+                16 & o && !c(t.src, n = e[4]) && k(t, "src", n)
             },
             d(e) {
-                e && b(t), e && te && te.end()
+                e && _(t)
             }
         }
     }
-    const re = 866,
-        ie = 546,
-        ae = 15,
-        se = 300,
-        le = 1350,
-        ce = 100,
-        de = 12,
-        ue = 24,
-        fe = .165,
-        ge = .005,
-        pe = .5;
 
-    function me(e, t, n) {
+    function ie(e) {
+        let t, n, o, r, i, a, s, l, c, d, u, g, f, p, m, h, w, y, E, R, z, M, F, T, O, I, N, q, B, P, j, D, L, U, V, H, Y, J, Q, W, X, ee, te = e[4] && re(e);
+        return {
+            c() {
+                t = v("div"), n = v("div"), o = v("div"), r = x("svg"), i = x("defs"), a = x("filter"), s = x("feTurbulence"), c = x("feDisplacementMap"), m = x("filter"), h = x("feColorMatrix"), w = x("feComponentTransfer"), y = x("feFuncR"), E = x("feFuncG"), R = x("feFuncB"), M = x("mask"), F = x("g"), T = x("rect"), P = x("image"), D = x("image"), V = S(), H = v("div"), Y = S(), te && te.c(), J = S(), Q = v("div"), Q.innerHTML = '<div class="game-loader-window__sweep"></div>', k(s, "type", "fractalNoise"), k(s, "baseFrequency", l = (1 / ge).toFixed(4)), k(s, "numOctaves", "3"), k(s, "seed", "7"), k(s, "result", "n"), k(c, "in", "SourceGraphic"), k(c, "in2", "n"), k(c, "scale", fe), k(c, "xChannelSelector", "R"), k(c, "yChannelSelector", "G"), k(a, "id", d = "tex-" + e[6]), k(a, "filterUnits", "userSpaceOnUse"), k(a, "x", u = e[5] - ue), k(a, "y", g = -ce - ue), k(a, "width", f = de + 2 * ue), k(a, "height", p = se + 2 * ce + 2 * ue), k(a, "color-interpolation-filters", "sRGB"), k(h, "type", "saturate"), k(h, "values", "0"), k(y, "type", "linear"), k(y, "slope", pe), k(y, "intercept", me), k(E, "type", "linear"), k(E, "slope", pe), k(E, "intercept", me), k(R, "type", "linear"), k(R, "slope", pe), k(R, "intercept", me), k(m, "id", z = "dim-" + e[6]), k(m, "x", "0"), k(m, "y", "0"), k(m, "width", "100%"), k(m, "height", "100%"), k(m, "color-interpolation-filters", "sRGB"), k(T, "class", "game-loader-window__reveal"), k(T, "x", e[5]), k(T, "y", O = -ce), k(T, "height", I = se + 2 * ce), k(T, "fill", "#fff"), k(T, "filter", N = "url(#tex-" + e[6] + ")"), A(T, "--full-w", de + "px"), A(T, "--reveal-dur", e[0] + "ms"), C(T, "game-loader-window__reveal--on", e[1]), k(F, "transform", q = "rotate(" + le + " " + ae / 2 + " " + se / 2 + ")"), k(M, "id", B = "reveal-" + e[6]), k(M, "maskUnits", "userSpaceOnUse"), k(M, "x", "0"), k(M, "y", "0"), k(M, "width", ae), k(M, "height", se), k(P, "class", "game-loader-window__dark"), k(P, "href", e[3]), k(P, "x", "0"), k(P, "y", "0"), k(P, "width", ae), k(P, "height", se), k(P, "preserveAspectRatio", "xMidYMid slice"), k(P, "filter", j = "url(#dim-" + e[6] + ")"), k(P, "opacity", he), k(D, "class", "game-loader-window__bright"), k(D, "href", e[3]), k(D, "x", "0"), k(D, "y", "0"), k(D, "width", ae), k(D, "height", se), k(D, "preserveAspectRatio", "xMidYMid slice"), k(D, "mask", L = "url(#reveal-" + e[6] + ")"), A(D, "--reveal-dur", e[0] + "ms"), C(D, "game-loader-window__bright--on", e[1]), k(r, "class", "game-loader-window__stage"), k(r, "viewBox", U = "0 0 " + ae + " " + se), k(r, "preserveAspectRatio", "none"), k(H, "class", "game-loader-window__shade"), k(o, "class", "game-loader-window__media"), k(Q, "class", "game-loader-window__border"), k(n, "class", "game-loader-window__card"), k(n, "style", W = e[2] ? `--sweep-gradient: ${e[2]};` : ""), k(t, "class", "game-loader-window")
+            },
+            m(e, l) {
+                b(e, t, l), $(t, n), $(n, o), $(o, r), $(r, i), $(i, a), $(a, s), $(a, c), $(i, m), $(m, h), $(m, w), $(w, y), $(w, E), $(w, R), $(i, M), $(M, F), $(F, T), $(r, P), $(r, D), $(o, V), $(o, H), $(n, Y), te && te.m(n, null), $(n, J), $(n, Q), ee = !0
+            },
+            p(e, [t]) {
+                (!ee || 1 & t) && A(T, "--reveal-dur", e[0] + "ms"), 2 & t && C(T, "game-loader-window__reveal--on", e[1]), (!ee || 8 & t) && k(P, "href", e[3]), (!ee || 8 & t) && k(D, "href", e[3]), (!ee || 1 & t) && A(D, "--reveal-dur", e[0] + "ms"), 2 & t && C(D, "game-loader-window__bright--on", e[1]), e[4] ? te ? te.p(e, t) : (te = re(e), te.c(), te.m(n, J)) : te && (te.d(1), te = null), (!ee || 4 & t && W !== (W = e[2] ? `--sweep-gradient: ${e[2]};` : "")) && k(n, "style", W)
+            },
+            i(e) {
+                ee || (G((() => {
+                    X || (X = K(t, Z, {
+                        duration: 200
+                    }, !0)), X.run(1)
+                })), ee = !0)
+            },
+            o(e) {
+                X || (X = K(t, Z, {
+                    duration: 200
+                }, !1)), X.run(0), ee = !1
+            },
+            d(e) {
+                e && _(t), te && te.d(), e && X && X.end()
+            }
+        }
+    }
+    const ae = 866,
+        se = 546,
+        le = 15,
+        ce = 300,
+        de = 1350,
+        ue = 100,
+        ge = 12,
+        fe = 24,
+        pe = .165,
+        me = .005,
+        he = .5;
+
+    function $e(e, t, n) {
         let o, r, i, a, {
                 gameId: s = ""
             } = t,
             {
-                duration: l = 1e4
+                bg: l = ""
+            } = t,
+            {
+                logo: c = ""
+            } = t,
+            {
+                duration: d = 1e4
             } = t;
-        const c = {
-                logo: te,
-                bg: Z
+        const u = {
+                logo: ne,
+                bg: ee
             },
-            d = {
+            g = {
                 Arizona: "arizona",
                 ArizonaStaging: "arizona_staging",
                 ArizonaV: "arizonav",
@@ -444,45 +470,45 @@
                 RodinaStaging: "rodina_staging",
                 Trilogy: "trilogy"
             },
-            u = {
-                [d.Arizona]: c,
-                [d.ArizonaStaging]: c,
-                [d.Rodina]: {
-                    logo: ne,
-                    bg: ee,
+            f = {
+                [g.Arizona]: u,
+                [g.ArizonaStaging]: u,
+                [g.Rodina]: {
+                    logo: oe,
+                    bg: te,
                     sweepColor: "#D3002C"
                 },
-                [d.RodinaStaging]: {
-                    logo: ne,
-                    bg: ee,
+                [g.RodinaStaging]: {
+                    logo: oe,
+                    bg: te,
                     sweepColor: "#D3002C"
                 }
             },
-            f = "glo" + Math.random().toString(36).slice(2, 8);
-        let g = !1;
-        var p;
-        return p = () => {
+            p = "glo" + Math.random().toString(36).slice(2, 8);
+        let m = !1;
+        var h;
+        return h = () => {
                 let e;
                 const t = requestAnimationFrame((() => {
-                    e = requestAnimationFrame((() => n(1, g = !0)))
+                    e = requestAnimationFrame((() => n(1, m = !0)))
                 }));
                 return () => {
                     cancelAnimationFrame(t), cancelAnimationFrame(e)
                 }
             },
             function() {
-                if (!E) throw new Error("Function called outside component initialization");
-                return E
-            }().$$.on_mount.push(p), e.$$set = e => {
-                "gameId" in e && n(7, s = e.gameId), "duration" in e && n(0, l = e.duration)
+                if (!R) throw new Error("Function called outside component initialization");
+                return R
+            }().$$.on_mount.push(h), e.$$set = e => {
+                "gameId" in e && n(7, s = e.gameId), "bg" in e && n(8, l = e.bg), "logo" in e && n(9, c = e.logo), "duration" in e && n(0, d = e.duration)
             }, e.$$.update = () => {
-                128 & e.$$.dirty && n(9, o = u[s] || c), 512 & e.$$.dirty && n(4, r = o.logo), 512 & e.$$.dirty && n(3, i = o.bg), 512 & e.$$.dirty && n(2, a = o.sweepColor)
-            }, [l, g, a, i, r, -240, f, s, d, o]
+                128 & e.$$.dirty && n(11, o = f[s] || u), 2560 & e.$$.dirty && n(4, r = "none" === c ? "" : c || o.logo), 2304 & e.$$.dirty && n(3, i = l || o.bg), 2048 & e.$$.dirty && n(2, a = o.sweepColor)
+            }, [d, m, a, i, r, -240, p, s, l, c, g, o]
     }
-    var he = new URLSearchParams(window.location.search);
-    console.log(he.get("game"), "game"), new class extends class {
+    var we = new URLSearchParams(window.location.search);
+    console.log(we.get("game"), "game"), new class extends class {
         $destroy() {
-            Q(this, 1), this.$destroy = t
+            W(this, 1), this.$destroy = t
         }
         $on(e, t) {
             const n = this.$$.callbacks[e] || (this.$$.callbacks[e] = []);
@@ -495,19 +521,23 @@
         }
     } {
         constructor(e) {
-            super(), W(this, e, me, oe, s, {
+            super(), X(this, e, $e, ie, s, {
                 gameId: 7,
+                bg: 8,
+                logo: 9,
                 duration: 0,
-                GameId: 8
+                GameId: 10
             })
         }
         get GameId() {
-            return this.$$.ctx[8]
+            return this.$$.ctx[10]
         }
     }({
         target: document.getElementById("root"),
         props: {
-            gameId: he.get("game")
+            gameId: we.get("game"),
+            bg: we.get("bg") || "",
+            logo: we.get("logo") || ""
         }
     })
 })();

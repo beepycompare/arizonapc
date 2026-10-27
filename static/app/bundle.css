@@ -3489,13 +3489,6 @@ img {
     background-color: #69c524
 }
 
-.theme-container[data-theme=arizona] .theme-container__character,
-.theme-container[data-theme=arizona_staging] .theme-container__character {
-    background-size: cover;
-    width: 100vw;
-    bottom: 0
-}
-
 .theme-container[data-theme=trilogy],
 .theme-container[data-theme=trilogy_staging] {
     --global-main: #1C1E26;

@@ -22,7 +22,7 @@
         closeApp: () => s.send("close-app"),
         maximizeWindow: () => s.send("maximize-window"),
         minimizeWindow: () => s.send("minimize-window"),
-        validateAndStartGame: (e, i, n, a, o, r, t) => s.send("validateAndStartGame", e, i, n, a, o, r, t),
+        validateAndStartGame: (e, i, n, a, o, t, r) => s.send("validateAndStartGame", e, i, n, a, o, t, r),
         validateGameFiles: e => s.send("validateGameFiles", e),
         repairGameFiles: (e, i) => s.send("repairGameFiles", e, i),
         installDrivers: e => s.send("installDrivers", e),
@@ -48,6 +48,8 @@
         onModInstallChange: e => s.on("mod:onInstallChange", e),
         installMod: (e, i) => s.send("mod:install", e, i),
         uninstallMod: (e, i) => s.send("mod:uninstall", e, i),
+        getThemeAssets: () => s.invoke("theme-assets:get"),
+        handleThemeAssetsUpdate: e => s.on("theme-assets:update", e),
         handleCrashRepairModalVisibility: e => s.on("crash-repair-modal-visibility", e),
         sendCrashRepairModalResponse: e => s.send("crash-repair-modal-response", e)
     })
